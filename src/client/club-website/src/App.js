@@ -1,25 +1,51 @@
 import React, { Component } from 'react';
+import "animate.css/animate.min.css";
 import './App.css';
 import Particles from 'react-particles-js';
+import { fadeInUp } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
+import ScrollAnimation from "react-animate-on-scroll";
 
-const centerdText = {
-  position: "absolute",
-  margin: 0,
-  width: "100%",
-  left: "50%",
-  top: "50%",
-  transform: "translate(-50%, -50%)",
-  zIndex: 11,
-  color: "#ffffff"
+const styles = {
+  centeredDiv: {
+    position: "absolute",
+    margin: 0,
+    width: "100%",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: 11,
+    color: "#ffffff"
+  },
+  titleText: {
+    fontSize: "5em",
+    animation: 'x 1.5s',
+    animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
+    margin: 0,
+  },
+  subtitleText: {
+    fontSize: "2em",
+    animation: 'x 1.5s',
+    animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
+    margin: 0,
+  },
+  headerStyle: {
+    fontColor: "#ffffff",
+    fontSize: "3em",
+  }
 };
 
 class App extends Component {
+
   render() {
+
     return (
       <div style={{backgroundColor: "#0288D1", position: "absolute", width: "100%", height: "100%", margin: "0"}} className="App">
-        <header style={centerdText}>
-          <h1 style={{fontSize: "4em", margin: 0}}> aggie coding club </h1>
-          <p style={{fontSize: "2em", fontWeight : 900, margin: 0}}> Empowering texas a&m students to code </p>
+        <header style={styles.centeredDiv}>
+          <StyleRoot>
+          <h1 style={styles.titleText}> aggie coding club </h1>
+          <p style={styles.subtitleText}> Empowering texas a&m students to code </p>
+          </StyleRoot>
         </header>
         <Particles
         params={{
@@ -134,7 +160,14 @@ class App extends Component {
         }}
         />
         <div style={{height: "100%", width: "100%"}}>
-          <h1 style={{fontSize: "4em"}}> what we do </h1>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
+          <h1 style={styles.headerStyle}> what we do </h1>
+        </ScrollAnimation>
+        </div>
+        <div style={{height: "100%", width: "100%", padding: "20px", backgroundColor: "#0288D1", color: "#ffffff"}}>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
+          <h1 style={styles.headerStyle}> who we are </h1>
+        </ScrollAnimation>
         </div>
 
       </div>
