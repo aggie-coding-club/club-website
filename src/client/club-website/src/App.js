@@ -18,7 +18,7 @@ const styles = {
     color: "#ffffff"
   },
   titleText: {
-    fontSize: "5em",
+    fontSize: "6em",
     animation: 'x 1.5s',
     animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
     margin: 0,
@@ -31,7 +31,7 @@ const styles = {
   },
   headerStyle: {
     fontColor: "#ffffff",
-    fontSize: "3em",
+    fontSize: "4em",
   }
 };
 
@@ -47,7 +47,7 @@ class App extends Component {
           <p style={styles.subtitleText}> Empowering texas a&m students to code </p>
           </StyleRoot>
         </header>
-        <Particles
+        <Particles style={{width: "100vh", height: "100vh"}}
         params={{
           particles: {
             number: {
@@ -159,9 +159,11 @@ class App extends Component {
           retina_detect: true
         }}
         />
-        <div style={{height: "100%", width: "100%"}}>
+        <div style={{height: "100%", width: "100%", padding: "10px", alignItems: "center"}}>
         <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
           <h1 style={styles.headerStyle}> what we do </h1>
+          <p style={{fontSize: "2em", fontWeight: 500, color: "#0288D1"}}> All you need is a computer, a text editor, and yourself. </p>
+          <p style={{fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative"}}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn't taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. </p>
         </ScrollAnimation>
         </div>
         <div style={{height: "100%", width: "100%", padding: "20px", backgroundColor: "#0288D1", color: "#ffffff"}}>
