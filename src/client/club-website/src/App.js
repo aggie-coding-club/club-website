@@ -7,6 +7,12 @@ import Radium, {StyleRoot} from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
 import { stack as Menu } from 'react-burger-menu';
 import ComputerIcon from 'material-ui-icons/Computer';
+import TextFormatIcon from 'material-ui-icons/TextFormat';
+import PersonPinIcon from 'material-ui-icons/PersonPin';
+import SimpleMediaCard from './SimpleMediaCard.js';
+import Rohit from "./images/rohit.jpg";
+import Liam from "./images/liam.jpg";
+import Colton from "./images/colton.jpg";
 
 const styles = {
   centeredDiv: {
@@ -17,7 +23,7 @@ const styles = {
     top: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: 1,
-    color: "#ffffff"
+    color: "#ffffff",
   },
   titleText: {
     fontSize: "6em",
@@ -43,7 +49,13 @@ const styles = {
   largeIcon: {
     width: 120,
     height: 120,
-  }
+    marginLeft: "40px",
+    marginRight: "40px",
+  },
+  card: {
+    maxWidth: 345,
+    height: 245,
+  },
 };
 
 class App extends Component {
@@ -63,14 +75,17 @@ class App extends Component {
           <a style={styles.linkStyle} onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
       </Menu>
       <main id="page-wrap">
-        <div style={{backgroundColor: "#0288D1", position: "absolute", width: "100%", height: "100%", margin: "0"}}>
+        <div style={{backgroundColor: "#0288D1", height: "100vh"}}>
+          <a href="#" style={{width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none"}} className="signUpBox">
+            <h1 className="signUpText" style={{marginLeft: "20px", marginRight: "20px", fontSize: "1em"}}> PROJECT SIGN UPS </h1>
+          </a>
           <header style={styles.centeredDiv}>
             <StyleRoot>
             <h1 style={styles.titleText}> aggie coding club </h1>
             <p style={styles.subtitleText}> empowering texas a&m students to code </p>
             </StyleRoot>
           </header>
-          <Particles style={{width: "100vh", height: "100vh"}}
+          <Particles
           params={{
             particles: {
               number: {
@@ -94,8 +109,8 @@ class App extends Component {
                 },
                 image: {
                   src: "img/github.svg",
-                  width: 100,
-                  height: 100
+                  height: 100,
+                  width: 100
                 }
               },
               opacity: {
@@ -182,25 +197,49 @@ class App extends Component {
             retina_detect: true
           }}
           />
-          <div style={{height: "100%", width: "100%", padding: "10px", alignItems: "center"}}>
-          <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
-            <h1 style={styles.headerStyle}> what we do </h1>
-            <ComputerIcon style={styles.largeIcon}/>
-            <p style={{fontSize: "2em", fontWeight: 500, color: "#0288D1"}}> All you need is a computer, a text editor, and yourself. </p>
-            <p style={{fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative"}}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn't taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself.' </p>
+          </div>
+          <div style={{position: "relative", paddingTop: "100px", paddingBottom: "200px", alignItems: "center"}}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <h1 style={styles.headerStyle}> what we do </h1>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <ComputerIcon style={styles.largeIcon}/>
+              <TextFormatIcon style={styles.largeIcon}/>
+              <PersonPinIcon style={styles.largeIcon}/>
+              <p style={{fontSize: "2em", fontWeight: 500, color: "#0288D1"}}> All you need is a computer, a text editor, and yourself. </p>
+              <p style={{fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative"}}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn't taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. </p>
+            </ScrollAnimation>
+          </div>
+          <div style={{paddingTop: "100px", backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+          <h1 style={styles.headerStyle}> who we are </h1>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
+          <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
+            <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+            <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+            <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+            <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+            </div>
           </ScrollAnimation>
           </div>
-          <div style={{height: "100%", width: "100%", padding: "20px", backgroundColor: "#0288D1", color: "#ffffff"}}>
-          <ScrollAnimation animateIn="fadeInUp" animateOnce="true">
-            <h1 style={styles.headerStyle}> who we are </h1>
-          </ScrollAnimation>
+          <div style={{position: "relative", alignItems: "center", paddingTop: "100px"}}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <h1 style={styles.headerStyle}> where we are </h1>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
+            <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
+              <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+              <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+              <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+              <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+              </div>
+            </ScrollAnimation>
           </div>
-        </div>
       </main>
       </div>
       </div>
     );
   }
 }
-
 export default App;
