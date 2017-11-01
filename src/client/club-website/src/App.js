@@ -13,6 +13,8 @@ import SimpleMediaCard from './SimpleMediaCard.js';
 import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
 import Colton from "./images/colton.jpg";
+import People from "./images/computer.jpeg";
+import { Parallax } from 'react-parallax';
 
 const styles = {
   centeredDiv: {
@@ -40,6 +42,7 @@ const styles = {
   headerStyle: {
     fontColor: "#ffffff",
     fontSize: "4em",
+    marginTop: "100px"
   },
   linkStyle: {
     margin: "10px",
@@ -89,7 +92,7 @@ class App extends Component {
           params={{
             particles: {
               number: {
-                value: 150,
+                value: 175,
                 density: {
                   enable: false,
                   value_area: 961.4383117143238
@@ -198,7 +201,7 @@ class App extends Component {
           }}
           />
           </div>
-          <div style={{position: "relative", paddingTop: "100px", paddingBottom: "200px", alignItems: "center"}}>
+          <div style={{position: "relative",   paddingBottom: "200px", alignItems: "center"}}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> what we do </h1>
             </ScrollAnimation>
@@ -207,32 +210,36 @@ class App extends Component {
               <TextFormatIcon style={styles.largeIcon}/>
               <PersonPinIcon style={styles.largeIcon}/>
               <p style={{fontSize: "2em", fontWeight: 500, color: "#0288D1"}}> All you need is a computer, a text editor, and yourself. </p>
-              <p style={{fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative"}}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn't taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. </p>
+              <p style={{fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative"}}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. </p>
             </ScrollAnimation>
           </div>
-          <div style={{paddingTop: "100px", backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
-          <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-          <h1 style={styles.headerStyle}> who we are </h1>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
-          <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
-            <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-            <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-            <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-            <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-            </div>
-          </ScrollAnimation>
-          </div>
-          <div style={{position: "relative", alignItems: "center", paddingTop: "100px"}}>
+          <Parallax bgImage={People} strength={400} style={{backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
+              <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+              </div>
+            </ScrollAnimation>
+          </Parallax>
+          <div style={{backgroundColor: "#ffffff", overflowY: "hidden"}}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> where we are </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
-            <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
-              <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-              <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-              <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-              <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+              <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
               </div>
             </ScrollAnimation>
           </div>
