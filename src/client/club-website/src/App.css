@@ -236,3 +236,20 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
   color: #0288D1;
   font-weight: 900;
 }
+
+.slick-prev{
+  left: 40px;
+  z-index: 100;
+}
+
+.slick-next{
+  right: 40px;
+}
+
+.slick-prev:before, .slick-next:before{
+  color: #000;
+}
+
+.whiteHeader{
+  color: white;
+}
