@@ -1,4 +1,4 @@
 module.exports = function(req, res) {
-    console.log('req.body =', req.body);
+    console.log('In events/update');
     res.sendStatus(200);
 }

@@ -2,7 +2,6 @@ var request = require('request');
 var rp = require('request-promise-native');
 const baseURL = 'https://api.github.com/'
 const {
-    username,
     personal_access_token
 } = require('./config');
 var _clubData;
