@@ -1,8 +1,12 @@
 var app = require('express')();
-var indexRoutes = require('./routes/index');
+var bodyParser = require('body-parser');
 var github = require('./github-helper');
-
+var calendar = require('./calendar-helper');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 github.initializeClubData().then((clubData) => {
-    app.use('/', indexRoutes.routes(clubData));
+    calendar.initCalendar((calendar) => {
+        app.use('/', require('./routes')());
+    });
 });
 app.listen(80);

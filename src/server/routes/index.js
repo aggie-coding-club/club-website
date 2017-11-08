@@ -1,13 +1,8 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router({ mergeParams: true });
 var github = require('./github');
-module.exports = {
-    routes: function (clubData) {
-        router.get('/', (req, res) => {
-            res.json(clubData)
-        })
-
-        router.post('/github', github);
-        return router;
-    }
+module.exports = function () {
+    router.use('/events', require('./events')());
+    router.post('/github', github);
+    return router;
 }
