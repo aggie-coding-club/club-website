@@ -7,7 +7,7 @@ yarn-error.log*
 
 # Project files
 src/server/config.js
-src/server/google-credentials.js
+src/server/google-credentials.json
 
 # Runtime data
 pids
