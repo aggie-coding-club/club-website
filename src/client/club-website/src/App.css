@@ -27,55 +27,6 @@
   to { transform: rotate(360deg); }
 }
 
-.bm-burger-button {
-  position: absolute;
-  width: 25px;
-  height: 20px;
-  left: 36px;
-  top: 32px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #ffffff;
-  background: transparent;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 20px;
-  width: 20px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #ffffff;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  overflow: hidden !important;
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
 .wrap
 {
   margin:50px auto 0 auto;
@@ -120,17 +71,35 @@
 }
 .tile h1
 {
-
-  font-weight:300;
-  margin:0;
+  position: relative;
+  font-size: 2.25em;
+  left: -20px;
+  bottom: -92px;
+  font-weight:700;
+  margin: 0;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  transition: all 0.5s ease-in-out;
 }
 .tile h2
 {
-  font-weight:100;
-  margin:20px 0 0 0;
-  font-style:italic;
-   transform: translateX(200px);
+  position: relative;
+  text-align: left;
+  left: -20px;
+  bottom: -205px;
+  font-size: 1.2em;
+  font-weight:700;
+  font-style:normal;
+   transform: translateY(200px);
+}
+.tile h3{
+  position: relative;
+  text-align: left;
+  font-style: italic;
+  left: -20px;
+  bottom: -190px;
+  font-size: 1em;
+  font-weight: 100;
+  transform: translateY(200px);
 }
 .tile p
 {
@@ -138,13 +107,13 @@
   margin:20px 0 0 0;
   line-height: 25px;
 /*   opacity:0; */
-  transform: translateX(-200px);
+  transform: translateY(200px);
   transition-delay: 0.2s;
 }
 .animate-text
 {
   opacity:0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .tile:hover
 {
@@ -158,9 +127,14 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 .tile:hover .animate-text
 {
-  transform:translateX(0);
+  transform:translateY(0);
   opacity:1;
 }
+
+.tile:hover h1{
+  transform: translateY(-42px);
+}
+
 .dots
 {
   position:absolute;
@@ -219,7 +193,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 .signUpBox{
   background-color: transparent;
-  transition: all ease-in 1s;
+  transition: all ease-in 0.5s;
 }
 
 .signUpBox:hover{
@@ -229,7 +203,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .signUpText{
   color: white;
   font-weight: 700;
-  transition: all ease-in 1s;
+  transition: all ease-in 0.5s;
   text-decoration: none;
 }
 

@@ -5,7 +5,6 @@ import Particles from 'react-particles-js';
 import { fadeInUp } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
-import { stack as Menu } from 'react-burger-menu';
 import ComputerIcon from 'material-ui-icons/Computer';
 import TextFormatIcon from 'material-ui-icons/TextFormat';
 import PersonPinIcon from 'material-ui-icons/PersonPin';
@@ -13,10 +12,18 @@ import SimpleMediaCard from './SimpleMediaCard.js';
 import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
 import Colton from "./images/colton.jpg";
-import Computer from "./images/computer_edit.jpg";
+import Hannah from "./images/hannah.jpg"
+import William from './images/william.jpg';
+import Marcus from './images/marcus.jpg';
+import Marissa from './images/marissa.jpg';
+import Simone from './images/simone.jpg';
+import Material from './images/material.jpg';
+import Material_2 from './images/material_2.png';
 import Engineering from "./images/hrbb.jpg";
 import { Parallax } from 'react-parallax';
 import ACC from './images/ACC-transparent.png';
+import ACC_Banner from './images/acc_banner.png';
+
 
 const styles = {
   centeredDiv: {
@@ -43,7 +50,7 @@ const styles = {
   },
   headerStyle: {
     fontColor: "#ffffff",
-    fontSize: "4em",
+    fontSize: "4.5em",
     marginTop: "100px",
     marginBottom: "100px"
   },
@@ -73,16 +80,9 @@ class App extends Component {
 
     return (
       <div className="App">
-      <div  id="outer-container">
-      <Menu width={"220px"} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } >
-          <a style={styles.linkStyle} id="home" className="menu-item" href="/">Home</a>
-          <a style={styles.linkStyle} id="about" className="menu-item" href="/about">About</a>
-          <a style={styles.linkStyle} id="contact" className="menu-item" href="/contact">Contact</a>
-          <a style={styles.linkStyle} onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-      </Menu>
       <main id="page-wrap">
         <div style={{backgroundColor: "#0288D1", height: "100vh"}}>
-          <img src={ACC} style={{position: "absolute", left: "15px", top: "15px", width: "100px"}}/>
+          <img src={ACC_Banner} class="banner" alt="acc_logo" style={{position: "absolute", left: "30px", top: "-60px", width: "100px"}}/>
           <a href="#" style={{width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none"}} className="signUpBox">
             <h1 className="signUpText" style={{marginLeft: "20px", marginRight: "20px", fontSize: "1em"}}> PROJECT SIGN UPS </h1>
           </a>
@@ -217,20 +217,20 @@ class App extends Component {
               <p style={{fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative"}}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. </p>
             </ScrollAnimation>
           </div>
-          <Parallax bgImage={Computer} strength={400} style={{backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
+          <Parallax bgImage={Material} strength={400} style={{backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{paddingBottom: "100px"}}>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="18" subtitle="Club President"/>
+                <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="18" subtitle="Vice President"/>
+                <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="18" subtitle="Project Management Chair"/>
+                <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="18" subtitle="Workshops Chair"/>
+                <SimpleMediaCard imgSrc={Marcus} firstName="Marcus" lastName="Heinonen" major="Computer Science" classYear="18" subtitle="Events Chair"/>
+                <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="21" subtitle="Recruitment Chair"/>
+                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soira" major="Computer Science" classYear="20" subtitle="Social Chair"/>
+                <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="19" subtitle="Marketing Chair"/>
               </div>
             </ScrollAnimation>
           </Parallax>
@@ -247,28 +247,27 @@ class App extends Component {
               <img alt="Engineering-Map" src={Engineering} style={{float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000"}}/>
             </ScrollAnimation>
           </div>
-          <div style={{backgroundColor: "#0288D1", overflowY: "hidden"}}>
+          <Parallax bgImage={Material_2} strength={400} style={{backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={styles.headerStyle}> current projects </h1>
+              <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{paddingBottom: "100px"}}>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
-                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="18" subtitle="Club President"/>
+                <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="18" subtitle="Vice President"/>
+                <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="18" subtitle="Project Management Chair"/>
+                <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="18" subtitle="Workshops Chair"/>
+                <SimpleMediaCard imgSrc={Marcus} firstName="Marcus" lastName="Heinonen" major="Computer Science" classYear="18" subtitle="Events Chair"/>
+                <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="21" subtitle="Recruitment Chair"/>
+                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soira" major="Computer Science" classYear="20" subtitle="Social Chair"/>
+                <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="19" subtitle="Marketing Chair"/>
               </div>
             </ScrollAnimation>
             <div className="copyright">
-              <h4 style={{color: "#ffffff"}}>&#169; copyright Jonathan Innis </h4>
+                <h4 style={{color: "#ffffff"}}>&#169; copyright Jonathan Innis </h4>
             </div>
-          </div>
+          </Parallax>
       </main>
-      </div>
       </div>
     );
   }
