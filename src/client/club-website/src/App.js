@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "animate.css/animate.min.css";
 import './App.css';
+import "animate.css/animate.min.css";
 import Particles from 'react-particles-js';
 import { fadeInUp } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
@@ -14,8 +14,9 @@ import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
 import Colton from "./images/colton.jpg";
 import Computer from "./images/computer_edit.jpg";
-import Logo from "./images/ACC-transparent.png";
+import Engineering from "./images/hrbb.jpg";
 import { Parallax } from 'react-parallax';
+import ACC from './images/ACC-transparent.png';
 
 const styles = {
   centeredDiv: {
@@ -43,7 +44,8 @@ const styles = {
   headerStyle: {
     fontColor: "#ffffff",
     fontSize: "4em",
-    marginTop: "100px"
+    marginTop: "100px",
+    marginBottom: "100px"
   },
   linkStyle: {
     margin: "10px",
@@ -80,7 +82,7 @@ class App extends Component {
       </Menu>
       <main id="page-wrap">
         <div style={{backgroundColor: "#0288D1", height: "100vh"}}>
-          <img src={Logo} style={{position: "absolute", left: "15px", top: "15px", width: "125px"}} alt="ACCLogo"/>
+          <img src={ACC} style={{position: "absolute", left: "15px", top: "15px", width: "100px"}}/>
           <a href="#" style={{width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none"}} className="signUpBox">
             <h1 className="signUpText" style={{marginLeft: "20px", marginRight: "20px", fontSize: "1em"}}> PROJECT SIGN UPS </h1>
           </a>
@@ -203,7 +205,7 @@ class App extends Component {
           }}
           />
           </div>
-          <div style={{position: "relative",   paddingBottom: "200px", alignItems: "center"}}>
+          <div style={{position: "relative", paddingBottom: "200px", alignItems: "center"}}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> what we do </h1>
             </ScrollAnimation>
@@ -220,7 +222,7 @@ class App extends Component {
               <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
-              <div style={{paddingTop:"50px", paddingBottom: "100px"}}>
+              <div style={{paddingBottom: "100px"}}>
                 <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
                 <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
                 <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
@@ -236,14 +238,34 @@ class App extends Component {
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> where we are </h1>
             </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <div style={{width: "auto", display: "inline-block", fontSize: "1.5vw", color: "#500000", paddingTop: "50px"}}>
+                <h1> H.R Bright Building </h1>
+                <h2> Every Tuesday 8PM </h2>
+                <h2> Room #113 </h2>
+              </div>
+              <img alt="Engineering-Map" src={Engineering} style={{float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000"}}/>
+            </ScrollAnimation>
+          </div>
+          <div style={{backgroundColor: "#0288D1", overflowY: "hidden"}}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <h1 className="whiteHeader" style={styles.headerStyle}> current projects </h1>
+            </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
-              <div style={{paddingTop:"50px", paddingBottom: "200px"}}>
+              <div style={{paddingBottom: "100px"}}>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
+                <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
                 <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
                 <SimpleMediaCard imgSrc={Rohit} title="Rohit Muchlera" subtitle="Club President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
                 <SimpleMediaCard imgSrc={Liam} title="Colton Weaver" subtitle="Vice President" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
                 <SimpleMediaCard imgSrc={Colton} title="Liam Moran" subtitle="Projects Chair" description="Sometimes I will just type and type and d when I do type I just keep typing until I can't stop typing and when I do stop typing it is when I feel like it"/>
               </div>
             </ScrollAnimation>
+            <div className="copyright">
+              <h4 style={{color: "#ffffff"}}>&#169; copyright Jonathan Innis </h4>
+            </div>
           </div>
       </main>
       </div>
