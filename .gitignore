@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Project files
+src/server/config.js
+src/server/google-credentials.json
+
 # Runtime data
 pids
 *.pid
