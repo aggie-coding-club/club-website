@@ -2,19 +2,16 @@ var request = require('request');
 var rp = require('request-promise-native');
 const baseURL = 'https://api.github.com/'
 const {
-    username,
     personal_access_token
 } = require('./config');
+var _clubData;
 
 function getOrganizationMembers() {
     let options = {
         uri: baseURL + 'orgs/aggie-coding-club/members',
         headers: {
-            'User-Agent': 'Request-Promise'
-        },
-        auth: {
-            user: username,
-            token: personal_access_token
+            'User-Agent': 'Request-Promise',
+            'Authorization': 'Bearer ' + personal_access_token
         }
     }
     return rp(options).then((response) => JSON.parse(response));
@@ -24,11 +21,8 @@ function getOrganizationRepos() {
     let options = {
         uri: baseURL + 'orgs/aggie-coding-club/repos',
         headers: {
-            'User-Agent': 'Request-Promise'
-        },
-        auth: {
-            user: username,
-            token: personal_access_token
+            'User-Agent': 'Request-Promise',
+            'Authorization': 'Bearer ' + personal_access_token
         }
     }
     return rp(options).then((response) => JSON.parse(response));
@@ -39,10 +33,7 @@ function getOrganizationTeams() {
         uri: baseURL + 'orgs/aggie-coding-club/teams',
         headers: {
             'User-Agent': 'Request-Promise',
-        },
-        auth: {
-            user: username,
-            token: personal_access_token
+            'Authorization': 'Bearer ' + personal_access_token
         }
     }
     return rp(options).then((response) => JSON.parse(response));
@@ -52,17 +43,14 @@ async function getTeamMembers(id, role) {
     let options = {
         uri: baseURL + 'teams/' + id + '/members' + '?role=' + (role ? role : 'all'),
         headers: {
-            'User-Agent': 'Request-Promise'
-        },
-        auth: {
-            user: username,
-            token: personal_access_token
+            'User-Agent': 'Request-Promise',
+            'Authorization': 'Bearer ' + personal_access_token
         }
     }
     return rp(options).then((response) => JSON.parse(response));
 }
 
-async function getClubData() {
+async function initializeClubData() {
     var clubData = {
         // "members": {},
         // "teams": {},
@@ -114,6 +102,7 @@ async function getClubData() {
         return getOrganizationRepos();
     }).then((repos) => {
         clubData['repos'] = repos;
+        _clubData = clubData;
         return clubData;
     })
 }
@@ -121,5 +110,8 @@ module.exports = {
     getOrganizationMembers,
     getOrganizationRepos,
     getOrganizationTeams,
-    getClubData
+    initializeClubData,
+    getClubData: function () {
+        return _clubData;
+    }
 }

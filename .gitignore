@@ -7,6 +7,7 @@ yarn-error.log*
 
 # Project files
 src/server/config.js
+src/server/google-credentials.js
 
 # Runtime data
 pids
@@ -59,4 +60,3 @@ typings/
 
 # dotenv environment variables file
 .env
-

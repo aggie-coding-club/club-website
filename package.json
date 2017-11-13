@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "github": "^12.0.1",
+    "googleapis": "^22.2.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   }
