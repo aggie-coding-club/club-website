@@ -239,10 +239,10 @@ class App extends Component {
               <h1 style={styles.headerStyle}> where we are </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <div style={{width: "auto", display: "inline-block", fontSize: "1.5vw", color: "#500000"}}>
+              <div style={{width: "auto", display: "inline-block", fontSize: "1.5vw", color: "#500000", paddingTop: "50px"}}>
                 <h1> H.R Bright Building </h1>
-                <h1> Every Tuesday 8PM </h1>
-                <h1> Room #113 </h1>
+                <h2> Every Tuesday 8PM </h2>
+                <h2> Room #113 </h2>
               </div>
               <img alt="Engineering-Map" src={Engineering} style={{float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000"}}/>
             </ScrollAnimation>
