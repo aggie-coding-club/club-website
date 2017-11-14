@@ -8,6 +8,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ComputerIcon from 'material-ui-icons/Computer';
 import TextFormatIcon from 'material-ui-icons/TextFormat';
 import PersonPinIcon from 'material-ui-icons/PersonPin';
+import EmailIcon from 'material-ui-icons/Email';
 import SimpleMediaCard from './SimpleMediaCard.js';
 import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
@@ -18,11 +19,12 @@ import Marcus from './images/marcus.jpg';
 import Marissa from './images/marissa.jpg';
 import Simone from './images/simone.jpg';
 import Material from './images/material.jpg';
-import Material_2 from './images/material_2.png';
 import Engineering from "./images/hrbb.jpg";
 import { Parallax } from 'react-parallax';
-import ACC from './images/ACC-transparent.png';
 import ACC_Banner from './images/acc_banner.png';
+import FaSlack from 'react-icons/lib/fa/slack';
+import FaGithub from 'react-icons/lib/fa/github';
+
 
 
 const styles = {
@@ -82,7 +84,7 @@ class App extends Component {
       <div className="App">
       <main id="page-wrap">
         <div style={{backgroundColor: "#0288D1", height: "100vh"}}>
-          <img src={ACC_Banner} class="banner" alt="acc_logo" style={{position: "absolute", left: "30px", top: "-60px", width: "100px"}}/>
+          <img src={ACC_Banner} class="banner" alt="acc_logo" style={{position: "absolute", left: "30px", top: "-40px", width: "100px"}}/>
           <a href="#" style={{width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none"}} className="signUpBox">
             <h1 className="signUpText" style={{marginLeft: "20px", marginRight: "20px", fontSize: "1em"}}> PROJECT SIGN UPS </h1>
           </a>
@@ -247,26 +249,31 @@ class App extends Component {
               <img alt="Engineering-Map" src={Engineering} style={{float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000"}}/>
             </ScrollAnimation>
           </div>
-          <Parallax bgImage={Material_2} strength={400} style={{backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden"}}>
+          <div style={{backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden"}}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
+              <h1 className="whiteHeader" style={{fontSize: "4.5em", marginTop: "100px"}}> drop us a line </h1>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
-              <div style={{paddingBottom: "100px"}}>
-                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="18" subtitle="Club President"/>
-                <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="18" subtitle="Vice President"/>
-                <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="18" subtitle="Project Management Chair"/>
-                <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="18" subtitle="Workshops Chair"/>
-                <SimpleMediaCard imgSrc={Marcus} firstName="Marcus" lastName="Heinonen" major="Computer Science" classYear="18" subtitle="Events Chair"/>
-                <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="21" subtitle="Recruitment Chair"/>
-                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soira" major="Computer Science" classYear="20" subtitle="Social Chair"/>
-                <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="19" subtitle="Marketing Chair"/>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={100}>
+              <div style={{width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block"}}>
+                <h1 style={{fontSize: "3.5em", fontWeight: 100}}> email </h1>
+                <EmailIcon style={{width: 100, height: 100}}/>
+                <h2 style={{position: "relative", top: "50%"}}> aggiecodingclub@gmail.com </h2>
+              </div>
+              <div style={{width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block"}}>
+                <h1 style={{fontSize: "3.5em", fontWeight:"100"}}> slack </h1>
+                <FaSlack style={{width: 100, height: 100}}/>
+                <h2 style={{position: "relative", top: "50%"}}> aggie-coding-club.slack.com </h2>
+              </div>
+              <div style={{width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block"}}>
+                <h1 style={{fontSize: "3.5em", fontWeight: 100}}>github</h1>
+                <FaGithub style={{width: 100, height: 100}}/>
+                <h2 style={{position: "relative", top: "50%"}}> github.com/aggie-coding-club </h2>
               </div>
             </ScrollAnimation>
             <div className="copyright">
                 <h4 style={{color: "#ffffff"}}>&#169; copyright Jonathan Innis </h4>
             </div>
-          </Parallax>
+          </div>
       </main>
       </div>
     );
