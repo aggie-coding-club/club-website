@@ -78,13 +78,18 @@ class App extends Component {
   showSettings (event) {
     event.preventDefault();
   }
+
+  componentDidMount(){
+    var response = fetch("/github");
+    console.log(response);
+  }
   render() {
 
     return (
       <div className="App">
       <main id="page-wrap">
         <div style={{backgroundColor: "#0288D1", height: "100vh"}}>
-          <img src={ACC_Banner} class="banner" alt="acc_logo" style={{position: "absolute", left: "30px", top: "-40px", width: "100px"}}/>
+          <img src={ACC_Banner} class="banner" alt="acc_logo" style={{position: "absolute", left: "30px", top: "-80px", width: "100px"}}/>
           <a href="#" style={{width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none"}} className="signUpBox">
             <h1 className="signUpText" style={{marginLeft: "20px", marginRight: "20px", fontSize: "1em"}}> PROJECT SIGN UPS </h1>
           </a>
