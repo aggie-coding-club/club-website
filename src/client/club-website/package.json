@@ -21,6 +21,7 @@
     "react-visibility-sensor": "^3.11.0",
     "webfontloader": "^1.6.28"
   },
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
