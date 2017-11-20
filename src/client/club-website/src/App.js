@@ -10,6 +10,7 @@ import TextFormatIcon from 'material-ui-icons/TextFormat';
 import PersonPinIcon from 'material-ui-icons/PersonPin';
 import EmailIcon from 'material-ui-icons/Email';
 import SimpleMediaCard from './SimpleMediaCard.js';
+import ProjectCard from './ProjectCard.js';
 import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
 import Colton from "./images/colton.jpg";
@@ -20,7 +21,7 @@ import Marissa from './images/marissa.jpg';
 import Simone from './images/simone.jpg';
 import Material from './images/material.jpg';
 import Engineering from "./images/hrbb.jpg";
-import { Parallax } from 'react-parallax';
+import {Parallax} from 'react-parallax';
 import ACC_Banner from './images/acc_banner.png';
 import FaSlack from 'react-icons/lib/fa/slack';
 import FaGithub from 'react-icons/lib/fa/github';
@@ -74,23 +75,17 @@ const styles = {
 };
 
 class App extends Component {
-
   showSettings(event) {
     event.preventDefault();
   }
 
-  componentDidMount() {
-    fetch('/github').then((response) => {
-      console.log(response);
-    })
-  }
   render() {
 
     return (
       <div className="App">
         <main id="page-wrap">
           <div style={{ backgroundColor: "#0288D1", height: "100vh" }}>
-            <img src={ACC_Banner} class="banner" alt="acc_logo" style={{ position: "absolute", left: "30px", top: "-80px", width: "100px" }} />
+            <img src={ACC_Banner} className="banner" alt="acc_logo" style={{ position: "absolute", left: "30px", top: "-80px", width: "130px" }} />
             <a href="#" style={{ width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none" }} className="signUpBox">
               <h1 className="signUpText" style={{ marginLeft: "20px", marginRight: "20px", fontSize: "1em" }}> PROJECT SIGN UPS </h1>
             </a>
@@ -255,6 +250,16 @@ class App extends Component {
               <img alt="Engineering-Map" src={Engineering} style={{ float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000" }} />
             </ScrollAnimation>
           </div>
+          <Parallax bgImage={Material} strength={400} style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <h1 className="whiteHeader" style={styles.headerStyle}> what we're building </h1>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
+              <div style={{ paddingBottom: "100px" }}>
+                <ProjectCard style={{display:"inline-block"}}/>
+              </div>
+            </ScrollAnimation>
+          </Parallax>
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={{ fontSize: "4.5em", marginTop: "100px" }}> drop us a line </h1>
