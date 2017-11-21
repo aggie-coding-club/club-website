@@ -5,9 +5,6 @@ import Particles from 'react-particles-js';
 import { fadeInUp } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
-import ComputerIcon from 'material-ui-icons/Computer';
-import TextFormatIcon from 'material-ui-icons/TextFormat';
-import PersonPinIcon from 'material-ui-icons/PersonPin';
 import EmailIcon from 'material-ui-icons/Email';
 import SimpleMediaCard from './SimpleMediaCard.js';
 import ProjectCard from './ProjectCard.js';
@@ -25,6 +22,11 @@ import {Parallax} from 'react-parallax';
 import ACC_Banner from './images/acc_banner.png';
 import FaSlack from 'react-icons/lib/fa/slack';
 import FaGithub from 'react-icons/lib/fa/github';
+import FaGoogle from 'react-icons/lib/fa/google';
+import FaCheck from 'react-icons/lib/fa/puzzle-piece';
+import FaWrench from 'react-icons/lib/fa/wrench';
+import FaComments from 'react-icons/lib/fa/comments';
+import Chip from 'material-ui/Chip';
 
 
 
@@ -57,21 +59,59 @@ const styles = {
     marginTop: "100px",
     marginBottom: "100px"
   },
+  introHeaderStyle: {
+    fontColor: "#ffffff",
+    fontSize: "4.5em",
+    marginTop: "100px",
+  },
   linkStyle: {
     margin: "10px",
     color: "#ffffff",
     textDecoration: "none"
   },
   largeIcon: {
-    width: 120,
-    height: 120,
-    marginLeft: "40px",
-    marginRight: "40px",
+    width: 100,
+    height: 100,
+    marginLeft: 40,
+    marginRight: 40,
+    verticalAlign: "top",
   },
   card: {
     maxWidth: 345,
     height: 245,
   },
+  column:{
+    marginTop: 50,
+    width: "500px",
+    display: "inline-block",
+  },
+  topChip:{
+    position: "relative",
+    fontFamily: "Raleway",
+    left: "50%",
+    transform: "translateX(-50%)",
+    marginBottom: 10,
+    backgroundColor: "#0288D1",
+    color: "#ffffff",
+  },
+  middleChip:{
+    position: "relative",
+    fontFamily: "Raleway",
+    left: "50%",
+    transform: "translateX(-50%)",
+    marginBottom: 10,
+    backgroundColor: "#03a9f4",
+    color: "#ffffff",
+  },
+  bottomChip:{
+    position: "relative",
+    fontFamily: "Raleway",
+    left: "50%",
+    transform: "translateX(-50%)",
+    marginBottom: 10,
+    backgroundColor: "#29b6f6",
+    color: "#ffffff",
+  }
 };
 
 class App extends Component {
@@ -210,14 +250,34 @@ class App extends Component {
           </div>
           <div style={{ position: "relative", paddingBottom: "200px", alignItems: "center" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 style={styles.headerStyle}> what we do </h1>
+              <h1 style={styles.introHeaderStyle}> what we do </h1>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={300}>
-              <ComputerIcon style={styles.largeIcon} />
-              <TextFormatIcon style={styles.largeIcon} />
-              <PersonPinIcon style={styles.largeIcon} />
-              <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1" }}> All you need is a computer, a text editor, and yourself. </p>
-              <p style={{ fontSize: "1em", fontWeight: 500, maxWidth: "700px", left: "50%", transform: "translateX(-50%)", position: "relative" }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. </p>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1" }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
+              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "800px", left: "50%", transform: "translateX(-50%)", position: "relative" }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <div style={styles.column}>
+                <FaCheck style={styles.largeIcon}/>
+                <h1 style={{fontSize: "2.5em"}}> Projects </h1>
+                <Chip style={styles.topChip} label="Work on a 3-5 person team"/>
+                <Chip style={styles.middleChip} label="Build an app, make a webiste, or even design a game"/>
+                <Chip style={styles.bottomChip} label="Gain experience with new languages and frameworks"/>
+              </div>
+              <div style={styles.column}>
+                <FaWrench style={styles.largeIcon}/>
+                <h1 style={{fontSize: "2.5em"}}> Workshops </h1>
+                <Chip style={styles.topChip} label="Learn new techologies from club members"/>
+                <Chip style={styles.middleChip} label="Get exposed to coding concepts and Github version-control"/>
+                <Chip style={styles.bottomChip} label="Acquire resume help and internship interview experience"/>
+              </div>
+              <div style={styles.column}>
+                <FaComments style={styles.largeIcon}/>
+                <h1 style={{fontSize: "2.5em"}}> Company Talks </h1>
+                <Chip style={styles.topChip} label="Network with some of the top tech companies"/>
+                <Chip style={styles.middleChip} label="Learn what managers want to hear in job interviews"/>
+                <Chip style={styles.bottomChip} label="Talk with professional who have experience in the industry"/>
+              </div>
             </ScrollAnimation>
           </div>
           <Parallax bgImage={Material} strength={400} style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden" }}>
@@ -266,19 +326,24 @@ class App extends Component {
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={100}>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3.5em", fontWeight: 100 }}> email </h1>
-                <EmailIcon style={{ width: 100, height: 100 }} />
-                <h2 style={{ position: "relative", top: "50%" }}> aggiecodingclub@gmail.com </h2>
+                <h1 style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
+                <EmailIcon style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3.5em", fontWeight: "100" }}> slack </h1>
-                <FaSlack style={{ width: 100, height: 100 }} />
-                <h2 style={{ position: "relative", top: "50%" }}> aggie-coding-club.slack.com </h2>
+                <h1 style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
+                <FaSlack style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3.5em", fontWeight: 100 }}>github</h1>
-                <FaGithub style={{ width: 100, height: 100 }} />
-                <h2 style={{ position: "relative", top: "50%" }}> github.com/aggie-coding-club </h2>
+                <h1 style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
+                <FaGithub style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
+              </div>
+              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
+                <h1 style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
+                <FaGoogle style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
               </div>
             </ScrollAnimation>
             <div className="copyright">

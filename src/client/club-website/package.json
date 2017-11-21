@@ -5,7 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "animate.css": "^3.5.2",
-    "material-ui": "^1.0.0-beta.18",
+    "material-ui": "^1.0.0-beta.21",
     "material-ui-icons": "^1.0.0-beta.17",
     "particles.js": "^2.0.0",
     "radium": "^0.19.5",
