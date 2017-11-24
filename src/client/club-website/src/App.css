@@ -242,3 +242,19 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .whiteHeader{
   color: white;
 }
+
+.officer_background{
+  background: url(images/material_3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.projects_background{
+  background: url(images/material_2.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

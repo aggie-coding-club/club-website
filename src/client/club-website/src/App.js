@@ -16,9 +16,7 @@ import William from './images/william.jpg';
 import Marcus from './images/marcus.jpg';
 import Marissa from './images/marissa.jpg';
 import Simone from './images/simone.jpg';
-import Material from './images/material.jpg';
 import Engineering from "./images/hrbb.jpg";
-import {Parallax} from 'react-parallax';
 import ACC_Banner from './images/acc_banner.png';
 import FaSlack from 'react-icons/lib/fa/slack';
 import FaGithub from 'react-icons/lib/fa/github';
@@ -57,7 +55,7 @@ const styles = {
     fontColor: "#ffffff",
     fontSize: "4.5em",
     marginTop: "100px",
-    marginBottom: "100px"
+    marginBottom: "50px"
   },
   introHeaderStyle: {
     fontColor: "#ffffff",
@@ -248,7 +246,7 @@ class App extends Component {
               }}
             />
           </div>
-          <div style={{ position: "relative", paddingBottom: "200px", alignItems: "center" }}>
+          <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.introHeaderStyle}> what we do </h1>
             </ScrollAnimation>
@@ -280,7 +278,7 @@ class App extends Component {
               </div>
             </ScrollAnimation>
           </div>
-          <Parallax bgImage={Material} strength={400} style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden" }}>
+          <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
             </ScrollAnimation>
@@ -296,7 +294,7 @@ class App extends Component {
                 <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="19" subtitle="Marketing Chair" />
               </div>
             </ScrollAnimation>
-          </Parallax>
+          </div>
           <div style={{ backgroundColor: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> where we are </h1>
@@ -310,7 +308,7 @@ class App extends Component {
               <img alt="Engineering-Map" src={Engineering} style={{ float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000" }} />
             </ScrollAnimation>
           </div>
-          <Parallax bgImage={Material} strength={400} style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
+          <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> what we're building </h1>
             </ScrollAnimation>
@@ -319,7 +317,34 @@ class App extends Component {
                 <ProjectCard style={{display:"inline-block"}}/>
               </div>
             </ScrollAnimation>
-          </Parallax>
+          </div>
+          <div style={{ backgroundColor: "#ffffff", color: "#0288D1", overflowY: "hidden" }}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <h1 style={{ fontSize: "4.5em", marginTop: "100px"}}> join us at an event </h1>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={100}>
+              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
+                <h1 style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
+                <EmailIcon style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
+              </div>
+              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
+                <h1 style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
+                <FaSlack style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
+              </div>
+              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
+                <h1 style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
+                <FaGithub style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
+              </div>
+              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
+                <h1 style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
+                <FaGoogle style={{ width: 90, height: 90 }} />
+                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
+              </div>
+            </ScrollAnimation>
+          </div>
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={{ fontSize: "4.5em", marginTop: "100px" }}> drop us a line </h1>
