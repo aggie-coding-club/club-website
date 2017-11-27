@@ -8,7 +8,7 @@ function SimpleMediaCard(props) {
       <h1 className="firstName" style={{textAlign: "left"}}>{props.firstName}</h1>
       <h1 className="lastName" style={{textAlign: "left"}}>{props.lastName}</h1>
       <h2 className="animate-text">{props.subtitle}</h2>
-      <h3 className="animate-text">{props.major} '{props.classYear}</h3>
+      <h3 className="animate-text">{props.major} {props.classYear}</h3>
       </div>
       </div>
   );

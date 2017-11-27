@@ -53,9 +53,9 @@ const styles = {
   },
   headerStyle: {
     fontColor: "#ffffff",
-    fontSize: "4.5em",
+    fontSize: "5em",
     marginTop: "100px",
-    marginBottom: "50px"
+    marginBottom: "75px"
   },
   introHeaderStyle: {
     fontColor: "#ffffff",
@@ -113,8 +113,31 @@ const styles = {
 };
 
 class App extends Component {
+  state = {
+    members: [],
+    teams: [],
+    repos: [],
+  }
+
   showSettings(event) {
     event.preventDefault();
+  }
+
+  attachData(){
+    fetch('/github').then((response) => {
+      return response.json();
+      }).then((json) => {
+      this.setState({members: json.members});
+      this.setState({teams: json.teams});
+      this.setState({repos: json.repos});
+      console.log(json.teams);
+      console.log(json.repos);
+      console.log(json.members);
+    }).catch((error) => {console.log(error)});
+  }
+
+  componentDidMount() {
+    this.attachData();
   }
 
   render() {
@@ -248,7 +271,7 @@ class App extends Component {
           </div>
           <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 style={styles.introHeaderStyle}> what we do </h1>
+              <h1 style={styles.headerStyle}> what we do </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1" }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
@@ -284,14 +307,14 @@ class App extends Component {
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
-                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="18" subtitle="Club President" />
-                <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="18" subtitle="Vice President" />
-                <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="18" subtitle="Project Management Chair" />
-                <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="18" subtitle="Workshops Chair" />
-                <SimpleMediaCard imgSrc={Marcus} firstName="Marcus" lastName="Heinonen" major="Computer Science" classYear="18" subtitle="Events Chair" />
-                <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="21" subtitle="Recruitment Chair" />
-                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soira" major="Computer Science" classYear="20" subtitle="Social Chair" />
-                <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="19" subtitle="Marketing Chair" />
+                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="'18" subtitle="Club President" />
+                <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="'18" subtitle="Vice President" />
+                <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="'18" subtitle="Project Management Chair" />
+                <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="'18" subtitle="Workshops Chair" />
+                <SimpleMediaCard imgSrc={Marcus} firstName="Marcus" lastName="Heinonen" major="Computer Science" classYear="'18" subtitle="Events Chair" />
+                <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="'21" subtitle="Recruitment Chair" />
+                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soira" major="Computer Science" classYear="'20" subtitle="Social Chair" />
+                <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="'19" subtitle="Marketing Chair" />
               </div>
             </ScrollAnimation>
           </div>
@@ -300,12 +323,14 @@ class App extends Component {
               <h1 style={styles.headerStyle}> where we are </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <div style={{ width: "auto", display: "inline-block", fontSize: "1.5vw", color: "#500000", paddingTop: "50px" }}>
-                <h1> H.R Bright Building </h1>
-                <h2> Every Tuesday 8PM </h2>
-                <h2> Room #113 </h2>
+              <div style={{marginBottom: 100}}>
+                <div style={{ position: "relative", width: "600px", display: "inline-block", fontSize: "2em", color: "#500000", margin: 50, top: -25}}>
+                  <h1 style={{marginTop: -10}}> H.R Bright Building </h1>
+                  <h2> Every Tuesday 8PM </h2>
+                  <h2 style={{marginBottom: 0}}> Room #113 </h2>
+                </div>
+                <img alt="Engineering-Map" src={Engineering} style={{position: "relative", display: "inline-block", width: "700px", border: "2px solid #000000"}} />
               </div>
-              <img alt="Engineering-Map" src={Engineering} style={{ float: "right", display: "inline-block", width: "50%", marginRight: "5%", marginBottom: "150px", border: "2px solid #000000" }} />
             </ScrollAnimation>
           </div>
           <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
@@ -314,34 +339,9 @@ class App extends Component {
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
-                <ProjectCard style={{display:"inline-block"}}/>
-              </div>
-            </ScrollAnimation>
-          </div>
-          <div style={{ backgroundColor: "#ffffff", color: "#0288D1", overflowY: "hidden" }}>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 style={{ fontSize: "4.5em", marginTop: "100px"}}> join us at an event </h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={100}>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
-                <EmailIcon style={{ width: 90, height: 90 }} />
-                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
-              </div>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
-                <FaSlack style={{ width: 90, height: 90 }} />
-                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
-              </div>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
-                <FaGithub style={{ width: 90, height: 90 }} />
-                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
-              </div>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                <h1 style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
-                <FaGoogle style={{ width: 90, height: 90 }} />
-                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
+                {this.state.repos.map(repos=>
+                  <ProjectCard key={repos.id} title={repos.name} language={repos.language} description={repos.description} projectManager="Gabriel Britain" githubLink={repos.html_url}/>
+                )}
               </div>
             </ScrollAnimation>
           </div>
@@ -349,7 +349,7 @@ class App extends Component {
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={{ fontSize: "4.5em", marginTop: "100px" }}> drop us a line </h1>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={100}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
                 <EmailIcon style={{ width: 90, height: 90 }} />
