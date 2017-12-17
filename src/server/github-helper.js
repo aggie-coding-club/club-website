@@ -50,6 +50,28 @@ async function getTeamMembers(id, role) {
     return rp(options).then((response) => JSON.parse(response));
 }
 
+async function getTeamRepos(teamId) {
+    let options = {
+        uri: baseURL + 'teams/' + teamId + '/repos',
+        headers: {
+            'User-Agent': 'Request-Promise',
+            'Authorization': 'Bearer ' + personal_access_token
+        }
+    }
+    return rp(options).then((response) => JSON.parse(response));
+}
+
+async function followURL(url) {
+    let options = {
+        uri: url,
+        headers: {
+            'User-Agent': 'Request-Promise',
+            'Authorization': 'Bearer ' + personal_access_token
+        }
+    }
+    return rp(options).then((response) => JSON.parse(response));
+}
+
 async function initializeClubData() {
     var clubData = {
         // "members": {},
@@ -60,6 +82,7 @@ async function initializeClubData() {
     };
     let cleanedUpTeams = [];
     let resolvedTeams = [];
+    let teamRepos = [];
     return getOrganizationMembers().then((members) => {
         let cleanedUpMembers = [];
         for (let member of members) {
@@ -72,13 +95,20 @@ async function initializeClubData() {
         clubData['members'] = cleanedUpMembers;
         return getOrganizationTeams();
     }).then((teams) => {
-        let cleanedUpTeams = [];
         resolvedTeams = teams;
-        let promises = [];
+        let maintainerPromises = [];
         for (let i = 0; i < teams.length; i++) {
-            promises.push(getTeamMembers(teams[i]['id'], 'maintainer'))
+            maintainerPromises.push(followURL(teams[i]['repositories_url']).then((repoInfo) => {
+                repoURLs = []
+                for (repo of repoInfo) {
+                    if (!repo['private'])
+                        repoURLs.push(repo['html_url']);
+                }
+                resolvedTeams[i]['repoURLs'] = repoURLs;
+                return getTeamMembers(teams[i]['id'], 'maintainer');
+            }));
         }
-        return Promise.all(promises);
+        return Promise.all(maintainerPromises);
     }).then((members) => {
         for (let i = 0; i < members.length; i++) {
             members[i] = members[i].filter((member) => member['login'] !== 'aggiecodingclub');
@@ -88,13 +118,13 @@ async function initializeClubData() {
                     id: member['id'],
                     avatar_url: member['avatar_url'],
                     html_url: member['html_url']
-
                 }
             }
             cleanedUpTeams.push({
                 name: resolvedTeams[i].name,
                 id: resolvedTeams[i].id,
                 description: resolvedTeams[i].description,
+                repoURLs: resolvedTeams[i].repoURLs,
                 "projectManager": members[i]
             })
         }
