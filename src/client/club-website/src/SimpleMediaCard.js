@@ -1,15 +1,14 @@
-// @flow weak
-
 import React from 'react';
 
 function SimpleMediaCard(props) {
   return (
-    <div class="tile">
+    <div className="tile">
       <img src={props.imgSrc} alt={props.alt}/>
-      <div class="text">
-      <h1>{props.title}</h1>
-      <h2 class="animate-text">{props.subtitle}</h2>
-      <p class="animate-text">{props.description}</p>
+      <div className="text">
+      <h1 className="firstName" style={{textAlign: "left"}}>{props.firstName}</h1>
+      <h1 className="lastName" style={{textAlign: "left"}}>{props.lastName}</h1>
+      <h2 className="animate-text">{props.subtitle}</h2>
+      <h3 className="animate-text">{props.major} {props.classYear}</h3>
       </div>
       </div>
   );
