@@ -40,7 +40,7 @@ const styles = {
     color: "#ffffff",
   },
   titleText: {
-    fontSize: "6em",
+    fontSize: "6.5em",
     animation: 'x 1.5s',
     animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
     margin: 0,
@@ -56,11 +56,6 @@ const styles = {
     fontSize: "5em",
     marginTop: "100px",
     marginBottom: "75px"
-  },
-  introHeaderStyle: {
-    fontColor: "#ffffff",
-    fontSize: "4.5em",
-    marginTop: "100px",
   },
   linkStyle: {
     margin: "10px",
@@ -274,8 +269,8 @@ class App extends Component {
               <h1 style={styles.headerStyle}> what we do </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1" }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
-              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "800px", left: "50%", transform: "translateX(-50%)", position: "relative" }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
+              <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1", marginLeft: 50, marginRight: 50 }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
+              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "900px", left: "50%", transform: "translateX(-50%)", position: "relative", paddingLeft: 50, paddingRight: 50 }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <div style={styles.column}>
@@ -335,12 +330,12 @@ class App extends Component {
           </div>
           <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={styles.headerStyle}> what we're building </h1>
+              <h1 className="whiteHeader" style={styles.headerStyle}> what we''re building </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
                 {this.state.repos.map(repos=>
-                  <ProjectCard key={repos.id} title={repos.name} language={repos.language} description={repos.description} projectManager="Gabriel Britain" githubLink={repos.html_url}/>
+                  <ProjectCard key={repos.id} members="Gabriel Britain, Jonathan Innis, Gabriel Britain, Jonathan Innis" title={repos.name} language={repos.language} description={repos.description} projectManager="Gabriel Britain" githubLink={repos.html_url}/>
                 )}
               </div>
             </ScrollAnimation>
