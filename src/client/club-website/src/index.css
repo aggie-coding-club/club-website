@@ -13,3 +13,8 @@ body {
   font-family: Raleway;
   overflow-x: hidden;
 }
+
+.chip{
+  font-family: Raleway;
+  font-size: 2em;
+}
