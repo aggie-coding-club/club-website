@@ -13,12 +13,14 @@ class ProjectCard extends Component{
     title: '',
     image: '',
     githubLink: '',
+    members: '',
   }
   componentWillMount(){
     this.setState({projectManager : this.props.projectManager});
     this.setState({description : this.props.description});
     this.setState({title : this.props.title});
     this.setState({githubLink : this.props.githubLink});
+    this.setState({members: this.props.members});
     this.establishLanguage();
   }
   establishLanguage(){
@@ -35,11 +37,10 @@ class ProjectCard extends Component{
           <div className="chevron"></div>
           <h1 style={{position: "relative", left: 5, top: 0, margin: 0, width: 450, fontWeight: "1000", textAlign: "left", padding: "10px", zIndex: 2, opacity: 1, fontSize: "2.5em"}}>{this.state.title}</h1>
         </div>
-        <h5 style={{position:"absolute", left: 5, fontWeight: 300, margin:0, padding: 10, fontSize: "1.5em",textAlign: "left", width: "auto"}}>Project Manager: </h5>
-        <h5 style={{position: "relative", left: 210, fontSize: "1.5em", margin:0, paddingTop: 10, paddingBottom: 10, textAlign: "left"}}>{this.state.projectManager}</h5>
+        <h5 style={{position:"relative", left: 5, fontWeight: 300, margin:0, padding: 10, fontSize: "1.5em",textAlign: "left", width: "auto"}}><b>Project Manager:</b> {this.state.projectManager}</h5>
         <p style={{position: "relative", fontWeight: 100, fontSize: "1em", paddingLeft: 15, paddingRight: 15, textAlign: "left", margin: 0}}>{this.state.description}</p>
-        <p></p>
-        <img alt="language_image" style={{position: "absolute", left: 10, top: 240, width: 50, height: 50}} src={this.state.image}/>
+        <p style={{position: "relative", textAlign: "left", paddingLeft: 15, paddingRight: 15, zIndex: 4}}><b>Contributors:</b> {this.state.members}</p>
+        <img alt="language_image" style={{position: "absolute", left: 10, top: 240, width: 50, height: 50, zIndex: 1}} src={this.state.image}/>
         <a target="_blank" href={this.state.githubLink} style={{color: "#333e44", textDecoration: "none"}}><FaGithub style={{position: "absolute", width: 50, height: 50, right: 10, bottom: 10}}/></a>
       </div>
     );
