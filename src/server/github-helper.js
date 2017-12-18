@@ -74,67 +74,64 @@ async function followURL(url) {
 
 async function initializeClubData() {
     var clubData = {
-        // "members": {},
         // "teams": {},
-        // "projectManagers": {},
         // "officers": {},
         // "repos": {}
     };
-    let cleanedUpTeams = [];
-    let resolvedTeams = [];
-    let teamRepos = [];
-    return getOrganizationMembers().then((members) => {
-        let cleanedUpMembers = [];
-        for (let member of members) {
-            cleanedUpMembers.push({
-                login: member['login'],
-                avatar_url: member['avatar_url'],
-                id: member['html_url'],
-            })
+    teams = await getOrganizationTeams();
+    for (let i = 0; i < teams.length; i++)  {
+        repoInfo = await followURL(teams[i]['repositories_url']);
+        repoData = []
+        for (let repo of repoInfo)  {
+            if (!repo['private'])   {
+                languageInformation = await followURL(repo['languages_url']);
+                repoData.push({
+                    name: repo['name'],
+                    html_url: repo['html_url'],
+                    languages: languageInformation,
+                    description: repo['description'],
+                    stars: repo['stargazers_count'],
+                    forks: repo['forks_count'],
+                    watchers: repo['watchers']
+                });
+            }
         }
-        clubData['members'] = cleanedUpMembers;
-        return getOrganizationTeams();
-    }).then((teams) => {
-        resolvedTeams = teams;
-        let maintainerPromises = [];
-        for (let i = 0; i < teams.length; i++) {
-            maintainerPromises.push(followURL(teams[i]['repositories_url']).then((repoInfo) => {
-                repoURLs = []
-                for (repo of repoInfo) {
-                    if (!repo['private'])
-                        repoURLs.push(repo['html_url']);
-                }
-                resolvedTeams[i]['repoURLs'] = repoURLs;
-                return getTeamMembers(teams[i]['id'], 'maintainer');
-            }));
+        teams[i]['repos'] = repoData;
+        let maintainers = await getTeamMembers(teams[i]['id'], 'maintainer');
+        maintainers = maintainers.filter((maintainer) => maintainer['login'] !== 'aggiecodingclub');
+        for (let j = 0; j < maintainers.length; j++)    {
+            maintainers[j] = {
+                login: maintainers[j]['login'],
+                id: maintainers[j]['id'],
+                avatar_url: maintainers[j]['avatar_url'],
+                html_url: maintainers[j]['html_url']
+            }
         }
-        return Promise.all(maintainerPromises);
-    }).then((members) => {
-        for (let i = 0; i < members.length; i++) {
-            members[i] = members[i].filter((member) => member['login'] !== 'aggiecodingclub');
-            for (let member in members[i]) {
-                member = {
-                    login: member['login'],
-                    id: member['id'],
-                    avatar_url: member['avatar_url'],
-                    html_url: member['html_url']
+        let members = await getTeamMembers(teams[i]['id']);
+        members = members.filter((member) => {
+            if (member['login'] === 'aggiecodingclub') return false;
+            for (let maintainer of maintainers) {
+                if (maintainer['login'] === member['login'])    {
+                    return false;
                 }
             }
-            cleanedUpTeams.push({
-                name: resolvedTeams[i].name,
-                id: resolvedTeams[i].id,
-                description: resolvedTeams[i].description,
-                repoURLs: resolvedTeams[i].repoURLs,
-                "projectManager": members[i]
-            })
+            return true;
+        });
+        teams[i] = {
+            name: teams[i].name,
+            id: teams[i].id,
+            description: teams[i].description,
+            repos: teams[i]['repos'],
+            projectManagers: maintainers,
+            'members': members
         }
-        clubData['teams'] = cleanedUpTeams
-        return getOrganizationRepos();
-    }).then((repos) => {
-        clubData['repos'] = repos;
-        _clubData = clubData;
-        return clubData;
-    })
+    }
+    let organizationRepos = await getOrganizationRepos();
+    clubData['teams'] = teams;
+    clubData['repos'] = organizationRepos;
+    _clubData = clubData;
+    return clubData;
+    console.log(JSON.stringify(teams, null, 3));
 }
 module.exports = {
     getOrganizationMembers,
