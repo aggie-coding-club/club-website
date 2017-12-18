@@ -1,4 +1,4 @@
-module.exports = function(req, res) {
-    console.log('req.body =', req.body);
-    res.sendStatus(200);
+module.exports = function (req, res) {
+    var githubHelper = require('../github-helper');
+    res.json(githubHelper.getClubData());
 }
