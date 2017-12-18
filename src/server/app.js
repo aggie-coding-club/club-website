@@ -9,4 +9,4 @@ github.initializeClubData().then((clubData) => {
         app.use('/', require('./routes')(calendar, clubData));
     });
 });
-app.listen(3000);
+app.listen(3001);
