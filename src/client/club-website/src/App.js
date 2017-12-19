@@ -7,6 +7,7 @@ import Radium, { StyleRoot } from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
 import EmailIcon from 'material-ui-icons/Email';
 import SimpleMediaCard from './SimpleMediaCard.js';
+import EventCard from './EventCard.js';
 import ProjectCard from './ProjectCard.js';
 import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
@@ -334,15 +335,22 @@ class App extends Component {
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
-                {this.state.repos.map(repos=>
-                  <ProjectCard key={repos.id} members="Gabriel Britain, Jonathan Innis, Gabriel Britain, Jonathan Innis" title={repos.name} language={repos.language} description={repos.description} projectManager="Gabriel Britain" githubLink={repos.html_url}/>
+                {this.state.teams.map(team=>
+                  <ProjectCard key={team.id} members="Gabriel Britain, Jonathan Innis, Gabriel Britain, Jonathan Innis" title={team.name} description={team.description} projectManager={team.projectManager} githubLink={team.repoURLs}/>
                 )}
               </div>
             </ScrollAnimation>
           </div>
+          <div style={{position: "relative", paddingBottom: "100px"}}>
+            <h1 style={styles.headerStyle}> what''s coming up next </h1>
+            <EventCard />
+            <EventCard />
+            <EventCard />
+            <EventCard />
+          </div>
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={{ fontSize: "4.5em", marginTop: "100px" }}> drop us a line </h1>
+              <h1 className="whiteHeader" style={{marginTop: "100px" }}> drop us a line </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
