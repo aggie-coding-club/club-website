@@ -16,10 +16,13 @@ class ProjectCard extends Component{
     members: '',
   }
   componentWillMount(){
-    this.setState({projectManager : this.props.projectManager});
+    if (this.props.projectManager.length != 0){
+      this.setState({projectManager: this.props.projectManager[0].login})
+    }
+    else this.setState({projectManager: 'Rohit Muchlera'});
     this.setState({description : this.props.description});
     this.setState({title : this.props.title});
-    this.setState({githubLink : this.props.githubLink});
+    this.setState({githubLink : this.props.githubLink[0]});
     this.setState({members: this.props.members});
     this.establishLanguage();
   }
@@ -35,7 +38,7 @@ class ProjectCard extends Component{
       <div className="projectTile" style={{backgroundColor: "#ffffff", color: "#333e44", margin: 20, width: 400, height: 300}}>
         <div style={{position: "relative", left: 0, top: 0, width: 500, height: "auto", borderBottom: "2px solid #333e44" , margin: 0}}>
           <div className="chevron"></div>
-          <h1 style={{position: "relative", left: 5, top: 0, margin: 0, width: 450, fontWeight: "1000", textAlign: "left", padding: "10px", zIndex: 2, opacity: 1, fontSize: "2.5em"}}>{this.state.title}</h1>
+          <h1 style={{position: "relative", left: 5, top: 0, margin: 0, width: 400, fontWeight: "1000", textAlign: "left", padding: "10px", zIndex: 2, opacity: 1, fontSize: "2.25em"}}>{this.state.title}</h1>
         </div>
         <h5 style={{position:"relative", left: 5, fontWeight: 300, margin:0, padding: 10, fontSize: "1.5em",textAlign: "left", width: "auto"}}><b>Project Manager:</b> {this.state.projectManager}</h5>
         <p style={{position: "relative", fontWeight: 100, fontSize: "1em", paddingLeft: 15, paddingRight: 15, textAlign: "left", margin: 0}}>{this.state.description}</p>
