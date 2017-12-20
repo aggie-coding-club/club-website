@@ -131,7 +131,6 @@ async function initializeClubData() {
     clubData['repos'] = organizationRepos;
     _clubData = clubData;
     return clubData;
-    console.log(JSON.stringify(teams, null, 3));
 }
 module.exports = {
     getOrganizationMembers,
