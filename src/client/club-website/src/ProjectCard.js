@@ -24,6 +24,7 @@ class ProjectCard extends Component{
         this.setState({projectManager: this.props.projectManager[0].login})
       }
       else this.setState({projectManager: 'Rohit Muchlera'});
+      console.log(repo);
       if (this.props.repo.length !== 0){
         this.setState({githubLink: this.props.repo[0].html_url});
         this.setState({description: this.props.repo[0].description});
