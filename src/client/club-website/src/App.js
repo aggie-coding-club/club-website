@@ -123,12 +123,10 @@ class App extends Component {
     fetch('/github').then((response) => {
       return response.json();
       }).then((json) => {
-      this.setState({members: json.members});
       this.setState({teams: json.teams});
       this.setState({repos: json.repos});
       console.log(json.teams);
       console.log(json.repos);
-      console.log(json.members);
     }).catch((error) => {console.log(error)});
   }
 
@@ -336,7 +334,7 @@ class App extends Component {
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
                 {this.state.teams.map(team=>
-                  <ProjectCard key={team.id} members="Gabriel Britain, Jonathan Innis, Gabriel Britain, Jonathan Innis" title={team.name} description={team.description} projectManager={team.projectManager} githubLink={team.repoURLs}/>
+                  <ProjectCard key={team.id} members="Gabriel Britain, Jonathan Innis, Gabriel Britain, Jonathan Innis" title={team.name} repo={team.repos} members={team.members} projectManager={team.projectManagers}/>
                 )}
               </div>
             </ScrollAnimation>
