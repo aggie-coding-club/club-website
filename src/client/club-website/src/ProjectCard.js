@@ -18,13 +18,11 @@ class ProjectCard extends Component{
   }
   componentWillMount(){
     try{
-      console.log(this.props.members);
       this.setState({members: this.props.members});
       if (this.props.projectManager.length !== 0){
         this.setState({projectManager: this.props.projectManager[0].login})
       }
       else this.setState({projectManager: 'Rohit Muchlera'});
-      console.log(repo);
       if (this.props.repo.length !== 0){
         this.setState({githubLink: this.props.repo[0].html_url});
         this.setState({description: this.props.repo[0].description});
@@ -41,6 +39,11 @@ class ProjectCard extends Component{
       console.log(e);
     }
   }
+
+  componentDidMount(){
+    console.log(this.state.githubLink);
+  }
+
   establishLanguage(){
     if (this.props.language === 'JavaScript') this.setState({image : javascriptImage});
     else if (this.props.language === 'Python') this.setState({image : pythonImage});
@@ -50,7 +53,7 @@ class ProjectCard extends Component{
   }
 
   handleChipClick = (url) => {
-    console.log(url);
+    //console.log(url);
   }
 
   render(){
