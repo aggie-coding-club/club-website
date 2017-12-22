@@ -291,7 +291,7 @@ class App extends Component {
                 <h1 style={{fontSize: "2.5em"}}> Company Talks </h1>
                 <Chip style={styles.topChip} label="Network with some of the top tech companies"/>
                 <Chip style={styles.middleChip} label="Learn what managers want to hear in job interviews"/>
-                <Chip style={styles.bottomChip} label="Talk with professional who have experience in the industry"/>
+                <Chip style={styles.bottomChip} label="Talk with professionals who have experience in the industry"/>
               </div>
             </ScrollAnimation>
           </div>
@@ -341,39 +341,37 @@ class App extends Component {
           </div>
           <div style={{position: "relative", paddingBottom: "100px"}}>
             <h1 style={styles.headerStyle}> what''s coming up next </h1>
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
           </div>
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={200}>
               <h1 className="whiteHeader" style={{marginTop: "100px" }}> drop us a line </h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
-                <EmailIcon style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="mailto:aggiecodingclub@gmail.com"><EmailIcon style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
-                <FaSlack style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="https://aggie-coding-club.slack.com"><FaSlack style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
-                <FaGithub style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="https://github.com/aggie-coding-club"><FaGithub style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
-                <FaGoogle style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="https://tinyurl.com/ydhotylu"><FaGoogle style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
               </div>
             </ScrollAnimation>
             <div className="copyright">
-              <h4 style={{ color: "#ffffff" }}>&#169; copyright Jonathan Innis </h4>
+              <h4 style={{ color: "#ffffff", fontSize: "0.75em" }}>&#169; 2017 Jonathan Innis | Gabriel Britain </h4>
             </div>
           </div>
         </main>
