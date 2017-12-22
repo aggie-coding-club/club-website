@@ -102,11 +102,10 @@
 .tile h3{
   position: absolute;
   text-align: left;
-  font-style: italic;
   left: 10px;
   margin: 0;
-  bottom: 5px;
-  font-size: 1em;
+  top: 5px;
+  font-size: 0.8em;
   font-weight: 100;
   width: 300px;
   transform: translateY(200px);

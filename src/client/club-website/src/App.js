@@ -337,7 +337,7 @@ class App extends Component {
           {/*Projects Info*/}
           <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={styles.headerStyle}> what we''re building </h1>
+              <h1 className="whiteHeader" style={styles.headerStyle}> what we&#39;re building </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
@@ -350,7 +350,7 @@ class App extends Component {
 
           {/*Events */}
           <div style={{position: "relative", paddingBottom: "100px"}}>
-            <h1 style={styles.headerStyle}> what''s coming up next </h1>
+            <h1 style={styles.headerStyle}> what&#39;s coming up next </h1>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
