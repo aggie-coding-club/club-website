@@ -263,6 +263,8 @@ class App extends Component {
               }}
             />
           </div>
+
+          {/*Basic/Background Info*/}
           <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> what we do </h1>
@@ -295,6 +297,8 @@ class App extends Component {
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Officer Info*/}
           <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
@@ -312,6 +316,8 @@ class App extends Component {
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Meeting Location Info*/}
           <div style={{ backgroundColor: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> where we are </h1>
@@ -321,12 +327,14 @@ class App extends Component {
                 <div style={{ position: "relative", width: "600px", display: "inline-block", fontSize: "2em", color: "#500000", margin: 50, top: -25}}>
                   <h1 style={{marginTop: -10}}> H.R Bright Building </h1>
                   <h2> Every Tuesday 8PM </h2>
-                  <h2 style={{marginBottom: 0}}> Room #113 </h2>
+                  <h2 style={{marginBottom: 0}}> Room 113 </h2>
                 </div>
                 <img alt="Engineering-Map" src={Engineering} style={{position: "relative", display: "inline-block", width: "700px", border: "2px solid #000000"}} />
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Projects Info*/}
           <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> what we''re building </h1>
@@ -339,6 +347,8 @@ class App extends Component {
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Events */}
           <div style={{position: "relative", paddingBottom: "100px"}}>
             <h1 style={styles.headerStyle}> what''s coming up next </h1>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
@@ -346,6 +356,8 @@ class App extends Component {
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
           </div>
+
+          {/*Resource Links*/}
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={200}>
               <h1 className="whiteHeader" style={{marginTop: "100px" }}> drop us a line </h1>
