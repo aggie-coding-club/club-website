@@ -7,6 +7,7 @@ import Radium, { StyleRoot } from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
 import EmailIcon from 'material-ui-icons/Email';
 import SimpleMediaCard from './SimpleMediaCard.js';
+import EventCard from './EventCard.js';
 import ProjectCard from './ProjectCard.js';
 import Rohit from "./images/rohit.jpg";
 import Liam from "./images/liam.jpg";
@@ -40,7 +41,7 @@ const styles = {
     color: "#ffffff",
   },
   titleText: {
-    fontSize: "6em",
+    fontSize: "6.5em",
     animation: 'x 1.5s',
     animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
     margin: 0,
@@ -56,11 +57,6 @@ const styles = {
     fontSize: "5em",
     marginTop: "100px",
     marginBottom: "75px"
-  },
-  introHeaderStyle: {
-    fontColor: "#ffffff",
-    fontSize: "4.5em",
-    marginTop: "100px",
   },
   linkStyle: {
     margin: "10px",
@@ -127,12 +123,10 @@ class App extends Component {
     fetch('/github').then((response) => {
       return response.json();
       }).then((json) => {
-      this.setState({members: json.members});
       this.setState({teams: json.teams});
       this.setState({repos: json.repos});
       console.log(json.teams);
       console.log(json.repos);
-      console.log(json.members);
     }).catch((error) => {console.log(error)});
   }
 
@@ -269,13 +263,15 @@ class App extends Component {
               }}
             />
           </div>
+
+          {/*Basic/Background Info*/}
           <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> what we do </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1" }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
-              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "800px", left: "50%", transform: "translateX(-50%)", position: "relative" }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
+              <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1", marginLeft: 50, marginRight: 50 }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
+              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "900px", left: "50%", transform: "translateX(-50%)", position: "relative", paddingLeft: 50, paddingRight: 50 }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <div style={styles.column}>
@@ -297,10 +293,12 @@ class App extends Component {
                 <h1 style={{fontSize: "2.5em"}}> Company Talks </h1>
                 <Chip style={styles.topChip} label="Network with some of the top tech companies"/>
                 <Chip style={styles.middleChip} label="Learn what managers want to hear in job interviews"/>
-                <Chip style={styles.bottomChip} label="Talk with professional who have experience in the industry"/>
+                <Chip style={styles.bottomChip} label="Talk with professionals who have experience in the industry"/>
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Officer Info*/}
           <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
@@ -318,6 +316,8 @@ class App extends Component {
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Meeting Location Info*/}
           <div style={{ backgroundColor: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> where we are </h1>
@@ -327,52 +327,63 @@ class App extends Component {
                 <div style={{ position: "relative", width: "600px", display: "inline-block", fontSize: "2em", color: "#500000", margin: 50, top: -25}}>
                   <h1 style={{marginTop: -10}}> H.R Bright Building </h1>
                   <h2> Every Tuesday 8PM </h2>
-                  <h2 style={{marginBottom: 0}}> Room #113 </h2>
+                  <h2 style={{marginBottom: 0}}> Room 113 </h2>
                 </div>
                 <img alt="Engineering-Map" src={Engineering} style={{position: "relative", display: "inline-block", width: "700px", border: "2px solid #000000"}} />
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Projects Info*/}
           <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={styles.headerStyle}> what we're building </h1>
+              <h1 className="whiteHeader" style={styles.headerStyle}> what we&#39;re building </h1>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
-                {this.state.repos.map(repos=>
-                  <ProjectCard key={repos.id} title={repos.name} language={repos.language} description={repos.description} projectManager="Gabriel Britain" githubLink={repos.html_url}/>
+                {this.state.teams.map(team=>
+                  <ProjectCard key={team.id} members="Gabriel Britain, Jonathan Innis, Gabriel Britain, Jonathan Innis" title={team.name} repo={team.repos} members={team.members} projectManager={team.projectManagers}/>
                 )}
               </div>
             </ScrollAnimation>
           </div>
+
+          {/*Events */}
+          <div style={{position: "relative", paddingBottom: "100px"}}>
+            <h1 style={styles.headerStyle}> what&#39;s coming up next </h1>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+            <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
+          </div>
+
+          {/*Resource Links*/}
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 className="whiteHeader" style={{ fontSize: "4.5em", marginTop: "100px" }}> drop us a line </h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={200}>
+              <h1 className="whiteHeader" style={{marginTop: "100px" }}> drop us a line </h1>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
-                <EmailIcon style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="mailto:aggiecodingclub@gmail.com"><EmailIcon style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
-                <FaSlack style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="https://aggie-coding-club.slack.com"><FaSlack style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
-                <FaGithub style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="https://github.com/aggie-coding-club"><FaGithub style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
               </div>
               <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
                 <h1 style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
-                <FaGoogle style={{ width: 90, height: 90 }} />
+                <a target="_blank" rel="noopener noreferrer" style={{textDecoration: "none", color: "#ffffff"}} href="https://tinyurl.com/ydhotylu"><FaGoogle style={{ width: 90, height: 90 }} /></a>
                 <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
               </div>
             </ScrollAnimation>
             <div className="copyright">
-              <h4 style={{ color: "#ffffff" }}>&#169; copyright Jonathan Innis </h4>
+              <h4 style={{ color: "#ffffff", fontSize: "0.75em" }}>&#169; 2017 Jonathan Innis | Gabriel Britain </h4>
             </div>
           </div>
         </main>
