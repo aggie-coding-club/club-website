@@ -149,6 +149,7 @@ class App extends Component {
                 <h1 style={styles.titleText}> aggie coding club </h1>
                 <p style={styles.subtitleText}> empowering texas a&m students to code </p>
               </StyleRoot>
+              <hr/>
             </header>
             <Particles
               params={{
@@ -268,12 +269,8 @@ class App extends Component {
           <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> what we do </h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1", marginLeft: 50, marginRight: 50 }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
-              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "900px", left: "50%", transform: "translateX(-50%)", position: "relative", paddingLeft: 50, paddingRight: 50 }}> Here at the Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn''t taken anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+              <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "900px", left: "50%", transform: "translateX(-50%)", position: "relative", paddingLeft: 50, paddingRight: 50 }}> Here at Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn&#39;t take anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
               <div style={styles.column}>
                 <FaCheck style={styles.largeIcon}/>
                 <h1 style={{fontSize: "2.5em"}}> Projects </h1>
@@ -302,8 +299,6 @@ class App extends Component {
           <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 className="whiteHeader" style={styles.headerStyle}> who we are </h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
               <div style={{ paddingBottom: "100px" }}>
                 <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="'18" subtitle="Club President" />
                 <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="'18" subtitle="Vice President" />
@@ -321,15 +316,13 @@ class App extends Component {
           <div style={{ backgroundColor: "#ffffff", overflowY: "hidden" }}>
             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <h1 style={styles.headerStyle}> where we are </h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
               <div style={{marginBottom: 100}}>
-                <div style={{ position: "relative", width: "600px", display: "inline-block", fontSize: "2em", color: "#500000", margin: 50, top: -25}}>
-                  <h1 style={{marginTop: -10}}> H.R Bright Building </h1>
+                <div style={{ position: "relative", width: "600px", display: "inline-block", fontSize: "2em", color: "#500000", margin: 10, top: -45}}>
+                  <h1> H.R Bright Building </h1>
                   <h2> Every Tuesday 8PM </h2>
                   <h2 style={{marginBottom: 0}}> Room 113 </h2>
                 </div>
-                <img alt="Engineering-Map" src={Engineering} style={{position: "relative", display: "inline-block", width: "700px", border: "2px solid #000000"}} />
+                <img alt="Engineering-Map" src={Engineering} style={{position: "relative", display: "inline-block", width: "700px", margin: 10, maxWidth: "90vw", border: "2px solid #000000"}} />
               </div>
             </ScrollAnimation>
           </div>
@@ -347,8 +340,9 @@ class App extends Component {
               </div>
             </ScrollAnimation>
           </div>
+          
 
-          {/*Events */}
+          {/*Events */}{/*
           <div style={{position: "relative", paddingBottom: "100px"}}>
             <h1 style={styles.headerStyle}> what&#39;s coming up next </h1>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
@@ -356,6 +350,7 @@ class App extends Component {
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
             <EventCard title="Facebook Talk" location="HR Bright Building" date="02/28/2017" time="5-7 PM" description="This would be a quick description of what the event is about."/>
           </div>
+          */}
 
           {/*Resource Links*/}
           <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden" }}>
