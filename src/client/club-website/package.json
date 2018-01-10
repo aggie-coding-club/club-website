@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "animate.css": "^3.5.2",
+    "aos": "^2.2.0",
     "jquery": "^3.2.1",
     "jquery.stellar": "github:markdalgleish/stellar.js#v0.6.2",
     "material-ui": "^1.0.0-beta.21",
