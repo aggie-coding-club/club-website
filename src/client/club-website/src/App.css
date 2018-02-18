@@ -237,7 +237,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 .whiteHeader{
   color: white;
-  font-size: 5em;
+  font-size: 4.5em;
 }
 
 .officer_background{
@@ -347,7 +347,8 @@ a.icon-block span {
   position: absolute;
   height: 300px;
   width: 300px;
-  color: #03446A;
+  background: #03446A;
+  color: white;
   align-items: center;
   text-align: center;
   font-size: 60px;
@@ -367,4 +368,94 @@ a.icon-block span {
   top: 50%;
   margin: 0 !important;
   width: 260px;
+}
+
+@media screen and (max-width: 480px) {
+  .acc_header{
+    font-size: 3.5em !important;
+  }
+
+  .subtitle{
+    font-size: 1.5em !important;
+  }
+
+  .tile, .card, .front, .back, .content{
+    height: 250px;
+    width: 250px;
+  }
+
+  .projectTile{
+    width: 250px !important;
+    height: 200px !important;
+  }
+
+  .projectTileOverlay{
+    width: 250px !important;
+  }
+
+  .projectTileTitle{
+    font-size: 1.5em !important;
+    width: 250px !important;
+  }
+
+  .projectTileSubtitle{
+    font-size: 0.8em !important;
+    width: 250px !important;
+  }
+
+  .projectTileChipsContainer{
+    font-size: 0.6em !important;
+    width: 200px !important;
+  }
+
+  .projectTileChips{
+    font-size: 0.6em !important;
+    height: 10px !important;
+  }
+
+  .projectTileDescription{
+    font-size: 0.6em !important;
+    width: 220px !important;
+  }
+
+  .projectTileLanguage{
+    font-size: 0.6em !important;
+    left: 18px !important;
+    bottom: 5px !important;
+  }
+
+  .projectTileMiddot{
+    font-size: 2em !important;
+    bottom: -9px !important;
+  }
+
+  .projectTileGithubLink{
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .contentWidth{
+    width: 210px !important;
+  }
+
+  .signUpText{
+    font-size: 0.8em !important;
+    margin-top: 12px;
+  }
+
+  .columnHeader{
+    font-size: 1.5em !important;
+  }
+
+  .chips{
+    font-size: 0.65em !important;
+  }
+
+  .header{
+    font-size: 3em !important;
+  }
+
+  .infoHeader{
+    font-size: 2em !important;
+  }
 }
