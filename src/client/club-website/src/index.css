@@ -2,7 +2,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
 
-html, div{
+div{
   height: 100%;
   width: 100%;
 }
@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: Raleway;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 .chip{
