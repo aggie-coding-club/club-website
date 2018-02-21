@@ -139,7 +139,6 @@ class App extends Component {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
-
     componentWillMount() {
         this.attachData();
     }
