@@ -31,7 +31,7 @@ const getOrganizationTeams = () => {
 }
 
 const getTeamMembers = (id, role) => {
-    options.uri = `${baseURL}/teams/${id}/members/${id}?role=${role ? role : 'all'}`;
+    options.uri = `${baseURL}/teams/${id}/members?role=${role ? role : 'all'}`;
     return rp(options).then((response) => JSON.parse(response));
 }
 
@@ -112,5 +112,8 @@ module.exports = {
     getOrganizationTeams,
     getTeamMembers,
     getTeamRepos,
-    pullClubData
+    pullClubData,
+    getClubData: () => {
+        return _clubData;
+    }
 };

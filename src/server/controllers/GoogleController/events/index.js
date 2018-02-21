@@ -3,7 +3,7 @@ const google = require('googleapis');
 const calendar = google.calendar('v3');
 const jwtClient = require('../jwtClient');
 
-const pullCalendar = async (callback) => {
+const pullCalendar = (callback) => {
     jwtClient.authorize((err, tokens) => {
         if (err) {
             console.error(err);
@@ -53,5 +53,5 @@ const deleteEvent = (eventId, callback) => {
 }
 
 module.exports = {
-    pullCalendar, addEvent, deleteEvent
+    pullCalendar, insertEvent, deleteEvent
 };
