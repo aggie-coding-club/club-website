@@ -1,12 +1,16 @@
 var app = require('express')();
 var bodyParser = require('body-parser');
-var github = require('./github-helper');
-var googleHelper = require('./google-helper/');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-github.initializeClubData().then((clubData) => {
-    googleHelper.calendarHelper.initCalendar((calendar) => {
-        app.use('/', require('./routes')(calendar, clubData));
+const {GithubController} = require('./controllers');
+const routes = require('./routes');
+
+const init = async () => {
+    await GithubController.pullClubData();
+    app.use('/', routes);
+    app.listen(3001, () => {
+        console.log('Listening on port 3001!');
     });
-});
-app.listen(3001);
+}
+
+init();

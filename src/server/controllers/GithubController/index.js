@@ -1,89 +1,62 @@
-var request = require('request');
-var rp = require('request-promise-native');
-const baseURL = 'https://api.github.com/'
-const {
-    personal_access_token
-} = require('./config');
-var _clubData;
+const request = require('request');
+const rp = require('request-promise');
 
-function getOrganizationMembers() {
-    let options = {
-        uri: baseURL + 'orgs/aggie-coding-club/members',
-        headers: {
-            'User-Agent': 'Request-Promise',
-            'Authorization': 'Bearer ' + personal_access_token
-        }
+const baseURL = 'https://api.github.com';
+const { personal_access_token } = require('../../config');
+
+let _clubData;
+
+
+let options = {
+    uri: baseURL,
+    headers: {
+        'User-Agent': 'Request-Promise',
+        Authorization: `Bearer ${personal_access_token}`
     }
+}
+
+const getOrganizationMemebers = () => {
+    options.uri = `${baseURL}/orgs/aggie-coding-club/members`;
     return rp(options).then((response) => JSON.parse(response));
 }
 
-function getOrganizationRepos() {
-    let options = {
-        uri: baseURL + 'orgs/aggie-coding-club/repos',
-        headers: {
-            'User-Agent': 'Request-Promise',
-            'Authorization': 'Bearer ' + personal_access_token
-        }
-    }
+const getOrganizationRepos = () => {
+    options.uri = `${baseURL}/orgs/aggie-coding-club/repos`;
     return rp(options).then((response) => JSON.parse(response));
 }
 
-function getOrganizationTeams() {
-    let options = {
-        uri: baseURL + 'orgs/aggie-coding-club/teams',
-        headers: {
-            'User-Agent': 'Request-Promise',
-            'Authorization': 'Bearer ' + personal_access_token
-        }
-    }
+const getOrganizationTeams = () => {
+    options.uri = `${baseURL}/orgs/aggie-coding-club/teams`;
     return rp(options).then((response) => JSON.parse(response));
 }
 
-async function getTeamMembers(id, role) {
-    let options = {
-        uri: baseURL + 'teams/' + id + '/members' + '?role=' + (role ? role : 'all'),
-        headers: {
-            'User-Agent': 'Request-Promise',
-            'Authorization': 'Bearer ' + personal_access_token
-        }
-    }
+const getTeamMembers = (id, role) => {
+    options.uri = `${baseURL}/teams/${id}/members?role=${role ? role : 'all'}`;
     return rp(options).then((response) => JSON.parse(response));
 }
 
-async function getTeamRepos(teamId) {
-    let options = {
-        uri: baseURL + 'teams/' + teamId + '/repos',
-        headers: {
-            'User-Agent': 'Request-Promise',
-            'Authorization': 'Bearer ' + personal_access_token
-        }
-    }
+const getTeamRepos = (teamId) => {
+    options.uri = `${baseURL}/teams/${teamId}/repos`;
     return rp(options).then((response) => JSON.parse(response));
 }
 
-async function followURL(url) {
-    let options = {
-        uri: url,
-        headers: {
-            'User-Agent': 'Request-Promise',
-            'Authorization': 'Bearer ' + personal_access_token
-        }
-    }
+const followURL = (url) => {
+    options.uri = url;
     return rp(options).then((response) => JSON.parse(response));
 }
 
-async function initializeClubData() {
-    var clubData = {
+const pullClubData = async () => {
+    let clubData = {
         // "teams": {},
         // "officers": {},
         // "repos": {}
     };
-    teams = await getOrganizationTeams();
-    for (let i = 0; i < teams.length; i++)  {
+    let teams = await getOrganizationTeams();
+    for (let i = 0; i < teams.length; i++) {
         repoInfo = await followURL(teams[i]['repositories_url']);
         repoData = []
-        for (let repo of repoInfo)  {
-            if (!repo['private'])   {
+        for (let repo of repoInfo) {
+            if (!repo['private']) {
                 languageInformation = await followURL(repo['languages_url']);
                 repoData.push({
                     name: repo['name'],
@@ -99,7 +72,7 @@ async function initializeClubData() {
         teams[i]['repos'] = repoData;
         let maintainers = await getTeamMembers(teams[i]['id'], 'maintainer');
         maintainers = maintainers.filter((maintainer) => maintainer['login'] !== 'aggiecodingclub');
-        for (let j = 0; j < maintainers.length; j++)    {
+        for (let j = 0; j < maintainers.length; j++) {
             maintainers[j] = {
                 login: maintainers[j]['login'],
                 id: maintainers[j]['id'],
@@ -111,7 +84,7 @@ async function initializeClubData() {
         members = members.filter((member) => {
             if (member['login'] === 'aggiecodingclub') return false;
             for (let maintainer of maintainers) {
-                if (maintainer['login'] === member['login'])    {
+                if (maintainer['login'] === member['login']) {
                     return false;
                 }
             }
@@ -132,12 +105,15 @@ async function initializeClubData() {
     _clubData = clubData;
     return clubData;
 }
+
 module.exports = {
-    getOrganizationMembers,
+    getOrganizationMemebers,
     getOrganizationRepos,
     getOrganizationTeams,
-    initializeClubData,
-    getClubData: function () {
+    getTeamMembers,
+    getTeamRepos,
+    pullClubData,
+    getClubData: () => {
         return _clubData;
     }
-}
+};
