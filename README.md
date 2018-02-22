@@ -5,3 +5,5 @@ A complete overhaul and redesign of the current state of the Aggie Coding Club W
 Jonathan Innis
 
 Gabriel Britain
+
+Davis Kirchhofer
