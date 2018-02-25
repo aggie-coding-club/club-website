@@ -214,7 +214,7 @@ class App extends Component {
                     ]}
                 />
                 <main id="page-wrap">
-                    <div style={{ backgroundColor: "#000", height: "100vh" }}>
+                    <div style={{ backgroundColor: "#0288D1", height: "100vh" }}>
                         <img src={ACC_Banner} className="banner" alt="acc_logo" style={{ position: "absolute", left: "30px", top: 0, minWidth: 80, width: "10%" }} />
                         <a href="#" style={{ width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none" }} className="signUpBox">
                             <h1 className="signUpText" style={{ marginLeft: "20px", marginRight: "20px", fontSize: "1em" }}> PROJECT SIGN UPS </h1>
@@ -426,7 +426,7 @@ class App extends Component {
                         </div>
                     }
 
-                    {/*Projects Info
+                    {/*Projects Info*/}
                     {this.state.projectsError ? null :
                         <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
                             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>

@@ -30,7 +30,8 @@ class ProjectCard extends Component{
       //Establish repo url and repo description
       if (this.props.repo.length !== 0){
         this.setState({githubLink: this.props.repo[0].html_url});
-        this.setState({description: this.props.repo[0].description});
+        if (this.props.repo[0].description.length > 175) this.setState({description: this.props.repo[0].description.substr(0,175) + "\u2026"});
+        else this.setState({description: this.props.repo[0].description});
       }
 
       //Establish title and language
