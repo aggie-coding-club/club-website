@@ -256,6 +256,14 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
   background-size: cover;
 }
 
+.title-background{
+  background: url(images/01_edit.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .chevron{
   position: absolute;
   z-index: 1;

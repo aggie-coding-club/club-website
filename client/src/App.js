@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import "animate.css/animate.min.css";
 import Particles from 'react-particles-js';
+import particles from './particlesjs-config.json';
 import { fadeInUp } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
@@ -173,7 +174,7 @@ class App extends Component {
     }
 
     attachData() {
-        fetch('/init').then((response) => {
+        fetch('/node/init').then((response) => {
             console.log(response);
             return response.json();
         }).then((json) => {
@@ -214,7 +215,7 @@ class App extends Component {
                     ]}
                 />
                 <main id="page-wrap">
-                    <div style={{ backgroundColor: "#0288D1", height: "100vh" }}>
+                    <div className="title-background" style={{height: "100vh" }}>
                         <img src={ACC_Banner} className="banner" alt="acc_logo" style={{ position: "absolute", left: "30px", top: 0, minWidth: 80, width: "10%" }} />
                         <a href="#" style={{ width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none" }} className="signUpBox">
                             <h1 className="signUpText" style={{ marginLeft: "20px", marginRight: "20px", fontSize: "1em" }}> PROJECT SIGN UPS </h1>
@@ -226,116 +227,7 @@ class App extends Component {
                             </StyleRoot>
                         </header>
                         <Particles
-                            params={{
-                                particles: {
-                                    number: {
-                                        value: 60,
-                                        density: {
-                                            enable: false,
-                                            value_area: 961.4383117143238
-                                        }
-                                    },
-                                    color: {
-                                        value: "#ffffff"
-                                    },
-                                    shape: {
-                                        type: "circle",
-                                        stroke: {
-                                            width: 0,
-                                            color: "#000000"
-                                        },
-                                        polygon: {
-                                            nb_sides: 5
-                                        },
-                                        image: {
-                                            src: "img/github.svg",
-                                            height: 100,
-                                            width: 100
-                                        }
-                                    },
-                                    opacity: {
-                                        value: 0.5,
-                                        random: false,
-                                        anim: {
-                                            enable: false,
-                                            speed: 1,
-                                            opacity_min: 0.1,
-                                            sync: false
-                                        }
-                                    },
-                                    size: {
-                                        value: 4,
-                                        random: true,
-                                        anim: {
-                                            enable: false,
-                                            speed: 40,
-                                            size_min: 0.1,
-                                            sync: false
-                                        }
-                                    },
-                                    line_linked: {
-                                        enable: true,
-                                        distance: 150,
-                                        color: "#ffffff",
-                                        opacity: 0.4,
-                                        width: 1
-                                    },
-                                    move: {
-                                        enable: true,
-                                        speed: 5,
-                                        direction: "none",
-                                        random: false,
-                                        straight: false,
-                                        out_mode: "out",
-                                        bounce: false,
-                                        attract: {
-                                            enable: false,
-                                            rotateX: 600,
-                                            rotateY: 1200
-                                        }
-                                    }
-                                },
-                                interactivity: {
-                                    detect_on: "canvas",
-                                    events: {
-                                        onhover: {
-                                            enable: false,
-                                            mode: "repulse"
-                                        },
-                                        onclick: {
-                                            enable: true,
-                                            mode: "push"
-                                        },
-                                        resize: true
-                                    },
-                                    modes: {
-                                        grab: {
-                                            distance: 400,
-                                            line_linked: {
-                                                opacity: 1
-                                            }
-                                        },
-                                        bubble: {
-                                            distance: 400,
-                                            size: 40,
-                                            duration: 2,
-                                            opacity: 8,
-                                            speed: 3
-                                        },
-                                        repulse: {
-                                            distance: 200,
-                                            duration: 0.4
-                                        },
-                                        push: {
-                                            particles_nb: 4
-                                        },
-                                        remove: {
-                                            particles_nb: 2
-                                        }
-                                    }
-                                },
-                                retina_detect: true
-                            }}
+                            params={particles}
                         />
                     </div>
 
@@ -403,7 +295,7 @@ class App extends Component {
             </ScrollAnimation>
           </div>*/}
 
-                    {/*Events */}{
+                    {/*Events */}{/*
                         <div style={{ position: "relative", paddingBottom: "100px" }}>
                             <h1 className="header" style={styles.headerStyle}> events coming up next </h1>
                             {
@@ -422,9 +314,9 @@ class App extends Component {
                                     })
                                     : null
                             }
-                            {/*<EventCard title="ACC Kickoff Meeting" location="Koldus 110" date="01/29/2018" time="6-7 PM" description="" />*/}
+                            {/*<EventCard title="ACC Kickoff Meeting" location="Koldus 110" date="01/29/2018" time="6-7 PM" description="" />}
                         </div>
-                    }
+                        */}
 
                     {/*Projects Info*/}
                     {this.state.projectsError ? null :

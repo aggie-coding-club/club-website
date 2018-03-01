@@ -18,6 +18,9 @@ class ProjectCard extends Component{
     try{
       //Establish team members
       this.setState({members: this.props.members});
+      this.setState({title : this.props.title});
+      console.log(this.props.title);
+      if (this.props.languages) this.establishLanguage();
 
       //Establish project manager
       if (this.props.projectManager.length !== 0){
@@ -28,15 +31,16 @@ class ProjectCard extends Component{
       }
 
       //Establish repo url and repo description
-      if (this.props.repo.length !== 0){
-        this.setState({githubLink: this.props.repo[0].html_url});
-        if (this.props.repo[0].description.length > 175) this.setState({description: this.props.repo[0].description.substr(0,175) + "\u2026"});
-        else this.setState({description: this.props.repo[0].description});
+      if (this.props.repo !== 0){
+        if (this.props.html_url) this.setState({githubLink: this.props.repo[0].html_url});
+        if (this.props.description){
+          if (this.props.repo[0].description.length > 175) this.setState({description: this.props.repo[0].description.substr(0,175) + "\u2026"});
+          else this.setState({description: this.props.repo[0].description});
+        }
       }
 
       //Establish title and language
-      this.setState({title : this.props.title});
-      this.establishLanguage();
+      
     }
     catch (e){
       console.log(e);
