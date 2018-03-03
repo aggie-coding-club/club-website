@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -7,8 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Project files
-src/server/config.js
-src/server/google-credentials.js
+config.js
+google-credentials.json
 
 # Runtime data
 pids
@@ -61,6 +60,7 @@ typings/
 
 # dotenv environment variables file
 .env
+<<<<<<< HEAD
 =======
 # Logs
 logs
@@ -126,3 +126,5 @@ typings/
 .env
 
 >>>>>>> d8baa862d0898f2d1477245ee2a664c1565555a9
+=======
+>>>>>>> b21e78489728ab5b3ed6279c8ca3913e7c75dc96

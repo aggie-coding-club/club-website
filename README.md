@@ -3,5 +3,13 @@ A complete overhaul and redesign of the current state of the Aggie Coding Club W
 
 # developers
 Jonathan Innis
+
 Gabriel Britain
+
 Ryan Pfeifer
+
+Davis Kirchhofer
+
+Nick Johnson
+
+Shawn Tan
