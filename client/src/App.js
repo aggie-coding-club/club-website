@@ -11,6 +11,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import SimpleMediaCard from './SimpleMediaCard.js';
 import EventCard from './EventCard.js';
 import ProjectCard from './ProjectCard.js';
+import Title from './TitleDiv.js';
 
 //Picture-Img Imports
 import Rohit from "./images/rohit.jpg";
@@ -215,22 +216,7 @@ class App extends Component {
                     ]}
                 />
                 <main id="page-wrap">
-                    <div className="title-background" style={{height: "100vh" }}>
-                        <img src={ACC_Banner} className="banner" alt="acc_logo" style={{ position: "absolute", left: "30px", top: 0, minWidth: 80, width: "10%" }} />
-                        <a href="#" style={{ width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none" }} className="signUpBox">
-                            <h1 className="signUpText" style={{ marginLeft: "20px", marginRight: "20px", fontSize: "1em" }}> PROJECT SIGN UPS </h1>
-                        </a>
-                        <header style={styles.centeredDiv}>
-                            <StyleRoot>
-                                <h1 className="acc_header" style={styles.titleText}> aggie coding club </h1>
-                                <p className="subtitle" style={styles.subtitleText}> empowering texas a&m students to code </p>
-                            </StyleRoot>
-                        </header>
-                        <Particles
-                            params={particles}
-                        />
-                    </div>
-
+				<Title/>
                     {/*Basic/Background Info*/}
                     <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
                         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
