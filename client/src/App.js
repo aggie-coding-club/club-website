@@ -214,7 +214,6 @@ class App extends Component {
               </Button>,
                     ]}
                 />
-                <main id="page-wrap">
                     <div className="title-background" style={{height: "100vh" }}>
                         <img src={ACC_Banner} className="banner" alt="acc_logo" style={{ position: "absolute", left: "30px", top: 0, minWidth: 80, width: "10%" }} />
                         <a href="#" style={{ width: "auto", height: "40px", position: "absolute", right: "20px", top: "20px", border: "#ffffff solid 1px", textDecoration: "none" }} className="signUpBox">
@@ -362,7 +361,6 @@ class App extends Component {
                             <h4 style={{ color: "#ffffff", fontSize: "0.75em" }}>&#169; 2018 Jonathan Innis | Gabriel Britain </h4>
                         </div>
                     </div>
-                </main>
             </div>
         );
     }
