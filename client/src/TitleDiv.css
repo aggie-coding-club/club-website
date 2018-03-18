@@ -1,0 +1,29 @@
+    .centeredDiv: {
+        position: "absolute";
+        margin: 0;
+        width: "100%";
+        left: "50%";
+        top: "50%";
+        transform: "translate(-50%, -50%)";
+        zIndex: 1;
+        color: "#ffffff";
+    }
+    .titleText: {
+        fontSize: "6em";
+        animation: 'x 1.5s';
+        animationName: Radium.keyframes(fadeInUp, 'fadeInUp');
+        margin: 0;
+        marginLeft: 20;
+        marginRight: 20;
+        marginBottom: 10;
+        lineHeight: 1;
+    }
+    .subtitleText: {
+        fontSize: "2em";
+        animation: 'x 1.5s';
+        animationName: Radium.keyframes(fadeInUp, 'fadeInUp');
+        margin: 0;
+        marginLeft: 20;
+        marginRight: 20;
+        lineHeight: 1;
+    }

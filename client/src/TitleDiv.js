@@ -5,9 +5,10 @@ import particles from './particlesjs-config.json';
 import { fadeInUp } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import ACC_Banner from './images/acc_banner.png';
+import styles from './TitleDiv.css';
 
-const styles = {
-    centeredDiv: {
+/*const styles = {
+    centeredDiv: { //yes
         position: "absolute",
         margin: 0,
         width: "100%",
@@ -17,7 +18,7 @@ const styles = {
         zIndex: 1,
         color: "#ffffff",
     },
-    titleText: {
+    titleText: { //yes
         fontSize: "6em",
         animation: 'x 1.5s',
         animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
@@ -27,7 +28,7 @@ const styles = {
         marginBottom: 10,
         lineHeight: 1,
     },
-    subtitleText: {
+    subtitleText: { //yes
         fontSize: "2em",
         animation: 'x 1.5s',
         animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
@@ -35,66 +36,8 @@ const styles = {
         marginLeft: 20,
         marginRight: 20,
         lineHeight: 1,
-    },
-    headerStyle: {
-        fontColor: "#ffffff",
-        fontSize: "4.5em",
-        marginTop: "100px",
-        marginBottom: "75px",
-        marginLeft: 20,
-        marginRight: 20,
-        lineHeight: 1,
-    },
-    linkStyle: {
-        margin: "10px",
-        color: "#ffffff",
-        textDecoration: "none"
-    },
-    largeIcon: {
-        width: 100,
-        height: 100,
-        marginLeft: 40,
-        marginRight: 40,
-        verticalAlign: "top",
-    },
-    card: {
-        maxWidth: 345,
-        height: 245,
-    },
-    column: {
-        marginTop: 50,
-        width: 400,
-        display: "inline-block",
-        margin: 10,
-    },
-    topChip: {
-        position: "relative",
-        fontFamily: "Raleway",
-        left: "50%",
-        transform: "translateX(-50%)",
-        marginBottom: 10,
-        backgroundColor: "#0288D1",
-        color: "#ffffff",
-    },
-    middleChip: {
-        position: "relative",
-        fontFamily: "Raleway",
-        left: "50%",
-        transform: "translateX(-50%)",
-        marginBottom: 10,
-        backgroundColor: "#03a9f4",
-        color: "#ffffff",
-    },
-    bottomChip: {
-        position: "relative",
-        fontFamily: "Raleway",
-        left: "50%",
-        transform: "translateX(-50%)",
-        marginBottom: 10,
-        backgroundColor: "#29b6f6",
-        color: "#ffffff",
     }
-};
+};*/
 
 class Title extends Component{
   render(){
