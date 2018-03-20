@@ -216,10 +216,9 @@ class App extends Component {
               </Button>,
                     ]}
                 />
-                <main id="page-wrap">
-                    <Title/>
 
-                    
+                <main id="page-wrap">
+                    <Title/>                 
                     <BackgroundInfo/>
 
                     {/*Officer Info*/}
@@ -321,7 +320,6 @@ class App extends Component {
                             <h4 style={{ color: "#ffffff", fontSize: "0.75em" }}>&#169; 2018 Jonathan Innis | Gabriel Britain </h4>
                         </div>
                     </div>
-                </main>
             </div>
         );
     }
