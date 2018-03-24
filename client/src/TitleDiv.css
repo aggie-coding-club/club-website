@@ -1,29 +1,29 @@
-    .centeredDiv: {
+    .centeredDiv {
         position: "absolute";
         margin: 0;
         width: "100%";
         left: "50%";
         top: "50%";
         transform: "translate(-50%, -50%)";
-        zIndex: 1;
+        z-index: 1;
         color: "#ffffff";
     }
-    .titleText: {
-        fontSize: "6em";
+    .titleText {
+        font-size: "6em";
         animation: 'x 1.5s';
-        animationName: Radium.keyframes(fadeInUp, 'fadeInUp');
+        animation-name: Radium.keyframes(fadeInUp, 'fadeInUp');
         margin: 0;
-        marginLeft: 20;
-        marginRight: 20;
-        marginBottom: 10;
-        lineHeight: 1;
+        margin-left: 20;
+        margin-right: 20;
+        margin-bottom: 10;
+        line-height: 1;
     }
-    .subtitleText: {
-        fontSize: "2em";
+    .subtitleText {
+        font-size: "2em";
         animation: 'x 1.5s';
-        animationName: Radium.keyframes(fadeInUp, 'fadeInUp');
+        animation-name: Radium.keyframes(fadeInUp, 'fadeInUp');
         margin: 0;
-        marginLeft: 20;
-        marginRight: 20;
-        lineHeight: 1;
+        margin-left: 20;
+        margin-right: 20;
+        line-height: 1;
     }
