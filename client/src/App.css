@@ -379,13 +379,6 @@ a.icon-block span {
 }
 
 @media screen and (max-width: 480px) {
-  .acc_header{
-    font-size: 3.5em !important;
-  }
-
-  .subtitle{
-    font-size: 1.5em !important;
-  }
 
   .tile, .card, .front, .back, .content{
     height: 250px;

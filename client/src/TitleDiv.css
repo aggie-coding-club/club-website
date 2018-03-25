@@ -1,29 +1,58 @@
-    .centeredDiv: {
-        position: "absolute";
-        margin: 0;
-        width: "100%";
-        left: "50%";
-        top: "50%";
-        transform: "translate(-50%, -50%)";
-        zIndex: 1;
-        color: "#ffffff";
-    }
-    .titleText: {
-        fontSize: "6em";
-        animation: 'x 1.5s';
-        animationName: Radium.keyframes(fadeInUp, 'fadeInUp');
-        margin: 0;
-        marginLeft: 20;
-        marginRight: 20;
-        marginBottom: 10;
-        lineHeight: 1;
-    }
-    .subtitleText: {
-        fontSize: "2em";
-        animation: 'x 1.5s';
-        animationName: Radium.keyframes(fadeInUp, 'fadeInUp');
-        margin: 0;
-        marginLeft: 20;
-        marginRight: 20;
-        lineHeight: 1;
-    }
+.centeredDiv {
+  position: absolute;
+  margin: 0px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  color: white;
+}
+.accHeader {
+  font-size: 6em;
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.subtitleText {
+  font-size: 2em;
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1;
+}
+.signUpBox{
+  width: auto;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: white solid 1px;
+  text-decoration: none;
+}
+.signUpText{
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1em;
+}
+.banner{
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  min-width: 80px;
+  width: 10%;
+}
+.title-background{
+  height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .acc_header{
+    font-size: 3.5em;
+  }
+  .subtitleText{
+    font-size: 1.5em;
+  }
+}
