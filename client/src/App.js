@@ -215,39 +215,10 @@ class App extends Component {
               </Button>,
                     ]}
                 />
+
                 <main id="page-wrap">
-				<Title/>
-                    {/*Basic/Background Info*/}
-                    <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
-                        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-                            <h1 className="header" style={styles.headerStyle}> what we do </h1>
-                            <p style={{ fontSize: "2em", fontWeight: 500, color: "#0288D1", marginLeft: 50, marginRight: 50 }}> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
-                            <p style={{ fontSize: "1.25em", fontWeight: 500, maxWidth: "900px", left: "50%", transform: "translateX(-50%)", position: "relative", paddingLeft: 50, paddingRight: 50 }}> Here at Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn&#39;t take anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
-                            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
-                                <div style={styles.column}>
-                                    <FaCheck style={styles.largeIcon} />
-                                    <h1 className="columnHeader" style={{ fontSize: "2.5em" }}> Projects </h1>
-                                    <Chip className="chips" style={styles.topChip} label="Work on a 3-5 person team" />
-                                    <Chip className="chips" style={styles.middleChip} label="Build an app, make a website, or even design a game" />
-                                    <Chip className="chips" style={styles.bottomChip} label="Gain experience with new languages and frameworks" />
-                                </div>
-                                <div style={styles.column}>
-                                    <FaWrench style={styles.largeIcon} />
-                                    <h1 className="columnHeader" style={{ fontSize: "2.5em" }}> Workshops </h1>
-                                    <Chip className="chips" style={styles.topChip} label="Learn new techologies from club members" />
-                                    <Chip className="chips" style={styles.middleChip} label="Get exposed to coding concepts and Github version-control" />
-                                    <Chip className="chips" style={styles.bottomChip} label="Acquire resume help and internship interview experience" />
-                                </div>
-                                <div style={styles.column}>
-                                    <FaComments style={styles.largeIcon} />
-                                    <h1 className="columnHeader" style={{ fontSize: "2.5em" }}> Company Talks </h1>
-                                    <Chip className="chips" style={styles.topChip} label="Network with some of the top tech companies" />
-                                    <Chip className="chips" style={styles.middleChip} label="Learn what managers want to hear in job interviews" />
-                                    <Chip className="chips" style={styles.bottomChip} label="Talk with professionals who have experience in the industry" />
-                                </div>
-                            </div>
-                        </ScrollAnimation>
-                    </div>
+                    <Title/>                 
+                    <BackgroundInfo/>
 
                     {/*Officer Info*/}
                     <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
