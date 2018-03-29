@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
-import './App.css';
+import './assets/App.css';
 import "animate.css/animate.min.css";
-import Particles from 'react-particles-js';
-import particles from './particlesjs-config.json';
 import { fadeInUp } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Component Imports
-import SimpleMediaCard from './SimpleMediaCard.js';
-import EventCard from './EventCard.js';
-import ProjectCard from './ProjectCard.js';
-import Title from './TitleDiv.js';
-import BackgroundInfo from './BackgroundInfoDiv.js';
+import SimpleMediaCard from './components/SimpleMediaCard.js';
+import EventCard from './components/EventCard.js';
+import ProjectCard from './components/ProjectCard.js';
+import Title from './components/Title';
+import Events from './components/Events';
 
 //Picture-Img Imports
-import Rohit from "./images/rohit.jpg";
-import Liam from "./images/liam.jpg";
-import Colton from "./images/colton.jpg";
-import Hannah from "./images/hannah.jpg"
-import William from './images/william.jpg';
-import Marcus from './images/marcus.jpg';
-import Marissa from './images/marissa.jpg';
-import Simone from './images/simone.jpg';
-import Engineering from "./images/hrbb.jpg";
-import ACC_Banner from './images/acc_banner.png';
+import Rohit from "./assets/images/rohit.jpg";
+import Liam from "./assets/images/liam.jpg";
+import Colton from "./assets/images/colton.jpg";
+import Hannah from "./assets/images/hannah.jpg"
+import William from './assets/images/william.jpg';
+import Marcus from './assets/images/marcus.jpg';
+import Marissa from './assets/images/marissa.jpg';
+import Simone from './assets/images/simone.jpg';
+import Engineering from "./assets/images/hrbb.jpg";
+import ACC_Banner from './assets/images/acc_banner.png';
 
 //Icon Imports
 import EmailIcon from 'material-ui-icons/Email';
@@ -166,6 +164,7 @@ class App extends Component {
         members: [],
         teams: [],
         repos: [],
+        events: [],
         width: 0,
         height: 0,
         particles: 0,
@@ -253,28 +252,7 @@ class App extends Component {
             </ScrollAnimation>
           </div>*/}
 
-                    {/*Events */}{/*
-                        <div style={{ position: "relative", paddingBottom: "100px" }}>
-                            <h1 className="header" style={styles.headerStyle}> events coming up next </h1>
-                            {
-                                this.state.events ?
-                                    this.state.events.map((event) => {
-                                        console.log(event);
-                                        const startDate = new Date(event.start.dateTime);
-                                        const endDate = new Date(event.end.dateTime);
-                                        const options = {
-                                            hour: 'numeric',
-                                            minute: 'numeric',
-                                            hour12: true
-                                        }
-                                        const duration = `${startDate.toLocaleTimeString('en-US', options)} - ${endDate.toLocaleTimeString('en-US', options)}`;
-                                        return <EventCard title={event.summary} location={event.location} date={startDate.toLocaleDateString('en-US')} time={duration} description={event.description}/>
-                                    })
-                                    : null
-                            }
-                            {/*<EventCard title="ACC Kickoff Meeting" location="Koldus 110" date="01/29/2018" time="6-7 PM" description="" />}
-                        </div>
-                        */}
+                    <Events events={this.state.events}/>
 
                     {/*Projects Info*/}
                     {this.state.projectsError ? null :
