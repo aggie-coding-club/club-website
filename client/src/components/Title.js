@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 import particles from '../assets/particlesjs-config.json';
 import { fadeInUp } from 'react-animations';
 import Radium, { StyleRoot } from 'radium';
-import ACC_Banner from '../images/acc_banner.png';
+import ACC_Banner from '../assets/images/acc_banner.png';
 import '../assets/TitleDiv.css';
 
 const styles = {
