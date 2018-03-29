@@ -11,6 +11,7 @@ import EventCard from './components/EventCard.js';
 import ProjectCard from './components/ProjectCard.js';
 import Title from './components/Title';
 import Events from './components/Events';
+import BackgroundInfo from './components/BackgroundInfo';
 
 //Picture-Img Imports
 import Rohit from "./assets/images/rohit.jpg";
@@ -216,8 +217,7 @@ class App extends Component {
                     ]}
                 />
 
-                <main id="page-wrap">
-                    <Title/>                 
+                    <Title/>
                     <BackgroundInfo/>
 
                     {/*Officer Info*/}
