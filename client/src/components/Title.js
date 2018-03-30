@@ -6,7 +6,7 @@ import { fadeInUp } from 'react-animations';
 import "animate.css/animate.min.css";
 import Radium, { StyleRoot } from 'radium';
 import ACC_Banner from '../assets/images/acc_banner.png';
-import '../assets/TitleDiv.css';
+import '../assets/Title.css';
 
 const styles = {
   titleText: {

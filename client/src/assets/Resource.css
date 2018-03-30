@@ -1,0 +1,46 @@
+.background{
+  background-color: #546E7A;
+  color: #ffffff;
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header{
+  color: #ffffff;
+  font-size: 4.5em;
+  margin-top: 100px;
+  margin-bottom: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1;
+}
+
+.infoHeader{
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.infoSubheader{
+  position: relative;
+  top: 50%;
+  font-size: 1.25em;
+}
+
+.column{
+  width: auto;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding=bottom: 100px;
+  display: inline-block;
+}
+
+.link{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.copyrightText{
+  color: #ffffff;
+  font-size: 0.75em;
+}

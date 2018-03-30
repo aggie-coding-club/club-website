@@ -7,6 +7,8 @@ import FaSlack from 'react-icons/lib/fa/slack';
 import FaGithub from 'react-icons/lib/fa/github';
 import FaGoogle from 'react-icons/lib/fa/google';
 
+import '../assets/Resource.css';
+
 const styles = {
     centeredDiv: {
         position: "absolute",
@@ -17,15 +19,6 @@ const styles = {
         transform: "translate(-50%, -50%)",
         zIndex: 1,
         color: "#ffffff",
-    },
-    headerStyle: {
-        fontColor: "#ffffff",
-        fontSize: "4.5em",
-        marginTop: "100px",
-        marginBottom: "75px",
-        marginLeft: 20,
-        marginRight: 20,
-        lineHeight: 1,
     },
     linkStyle: {
         margin: "10px",
@@ -81,32 +74,32 @@ const styles = {
 export default class Resource extends React.Component{
   render(){
     return(
-      <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden", display: "flex", flexWrap: "wrap" }}>
+      <div className="background">
           <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={200}>
-              <h1 className="header" style={styles.headerStyle}> drop us a line </h1>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                  <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
-                  <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="mailto:aggiecodingclub@gmail.com"><EmailIcon style={{ width: 90, height: 90 }} /></a>
-                  <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
+              <h1 className="header"> drop us a line </h1>
+              <div className="column">
+                  <h1 className="infoHeader"> email </h1>
+                  <a target="_blank" rel="noopener noreferrer" className="link" href="mailto:aggiecodingclub@gmail.com"><EmailIcon style={{ width: 90, height: 90 }} /></a>
+                  <h2 className="infoSubheader"> aggiecodingclub@gmail.com </h2>
               </div>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                  <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
-                  <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="https://aggie-coding-club.slack.com"><FaSlack style={{ width: 90, height: 90 }} /></a>
-                  <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
+              <div className="column">
+                  <h1 className="infoHeader"> slack </h1>
+                  <a target="_blank" rel="noopener noreferrer" className="link" href="https://aggie-coding-club.slack.com"><FaSlack style={{ width: 90, height: 90 }} /></a>
+                  <h2 className="infoSubheader"> aggie-coding-club.slack.com </h2>
               </div>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                  <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
-                  <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="https://github.com/aggie-coding-club"><FaGithub style={{ width: 90, height: 90 }} /></a>
-                  <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
+              <div className="column">
+                  <h1 className="infoHeader">github</h1>
+                  <a target="_blank" rel="noopener noreferrer" className="link" href="https://github.com/aggie-coding-club"><FaGithub style={{ width: 90, height: 90 }} /></a>
+                  <h2 className="infoSubheader"> github.com/aggie-coding-club </h2>
               </div>
-              <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                  <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
-                  <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="https://tinyurl.com/ydhotylu"><FaGoogle style={{ width: 90, height: 90 }} /></a>
-                  <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
+              <div className="column">
+                  <h1 className="infoHeader">google drive</h1>
+                  <a target="_blank" rel="noopener noreferrer" className="link" href="https://tinyurl.com/ydhotylu"><FaGoogle style={{ width: 90, height: 90 }} /></a>
+                  <h2 className="infoSubheader"> tinyurl.com/ydhotylu </h2>
               </div>
           </ScrollAnimation>
           <div className="copyright">
-              <h4 style={{ color: "#ffffff", fontSize: "0.75em" }}>&#169; 2018 Jonathan Innis | Gabriel Britain </h4>
+              <h4 className="copyrightText">&#169; 2018 Jonathan Innis | Gabriel Britain </h4>
           </div>
       </div>
     );
