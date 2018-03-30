@@ -12,6 +12,7 @@ import ProjectCard from './components/ProjectCard.js';
 import Title from './components/Title';
 import Events from './components/Events';
 import BackgroundInfo from './components/BackgroundInfo';
+import CustomSnackbar from './components/CustomSnackbar';
 
 //Picture-Img Imports
 import Rohit from "./assets/images/rohit.jpg";
@@ -36,8 +37,6 @@ import FaComments from 'react-icons/lib/fa/comments';
 
 //Material UI Imports
 import Chip from 'material-ui/Chip';
-import Snackbar from 'material-ui/Snackbar';
-import Button from 'material-ui/Button';
 
 
 
@@ -132,31 +131,9 @@ const styles = {
 };
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
 
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-    }
     componentWillMount() {
         this.attachData();
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
-    updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
-        if (this.state.width > 768) {
-            var num_nb = Math.round(Math.sqrt(window.innerWidth * 15));
-        } else {
-            var num_nb = Math.round(Math.sqrt(window.innerWidth * 3));
-        }
-        this.setState({ particles: num_nb });
     }
 
     state = {
@@ -169,10 +146,6 @@ class App extends Component {
         width: 0,
         height: 0,
         particles: 0,
-    }
-
-    showSettings(event) {
-        event.preventDefault();
     }
 
     attachData() {
@@ -197,25 +170,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Snackbar
-                    style={{ height: 30, width: 100 }}
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    open={this.state.open}
-                    autoHideDuration={6000}
-                    onClose={this.handleClose}
-                    SnackbarContentProps={{
-                        'aria-describedby': 'message-id',
-                    }}
-                    message={<span id="message-id">There was a error pulling data from Github</span>}
-                    action={[
-                        <Button key="undo" color="accent" dense onClick={this.handleClose}>
-                            DISMISS
-              </Button>,
-                    ]}
-                />
+                    <CustomSnackbar open={this.state.open} handleClose={this.handleClose}/>
 
                     <Title/>
                     <BackgroundInfo/>
@@ -236,21 +191,6 @@ class App extends Component {
                             </div>
                         </ScrollAnimation>
                     </div>
-
-                    {/*Meeting Location Info*/}{/*
-          <div style={{ backgroundColor: "#ffffff", overflow: "hidden" }}>
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <h1 style={styles.headerStyle}> where we are </h1>
-              <div style={{marginBottom: 100, display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-                <div style={{ position: "relative", width: 600, fontSize: "2em", color: "#500000", margin: 10, top: -45}}>
-                  <h1> H.R Bright Building </h1>
-                  <h2> Tuesdays at 8PM </h2>
-                  <h2 style={{marginBottom: 0}}> Room 113 </h2>
-                </div>
-                <img alt="Engineering-Map" src={Engineering} style={{position: "relative", width: "700px", margin: 10, maxWidth: "90vw", border: "2px solid #000000"}} />
-              </div>
-            </ScrollAnimation>
-          </div>*/}
 
                     <Events events={this.state.events}/>
 
