@@ -4,11 +4,11 @@ As a team, our project goal is to completely automate the Aggie Coding Club club
 # Planned Features
 - [ ] Pull events from Google Calendar
 
-- [ ] Transfering backend server to Django
+- [ ] Transfer backend server to Django
 
-- [ ] Providing Project Signup Sheet through the website
+- [ ] Provide ACC project signup sheet through the website
 
-- [ ] Using machine learning to assign users to projects
+- [ ] Use machine learning to assign users to projects
 
 # Front-End Developers (React)
 Jonathan Innis
