@@ -1,6 +1,15 @@
 # ACC Club Website
 As a team, our project goal is to completely automate the Aggie Coding Club club website so that there will no longer be any need to go into the code manually and change data. Instead, the data for the website is provided from information on the club's Github account and from the club's Google Calendar account.
 
+# Planned Features
+- [ ] Pull events from Google Calendar
+
+- [ ] Transfering backend server to Django
+
+- [ ] Providing Project Signup Sheet through the website
+
+- [ ] Using machine learning to assign users to projects
+
 # Front-End Developers (React)
 Jonathan Innis
 
