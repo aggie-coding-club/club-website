@@ -10,6 +10,7 @@ import Title from './components/Title';
 import Events from './components/Events';
 import BackgroundInfo from './components/BackgroundInfo';
 import CustomSnackbar from './components/CustomSnackbar';
+import Resource from './components/Resource';
 
 //Picture-Img Imports
 import Rohit from "./assets/images/rohit.jpg";
@@ -21,11 +22,7 @@ import Marcus from './assets/images/marcus.jpg';
 import Marissa from './assets/images/marissa.jpg';
 import Simone from './assets/images/simone.jpg';
 
-//Icon Imports
-import EmailIcon from 'material-ui-icons/Email';
-import FaSlack from 'react-icons/lib/fa/slack';
-import FaGithub from 'react-icons/lib/fa/github';
-import FaGoogle from 'react-icons/lib/fa/google';
+
 
 
 
@@ -140,10 +137,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                    <CustomSnackbar open={this.state.open} handleClose={this.handleClose}/>
-
-                    <Title/>
-                    <BackgroundInfo/>
+              <CustomSnackbar open={this.state.open} handleClose={this.handleClose}/>
+              <Title/>
+              <BackgroundInfo/>
 
                     {/*Officer Info*/}
                     <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
@@ -179,35 +175,7 @@ class App extends Component {
                             </ScrollAnimation>
                         </div>}
 
-                    {/*Resource Links*/}
-                    <div style={{ backgroundColor: "#546E7A", color: "#ffffff", overflowY: "hidden", display: "flex", flexWrap: "wrap" }}>
-                        <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={200}>
-                            <h1 className="header" style={styles.headerStyle}> drop us a line </h1>
-                            <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                                <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: 100 }}> email </h1>
-                                <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="mailto:aggiecodingclub@gmail.com"><EmailIcon style={{ width: 90, height: 90 }} /></a>
-                                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggiecodingclub@gmail.com </h2>
-                            </div>
-                            <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                                <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: "100" }}> slack </h1>
-                                <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="https://aggie-coding-club.slack.com"><FaSlack style={{ width: 90, height: 90 }} /></a>
-                                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> aggie-coding-club.slack.com </h2>
-                            </div>
-                            <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                                <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: 100 }}>github</h1>
-                                <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="https://github.com/aggie-coding-club"><FaGithub style={{ width: 90, height: 90 }} /></a>
-                                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> github.com/aggie-coding-club </h2>
-                            </div>
-                            <div style={{ width: "auto", marginLeft: "40px", marginRight: "40px", paddingBottom: "100px", display: "inline-block" }}>
-                                <h1 className="infoHeader" style={{ fontSize: "3em", fontWeight: 100 }}>google drive</h1>
-                                <a target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#ffffff" }} href="https://tinyurl.com/ydhotylu"><FaGoogle style={{ width: 90, height: 90 }} /></a>
-                                <h2 style={{ position: "relative", top: "50%", fontSize: "1.25em" }}> tinyurl.com/ydhotylu </h2>
-                            </div>
-                        </ScrollAnimation>
-                        <div className="copyright">
-                            <h4 style={{ color: "#ffffff", fontSize: "0.75em" }}>&#169; 2018 Jonathan Innis | Gabriel Britain </h4>
-                        </div>
-                    </div>
+              <Resource/>
             </div>
         );
     }
