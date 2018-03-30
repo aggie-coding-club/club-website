@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Particles from 'react-particles-js';
 import particles from '../assets/particlesjs-config.json';
 import { fadeInUp } from 'react-animations';
+import "animate.css/animate.min.css";
 import Radium, { StyleRoot } from 'radium';
 import ACC_Banner from '../assets/images/acc_banner.png';
 import '../assets/TitleDiv.css';

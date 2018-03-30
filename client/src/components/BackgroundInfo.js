@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { fadeInUp } from 'react-animations';
-import Radium, { StyleRoot } from 'radium';
+import Radium from 'radium';
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Icon Imports
@@ -104,7 +104,7 @@ const styles = {
 
 class BackgroundInfo extends Component {
     render() {
-        return( 
+        return(
 
             <div style={{ position: "relative", paddingBottom: "100px", alignItems: "center" }}>
                         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
@@ -139,5 +139,5 @@ class BackgroundInfo extends Component {
 
             );
     }
-} 
+}
 export default BackgroundInfo;

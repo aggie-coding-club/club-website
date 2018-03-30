@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import './assets/App.css';
-import "animate.css/animate.min.css";
-import { fadeInUp } from 'react-animations';
-import Radium, { StyleRoot } from 'radium';
+
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Component Imports
 import SimpleMediaCard from './components/SimpleMediaCard.js';
-import EventCard from './components/EventCard.js';
 import ProjectCard from './components/ProjectCard.js';
 import Title from './components/Title';
 import Events from './components/Events';
@@ -23,20 +20,12 @@ import William from './assets/images/william.jpg';
 import Marcus from './assets/images/marcus.jpg';
 import Marissa from './assets/images/marissa.jpg';
 import Simone from './assets/images/simone.jpg';
-import Engineering from "./assets/images/hrbb.jpg";
-import ACC_Banner from './assets/images/acc_banner.png';
 
 //Icon Imports
 import EmailIcon from 'material-ui-icons/Email';
 import FaSlack from 'react-icons/lib/fa/slack';
 import FaGithub from 'react-icons/lib/fa/github';
 import FaGoogle from 'react-icons/lib/fa/google';
-import FaCheck from 'react-icons/lib/fa/puzzle-piece';
-import FaWrench from 'react-icons/lib/fa/wrench';
-import FaComments from 'react-icons/lib/fa/comments';
-
-//Material UI Imports
-import Chip from 'material-ui/Chip';
 
 
 
@@ -50,25 +39,6 @@ const styles = {
         transform: "translate(-50%, -50%)",
         zIndex: 1,
         color: "#ffffff",
-    },
-    titleText: {
-        fontSize: "6em",
-        animation: 'x 1.5s',
-        animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
-        margin: 0,
-        marginLeft: 20,
-        marginRight: 20,
-        marginBottom: 10,
-        lineHeight: 1,
-    },
-    subtitleText: {
-        fontSize: "2em",
-        animation: 'x 1.5s',
-        animationName: Radium.keyframes(fadeInUp, 'fadeInUp'),
-        margin: 0,
-        marginLeft: 20,
-        marginRight: 20,
-        lineHeight: 1,
     },
     headerStyle: {
         fontColor: "#ffffff",

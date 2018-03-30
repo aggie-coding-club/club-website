@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import FaGithub from 'react-icons/lib/fa/github';
-import Chip from 'material-ui/Chip';
 import Colors from '../assets/colors.js';
 
 class ProjectCard extends Component{
