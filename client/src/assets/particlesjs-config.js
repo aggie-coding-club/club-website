@@ -1,4 +1,4 @@
-{
+export const particles = {
   "particles": {
     "number": {
       "value": 80,

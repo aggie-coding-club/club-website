@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Particles from 'react-particles-js';
-import particles from '../assets/particlesjs-config.json';
+import particles from '../assets/particlesjs-config.js';
 import { fadeInUp } from 'react-animations';
 import "animate.css/animate.min.css";
 import Radium, { StyleRoot } from 'radium';
