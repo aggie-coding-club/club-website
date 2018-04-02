@@ -4,7 +4,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const styles = {
     headerStyle: {
-        fontColor: "#ffffff",
+        color: "#000",
         fontSize: "4.5em",
         marginTop: "100px",
         marginBottom: "75px",
