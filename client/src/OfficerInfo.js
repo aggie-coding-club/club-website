@@ -13,15 +13,16 @@ import Simone from './images/simone.jpg';
 import SimpleMediaCard from './SimpleMediaCard.js';
 import ScrollAnimation from "react-animate-on-scroll";
 
-import styles from './OfficerInfo.css';
+import './OfficerInfo.css';
 
+//THE .headerStyle ISN'T UPDATING THE FONT SIZE CORRECTLY
 
 class OfficerInfo extends Component{
     render(){
         return(
             <div strength={400} className="officer_background" style={{ backgroundColor: "#a7c0cd", color: "#ffffff", overflowY: "hidden" }}>
                         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-                            <h1 className="header" style={styles.headerStyle}> who we are </h1>
+                            <h1 className="headerStyle"> who we are </h1>
                             <div style={{ paddingBottom: "100px" }}>
                                 <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="'18" subtitle="Club President" />
                                 <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="'18" subtitle="Vice President" />
