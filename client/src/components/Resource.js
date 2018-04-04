@@ -37,7 +37,7 @@ export default class Resource extends React.Component{
               </div>
           </ScrollAnimation>
           <div className="copyright">
-              <h4 className="copyrightText">&#169; 2018 Jonathan Innis | Gabriel Britain </h4>
+              <h4 className="copyrightText">&#169; 2018 Aggie Coding Club </h4>
           </div>
       </div>
     );
