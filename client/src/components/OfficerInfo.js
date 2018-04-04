@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 
 //Picture-Img Imports
-import Rohit from "./images/rohit.jpg";
-import Liam from "./images/liam.jpg";
-import Colton from "./images/colton.jpg";
-import Hannah from "./images/hannah.jpg"
-import William from './images/william.jpg';
-import Marcus from './images/marcus.jpg';
-import Marissa from './images/marissa.jpg';
-import Simone from './images/simone.jpg';
+import Rohit from "../assets/images/rohit.jpg";
+import Liam from "../assets/images/liam.jpg";
+import Colton from "../assets/images/colton.jpg";
+import Hannah from "../assets/images/hannah.jpg"
+import William from '../assets/images/william.jpg';
+import Marcus from '../assets/images/marcus.jpg';
+import Marissa from '../assets/images/marissa.jpg';
+import Simone from '../assets/images/simone.jpg';
 
 import SimpleMediaCard from './SimpleMediaCard.js';
 import ScrollAnimation from "react-animate-on-scroll";
 
-import './OfficerInfo.css';
+import '../assets/OfficerInfo.css';
 
 //THE .headerStyle ISN'T UPDATING THE FONT SIZE CORRECTLY
 

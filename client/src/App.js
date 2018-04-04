@@ -4,15 +4,15 @@ import './assets/App.css';
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Component Imports
-import SimpleMediaCard from './SimpleMediaCard.js';
-import EventCard from './EventCard.js';
-import ProjectCard from './ProjectCard.js';
-import Title from './TitleDiv.js';
-import OfficerInfo from './OfficerInfo.js';
-
-//Picture-Img Imports
-import Engineering from "./images/hrbb.jpg";
-import ACC_Banner from './images/acc_banner.png';
+import SimpleMediaCard from './components/SimpleMediaCard.js';
+import EventCard from './components/EventCard.js';
+import ProjectCard from './components/ProjectCard';
+import Title from './components/Title';
+import CustomSnackbar from './components/CustomSnackbar';
+import OfficerInfo from './components/OfficerInfo';
+import Resource from './components/Resource';
+import BackgroundInfo from './components/BackgroundInfo';
+import Events from './components/Events';
 
 
 
@@ -132,28 +132,24 @@ class App extends Component {
               <CustomSnackbar open={this.state.open} handleClose={this.handleClose}/>
               <Title/>
               <BackgroundInfo/>
+              <OfficerInfo/>
+              <Events events={this.state.events}/>
 
-                    {/*Officer Info*/}
-                    <OfficerInfo/>
-
-                    <Events events={this.state.events}/>
-
-                    {/*Projects Info*/}
-                    {this.state.projectsError ? null :
-                        <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
-                            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-                                <h1 className="header" style={styles.headerStyle}> what we&#39;re building </h1>
-                            </ScrollAnimation>
-                            <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
-                                <div style={{ paddingBottom: "100px" }}>
-                                    {this.state.teams.map(team =>
-                                        <ProjectCard key={team.id} title={team.name} repo={team.repos} members={team.members} projectManager={team.projectManagers} />
-                                    )}
-                                </div>
-                            </ScrollAnimation>
-                        </div>}
-
-              <Resource/>
+              {/*Projects Info*/}
+              {this.state.projectsError ? null :
+                  <div className="projects_background" style={{ backgroundColor: "#757575", color: "#ffffff", overflowY: "hidden", height: "auto" }}>
+                      <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+                          <h1 className="header" style={styles.headerStyle}> what we&#39;re building </h1>
+                      </ScrollAnimation>
+                      <ScrollAnimation animateIn="fadeInUp" animateOnce={true} offset={175}>
+                          <div style={{ paddingBottom: "100px" }}>
+                              {this.state.teams.map(team =>
+                                  <ProjectCard key={team.id} title={team.name} repo={team.repos} members={team.members} projectManager={team.projectManagers} />
+                              )}
+                          </div>
+                      </ScrollAnimation>
+                  </div>}
+                <Resource/>
             </div>
         );
     }
