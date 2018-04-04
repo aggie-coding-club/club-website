@@ -10,7 +10,7 @@ import Marcus from '../assets/images/marcus.jpg';
 import Marissa from '../assets/images/marissa.jpg';
 import Simone from '../assets/images/simone.jpg';
 
-import SimpleMediaCard from './SimpleMediaCard.js';
+import {SimpleMediaCard} from './SimpleMediaCard.js';
 import ScrollAnimation from "react-animate-on-scroll";
 
 import '../assets/OfficerInfo.css';

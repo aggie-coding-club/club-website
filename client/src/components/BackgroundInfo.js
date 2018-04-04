@@ -24,21 +24,21 @@ class BackgroundInfo extends Component {
                     <p className="mottoIdea"> All it takes is an idea, a computer, and the willingness to build something amazing. </p>
                     <p className="description"> Here at Aggie Coding Club, we believe that anyone, any major, from any background can learn how to code. Coding doesn&#39;t take anything more than than the computer that you have for college, the text editor that comes with it, and yourself. All it takes is a great idea and the willingness to execute it.</p>
                     <div className="flexibleContainer">
-                        <div className="column">
+                        <div className="backgroundColumn">
                             <FaCheck className="largeIcon" />
                             <h1 className="columnHeader"> Projects </h1>
                             <Chip className="chips topChip" label="Work on a 3-5 person team" />
                             <Chip className="chips middleChip" label="Build an app, make a website, or even design a game" />
                             <Chip className="chips bottomChip" label="Gain experience with new languages and frameworks" />
                         </div>
-                        <div className="column">
+                        <div className="backgroundColumn">
                             <FaWrench className="largeIcon"/>
                             <h1 className="columnHeader"> Workshops </h1>
                             <Chip className="chips topChip" label="Learn new techologies from club members" />
                             <Chip className="chips middleChip" label="Get exposed to coding concepts and Github version-control" />
                             <Chip className="chips bottomChip" label="Acquire resume help and internship interview experience" />
                         </div>
-                        <div className="column">
+                        <div className="backgroundColumn">
                             <FaComments className="largeIcon"/>
                             <h1 className="columnHeader"> Company Talks </h1>
                             <Chip className="chips topChip" label="Network with some of the top tech companies" />

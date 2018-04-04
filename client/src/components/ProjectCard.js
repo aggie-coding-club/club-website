@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import FaGithub from 'react-icons/lib/fa/github';
 import Colors from '../assets/colors.js';
 
-class ProjectCard extends Component{
+export default class ProjectCard extends Component{
   state={
     projectManager: '',
     description: '',
@@ -76,5 +76,3 @@ class ProjectCard extends Component{
     );
   }
 }
-
-export default ProjectCard;

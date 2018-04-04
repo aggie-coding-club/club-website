@@ -35,7 +35,7 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.column{
+.backgroundColumn{
   margin-top: 50px;
   width: 400px;
   display: inline-block;

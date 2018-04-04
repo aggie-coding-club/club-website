@@ -19,7 +19,7 @@ const styles = {
   }
 };
 
-class Title extends Component{
+export default class Title extends Component{
   render(){
     return(
       <div className="title-background">
@@ -40,4 +40,3 @@ class Title extends Component{
     );
   }
 }
-export default Title;

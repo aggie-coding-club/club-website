@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SimpleMediaCard(props) {
+export const SimpleMediaCard = props => {
   return (
     <div className="tile">
       <img src={props.imgSrc} alt={props.alt}/>
@@ -13,5 +13,3 @@ function SimpleMediaCard(props) {
       </div>
   );
 }
-
-export default SimpleMediaCard;

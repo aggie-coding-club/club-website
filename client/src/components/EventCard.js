@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class EventCard extends Component{
+export default class EventCard extends Component{
   render(){
     return(
       <div className="card">
@@ -21,5 +21,3 @@ class EventCard extends Component{
     );
   }
 }
-
-export default EventCard;

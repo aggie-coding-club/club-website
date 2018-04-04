@@ -4,8 +4,6 @@ import './assets/App.css';
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Component Imports
-import SimpleMediaCard from './components/SimpleMediaCard.js';
-import EventCard from './components/EventCard.js';
 import ProjectCard from './components/ProjectCard';
 import Title from './components/Title';
 import CustomSnackbar from './components/CustomSnackbar';
@@ -13,10 +11,6 @@ import OfficerInfo from './components/OfficerInfo';
 import Resource from './components/Resource';
 import BackgroundInfo from './components/BackgroundInfo';
 import Events from './components/Events';
-
-
-
-
 
 const styles = {
     centeredDiv: {
@@ -149,7 +143,7 @@ class App extends Component {
                           </div>
                       </ScrollAnimation>
                   </div>}
-                <Resource/>
+              <Resource/>
             </div>
         );
     }
