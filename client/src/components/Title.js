@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 
 import Particles from 'react-particles-js';
-import particles from './particlesjs-config.json';
+import {particles} from '../assets/particlesjs-config.js';
 import { fadeInUp } from 'react-animations';
+import "animate.css/animate.min.css";
 import Radium, { StyleRoot } from 'radium';
-import ACC_Banner from './images/acc_banner.png';
-import './TitleDiv.css';
+import ACC_Banner from '../assets/images/acc_banner.png';
+import '../assets/Title.css';
 
 const styles = {
   titleText: {
