@@ -1,0 +1,82 @@
+.backgroundDivMain{
+  position: relative;
+  padding-bottom: 100px;
+  align-items: center;
+}
+.blackHeader{
+  color: black;
+  font-size: 4.5em;
+  margin-top: 100px;
+  margin-bottom: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1;
+}
+.mottoIdea{
+  font-size: 2em;
+  font-weight: 50;
+  color: #0288D1;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.description{
+  font-size: 1.25em;
+  font-weight: 500;
+  max-width: 900px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.flexibleContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.column{
+  margin-top: 50px;
+  width: 400px;
+  display: inline-block;
+  margin: 10px;
+}
+.largeIcon{
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+  vertical-align: top;
+}
+.chips{
+  position: relative;
+  font-family: Raleway !important;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  margin-bottom: 10px;
+  color: white !important;
+}
+.topChip{
+  background-color: #0288D1 !important;
+}
+.middleChip{
+  background-color: #03a9f4 !important;
+}
+.bottomChip{
+  background-color: #29b6f6 !important;
+}
+
+@media screen and (max-width: 480px) {
+
+  .columnHeader{
+    font-size: 1.5em !important;
+  }
+
+  .chips{
+    font-size: 0.65em !important;
+  }
+
+  .blackHeader{
+    font-size: 3em !important;
+  }
+}
