@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './assets/App.css';
-
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Component Imports
