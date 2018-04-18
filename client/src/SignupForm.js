@@ -6,8 +6,21 @@ class SignupForm extends Component {
         return (
             <Form className = "form">
                 <div className = "test">
-                
+                   <div className = "name">
+                    <Text
+                        required = {true}
+                        label = "Name"
+                        value = {this.state.name} />
+                    </div>
+                    <div className="class">
+                        <Select
+                            required = {true}
+                            label={'Classification'}
+                            values={[{value:'U1', label='Freshman'},{value:'U2', label='Sophomore'},{value:'U3', label='Junior'},{value:'U4', label='Senior'}]}
+                            vale={this.state.class} />
+                    </div>
                 </div>
+
             </Form>
             //SAMPLE HTML CODE USING THE API FOR TESTING
             /*
