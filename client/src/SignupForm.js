@@ -16,7 +16,7 @@ class SignupForm extends Component {
                         <Select
                             required = {true}
                             label={'Classification'}
-                            values={[{value:'U1', label='Freshman'},{value:'U2', label='Sophomore'},{value:'U3', label='Junior'},{value:'U4', label='Senior'}]}
+                            values={[{value:'U1', label:'Freshman'},{value:'U2', label:'Sophomore'},{value:'U3', label:'Junior'},{value:'U4', label:'Senior'}]}
                             vale={this.state.class} />
                     </div>
                 </div>
