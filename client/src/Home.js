@@ -126,7 +126,7 @@ class Home extends Component {
               <Title/>
               <BackgroundInfo/>
               <OfficerInfo/>
-              <Events events={this.state.events}/>
+              {/*<Events events={this.state.events}/>*/}
 
               {/*Projects Info*/}
               {this.state.projectsError ? null :
