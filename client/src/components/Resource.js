@@ -2,7 +2,7 @@ import React from 'react';
 import ScrollAnimation from "react-animate-on-scroll";
 
 //Icon Imports
-import EmailIcon from 'material-ui-icons/Email';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
 import FaSlack from 'react-icons/lib/fa/slack';
 import FaGithub from 'react-icons/lib/fa/github';
 import FaGoogle from 'react-icons/lib/fa/google';
@@ -17,7 +17,7 @@ export default class Resource extends React.Component{
               <h1 className="header"> drop us a line </h1>
               <div className="resourceColumn">
                   <h1 className="infoHeader"> email </h1>
-                  <a target="_blank" rel="noopener noreferrer" className="link" href="mailto:aggiecodingclub@gmail.com"><EmailIcon style={{ width: 90, height: 90 }} /></a>
+                  <a target="_blank" rel="noopener noreferrer" className="link" href="mailto:aggiecodingclub@gmail.com"><FaEnvelope style={{ width: 90, height: 90 }} /></a>
                   <h2 className="infoSubheader"> aggiecodingclub@gmail.com </h2>
               </div>
               <div className="resourceColumn">

@@ -9,7 +9,7 @@ import FaWrench from 'react-icons/lib/fa/wrench';
 import FaComments from 'react-icons/lib/fa/comments';
 
 //Material UI Imports
-import Chip from 'material-ui/Chip';
+import Chip from '@material-ui/core/Chip';
 
 
 

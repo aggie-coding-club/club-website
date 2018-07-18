@@ -4,5 +4,8 @@ import './assets/index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const Index = () => {
+    return <App/>
+  };
+  
+  ReactDOM.render(<Index />, document.getElementById("index"));

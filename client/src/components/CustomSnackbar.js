@@ -1,6 +1,6 @@
 import React from 'react';
-import Snackbar from 'material-ui/Snackbar';
-import Button from 'material-ui/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import Button from '@material-ui/core/Button';
 
 export default class CustomSnackbar extends React.Component{
   render(){
