@@ -9,7 +9,7 @@ yarn-error.log*
 config.json
 google-credentials.json
 db.sqlite3
-env/
+env*
 
 # Runtime data
 pids
