@@ -1,4 +1,4 @@
-#!/home/quontas/Documents/Programming/ACC/club-website/env/bin/python3
+#!/home/quontas/Documents/Programming/ACC/club-website/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

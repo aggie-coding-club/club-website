@@ -6,8 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Project files
-config.js
+config.json
 google-credentials.json
+db.sqlite3
 
 # Runtime data
 pids
