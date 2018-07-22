@@ -30,7 +30,7 @@ class Team(models.Model):
     combined_slug = models.SlugField(max_length=100)
     description = models.TextField(null=True, blank=True)
     name = models.CharField(max_length=100)
-    parent_team = models.ForeignKey('Team', related_name='child_team')
+    parent_team = models.ForeignKey('Team', related_name='child_team', on_delete=models.CASCADE, null=True, blank=True)
     url = models.URLField()
 
     def __str__(self):
@@ -58,10 +58,10 @@ class Member(models.Model):
     email = models.EmailField(null=True, blank=True)
     name = models.CharField(max_length=100, null=True, blank=True)
     url = models.URLField(null=True, blank=True)
-    login = models.CharField(max_length=100, null=True, blank=True)
+    login = models.CharField(max_length=100, primary_key=True)
 
     teams = models.ManyToManyField(Team, related_name='members')
     repositories = models.ManyToManyField(Repository, related_name='contributors')
 
     def __str__(self):
-        return self.login.to_python()
+        return str(self.login)
