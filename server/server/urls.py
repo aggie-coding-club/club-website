@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from github import urls as github_urls
+from mail import urls as mail_urls
 
 urlpatterns = [
-    path('', include(github_urls))
+    path('github/', include(github_urls)),
+    path('mail/', include(mail_urls))
 ]

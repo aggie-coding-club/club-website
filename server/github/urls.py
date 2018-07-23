@@ -4,7 +4,7 @@ from github import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
-router.register(r'members', views.MemberViewSet)
+router.register(r'users', views.GithubUserViewSet)
 router.register(r'repositories', views.RepositoryViewSet)
 router.register(r'teams', views.TeamViewSet)
 

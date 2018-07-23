@@ -48,7 +48,7 @@ def post_graphql(graphql_query: str, headers: Dict[str, str]):
     return json_response['data']
 
 
-def save_member(member_dict: Dict[str, str]) -> github_models.Member:
+def save_member(member_dict: Dict[str, str]) -> github_models.GithubUser:
     """
     Takes a GitHub JSON representation of a member, and saves it with Django ORM.
 
@@ -67,7 +67,7 @@ def save_member(member_dict: Dict[str, str]) -> github_models.Member:
         'url': member_dict['url']
     }
 
-    m, _ = github_models.Member.objects.get_or_create(
+    m, _ = github_models.GithubUser.objects.get_or_create(
         login=login, defaults=defaults)
     return m
 
@@ -241,6 +241,7 @@ class Command(BaseCommand):
         teams = organization_data['teams']['nodes']
         for team_dict in teams:
             t = save_team(team_dict)
-            for login in team_dict['members']:
+            logins = [m['login'] for m in team_dict['members']['nodes']]
+            for login in logins:
                 if login in member_cache:
                     member_cache[login].teams.add(t)

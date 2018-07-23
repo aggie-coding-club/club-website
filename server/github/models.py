@@ -36,7 +36,7 @@ class Team(models.Model):
     def __str__(self):
         return str(self.combined_slug.to_python())
 
-class Member(models.Model):
+class GithubUser(models.Model):
     """A representation of a GitHub user.
 
     Attributes:
