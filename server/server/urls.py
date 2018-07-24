@@ -19,6 +19,7 @@ from github import urls as github_urls
 from mail import urls as mail_urls
 
 urlpatterns = [
+    path('api-auth/', include('rest_framework.urls')),
     path('github/', include(github_urls)),
     path('mail/', include(mail_urls))
 ]

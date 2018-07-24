@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Project files
+__pycache__
 config.js
 config.json
 google-credentials.json
