@@ -1,4 +1,9 @@
+from django.conf import settings
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+
 
 class Repository(models.Model):
     """A representation of a GitHub repository.
@@ -21,6 +26,7 @@ class Repository(models.Model):
     def __str__(self):
         return self.name.to_python()
 
+
 class Team(models.Model):
     """A representation of a GitHub team.
 
@@ -30,11 +36,19 @@ class Team(models.Model):
     combined_slug = models.SlugField(max_length=100)
     description = models.TextField(null=True, blank=True)
     name = models.CharField(max_length=100)
-    parent_team = models.ForeignKey('Team', related_name='child_team', on_delete=models.CASCADE, null=True, blank=True)
+    parent_team = models.ForeignKey(
+        'Team', related_name='child_team', on_delete=models.CASCADE, null=True, blank=True)
     url = models.URLField()
 
     def __str__(self):
         return str(self.combined_slug.to_python())
+
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
+
 
 class GithubUser(models.Model):
     """A representation of a GitHub user.
@@ -61,7 +75,8 @@ class GithubUser(models.Model):
     login = models.CharField(max_length=100, primary_key=True)
 
     teams = models.ManyToManyField(Team, related_name='members')
-    repositories = models.ManyToManyField(Repository, related_name='contributors')
+    repositories = models.ManyToManyField(
+        Repository, related_name='contributors')
 
     def __str__(self):
         return str(self.login)

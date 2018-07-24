@@ -22,3 +22,8 @@ class MailingGroup(auth_models.Group):
           datatuple: A tuple of format (email_subject, email_body, sender)
         """
         return mail_commands.send_mail(subject, body, from_email, self.email_list, fail_silently=False)
+
+    class Meta:
+        permissions = (
+            ('send_mail', 'Can send mail to this MailingGroup'),
+        )
