@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth import models as auth_models
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -73,6 +74,8 @@ class GithubUser(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     url = models.URLField(null=True, blank=True)
     login = models.CharField(max_length=100, primary_key=True)
+    user = models.OneToOneField(
+        auth_models.User, on_delete=models.CASCADE, null=True, blank=True)
 
     teams = models.ManyToManyField(Team, related_name='members')
     repositories = models.ManyToManyField(

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'github.apps.GithubConfig',
-    'mail.apps.MailConfig',
+    'social_django',
     'rest_framework.authtoken'
 ]
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +80,14 @@ REST_FRAMEWORK = {
 
 WSGI_APPLICATION = 'server.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_GITHUB_KEY = os.environ['SOCIAL_AUTH_GITHUB_KEY']
+SOCIAL_AUTH_GITHUB_SECRET = os.environ['SOCIAL_AUTH_GITHUB_SECRET']
+SOCIAL_AUTH_GITHUB_SCOPE = ['read:user', 'user:email']
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases

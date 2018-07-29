@@ -13,6 +13,7 @@ google-credentials.json
 db.sqlite3
 .vscode
 env
+*.env
 
 # Runtime data
 pids

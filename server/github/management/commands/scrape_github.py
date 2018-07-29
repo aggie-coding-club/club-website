@@ -4,6 +4,7 @@ from pprint import pprint
 from typing import Dict, List
 
 import requests
+from django.contrib.auth import models as auth_models
 from django.core.management.base import BaseCommand, CommandError
 
 from github import models as github_models
@@ -66,9 +67,14 @@ def save_member(member_dict: Dict[str, str]) -> github_models.GithubUser:
         'name': member_dict['name'],
         'url': member_dict['url']
     }
+    user = None
+    try:
+        user = auth_models.User.objects.get(email=defaults['email'])
+    except auth_models.User.DoesNotExist:
+        pass
 
     m, _ = github_models.GithubUser.objects.get_or_create(
-        login=login, defaults=defaults)
+        login=login, defaults=defaults, user=user)
     return m
 
 
