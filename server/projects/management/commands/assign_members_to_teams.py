@@ -94,6 +94,13 @@ def decode_project_members(forward, backward, cost_matrix, indices, applications
 
 
 def add_new_members_to_projects(new_projects):
+    """Assigns the users on each application to their new projects.
+
+    Args:
+        new_projects: {
+            <Project>: [<ProjectApplication>]
+        }
+    """
     for project in new_projects:
         users = []
         for application in new_projects[project]:
