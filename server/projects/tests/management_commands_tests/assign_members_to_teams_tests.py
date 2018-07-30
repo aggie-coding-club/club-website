@@ -73,10 +73,10 @@ class AssignMembersToTeamsTest(shared_testcase.ProjectsTestCase):
         }
         self.assertDictEqual(expected_forward_mapping, actual_forward_mapping)
 
-        expected_cost_matrix = [[0, 1, 2], [2, 1, 0]]
+        expected_cost_matrix = [[1, 2, 3], [3, 2, 1]]
         self.assertEqual(expected_cost_matrix, actual_cost_matrix.tolist())
 
-    def test_assign_members_to_teams(self):
+    def test_decode_project_members(self):
         forward_mapping = {
             self.small_project: {
                 'id': 0,
@@ -91,7 +91,7 @@ class AssignMembersToTeamsTest(shared_testcase.ProjectsTestCase):
                 'range': (2, 3)
             }
         }
-        cost_matrix = np.array([[0, 1, 2], [2, 1, 0]])
+        cost_matrix = np.array([[1, 2, 3], [3, 2, 1]])
         reverse_mapping = {
             0: self.small_project,
             1: self.small_project2,
@@ -99,10 +99,28 @@ class AssignMembersToTeamsTest(shared_testcase.ProjectsTestCase):
         }
         row_indices, col_indices = linear_sum_assignment(cost_matrix)
         indices = zip(row_indices, col_indices)
-        actual_new_teams = mgmt_cmd.assign_members_to_teams(forward_mapping, cost_matrix, reverse_mapping, indices, self.applications)
-        
+        actual_new_projects = mgmt_cmd.decode_project_members(
+            forward_mapping, cost_matrix, reverse_mapping, indices, self.applications)
+
         expected_new_teams = {
             self.small_project: [self.application1],
             self.medium_project: [self.application2]
         }
-        self.assertDictEqual(expected_new_teams, actual_new_teams)
+        self.assertDictEqual(expected_new_teams, actual_new_projects)
+
+    def test_add_new_members_to_projects(self):
+        decoded_new_teams = {
+            self.small_project: [self.application1],
+            self.medium_project: [self.application2]
+        }
+        mgmt_cmd.add_new_members_to_projects(decoded_new_teams)
+        
+        expected_small_project_members = [self.member1]
+        actual_small_project_members = list(self.small_project.members.all())
+        self.assertListEqual(expected_small_project_members,
+                             actual_small_project_members)
+
+        expected_medium_project_members = [self.member2]
+        actual_medium_project_members = list(self.medium_project.members.all())
+        self.assertListEqual(expected_medium_project_members,
+                             actual_medium_project_members)

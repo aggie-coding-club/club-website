@@ -65,11 +65,11 @@ def construct_cost_matrix(applications, projects):
             preferred_project = preferences[j]
             start, end = projects[preferred_project]['range']
 
-            cost_matrix[i][start:end] = j
+            cost_matrix[i][start:end] = j + 1
     return projects, cost_matrix
 
 
-def assign_members_to_teams(forward, backward, cost_matrix, indices, applications):
+def decode_project_members(forward, backward, cost_matrix, indices, applications):
     """Takes a forward mapping, backward mapping, and indices, and then assigns applications to teams.
 
     Args:
@@ -93,6 +93,14 @@ def assign_members_to_teams(forward, backward, cost_matrix, indices, application
     return teams
 
 
+def add_new_members_to_projects(new_projects):
+    for project in new_projects:
+        users = []
+        for application in new_projects[project]:
+            users.append(application.user)
+        project.add_multiple_members(users)
+
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         current_applications = projects_models.ProjectApplication.objects.current_applications()
@@ -103,5 +111,6 @@ class Command(BaseCommand):
             current_applications, forward_mapping)
         row_indices, col_indices = linear_sum_assignment(cost_matrix)
         indices = zip(row_indices, col_indices)
-        new_teams = assign_members_to_teams(
+        new_projects = decode_project_members(
             forward_mapping, backward_mapping, cost_matrix, indices, applications)
+        add_new_members_to_projects(new_projects)
