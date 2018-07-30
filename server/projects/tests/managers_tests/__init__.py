@@ -1,0 +1,4 @@
+from .projects_manager_tests import ProjectsManagerTest
+from .project_applications_manager_tests import ProjectApplicationsManagerTest
+
+__all__ = [ProjectsManagerTest, ProjectApplicationsManagerTest]
