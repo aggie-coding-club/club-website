@@ -5,7 +5,7 @@ from django.contrib.auth import models as auth_models
 from typing import List, Dict, Tuple
 
 
-class ProjectApplicationsTest(shared_testcase.ProjectsTestCase):
+class ProjectApplicationModelTests(shared_testcase.ProjectsTestCase):
 
     def test_get_preferences(self):
         preferences = [self.approved_project1, self.approved_project2, self.approved_project3]

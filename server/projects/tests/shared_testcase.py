@@ -23,6 +23,10 @@ class ProjectsTestCase(testcases.TestCase):
         cls.project_lead = auth_models.User.objects.create_user(
             username='project-lead', email='project-lead@email.com')
 
+        # Staff member
+        cls.staff_member = auth_models.User.objects.create_user(
+            username='staff', password='password', email='staff@email.com', is_staff=True)
+
     @classmethod
     def setUpProjects(cls):
         """Creates Projects to be used between TestCases."""

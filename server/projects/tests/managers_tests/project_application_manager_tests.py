@@ -4,7 +4,7 @@ from projects.tests import shared_testcase
 from django.contrib.auth import models as auth_models
 
 
-class ProjectApplicationsManagerTest(shared_testcase.ProjectsTestCase):
+class ProjectApplicationManagerTests(shared_testcase.ProjectsTestCase):
     def setUp(self):
         self.preferences = [self.approved_project1,
                             self.approved_project2, self.approved_project3]

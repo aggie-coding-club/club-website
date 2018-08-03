@@ -1,3 +1,3 @@
-from .assign_members_to_teams_tests import AssignMembersToTeamsTest
+from .assign_members_to_teams_tests import AssignMembersToTeamsTests
 
-__all__ = [AssignMembersToTeamsTest]
+__all__ = [AssignMembersToTeamsTests]

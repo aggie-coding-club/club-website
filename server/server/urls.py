@@ -18,13 +18,15 @@ from django.contrib.auth import views as auth_views
 from django.urls import include, path
 from django.conf.urls import url, include
 from rest_framework.authtoken import views
+from projects import urls as projects_urls
 
 from github import urls as github_urls
 
 urlpatterns = [
-    path('', include('social_django.urls')),
+    url(r'^projects/', include(projects_urls)),
     url(r'^login/$', auth_views.login, name='login'),
-    path('admin/', admin.site.urls),
-    path('api-token-auth/', views.obtain_auth_token),
-    path('api-auth/', include('rest_framework.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^api-token-auth/', views.obtain_auth_token),
+    url(r'^api-auth/', include('rest_framework.urls')),
+    path('', include('social_django.urls')),
 ]
