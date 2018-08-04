@@ -25,14 +25,15 @@ class ProjectViewsTests(shared_testcase.ProjectsTestCase):
             'idealCapacity': 0.05,
             'approved': False,
         }
-        response = self.client.post(self.create_project_url, data=mock_project)
+        response = self.client.post(self.create_project_url, data=json.dumps(
+            mock_project), content_type='application/json')
 
         expected = {
             'name': 'Test Project',
             'description': 'A project description',
-            'ideal_capacity': 0.05,
+            'idealCapacity': 0.05,
             'approved': False,
-            'project_lead': None,
+            'projectLead': None,
             'members': []
         }
 
@@ -47,14 +48,15 @@ class ProjectViewsTests(shared_testcase.ProjectsTestCase):
             'idealCapacity': 0.05,
             'approved': True
         }
-        response = self.client.post(self.create_project_url, data=mock_project)
+        response = self.client.post(self.create_project_url, data=json.dumps(
+            mock_project), content_type='application/json')
 
         expected = {
             'name': 'Test Project',
             'description': 'A project description',
-            'ideal_capacity': 0.05,
+            'idealCapacity': 0.05,
             'approved': True,
-            'project_lead': None,
+            'projectLead': None,
             'approved': False,
             'members': []
         }
@@ -162,14 +164,13 @@ class ProjectApplicationViewsTests(shared_testcase.ProjectsTestCase):
         response = self.client.post(url, data=json.dumps(
             data), content_type='application/json', **self.headers)
         actual = json.loads(response.content)
-
         expected = {
             'semester': 'FA',
             'year': 2015,
-            'first_choice': self.approved_project1.pk,
-            'second_choice': self.approved_project2.pk,
-            'third_choice': self.approved_project3.pk,
-            'created_project': None,
+            'firstChoice': self.approved_project1.pk,
+            'secondChoice': self.approved_project2.pk,
+            'thirdChoice': self.approved_project3.pk,
+            'createdProject': None,
             'user': self.authenticated_user.pk
         }
 
@@ -197,14 +198,13 @@ class ProjectApplicationViewsTests(shared_testcase.ProjectsTestCase):
         url = django_urls.reverse(
             'projects:project-apps-detail', args=[application.pk])
         data = {
-            'firstChoice': self.approved_project1.pk,
-            'secondChoice': self.approved_project2.pk,
-            'thirdChoice': self.approved_project3.pk
+            'first_choice': self.approved_project1.pk,
+            'second_choice': self.approved_project2.pk,
+            'third_choice': self.approved_project3.pk
         }
 
-        response = self.client.put(
+        response = self.client.patch(
             url, data=json.dumps(data), content_type='application/json', **self.headers)
-
         updated_application = projects_models.ProjectApplication.objects.get(
             pk=application.pk)
         expected = [self.approved_project1,
@@ -212,27 +212,27 @@ class ProjectApplicationViewsTests(shared_testcase.ProjectsTestCase):
         actual = updated_application.preferences
         self.assertListEqual(expected, actual)
 
-    # def test_update_project_application_fails_when_not_owner(self):
-    #     project_preferences = [self.approved_project1,
-    #                            self.approved_project3, self.approved_project2]
-    #     application = self.create_application(
-    #         self.authenticated_user, project_preferences)
+    def test_update_project_application_fails_when_not_owner(self):
+        project_preferences = [self.approved_project1,
+                               self.approved_project3, self.approved_project2]
+        application = self.create_application(
+            self.authenticated_user, project_preferences)
 
-    #     url = django_urls.reverse(
-    #         'projects:project-apps-detail', args=[application.pk])
-    #     data = {
-    #         'firstChoice': self.approved_project1.pk,
-    #         'secondChoice': self.approved_project2.pk,
-    #         'thirdChoice': self.approved_project3.pk
-    #     }
+        url = django_urls.reverse(
+            'projects:project-apps-detail', args=[application.pk])
 
-    #     bad_token = Token.objects.get(user=self.member1)
-    #     headers = {
-    #         'HTTP_AUTHORIZATION': 'Token %s' % bad_token
-    #     }
-    #     response = self.client.put(url, data=json.dumps(
-    #         data), content_type='application/json', **headers)
-    #     updated_application = projects_models.ProjectApplication.objects.get(
-    #         pk=application.pk)
-    #     print(updated_application.preferences)
-    #     self.assertEqual(response.status_code, 401)
+        data = {
+            'firstChoice': self.approved_project1.pk,
+            'secondChoice': self.approved_project2.pk,
+            'thirdChoice': self.approved_project3.pk
+        }
+
+        bad_token = Token.objects.get(user=self.member1)
+        headers = {
+            'HTTP_AUTHORIZATION': 'Token %s' % bad_token
+        }
+        response = self.client.patch(url, data=json.dumps(
+            data), content_type='application/json', **headers)
+        updated_application = projects_models.ProjectApplication.objects.get(
+            pk=application.pk)
+        self.assertEqual(response.status_code, 403)

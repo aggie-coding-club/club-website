@@ -7,14 +7,14 @@ from projects import serializers as projects_serializers
 # Create your views here.
 
 
-class IsOwner(permissions.BasePermission):
-    """
-    A custom permission to only allow owners of an object to edit it.
-    """
+class IsAuthenticatedAndOwner(permissions.BasePermission):
+    message = 'You must be the owner of this object.'
+
+    def has_permission(self, request, view):
+        return request.user.is_authenticated
 
     def has_object_permission(self, request, view, obj):
-        print(obj.owner, request.user)
-        return obj.owner == request.user
+        return obj.user == request.user
 
 
 class ProjectViewset(viewsets.ModelViewSet):
@@ -27,36 +27,17 @@ class ProjectViewset(viewsets.ModelViewSet):
         fields = {
             'name': data['name'],
             'description': data['description'],
-            'ideal_capacity': data['idealCapacity'],
+            'ideal_capacity': data['ideal_capacity'],
+            'approved': False
         }
-        if 'projectLead' in data:
-            fields['project_lead'] = data['projectLead']
-            print('projectLead in data')
+        if 'project_lead' in data:
+            fields['project_lead'] = data['project_lead']
         if 'members' in data:
             fields['members'] = data['members']
 
         instance = projects_models.Project.objects.create(**fields)
         serializer = self.serializer_class(instance)
         return response.Response(serializer.data)
-
-    def update(self, request, pk=None):
-        data = request.data
-        fields = {
-            'name': data['name'],
-            'description': data['description'],
-            'ideal_capacity': data['idealCapacity'],
-        }
-        if 'projectLead' in data:
-            project_lead = auth_models.User.objects.get(
-                pk=data['projectLead'])
-            fields['project_lead'] = project_lead
-
-        self.queryset.filter(pk=pk).update(**fields)
-
-        if 'members' in data:
-            members = auth_models.User.objects.filter(pk__in=data['members'])
-            self.queryset.get(pk=pk).members.set(members, clear=True)
-        return response.Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class ModifyProjectApproval(generics.UpdateAPIView):
@@ -74,20 +55,36 @@ class ModifyProjectApproval(generics.UpdateAPIView):
         return response.Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ProjectApplicationViewset(mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class ProjectApplicationViewset(viewsets.ModelViewSet):
+    """Handles creating, updating, partially-updating, deleting, retrieving, and destroying project applications.
+
+    POST - Creates a new ProjectApplication. Must be authenticated.
+
+    PUT - Replaces an existing ProjectApplication with existing data. Must be the owner of the ProjectApplication
+
+    PATCH - Updates parts of a ProjectApplication with new data. Must be the owner of the ProjectApplication.
+
+    DELETE - Deletes a ProjectApplication. Must be the owner of the ProjectApplication.
+    """
+
     serializer_class = projects_serializers.ProjectApplicationSerializer
     queryset = projects_models.ProjectApplication.objects.current_applications()
-    permission_classes = (permissions.IsAuthenticated, IsOwner,)
-
-    mapping = {
-        'user': 'user',
-        'semester': 'semester',
-        'year': 'year',
-        'firstChoice': 'first_choice',
-        'secondChoice': 'second_choice',
-        'thirdChoice': 'third_choice',
-        'createdProject': 'created_project'
+    permission_classes_by_action = {
+        'default': (permissions.IsAuthenticated,),
+        'list': (permissions.IsAdminUser,),
+        'retrieve': (IsAuthenticatedAndOwner,),
+        'destroy': (IsAuthenticatedAndOwner,),
+        'update': (IsAuthenticatedAndOwner,),
+        'partial_update': (IsAuthenticatedAndOwner,)
     }
+
+    def get_permissions(self):
+        try:
+            # return permission_classes depending on `action`
+            return [permission() for permission in self.permission_classes_by_action[self.action]]
+        except KeyError:
+            # action is not set return default permission_classes
+            return [permission() for permission in self.permission_classes_by_action['default']]
 
     def create(self, request):
         data = request.data
@@ -97,24 +94,14 @@ class ProjectApplicationViewset(mixins.CreateModelMixin, mixins.DestroyModelMixi
             'year': data['year']
         }
         fields['first_choice'] = projects_models.Project.objects.get(
-            pk=data['firstChoice'])
-        if 'secondChoice' in data:
+            pk=data['first_choice'])
+        if 'second_choice' in data:
             fields['second_choice'] = projects_models.Project.objects.get(
-                pk=data['secondChoice'])
-        if 'thirdChoice' in data:
+                pk=data['second_choice'])
+        if 'third_choice' in data:
             fields['third_choice'] = projects_models.Project.objects.get(
-                pk=data['thirdChoice'])
-
+                pk=data['third_choice'])
         new_application = projects_models.ProjectApplication.objects.create(
             **fields)
         serializer = self.serializer_class(new_application)
         return response.Response(serializer.data)
-
-    def update(self, request, pk=None):
-        data = request.data
-        fields_to_update = {}
-        for key in self.mapping:
-            if key in data:
-                fields_to_update[self.mapping[key]] = data[key]
-        self.queryset.filter(pk=pk).update(**fields_to_update)
-        return response.Response(status=status.HTTP_204_NO_CONTENT)
