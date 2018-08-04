@@ -1,5 +1,4 @@
 {
-    "personal_access_token": "<GITHUB-PROVIDED-ACCESS-TOKEN>",
-    "username": "<GITHUB-SERVICE-ACCOUNT-USERNAME>",
-    "bot_calendar_id": "<BOT-CALENDAR-ID>"
+    "personal_access_token": "<GITHUB_PERSONAL_ACCESS_TOKEN>",
+    "username": "<GITHUB_USERNAME>"
 }

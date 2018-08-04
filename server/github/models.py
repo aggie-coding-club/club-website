@@ -25,7 +25,7 @@ class Repository(models.Model):
     url = models.URLField()
 
     def __str__(self):
-        return self.name.to_python()
+        return self.name
 
 
 class Team(models.Model):
@@ -42,7 +42,7 @@ class Team(models.Model):
     url = models.URLField()
 
     def __str__(self):
-        return str(self.combined_slug.to_python())
+        return str(self.combined_slug)
 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
