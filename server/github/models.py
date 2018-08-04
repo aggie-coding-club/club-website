@@ -3,6 +3,7 @@ from django.contrib.auth import models as auth_models
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils.translation import ugettext_lazy as _
 from rest_framework.authtoken.models import Token
 
 
@@ -26,6 +27,9 @@ class Repository(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = _('Repositories')
 
 
 class Team(models.Model):
