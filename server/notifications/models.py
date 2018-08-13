@@ -51,6 +51,7 @@ class EmailMixin(models.Model):
     Attributes:
         subject: The subject line of the email
         recipients: The specific recipients of the email.
+        html_email: Whether or not this email contains HTML content.
     """
 
     subject = models.CharField(max_length=255)
