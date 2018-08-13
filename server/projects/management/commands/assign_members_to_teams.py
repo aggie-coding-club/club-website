@@ -112,12 +112,12 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         current_applications = projects_models.ProjectApplication.objects.current_applications()
         approved_projects = projects_models.Project.objects.approved_projects()
-        forward_mapping, backward_mapping = create_forward_and_backward_mappings(
+        forward_mapping, backward_mapping = create_mappings(
             approved_projects)
         forward_mapping, cost_matrix = construct_cost_matrix(
             current_applications, forward_mapping)
         row_indices, col_indices = linear_sum_assignment(cost_matrix)
         indices = zip(row_indices, col_indices)
         new_projects = decode_project_members(
-            forward_mapping, backward_mapping, cost_matrix, indices, applications)
+            forward_mapping, backward_mapping, cost_matrix, indices, current_applications)
         add_new_members_to_projects(new_projects)
