@@ -55,6 +55,7 @@ class EmailMixin(models.Model):
 
     subject = models.CharField(max_length=255)
     recipients = models.ManyToManyField(auth_models.User)
+    html_email = models.BooleanField(default=False)
 
     @property
     def emails(self):
@@ -82,11 +83,12 @@ class EmailNotification(Notification, EmailMixin):
     """A representation of an email notification.
 
     Attributes:
-        message: The body of the notification, or what we want to announce to members.
-        sending_user: Who sent the message. This should either be an officer or a robot account.
         attachment: An optional attachment to send alongside the message.
-        subject: The subject line of the email
+        html_email: Whether or not the message of the email is HTML.
+        message: The body of the notification, or what we want to announce to members.
         recipients: The specific recipients of the email.
+        sending_user: Who sent the message. This should either be an officer or a robot account.
+        subject: The subject line of the email
     """
     sending_user = models.ForeignKey(
         auth_models.User, on_delete=models.PROTECT, related_name='email_notifications', limit_choices_to={'is_staff': True})
@@ -96,13 +98,14 @@ class SlackEmailNotification(Notification, EmailMixin, SlackMixin):
     """A representation of a notification that was emitted through Slack and through email.
 
     Attributes:
-        message: The body of the notification, or what we want to announce to members.
-        sending_user: Who sent the message. This should either be an officer or a robot account.
         attachment: An optional attachment to send alongside the message.
         channel: What channel to create an announcement in. The choices should be "#announcements", or "#general"
+        html_email: Whether or not the message of the email is HTML.
+        message: The body of the notification, or what we want to announce to members.
         notify_channel: Whether or not to prefix the announcement with "@channel"
-        subject: The subject line of the email
         recipients: The specific recipients of the email.
+        sending_user: Who sent the message. This should either be an officer or a robot account.
+        subject: The subject line of the email
     """
     sending_user = models.ForeignKey(
         auth_models.User, on_delete=models.PROTECT, related_name='slack_email_notifications', limit_choices_to={'is_staff': True})
