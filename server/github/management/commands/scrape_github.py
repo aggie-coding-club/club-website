@@ -1,6 +1,4 @@
-import json
 import os
-from pprint import pprint
 from typing import Dict, List
 
 import requests
@@ -9,26 +7,9 @@ from django.core.management.base import BaseCommand, CommandError
 
 from github import models as github_models
 
-
-def load_credentials(file) -> Dict[str, str]:
-    """Loads credentials in from local file.
-    
-    Args:
-      file: The file object to open.
-      """
-    return json.load(file)
-
-
-def build_headers(credentials: Dict[str, str]) -> Dict[str, str]:
-    """Creates the headers that GitHub is looking for in their requests.
-
-    Args:
-      credentials: The dictionary of credentals to use.
-    Returns:
-      The headers to use in each GitHub request.
-    """
-    return {'Authorization': 'Bearer %s' % credentials['personal_access_token']}
-
+HEADERS = {
+    'Authorization': 'Bearer %s' % os.environ['PERSONAL_ACCESS_TOKEN']
+}
 
 def post_graphql(graphql_query: str, headers: Dict[str, str]):
     """
@@ -201,9 +182,6 @@ def team_fields() -> str:
 class Command(BaseCommand):
     def handle(self, *args, **options):
         """Scrapes GitHub data for member, team, and repository information."""
-        path = os.path.abspath('server/github/management/commands/config.json')
-        credentials = load_credentials(open(path, 'r'))
-        headers = build_headers(credentials)
 
         query = """
         {
@@ -226,7 +204,7 @@ class Command(BaseCommand):
             }
         }
         """ % (member_fields(), team_fields(), repository_fields())
-        organization_data = post_graphql(query, headers)[
+        organization_data = post_graphql(query, HEADERS)[
             'organization']
         members = organization_data['members']['nodes']
 
@@ -234,15 +212,17 @@ class Command(BaseCommand):
         for member_dict in members:
             m = save_member(member_dict)
             member_cache[member_dict['login']] = m
+        print('Member cache built')
 
         repositories = organization_data['repositories']['nodes']
         for repository_dict in repositories:
             r = save_repository(repository_dict)
             contributor_logins = repository_contributors(
-                'aggie-coding-club', repository_dict['name'], headers)
+                'aggie-coding-club', repository_dict['name'], HEADERS)
             for login in contributor_logins:
                 if login in member_cache:
                     member_cache[login].repositories.add(r)
+        print('Repositories saved')
 
         teams = organization_data['teams']['nodes']
         for team_dict in teams:
@@ -251,3 +231,4 @@ class Command(BaseCommand):
             for login in logins:
                 if login in member_cache:
                     member_cache[login].teams.add(t)
+        print('Teams saved')

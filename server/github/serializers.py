@@ -14,7 +14,7 @@ class RepositorySerializer(rf_serializers.ModelSerializer):
     class Meta:
         model = github_models.Repository
         fields = ('description', 'homepage_url', 'is_private',
-                  'name', 'primary_language', 'url')
+                  'name', 'primary_language', 'url', 'contributors')
 
 
 class TeamSerializer(rf_serializers.ModelSerializer):
