@@ -20,8 +20,6 @@ class SharedTestCase(testcases.TestCase):
     @classmethod
     def setUpEvents(cls):
         """Creates Events to be used between TestCases."""
-        cls.setUpUsers()
-
         start_datetime1 = timezone.now()
         end_datetime1 = start_datetime1 + datetime.timedelta(seconds=1800)
 
@@ -35,4 +33,5 @@ class SharedTestCase(testcases.TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        cls.setUpUsers()
         cls.setUpEvents()
