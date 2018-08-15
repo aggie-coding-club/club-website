@@ -3,7 +3,7 @@ from projects.tests import shared_testcase
 from django.test import testcases
 
 
-class ProjectsManagerTest(shared_testcase.ProjectsTestCase):
+class ProjectManagerTests(shared_testcase.ProjectsTestCase):
     
     def test_approved_projects(self):
         approved_projects = projects_models.Project.objects.approved_projects()

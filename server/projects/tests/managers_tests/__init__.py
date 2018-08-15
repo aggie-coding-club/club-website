@@ -1,4 +1,4 @@
-from .projects_manager_tests import ProjectsManagerTest
-from .project_applications_manager_tests import ProjectApplicationsManagerTest
+from .project_manager_tests import ProjectManagerTests
+from .project_application_manager_tests import ProjectApplicationManagerTests
 
-__all__ = [ProjectsManagerTest, ProjectApplicationsManagerTest]
+__all__ = [ProjectManagerTests, ProjectApplicationManagerTests]

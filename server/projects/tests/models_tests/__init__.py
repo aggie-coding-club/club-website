@@ -1,3 +1,3 @@
-from .projects_tests import ProjectsTest
-from .project_applications_tests import ProjectApplicationsTest
-__all__ = [ProjectsTest, ProjectApplicationsTest]
+from .project_model_tests import ProjectModelTests
+from .project_application_model_tests import ProjectApplicationModelTests
+__all__ = [ProjectModelTests, ProjectApplicationModelTests]

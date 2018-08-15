@@ -5,7 +5,7 @@ from projects.management.commands import assign_members_to_teams as mgmt_cmd
 from scipy.optimize import linear_sum_assignment
 
 
-class AssignMembersToTeamsTest(shared_testcase.ProjectsTestCase):
+class AssignMembersToTeamsTests(shared_testcase.ProjectsTestCase):
 
     def setUp(self):
         self.small_project = projects_models.Project(

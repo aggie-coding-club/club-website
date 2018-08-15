@@ -1,5 +1,7 @@
-from .models_tests import ProjectsTest, ProjectApplicationsTest
+from .models_tests import ProjectModelTests, ProjectApplicationModelTests
 from .services_tests import ServicesTest
-from .managers_tests import ProjectsManagerTest, ProjectApplicationsManagerTest
-from .management_commands_tests import AssignMembersToTeamsTest
-__all__ = [ProjectsTest, ProjectApplicationsTest, ServicesTest, ProjectsManagerTest, ProjectApplicationsManagerTest, AssignMembersToTeamsTest]
+from .managers_tests import ProjectManagerTests, ProjectApplicationManagerTests
+from .management_commands_tests import AssignMembersToTeamsTests
+from .views_tests import ProjectViewsTests, ProjectApplicationViewsTests
+__all__ = [ProjectModelTests, ProjectApplicationModelTests, ServicesTest, ProjectManagerTests,
+           ProjectApplicationManagerTests, AssignMembersToTeamsTests, ProjectViewsTests, ProjectApplicationViewsTests]

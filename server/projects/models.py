@@ -43,7 +43,7 @@ class Project(models.Model):
         members: Users who are contributing to this project.
         ideal_capacity: How many Users this project ideally would have.
     """
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     description = models.TextField(max_length=255)
     project_lead = models.ForeignKey(auth_models.User,
                                      on_delete=models.SET_NULL,

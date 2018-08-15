@@ -5,7 +5,7 @@ from django.core import exceptions as django_exceptions
 from django.test import testcases
 
 
-class ProjectsTest(shared_testcase.ProjectsTestCase):
+class ProjectModelTests(shared_testcase.ProjectsTestCase):
     """Tests method functionality of the Project model."""
 
     def test_add_member(self):
