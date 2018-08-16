@@ -1,10 +1,10 @@
 from typing import Dict
 
 from django.core import mail
-
-from notifications import models as notify_models
 from django.template import loader
 from django.utils import html
+
+from notifications import models as notify_models
 
 
 def create_emailmultialternatives(email_notification) -> mail.EmailMultiAlternatives:

@@ -1,7 +1,8 @@
 from django import test
-from notifications.tests import shared_testcase
-from django.core import exceptions as django_exceptions
 from django.contrib.auth import models as auth_models
+from django.core import exceptions as django_exceptions
+
+from notifications.tests import shared_testcase
 
 
 class SlackNotificationTests(shared_testcase.SharedTestCase):

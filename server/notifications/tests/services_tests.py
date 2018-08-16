@@ -41,12 +41,10 @@ class ServicesTests(shared_testcase.SharedTestCase):
         self.assertEqual(successful_emails, 1)
 
     def test_send_email_with_html_content(self):
-        notification = models.EmailNotification(message=self.html_content,
-                                                html_email=True,
-                                                sending_user=self.superuser1,
-                                                subject='Subject')
-        notification.save()
-        notification.recipients.set([self.superuser2])
+        notification = self.create_emailnotification(sending_user=self.superuser1, 
+                                                     recipients=[self.superuser2],
+                                                     html_email=True, 
+                                                     message=self.html_content)
 
         successful_emails = services.send_email(notification)
         self.assertEqual(successful_emails, 1)

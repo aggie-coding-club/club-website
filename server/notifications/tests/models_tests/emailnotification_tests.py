@@ -1,7 +1,8 @@
 from django import test
 from django.contrib.auth import models as auth_models
-from notifications import models as notify_models
 from django.core import exceptions as django_exceptions
+
+from notifications import models as notify_models
 from notifications.tests import shared_testcase
 
 
