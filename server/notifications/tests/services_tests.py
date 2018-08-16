@@ -1,6 +1,5 @@
+from notifications import models, services
 from notifications.tests import shared_testcase
-from notifications import services
-from notifications import models
 
 
 class ServicesTests(shared_testcase.SharedTestCase):
