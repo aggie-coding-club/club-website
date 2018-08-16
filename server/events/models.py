@@ -21,7 +21,10 @@ class Event(models.Model):
     location = models.CharField(max_length=255)
     start_datetime = models.DateTimeField(default=timezone.now())
     end_datetime = models.DateTimeField(default=timezone.now())
-    duration = property(lambda self: self.end_datetime - self.start_datetime)
+
+    @property
+    def duration(self):
+        return self.end_datetime - self.start_datetime
 
 class SponsoredMixin(models.Model):
     """ Additional information about an event sponsor.
