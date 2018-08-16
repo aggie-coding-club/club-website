@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'github.apps.GithubConfig',
     'projects.apps.ProjectsConfig',
     'notifications.apps.NotificationsConfig',
+    'events.apps.EventsConfig',
     'social_django',
     'rest_framework.authtoken'
 ]
