@@ -138,101 +138,12 @@ class ProjectViewsTests(shared_testcase.ProjectsTestCase):
             pk=self.approved_project1.pk)
         self.assertTrue(updated_project.approved == False)
 
-
 class ProjectApplicationViewsTests(shared_testcase.ProjectsTestCase):
-    """Tests ProjectApplication views."""
 
     def setUp(self):
-        super(ProjectApplicationViewsTests, self).setUp()
-        self.authenticated_user = auth_models.User.objects.create_user(
-            username='username', password='password')
-        token = Token.objects.get(user=self.authenticated_user)
-        self.headers = {
-            'HTTP_AUTHORIZATION': 'Token %s' % token
-        }
+        self.application1 = self.create_application(self.member1, [self.approved_project1, self.approved_project2, self.approved_project3])
 
-    def test_create_project_application(self):
-        url = django_urls.reverse('projects:project-apps-list')
-        data = {
-            'semester': 'FA',
-            'year': 2015,
-            'firstChoice': self.approved_project1.pk,
-            'secondChoice': self.approved_project2.pk,
-            'thirdChoice': self.approved_project3.pk,
-        }
-        token = Token.objects.get(user=self.authenticated_user)
-        response = self.client.post(url, data=json.dumps(
-            data), content_type='application/json', **self.headers)
-        actual = json.loads(response.content)
-        expected = {
-            'semester': 'FA',
-            'year': 2015,
-            'firstChoice': self.approved_project1.pk,
-            'secondChoice': self.approved_project2.pk,
-            'thirdChoice': self.approved_project3.pk,
-            'createdProject': None,
-            'user': self.authenticated_user.pk
-        }
-
-        self.assertEqual(expected, actual)
-
-    def test_create_project_application_fails_if_not_authenticated(self):
-        url = django_urls.reverse('projects:project-apps-list')
-        data = {
-            'semester': 'FA',
-            'year': 2015,
-            'firstChoice': self.approved_project1.pk,
-            'secondChoice': self.approved_project2.pk,
-            'thirdChoice': self.approved_project3.pk
-        }
-
-        response = self.client.post(url, data=json.dumps(
-            data), content_type='application/json')
-        self.assertEqual(response.status_code, 401)
-
-    def test_update_project_application(self):
-        project_preferences = [self.approved_project1,
-                               self.approved_project3, self.approved_project2]
-        application = self.create_application(
-            self.authenticated_user, project_preferences)
-        url = django_urls.reverse(
-            'projects:project-apps-detail', args=[application.pk])
-        data = {
-            'first_choice': self.approved_project1.pk,
-            'second_choice': self.approved_project2.pk,
-            'third_choice': self.approved_project3.pk
-        }
-
-        response = self.client.patch(
-            url, data=json.dumps(data), content_type='application/json', **self.headers)
-        updated_application = projects_models.ProjectApplication.objects.get(
-            pk=application.pk)
-        expected = [self.approved_project1,
-                    self.approved_project2, self.approved_project3]
-        actual = updated_application.preferences
-        self.assertListEqual(expected, actual)
-
-    def test_update_project_application_fails_when_not_owner(self):
-        project_preferences = [self.approved_project1,
-                               self.approved_project3, self.approved_project2]
-        application = self.create_application(
-            self.authenticated_user, project_preferences)
-
-        url = django_urls.reverse(
-            'projects:project-apps-detail', args=[application.pk])
-
-        data = {
-            'firstChoice': self.approved_project1.pk,
-            'secondChoice': self.approved_project2.pk,
-            'thirdChoice': self.approved_project3.pk
-        }
-
-        bad_token = Token.objects.get(user=self.member1)
-        headers = {
-            'HTTP_AUTHORIZATION': 'Token %s' % bad_token
-        }
-        response = self.client.patch(url, data=json.dumps(
-            data), content_type='application/json', **headers)
-        updated_application = projects_models.ProjectApplication.objects.get(
-            pk=application.pk)
-        self.assertEqual(response.status_code, 403)
+    def test_retrieve_project_application(self):
+        url = django_urls.reverse('projects:app-detail', args=[self.application1.pk])
+        response = self.client.get(url)
+        print(str(response.content))

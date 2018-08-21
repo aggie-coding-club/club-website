@@ -1,0 +1,16 @@
+{% load rest_framework %}
+
+<html>
+
+<body>
+
+    <h1>Project Application - {{application.semester}} {{application.year}}</h1>
+
+    <form action="{% url 'projects:app-detail' pk=application.pk %}" method="PATCH">
+        {% csrf_token %} {% render_form serializer %}
+        <input type="submit" value="Update Project Application">
+    </form>
+
+</body>
+
+</html>
