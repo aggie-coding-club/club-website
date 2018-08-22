@@ -17,17 +17,17 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import include, path
 from django.conf.urls import url, include
-from rest_framework.authtoken import views
+from django.views import generic as generic_views
 from projects import urls as projects_urls
 
 from github import urls as github_urls
 
 urlpatterns = [
-    url(r'^projects/', include(projects_urls)),
-    url(r'^github/', include(github_urls)),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^api-token-auth/', views.obtain_auth_token),
-    url(r'^api-auth/', include('rest_framework.urls')),
-    path('', include('social_django.urls')),
+    path('projects/', include(projects_urls)),
+    path('github/', include(github_urls)),
+    path('admin/', admin.site.urls),
+    path('login/', auth_views.login),
+    path('accounts/profile/', generic_views.TemplateView.as_view(
+        template_name='accounts/profile.html'), name='profile'),
+    path('', include('social_django.urls'))
 ]

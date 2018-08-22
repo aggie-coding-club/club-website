@@ -11,6 +11,10 @@ HEADERS = {
     'Authorization': 'Bearer %s' % os.environ['PERSONAL_ACCESS_TOKEN']
 }
 
+
+class GraphQLException(Exception):
+    pass
+
 def post_graphql(graphql_query: str, headers: Dict[str, str]):
     """
     Makes a POST request to GitHub's v4 API.
@@ -26,7 +30,7 @@ def post_graphql(graphql_query: str, headers: Dict[str, str]):
     r.raise_for_status()
     json_response = r.json()
     if 'errors' in json_response:
-        raise Exception(json_response['errors'])
+        raise GraphQLException(json_response['errors'])
     return json_response['data']
 
 

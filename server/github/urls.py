@@ -1,14 +1,11 @@
-from django.conf.urls import url, include
-from rest_framework.routers import DefaultRouter
-from github import views
+from django.urls import include, path
 
+from github import views as github_views
+
+app_name = 'github'
 # Create a router and register our viewsets with it.
-router = DefaultRouter()
-router.register(r'users', views.GithubUserViewSet)
-router.register(r'repositories', views.RepositoryViewSet)
-router.register(r'teams', views.TeamViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
-    url(r'^', include(router.urls))
+    path('connect/', github_views.GithubConnect.as_view(), name='connect')
 ]
