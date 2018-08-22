@@ -61,10 +61,9 @@ class ProjectApplicationsManager(django_models.Manager):
     def get_queryset(self):
         return super(ProjectApplicationsManager, self).get_queryset()
 
-    def current_applications(self):
+    def all(self):
         parameters = {
             'semester': calculate_semester(),
             'year': datetime.today().year
-
         }
         return self.get_queryset().filter(**parameters)

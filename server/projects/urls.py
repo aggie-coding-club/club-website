@@ -6,6 +6,8 @@ app_name = 'projects'
 
 
 urlpatterns = [
-    path('applications/<int:pk>/', projects_views.ProjectApplicationDetail.as_view(),
-        name='app-detail')
+    path('applications/<int:pk>/',
+         projects_views.ProjectApplicationDetail.as_view(), name='app-detail'),
+    path('applications/',
+         projects_views.ProjectApplicationCreate.as_view(), name='app-create')
 ]

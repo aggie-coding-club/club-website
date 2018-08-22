@@ -18,7 +18,7 @@ class ProjectApplicationManagerTests(shared_testcase.ProjectsTestCase):
         old_application = self.create_application(
             user=self.member2, projects=self.preferences2, semester='SU', year=2015)
 
-        current_applications = projects_models.ProjectApplication.objects.current_applications()
+        current_applications = projects_models.ProjectApplication.current.all()
         expected = [self.normal_application.pk]
         actual = [app.pk for app in current_applications]
         self.assertListEqual(expected, actual)
