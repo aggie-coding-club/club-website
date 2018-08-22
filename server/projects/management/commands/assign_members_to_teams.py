@@ -105,7 +105,7 @@ def add_new_members_to_projects(new_projects):
         users = []
         for application in new_projects[project]:
             users.append(application.user)
-        project.add_multiple_members(users)
+        project.members.add(*users)
 
 
 class Command(BaseCommand):

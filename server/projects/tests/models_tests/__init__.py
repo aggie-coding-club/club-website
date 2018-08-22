@@ -1,3 +1,0 @@
-from .project_model_tests import ProjectModelTests
-from .project_application_model_tests import ProjectApplicationModelTests
-__all__ = [ProjectModelTests, ProjectApplicationModelTests]

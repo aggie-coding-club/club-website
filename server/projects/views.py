@@ -1,7 +1,10 @@
-from django import shortcuts, views
 import datetime
-from projects import models as project_models
+
+from django import shortcuts, views
+from django.contrib.auth import mixins as auth_mixins
+
 from projects import managers as project_managers
+from projects import models as project_models
 
 human_readable_semesters = {
     'FA': 'Fall',
@@ -11,7 +14,12 @@ human_readable_semesters = {
 }
 
 
-class ProjectApplicationCreate(views.generic.edit.CreateView):
+def is_owner(self):
+    obj = self.get_object()
+    return self.request.user == obj.user
+
+
+class ProjectApplicationCreate(auth_mixins.LoginRequiredMixin, views.generic.edit.CreateView):
     model = project_models.ProjectApplication
     fields = ('first_choice', 'second_choice',
               'third_choice', 'created_project')
@@ -31,11 +39,12 @@ class ProjectApplicationCreate(views.generic.edit.CreateView):
         return super().form_valid(form)
 
 
-class ProjectApplicationUpdate(views.generic.edit.UpdateView):
+class ProjectApplicationUpdate(auth_mixins.UserPassesTestMixin, auth_mixins.LoginRequiredMixin, views.generic.edit.UpdateView):
     model = project_models.ProjectApplication
     fields = ('first_choice', 'second_choice',
               'third_choice', 'created_project')
     template_name = 'applications/update_form.html'
+    test_func = is_owner
 
     def get_context_data(self, **kwargs):
         context = super(ProjectApplicationUpdate,
@@ -47,13 +56,13 @@ class ProjectApplicationUpdate(views.generic.edit.UpdateView):
         return context
 
 
-class ProjectCreate(views.generic.edit.CreateView):
+class ProjectCreate(auth_mixins.LoginRequiredMixin, views.generic.edit.CreateView):
     model = project_models.Project
     fields = ('name', 'description', 'project_lead', 'ideal_capacity')
     template_name = 'projects/create_form.html'
 
 
-class ProjectDetail(views.generic.DetailView):
+class ProjectDetail(auth_mixins.LoginRequiredMixin, views.generic.DetailView):
     model = project_models.Project
     fields = ('name', 'description', 'project_lead', 'ideal_capacity')
     template_name = 'projects/detail.html'

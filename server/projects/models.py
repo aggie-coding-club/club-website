@@ -157,4 +157,4 @@ class ProjectApplication(models.Model):
         return [choice for choice in choices if choice]
 
     def get_absolute_url(self):
-        return urls.reverse_lazy('projects:app-detail', kwargs={'pk': self.pk})
+        return urls.reverse_lazy('projects:app-update', kwargs={'pk': self.pk})

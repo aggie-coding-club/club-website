@@ -1,3 +1,3 @@
-from .project_views_tests import ProjectViewsTests, ProjectApplicationViewsTests
+from .project_views_tests import ProjectApplicationViewsTests, ProjectViewsTests
 
-__all__ = [ProjectViewsTests, ProjectApplicationViewsTests]
+__all__ = ['ProjectApplicationViewsTests', 'ProjectViewsTests']
