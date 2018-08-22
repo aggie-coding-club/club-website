@@ -1,52 +1,59 @@
-from django import shortcuts
-from rest_framework import permissions, renderers, response, views, generics, mixins
-from django import shortcuts
+from django import shortcuts, views
+import datetime
 from projects import models as project_models
-from projects import serializers as project_serializers
+from projects import managers as project_managers
+
+human_readable_semesters = {
+    'FA': 'Fall',
+    'SP': 'Spring',
+    'SU': 'Summer',
+    'WI': 'Winter'
+}
 
 
-class ProjectApplicationDetail(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = project_serializers.ProjectApplicationSerializer
-    renderer_classes = [renderers.TemplateHTMLRenderer]
-    template_name = 'projects/projectapplication_detail_form.html'
-    queryset = project_models.ProjectApplication.current.all()
+class ProjectApplicationCreate(views.generic.edit.CreateView):
+    model = project_models.ProjectApplication
+    fields = ('first_choice', 'second_choice',
+              'third_choice', 'created_project')
+    template_name = 'applications/create_form.html'
 
-    def get(self, request, pk):
-        project_application = shortcuts.get_object_or_404(
-            project_models.ProjectApplication, pk=pk)
-        serializer = project_serializers.ProjectApplicationSerializer(
-            project_application)
-        return response.Response({'serializer': serializer, 'application': project_application})
+    def get_context_data(self, **kwargs):
+        context = super(ProjectApplicationCreate,
+                        self).get_context_data(**kwargs)
+        short_semester = project_managers.calculate_semester()
+        semester = human_readable_semesters[short_semester]
+        context['semester'] = semester
+        context['year'] = datetime.date.today().year
+        return context
 
-    def post(self, request, pk):
-        project_application = shortcuts.get_object_or_404(
-            project_models.ProjectApplication, pk=pk)
-        serializer = project_serializers.ProjectApplicationSerializer(
-            project_application, data=request.data)
-        if not serializer.is_valid():
-            return response.Response({'serializer': serializer, 'application': project_application})
-        serializer.save()
-        return response.Response({'serializer': serializer, 'application': project_application})
-
-    def delete(self, request, pk):
-        project_application = shortcuts.get_object_or_404(
-            project_models.ProjectApplication, pk=pk)
-        project_application.delete()
-        return shortcuts.redirect('settings.LOGIN_REDIRECT_URL', permanent=True)
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
-class ProjectApplicationCreate(generics.GenericAPIView, mixins.CreateModelMixin):
-    renderer_classes = [renderers.TemplateHTMLRenderer]
-    template_name = 'projects/projectapplication_create_form.html'
+class ProjectApplicationUpdate(views.generic.edit.UpdateView):
+    model = project_models.ProjectApplication
+    fields = ('first_choice', 'second_choice',
+              'third_choice', 'created_project')
+    template_name = 'applications/update_form.html'
 
-    def get(self, request):
-        serializer = project_serializers.ProjectApplicationSerializer()
-        return response.Response({'serializer': serializer})
+    def get_context_data(self, **kwargs):
+        context = super(ProjectApplicationUpdate,
+                        self).get_context_data(**kwargs)
+        short_semester = project_managers.calculate_semester()
+        semester = human_readable_semesters[short_semester]
+        context['semester'] = semester
+        context['year'] = datetime.date.today().year
+        return context
 
-    def post(self, request):
-        serializer = project_serializers.ProjectApplicationSerializer(
-            data=request.data)
-        if not serializer.is_valid():
-            return response.Response({'serializer': serializer})
-        serializer.save()
-        return response.Response({'serializer': serializer, 'application': serializer.data})
+
+class ProjectCreate(views.generic.edit.CreateView):
+    model = project_models.Project
+    fields = ('name', 'description', 'project_lead', 'ideal_capacity')
+    template_name = 'projects/create_form.html'
+
+
+class ProjectDetail(views.generic.DetailView):
+    model = project_models.Project
+    fields = ('name', 'description', 'project_lead', 'ideal_capacity')
+    template_name = 'projects/detail.html'

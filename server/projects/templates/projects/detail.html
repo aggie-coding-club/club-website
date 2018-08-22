@@ -1,0 +1,33 @@
+<h1>
+    {% if object.repository %}
+        <a href={{object.repository.url}}>{{object.repository.name}}</a>
+    {% else %}
+        {{object.name}}
+    {% endif %}
+</h1>
+<p>{{object.description}}</p>
+<p>Members:
+    <ul>
+        {% for member in object.members.all %}
+        <li>
+            {% if member.githubuser %}
+                <a href={{member.githubuser.url}}>
+                    {% if member.githubuser.name %}
+                        {{member.githubuser.name}}
+                    {% else %}
+                        {{member.githubuser.login}}
+                    {% endif %}
+                </a>
+            {% else %}
+                {{member}}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</p>
+<p>Project Lead:
+    <a href={{object.project_lead.githubuser.url}}>
+            {{object.project_lead}}
+    </a>
+</p>
+<p>Capacity: {{object.ideal_capacity}}</p>

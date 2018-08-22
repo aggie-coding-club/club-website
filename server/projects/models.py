@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Dict, List, NewType, Tuple
 
+from django import urls
 from django.contrib.auth import models as auth_models
 from django.core import exceptions as django_exceptions
 from django.db import models
@@ -31,6 +32,7 @@ def requires_project_approval(main_function):
                 'This Project is not approved. It must be approved before modifying data.')
         main_function(self, *args, **kwargs)
     return wrapper
+
 
 class Project(models.Model):
     """A representation of an ACC Project.
@@ -69,94 +71,6 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
-    def approve_project(self):
-        """Approves this Project."""
-        self.approved = True
-        self.save()
-
-    @requires_project_approval
-    def add_member(self, user: auth_models.User):
-        """Adds a member to this Project. See `add_project_lead` for adding a project lead.
-        Requires project approval.
-
-        Args:
-            user: The user to add to this Project
-        """
-        self.members.add(user)
-
-    @requires_project_approval
-    def add_multiple_members(self, users: List[auth_models.User]):
-        """Adds multiple members to this Project. See `add_member` for adding an individual member.
-        Requires project approval.
-
-        Args:
-            users: The users to add to this project.
-        """
-        self.members.add(*users)
-
-    @requires_project_approval
-    def remove_member(self, user: auth_models.User):
-        """Removes a member from this Project. See `remove_project_lead` for removing a project lead.
-        Requires project approval.
-
-        Args:
-            user: The user to remove from this Project.
-        """
-        self.members.remove(user)
-
-    @requires_project_approval
-    def remove_multiple_members(self, users: List[auth_models.User]):
-        """Remove multiple members from this Project. See `remove_member` for removing an individual member.
-        Requires project approval.
-
-        Args:
-            users: The users to add to this project.
-        """
-        if not self.approved:
-            raise NotApprovedException(
-                'This project has not been approved. Modifications are not possible.')
-        self.members.remove(*users)
-
-    @requires_project_approval
-    def add_project_lead(self, user: auth_models.User):
-        """Add a project lead to this Project. See `replace_project_lead` to replace a project lead.
-        Requires project approval.
-
-        Args:
-            user: The user to add as a project lead.
-        Raises:
-            django_exceptions.ValidationError if the project
-            lead already is set.
-        """
-        if not self.approved:
-            raise NotApprovedException(
-                'This project has not been approved. Adding a project lead is not allowed.')
-        if self.project_lead is not None:
-            raise django_exceptions.ValidationError(('Project lead already exists. '
-                                                     'Remove existing lead before adding new lead.'))
-        self.project_lead = user
-        self.save()
-
-    @requires_project_approval
-    def remove_project_lead(self):
-        """Remove the project lead of this Project. See `replace_project_lead` to replace a project lead.
-        Requires project approval."""
-        if not self.approved:
-            raise NotApprovedException(
-                'This project has not been approved. Removing a project lead is not allowed.')
-        self.project_lead = None
-        self.save()
-
-    @requires_project_approval
-    def replace_project_lead(self, user: auth_models.User):
-        """Replace the current project lead of this Project with a new project lead. Requires project approval.
-
-        Args:
-            user: The user to replace the current project lead with.
-        """
-        self.remove_project_lead()
-        self.add_project_lead(user)
-
     @property
     def member_emails(self) -> List[Email]:
         """Retrieves all of the emails for the members of a Project.
@@ -168,6 +82,8 @@ class Project(models.Model):
         """
         return [m.email for m in self.members.all() if m.email]
 
+    def get_absolute_url(self):
+        return urls.reverse_lazy('projects:project-detail', kwargs={'pk': self.pk})
 
 class ProjectApplication(models.Model):
     """An application to an ACC project. Submitted by a `User` for a `Project`
@@ -228,7 +144,7 @@ class ProjectApplication(models.Model):
         Returns:
             Boolean.
         """
-        return self.semester == calculate_semester(datetime.today()) and self.year == datetime.today().year
+        return self.semester == projects_managers.calculate_semester(datetime.today()) and self.year == datetime.today().year
 
     @property
     def preferences(self):
@@ -239,3 +155,6 @@ class ProjectApplication(models.Model):
         """
         choices = [self.first_choice, self.second_choice, self.third_choice]
         return [choice for choice in choices if choice]
+
+    def get_absolute_url(self):
+        return urls.reverse_lazy('projects:app-detail', kwargs={'pk': self.pk})

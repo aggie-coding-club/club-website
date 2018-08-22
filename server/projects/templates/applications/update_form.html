@@ -1,0 +1,6 @@
+<h1>{{ semester }} {{ year }} Project Application</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <ul>{{ form.as_ul }}</ul>
+    <button type="submit" class="save btn btn-default">Update</button>
+</form>

@@ -1,6 +1,0 @@
-{% load rest_framework %}
-
-<form action="{% url 'projects:app-create' %}" method="post" novalidate>
-    {% csrf_token %} {% render_form serializer template_pack='rest_framework/vertical' %}
-    <button type="submit" class="btn btn-default">Submit Project Application</button>
-</form>

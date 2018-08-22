@@ -1,0 +1,26 @@
+<ul>
+    {% for repo in repos %}
+    <li>
+        <div>
+            <a href={{repo.url}}>{{ repo.name }}</a> - {{ repo.description }}</div>
+        <ul>
+            {% for member in repo.contributors.all %}
+            <li>
+                <!-- <img src={{member.avatar_url}}/> -->
+                <a href={{member.url}}>
+                    {% if member.name %} 
+                        {{ member.name }} 
+                    {% else %} 
+                        {{member.login}}
+                    {% endif %}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% if user.is_authenticated %}
+    <a href={{settings.LOGIN_REDIRECT_URL}}>Profile</a>
+{% else %}
+    <a href="/login">Login</a>
+{% endif %}
