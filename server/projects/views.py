@@ -1,7 +1,11 @@
 import datetime
 
-from django import shortcuts, views
+from django import forms, shortcuts
+from django import urls as django_urls
+from django import views
 from django.contrib.auth import mixins as auth_mixins
+from django.contrib.auth import models as auth_models
+from django.http import response
 
 from projects import managers as project_managers
 from projects import models as project_models
@@ -19,11 +23,33 @@ def is_owner(self):
     return self.request.user == obj.user
 
 
+def current_application_exists(user: auth_models.User):
+    """Checks to see if a user has current application.
+
+    Args:
+        user: An instance of auth_models.User.
+    Returns:
+        A boolean indicating whether "user" has a current application.
+    """
+    semester, year = project_managers.calculate_current_term()
+    return project_models.ProjectApplication.objects.filter(user=user, semester=semester, year=year).exists()
+
+
 class ProjectApplicationCreate(auth_mixins.LoginRequiredMixin, views.generic.edit.CreateView):
     model = project_models.ProjectApplication
     fields = ('first_choice', 'second_choice',
               'third_choice', 'created_project')
     template_name = 'applications/create_form.html'
+    success_url = '/accounts/profile'
+
+    def get(self, request, *args, **kwargs):
+        if current_application_exists(request.user):
+            current = request.user.project_applications.current()
+            redirect_url = django_urls.reverse(
+                'projects:app-update', args=[current.pk])
+            return shortcuts.redirect(redirect_url)
+        context = self.get_context_data(*args, **kwargs)
+        return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):
         context = super(ProjectApplicationCreate,
@@ -36,6 +62,10 @@ class ProjectApplicationCreate(auth_mixins.LoginRequiredMixin, views.generic.edi
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        if current_application_exists(self.request.user):
+            form.add_error(None, forms.ValidationError(
+                "You've already created an application for this semester. Update that instead."))
+            return super(ProjectApplicationCreate, self).form_invalid(form)
         return super().form_valid(form)
 
 
@@ -44,6 +74,7 @@ class ProjectApplicationUpdate(auth_mixins.UserPassesTestMixin, auth_mixins.Logi
     fields = ('first_choice', 'second_choice',
               'third_choice', 'created_project')
     template_name = 'applications/update_form.html'
+    success_url = '/accounts/profile'
     test_func = is_owner
 
     def get_context_data(self, **kwargs):
@@ -54,6 +85,15 @@ class ProjectApplicationUpdate(auth_mixins.UserPassesTestMixin, auth_mixins.Logi
         context['semester'] = semester
         context['year'] = datetime.date.today().year
         return context
+
+
+class ProjectApplicationRedirect(auth_mixins.LoginRequiredMixin, views.generic.RedirectView):
+    def get_redirect_url(self, *args, **kwargs):
+        user = self.request.user
+        if current_application_exists(user):
+            current = user.project_applications.current()
+            return django_urls.reverse('projects:app-update', args=[current.pk])
+        return django_urls.reverse('projects:app-create')
 
 
 class ProjectCreate(auth_mixins.LoginRequiredMixin, views.generic.edit.CreateView):

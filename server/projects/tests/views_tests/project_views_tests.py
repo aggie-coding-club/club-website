@@ -138,3 +138,12 @@ class ProjectApplicationViewsTests(shared_testcase.ProjectsTestCase):
             url, data=data, content_type='application/x-www-form-urlencoded')
         self.assertRedirects(response, '/accounts/login/?next=/projects/applications/%s/' %
                              app.pk, fetch_redirect_response=False)
+
+    def test_update_project_application_redirects_if_already_made(self):
+        self.client.login(username='staff', password='password')
+        app = self.create_application(self.staff_member, [self.approved_project1, self.approved_project2, self.approved_project3])
+        url = django_urls.reverse('projects:app-create')
+
+        response = self.client.get(url, content_type='application/x-www-form-urlencoded')
+        expected_redirect_url = django_urls.reverse('projects:app-update', args=[app.pk])
+        self.assertRedirects(response, expected_redirect_url, fetch_redirect_response=False)

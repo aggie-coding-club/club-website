@@ -33,6 +33,9 @@ def calculate_semester(date=datetime.today()) -> str:
     else:
         return SUMMER
 
+def calculate_current_term() -> Tuple[str, int]:
+    return (calculate_semester(), datetime.today().year)
+
 class ProjectsManager(django_models.Manager):
     """A Manager for the Project model."""
 
@@ -61,9 +64,9 @@ class ProjectApplicationsManager(django_models.Manager):
     def get_queryset(self):
         return super(ProjectApplicationsManager, self).get_queryset()
 
-    def all(self):
+    def current(self):
         parameters = {
             'semester': calculate_semester(),
             'year': datetime.today().year
         }
-        return self.get_queryset().filter(**parameters)
+        return self.get_queryset().get(**parameters)

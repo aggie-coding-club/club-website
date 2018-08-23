@@ -3,15 +3,29 @@
 <p>Here are some things you can do:</p>
 <ul>
     <li>
-        <a href="{% url 'projects:app-create' %}">Create your project preferences</a>
+        {% if not user.project_applications.current %}
+            <a href="{% url 'projects:app' %}">Create your project preferences</a>
+        {% else %}
+            <a href={{user.project_applications.current.get_absolute_url}}>Manage your project application</a>
+        {% endif %}
     </li>
     <li>
         <a href="{% url 'projects:project-create' %}">Propose a project</a>
     </li>
-    {% if not user.githubuser %}
-        <li>
-            <a href="{% url 'github:connect' %}">Connect your GitHub account</a>
-        </li>
+    {% if user.leads %}
+    <li>Manage the projects you lead:
+        <ul>
+            {% for project in user.leads.all %}
+            <li>
+                <a href={{project.get_absolute_url}}>{{ project.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endif %} {% if not user.githubuser %}
+    <li>
+        <a href="{% url 'github:connect' %}">Connect your GitHub account</a>
+    </li>
     {% endif %}
 </ul>
 {% endif %}

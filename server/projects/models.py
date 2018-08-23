@@ -123,8 +123,7 @@ class ProjectApplication(models.Model):
     created_project = models.ForeignKey(
         Project, on_delete=models.CASCADE, related_name='project_creator', null=True, blank=True)
 
-    objects = models.Manager()
-    current = projects_managers.ProjectApplicationsManager()
+    objects = projects_managers.ProjectApplicationsManager()
 
     class Meta:
         ordering = ('')
