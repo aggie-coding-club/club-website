@@ -6,7 +6,7 @@
         {% if not user.project_applications.current %}
             <a href="{% url 'projects:app' %}">Create your project preferences</a>
         {% else %}
-            <a href={{user.project_applications.current.get_absolute_url}}>Manage your project application</a>
+            <a href="{% url 'projects:app' %}">Update your project application</a>
         {% endif %}
     </li>
     <li>

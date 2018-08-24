@@ -15,7 +15,7 @@ class ProjectApplicationManagerTests(shared_testcase.ProjectsTestCase):
             self.member1, self.preferences)
 
     def test_current_applications_excludes_old_applications(self):
-        old_application = self.create_application(
+        self.create_application(
             user=self.member2, projects=self.preferences2, semester='SU', year=2015)
 
         current_applications = projects_models.ProjectApplication.objects.current()
