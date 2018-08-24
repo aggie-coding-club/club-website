@@ -34,6 +34,18 @@ def current_application_exists(user: auth_models.User):
     semester, year = project_managers.calculate_current_term()
     return project_models.ProjectApplication.objects.filter(user=user, semester=semester, year=year).exists()
 
+def get_current_application(user: auth_models.User):
+    """Retrieves a user's current ProjectApplication.
+
+    Args:
+        user: An instance of auth_models.User.
+    Returns:
+        The user's current application.
+    """
+    if not current_application_exists(user):
+        return None
+    semester, year = project_managers.calculate_current_term()
+    return project_models.ProjectApplication.objects.get(user=user, semester=semester, year=year)
 
 class ProjectApplicationCreate(auth_mixins.LoginRequiredMixin, views.generic.edit.CreateView):
     model = project_models.ProjectApplication
@@ -41,15 +53,6 @@ class ProjectApplicationCreate(auth_mixins.LoginRequiredMixin, views.generic.edi
               'third_choice', 'created_project')
     template_name = 'applications/create_form.html'
     success_url = '/accounts/profile'
-
-    def get(self, request, *args, **kwargs):
-        if current_application_exists(request.user):
-            current = request.user.project_applications.current()
-            redirect_url = django_urls.reverse(
-                'projects:app-update', args=[current.pk])
-            return shortcuts.redirect(redirect_url)
-        context = self.get_context_data(*args, **kwargs)
-        return self.render_to_response(context)
 
     def get_context_data(self, **kwargs):
         context = super(ProjectApplicationCreate,
@@ -91,7 +94,7 @@ class ProjectApplicationRedirect(auth_mixins.LoginRequiredMixin, views.generic.R
     def get_redirect_url(self, *args, **kwargs):
         user = self.request.user
         if current_application_exists(user):
-            current = user.project_applications.current()
+            current = get_current_application(user)
             return django_urls.reverse('projects:app-update', args=[current.pk])
         return django_urls.reverse('projects:app-create')
 
