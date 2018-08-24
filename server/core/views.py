@@ -19,9 +19,8 @@ class IndexView(generic_views.TemplateView):
         context['repos'] = repositories
         context['LOGIN_REDIRECT_URL'] = '/accounts/profile'
 
-        relative_static_path = settings.STATIC_URL[1:]
-        officer_photo_path = os.path.join(
-            'server', relative_static_path, 'officers')
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        officer_photo_path = os.path.join(current_dir, '../static/officers')
         officer_photos = os.listdir(officer_photo_path)
         context['officer_photos'] = officer_photos
         return context
