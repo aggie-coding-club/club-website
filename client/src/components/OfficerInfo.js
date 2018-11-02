@@ -24,7 +24,7 @@ class OfficerInfo extends Component{
                         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
                             <h1 className="headerStyle"> who we are </h1>
                             <div style={{ paddingBottom: "100px" }}>
-                                <SimpleMediaCard imgSrc={Rohit} firstName="James" lastName="Muchlera" major="Computer Science" classYear="'18" subtitle="Club President" />
+                                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="'18" subtitle="Club President" />
                                 <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="'18" subtitle="Vice President" />
                                 <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="'18" subtitle="Project Management Chair" />
                                 <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="'18" subtitle="Workshops Chair" />
