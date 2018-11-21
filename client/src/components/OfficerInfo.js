@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 
 //Picture-Img Imports
-import Rohit from "../assets/images/rohit.jpg";
-import Liam from "../assets/images/liam.jpg";
-import Colton from "../assets/images/colton.jpg";
 import Hannah from "../assets/images/hannah.jpg"
-import William from '../assets/images/william.jpg';
-import Marcus from '../assets/images/marcus.jpg';
+import Gabriel from '../assets/images/gabriel.jpg';
+import Feras from '../assets/images/feras.jpg';
 import Marissa from '../assets/images/marissa.jpg';
-import Simone from '../assets/images/simone.jpg';
+import Thomas from '../assets/images/thomas.jpg';
+import Edgar from '../assets/images/edgar.jpg';
 
 import {SimpleMediaCard} from './SimpleMediaCard.js';
 import ScrollAnimation from "react-animate-on-scroll";
@@ -24,14 +22,12 @@ class OfficerInfo extends Component{
                         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
                             <h1 className="headerStyle"> who we are </h1>
                             <div style={{ paddingBottom: "100px" }}>
-                            <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="'20" subtitle="Club President" />
-                                <SimpleMediaCard imgSrc={Rohit} firstName="Rohit" lastName="Muchlera" major="Computer Science" classYear="'18" subtitle="Club President" />
-                                <SimpleMediaCard imgSrc={Colton} firstName="Colton" lastName="Weaver" major="Electrical Engineering" classYear="'18" subtitle="Vice President" />
-                                <SimpleMediaCard imgSrc={Liam} firstName="Liam" lastName="Moran" major="Computer Science" classYear="'18" subtitle="Project Management Chair" />
-                                <SimpleMediaCard imgSrc={William} firstName="William" lastName="O'Rosky" major="Computer Engineering" classYear="'18" subtitle="Workshops Chair" />
-                                <SimpleMediaCard imgSrc={Marcus} firstName="Marcus" lastName="Heinonen" major="Computer Science" classYear="'18" subtitle="Events Chair" />
-                                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soira" major="Computer Science" classYear="'20" subtitle="Social Chair" />
-                                <SimpleMediaCard imgSrc={Simone} firstName="Simone" lastName="Serrano" major="MIS" classYear="'19" subtitle="Marketing Chair" />
+                                <SimpleMediaCard imgSrc={Hannah} firstName="Hannah" lastName="Gooden" major="Computer Science" classYear="'20" subtitle="President" />
+                                <SimpleMediaCard imgSrc={Gabriel} firstName="Gabriel" lastName="Britain" major="Computer Science" classYear="'20" subtitle="Vice President" />
+                                <SimpleMediaCard imgSrc={Feras} firstName="Feras" lastName="Khemakhem" major="Computer Science" classYear="'20" subtitle="Project Management Chair" />
+                                <SimpleMediaCard imgSrc={Marissa} firstName="Marissa" lastName="Soria" major="Electronic Systems Engineering Technology" classYear="'20" subtitle="Events Chair" />
+                                <SimpleMediaCard imgSrc={Thomas} firstName="Thomas" lastName="McDonald" major="Computer Science" classYear="'20" subtitle="Co-Workshops Chair" />
+                                <SimpleMediaCard imgSrc={Edgar} firstName="Edgar" lastName="Martinez" major="Computer Science" classYear="'20" subtitle="Co-Workshops Chair" />
                             </div>
                         </ScrollAnimation>
                     </div>

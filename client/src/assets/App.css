@@ -53,9 +53,10 @@
 }
 .tile img
 {
-  height:100%;
-  width:100%;
-  position:absolute;
+  /* height:100%; */
+  width:100%;                /* For images that are taller than they are wide, */
+  overflow: hidden;          /* the width and the overflow properties prevent */
+  position:absolute;         /* stretching of the image. */
   top:0;
   left:0;
   z-index:0;
