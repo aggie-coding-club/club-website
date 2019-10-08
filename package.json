@@ -18,17 +18,23 @@
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run check",
-    "start": "node build/src/index.js"
+    "start": "node build/src/index.js",
+    "copy-static-assets": "ts-node copyStaticAssets.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.2.0",
+    "@types/express": "^4.17.1",
     "@types/mocha": "^5.2.7",
     "@types/node": "^10.0.3",
+    "@types/shelljs": "^0.8.5",
     "gts": "^1.1.0",
+    "ts-node": "^8.4.1",
     "typescript": "~3.5.0"
   },
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
+    "shelljs": "^0.8.3"
   }
 }
