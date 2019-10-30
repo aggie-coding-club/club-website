@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aggie Coding Club - Announcements</title>
+    <meta name="description" content="Here you can find future events and announcements.">
+</head>
+
+<body>
+    <% for(month of ["November", "December", "January"]) { %>
+    <h2><%= month %></h2>
+    <ul role="navigation">
+        <% for(var x=0; x<4; x++) { %>
+        <li>
+            <h3>Event Title</h3>
+            <h4>Date/Time: 9/25/2019 from 7:00pm to 9:00pm, <abbr title="Located at The Harvey Bright Building in Room 124">Location: HRBB 124</abbr></h4>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+</body>
+
+</html>
