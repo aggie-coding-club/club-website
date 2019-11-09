@@ -17,6 +17,14 @@ app.get('/announcements', (req, res) => {
     res.render('announcements');
 });
 
+app.get('/projects/learning', (req, res) => {
+    res.render('learning_oriented_projects.html');
+});
+
+app.get('/projects/progress', (req, res) => {
+    res.render('progress_oriented_projects.html');
+});
+
 app.listen(3000, () => {
     console.log(`Listening on port ${port}`);
 });
