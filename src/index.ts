@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
+import {officers} from './data/officers.json';
 
 const app = express();
 const port = 3000;
@@ -12,6 +13,10 @@ app.use('/static', express.static(path.join(__dirname, '/static')));
 app.get('/', (req, res) => {
     res.render('index');
 });
+
+app.get('/about', (req, res) => {
+    res.render('about', {officers: officers});
+})
 
 app.get('/announcements', (req, res) => {
     res.render('announcements');
