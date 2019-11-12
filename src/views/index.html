@@ -4,15 +4,51 @@
 <head>
     <meta name="description" content="This is the homepage for Aggie Coding Club.">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/bs.css">
+    <link rel="stylesheet" href="/static/index.css">
 </head>
 
 <body>
-<a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com">Join Slack</a>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/sponsors">Sponsors</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <section class="intro">
+        <div class="intro-left col-lg-7">
+            <h1 class="small-title">Welcome to the</h1>
+            <h1 class="big-title">Aggie Coding Club</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email-input" class="sr-only">Email</label>
+                    <input type="email" class="form-control" id="email-input" placeholder="Enter your email...">
+                </div>
+                <button type="submit" class="btn"><img alt="" src="/src/static/images/forward-arrow.svg"/></button>
+            </form>
+        </div>
+        <div class="intro-right col-lg-5">
+            <img alt="main image" src="/src/static/images/img.jpg">
+        </div>
+    </section>
 <a target="_blank" rel="noopener noreferrer" href="https://groups.google.com/forum/#!forum/aggiecodingclub">Join Mailing List</a>
 <a href="/about">Learn more about ACC!</a>
     <a href="/announcements">Announcements</a>
     See our Learning and Progress Oriented projects <a href="/projects">here!</a>
-    <center><P>Weekly Meeting Time: <time>Monday 7pm to 9pm</time></P></center>
+    <footer>
+        <div class="links">
+            <p>Let's Socialize</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img src="/static/images/slack.svg"/></a>
+            <a href=""><img src="/static/images/github.svg"/></a>
+        </div>
+    </footer>
 </body>
     
 

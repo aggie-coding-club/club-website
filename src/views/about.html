@@ -4,26 +4,87 @@
 <head>
     <meta name="description" content="This is the about page for Aggie Coding Club.">
     <meta charset="UTF-8">
-    <!--Temporary CSS-->
-    <style>
-        img {
-            width: 300px;
-            height: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/bs.css">
+    <link rel="stylesheet" href="/static/index.css">
 </head>
 
 <body>
-    <h1>Officers</h1>
-        <% for (const officer of officers) { %>
-            <div>
-                <img src="<%=officer.image%>">
-                <h3><%=officer.name%></h3>
-                <h4><%=officer.major%></h4>
-                <h4><%=officer.position%></h4>
-                <p><%=officer.description%></p>
-            </div>
-            <% } %>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/sponsors">Sponsors</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <section class="about">
+        <div class="intro-left col-lg-7">
+            <h1>About Us</h1>
+            <p>According to all known laws
+                    of aviation,
+                    
+                      
+                    there is no way a bee
+                    should be able to fly.
+                    
+                      
+                    Its wings are too small to get
+                    its fat little body off the ground.
+                    
+                      
+                    The bee, of course, flies anyway
+                    
+                      
+                    because bees don't care
+                    what humans think is impossible.
+                    
+                      
+                    Yellow, black. Yellow, black.
+                    Yellow, black. Yellow, black.
+                    
+                      
+                    Ooh, black and yellow!
+                    Let's shake it up a little.
+                    
+                      
+                    Barry! Breakfast is ready!
+                    </p>
+            <P id="meeting"><b>Meeting Time:</b> <br/><time>Monday 7pm to 9pm</time></P>
+            <button id="slack-button">Join Our Slack <img src="/static/images/slack-clr.svg" /></button>
+        </div>
+        <div class="intro-right col-lg-5">
+            <img alt="main image" src="/static/images/img.jpg">
+        </div>
+    </section>
+    <section>
+        <h1>Officers</h1>
+        <div class="row">
+            <div class="row col-lg-6">
+            <% var i = 0 %>
+            <% for (const officer of officers) { %>
+                <div class="officer-card col-lg-6 col-md-6 col-sm-6">
+                    <div class="officer-img" style="background-image: url('<%=officer.image%>')"></div>
+                    <h3><%=officer.name%></h3>
+                    <h4><%=officer.major%></h4>
+                    <h4><%=officer.position%></h4>
+                    <p><%=officer.description%></p>
+                </div>
+                <% i++; %>
+                    <% if (i == 2) { %>
+                        </div><div class="row col-lg-6">
+                    <% } %>
+                    <% if (i == 4) { %>
+                        </div></div><div class="row"><div class="row col-lg-6">
+                        <% i = 0 %>
+                    <% } %>
+                <% } %>
+        </div></div>
+    </section>
     <h1>Sponsors</h1>
     <ul>
         <li>Pariveda Solutions</li>
@@ -37,6 +98,13 @@
         <li>Stellar Development Foundation</li>
         <li>Textron</li>
     </ul>
+    <footer>
+        <div class="links">
+            <p>Let's Socialize</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img src="/static/images/slack.svg"/></a>
+            <a href=""><img src="/static/images/github.svg"/></a>
+        </div>
+    </footer>
 </body>
 
 </html>
