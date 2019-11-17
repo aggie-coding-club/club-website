@@ -33,6 +33,7 @@
     "typescript": "~3.5.0"
   },
   "dependencies": {
+    "@octokit/rest": "^16.35.0",
     "chai": "^4.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
