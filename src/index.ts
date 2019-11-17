@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
+import {officers} from './data/officers.json';
 
 const app = express();
 const port = 3000;
@@ -13,6 +14,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/about', (req, res) => {
+    res.render('about', {officers: officers});
+})
+
 app.get('/announcements', (req, res) => {
     let testCompetitions = [
         { name: 'Discord Bot', info: 'beep boop' },
@@ -23,6 +28,14 @@ app.get('/announcements', (req, res) => {
     res.render('announcements', {
         competitions: testCompetitions
     });
+});
+
+app.get('/projects/learning', (req, res) => {
+    res.render('learning_oriented_projects.html');
+});
+
+app.get('/projects/progress', (req, res) => {
+    res.render('progress_oriented_projects.html');
 });
 
 app.listen(3000, () => {
