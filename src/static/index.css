@@ -1,4 +1,7 @@
 /* command: sass --watch src/static/index.scss:src/static/index.css */
+html {
+  scroll-behavior: smooth; }
+
 nav {
   padding: 0px 10%;
   overflow: hidden;
@@ -87,11 +90,25 @@ section {
   border-radius: 20px;
   width: 100%;
   max-width: 250px;
-  padding: 15px;
+  padding: 15px 10px;
   font-size: 18px;
   font-weight: bold;
   background-color: white; }
   .about #slack-button img {
+    float: right;
+    max-height: 1.5em;
+    padding: 0px 20px 5px 20px; }
+.about #slack-button:hover {
+  margin-top: 20px;
+  border: 1px grey solid;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 250px;
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #dadada; }
+  .about #slack-button:hover img {
     float: right;
     max-height: 1.5em;
     padding: 0px 20px 5px 20px; }
@@ -111,12 +128,87 @@ section {
   .officer-card p {
     font-size: 14px; }
 
+.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block; }
+
+.left {
+  margin-right: auto !important;
+  display: block; }
+
+.right {
+  margin-left: auto !important;
+  display: block; }
+
+.sponsored-by .sponsor-logo-lg,
+.sponsored-by .sponsor-logo-md,
+.sponsored-by .sponsor-logo-sm {
+  transition: 0.5s;
+  margin: 30px 0;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 250px; }
+.sponsored-by .sponsor-logo-lg:hover,
+.sponsored-by .sponsor-logo-md:hover,
+.sponsored-by .sponsor-logo-sm:hover {
+  transform: scale(1.05);
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%); }
+.sponsored-by #capsher-logo {
+  max-width: 150px; }
+.sponsored-by #schwab-logo {
+  max-width: 125px; }
+.sponsored-by #hcss-logo {
+  max-width: 150px; }
+.sponsored-by #bell-logo {
+  max-width: 100px; }
+.sponsored-by #westmonroe-logo {
+  max-width: 300px; }
+.sponsored-by #jpmc-logo {
+  max-width: 350px; }
+
+.projects {
+  overflow: hidden; }
+  .projects img {
+    padding: 40px 20px; }
+  .projects .cat-button {
+    margin: 40px 10px 0px 0px;
+    border: 0px grey solid;
+    border-radius: 20px;
+    padding: 15px 35px;
+    font-size: 16px;
+    color: white;
+    background-color: grey;
+    display: inline-block; }
+    .projects .cat-button img {
+      float: right;
+      max-height: 1.5em;
+      padding: 0px 20px 5px 20px; }
+  .projects .cat-button:hover {
+    cursor: pointer;
+    background-color: #0389CD;
+    text-decoration: none; }
+
+.project-cat h1 {
+  text-align: center; }
+
+#learning {
+  color: white;
+  background-color: #0389CD; }
+
 footer {
   background: #0389CD;
   min-height: 100px;
   overflow: hidden;
   color: white;
   padding: 0px 10%; }
+  footer #tim {
+    color: #0389CD;
+    cursor: default; }
   footer .links {
     padding: 20px 40px 40px 40px;
     min-width: 300px;

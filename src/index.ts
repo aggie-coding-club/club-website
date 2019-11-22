@@ -22,6 +22,10 @@ app.get('/announcements', (req, res) => {
     res.render('announcements');
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects');
+});
+
 app.get('/projects/learning', (req, res) => {
     res.render('learning_oriented_projects.html');
 });
