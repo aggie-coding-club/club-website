@@ -19,7 +19,15 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/announcements', (req, res) => {
-    res.render('announcements');
+    let testCompetitions = [
+        { name: 'Discord Bot', info: 'beep boop' },
+        { name: 'Website', info: 'show them your power' },
+        { name: 'Chess', info: 'make big brain play' }
+    ] 
+
+    res.render('announcements', {
+        competitions: testCompetitions
+    });
 });
 
 app.get('/projects/learning', (req, res) => {
