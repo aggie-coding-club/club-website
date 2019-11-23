@@ -22,10 +22,9 @@
         <% } %>
         <h2>Competitions</h2>
           <ul>
-              <li>Competition 1</li>
-              <li>Competition 2</li>
-              <li>Competition 3</li>
+              <% competitions.forEach(function(competition) { %>
+                <li><%= competition.name %> - <%= competition.info %></li>
+              <% }); %>
           </ul>
     </body>
-
 </html>

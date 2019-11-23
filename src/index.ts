@@ -19,19 +19,19 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/announcements', (req, res) => {
-  res.render('announcements');
+    let testCompetitions = [
+        { name: 'Discord Bot', info: 'beep boop' },
+        { name: 'Website', info: 'show them your power' },
+        { name: 'Chess', info: 'make big brain play' }
+    ] 
+
+    res.render('announcements', {
+        competitions: testCompetitions
+    });
 });
 
 app.get('/projects', (req, res) => {
   res.render('projects');
-});
-
-app.get('/projects/learning', (req, res) => {
-  res.render('learning_oriented_projects.html');
-});
-
-app.get('/projects/progress', (req, res) => {
-  res.render('progress_oriented_projects.html');
 });
 
 app.listen(3000, () => {
