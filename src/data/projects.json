@@ -1,0 +1,36 @@
+{
+  "projects":[
+    {
+      "repoURL": "github.com",
+      "name": "Project 1",
+      "description": "The first project description",
+      "tools": ["Hammer","Screwdriver"],
+      "members": [
+        {
+          "profileURL": "www.MickeyMouseProfile.com",
+          "imageURL": "www.imageURL.com"
+        },
+        {
+          "profileURL": "www.SpongeBobProfile.com",
+          "imageURL": "www.imageURL.com"
+        }
+      ]
+    },
+    {
+      "repoURL": "github.com",
+      "name": "Project 2",
+      "description": "Second project description",
+      "tools": ["Hammer","Screwdriver","Nails","Chainsaw"],
+      "members": [
+        {
+          "profileURL": "www.CuriousGeorgeProfile.com",
+          "imageURL": "www.imageURL.com"
+        },
+        {
+          "profileURL": "www.ScoobyDooProfile.com",
+          "imageURL": "www.imageURL.com"
+        }
+      ]
+    }
+  ]
+}

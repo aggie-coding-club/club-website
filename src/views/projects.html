@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aggie Coding Club - Projects</title>
+        <meta name="description" content="Here you can find information about projects.">
+    </head>
+
+    <body>
+        <h1>Projects</h1>
+        <% for (const project of projects) { %>
+        <div>
+            <h2><%=project.name%></h2>
+            <p><%=project.description%></p>
+            <div>
+                <% for (const tool of project.tools) { %>
+                <span><%=tool%>, </span> <% } %>
+            </div>
+            <div>
+                <% for (const member of project.members) { %>
+                <a><%=member.profileURL%>, <%=member.imageURL%><br></a> <%} %>
+            </div>
+        </div>
+        <% } %>
+    </body>
+</html>
