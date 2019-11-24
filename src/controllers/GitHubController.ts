@@ -1,4 +1,4 @@
-import ProjectData, { ProjectMember } from '../models/ProjectData';
+import { ProjectData, ProjectMember } from '../models/ProjectData';
 import * as Octokit from "@octokit/rest";
 
 type RepoType = "public" | "private" | "forks" | "all";
