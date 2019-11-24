@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <title>Aggie Coding Club - Projects</title>
-        <meta name="description" content="Here you can find information about projects.">
-    </head>
 
-    <body>
-        <h1>Projects</h1>
+<head>
+    <meta name="description" content="This is the about page for Aggie Coding Club.">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/bs.css">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="projects">
+        <div class="intro-left col-lg-7">
+            <h1>Projects</h1>
+            <p>
+                There are many benefits to starting side projects. Aggie Coding Club provides an opportunity to learn
+                new skills and boost work performance.
+            </p>
+            <a href="#learning" class="cat-button">Learning Oriented</a> <a href="#progress" class="cat-button">Progress
+                Oriented</a>
+        </div>
+        <div class="intro-right col-lg-5">
+            <img alt="main image" src="/static/images/img.jpg">
+        </div>
+    </section>
+
+    <section class="project-cat" id="learning">
+        <h1>Learning Oriented Projects</h1>
         <% for (const project of projects) { %>
         <div>
             <h2><%=project.name%></h2>
@@ -16,11 +47,26 @@
                 <% for (const tool of project.tools) { %>
                 <span><%=tool%>, </span> <% } %>
             </div>
-            <div>
-                <% for (const member of project.members) { %>
-                <a><%=member.profileURL%>, <%=member.imageURL%><br></a> <%} %>
-            </div>
+            <!-- <div>
+                    <% for (const member of project.members) { %>
+                    <a><%=member.profileURL%>, <%=member.imageURL%><br></a> <%} %>
+                </div> -->
         </div>
         <% } %>
-    </body>
+    </section>
+
+    <section class="project-cat" id="progress">
+        <h1>Projects Oriented Projects</h1>
+    </section>
+
+    <footer>
+        <div class="links">
+            <p>Let's Socialize</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img
+                    src="/static/images/slack.svg" /></a>
+            <a href=""><img src="/static/images/github.svg" /></a>
+        </div>
+    </footer>
+</body>
+
 </html>
