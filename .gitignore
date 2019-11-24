@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/node,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=node,visualstudiocode
+# Created by https://www.gitignore.io/api/node,sass,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=node,sass,visualstudiocode
 build/
 ### Node ###
 # Logs
@@ -80,7 +80,7 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# react / gatsby
+# react / gatsby 
 public/
 
 # vuepress build output
@@ -95,6 +95,12 @@ public/
 # DynamoDB Local files
 .dynamodb/
 
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -106,4 +112,4 @@ public/
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/node,visualstudiocode
+# End of https://www.gitignore.io/api/node,sass,visualstudiocode
