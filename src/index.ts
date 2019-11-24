@@ -4,11 +4,11 @@ import * as Octokit from '@octokit/rest';
 import { GitHubController } from './controllers/GitHubController';
 import { officers } from './data/officers.json';
 
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN
-});
+// const octokit = new Octokit({
+//   auth: process.env.GITHUB_TOKEN
+// });
 
-const gitHubController = new GitHubController(octokit);
+// const gitHubController = new GitHubController(octokit);
 
 const app = express();
 const port = 3000;
@@ -39,8 +39,8 @@ app.get('/announcements', (req, res) => {
 });
 
 app.get('/projects', async (req, res) => {
-  const listOfProjects = await gitHubController.getAllProjects();
-  res.render('projects', {listOfProjects: listOfProjects});
+  // const listOfProjects = await gitHubController.getAllProjects("public");
+  res.render('projects');
 });
 
 app.listen(3000, () => {
