@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as path from 'path';
 import { officers } from './data/officers.json';
+import { projects } from './data/projects.json';
 
 const app = express();
 const port = 3000;
@@ -19,19 +20,19 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/announcements', (req, res) => {
-  res.render('announcements');
+  const testCompetitions = [
+    { name: 'Discord Bot', info: 'beep boop' },
+    { name: 'Website', info: 'show them your power' },
+    { name: 'Chess', info: 'make big brain play' },
+  ];
+
+  res.render('announcements', {
+    competitions: testCompetitions,
+  });
 });
 
 app.get('/projects', (req, res) => {
-  res.render('projects');
-});
-
-app.get('/projects/learning', (req, res) => {
-  res.render('learning_oriented_projects.html');
-});
-
-app.get('/projects/progress', (req, res) => {
-  res.render('progress_oriented_projects.html');
+  res.render('projects', { projects });
 });
 
 app.listen(3000, () => {
