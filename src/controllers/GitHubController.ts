@@ -6,7 +6,7 @@ type RepoType = "public" | "private" | "forks" | "all";
 /**
  * Controller for all GitHub data
  */
-export default class GitHubControler {
+export class GitHubControler {
     org: string;
     octokit: Octokit;
 
