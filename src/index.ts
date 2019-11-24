@@ -17,12 +17,8 @@ app.get('/announcements', (req, res) => {
     res.render('announcements');
 });
 
-app.get('/projects/learning', (req, res) => {
-    res.render('learning', {projects: learning});
-});
-
-app.get('/projects/progress', (req, res) => {
-    res.render('progress', {projects: progress});
+app.get('/projects', (req, res) => {
+    res.render('projects', {projects: project});
 });
 
 app.listen(3000, () => {
