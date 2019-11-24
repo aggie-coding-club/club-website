@@ -3,30 +3,38 @@ import * as Octokit from "@octokit/rest";
 
 type RepoType = "public" | "private" | "forks" | "all";
 
+/**
+ * Controller for all GitHub data
+ */
 export default class GitHubControler {
     org: string;
-    type: RepoType;
     octokit: Octokit;
 
-    constructor(authToken: string, org?: string, type?: RepoType) {
-        this.org = org || "aggie-coding-club";
-        this.type = type || "public";
-        
-        this.octokit = new Octokit({auth: authToken});
+    
+    constructor(octokit: Octokit, org?: string) {
+        this.org = org || "aggie-coding-club";        
+        this.octokit = octokit;
     }
     
-    getProjectData(): Promise<ProjectData[]> {
+
+    /**
+     * Returns a list of projects belonging to this organization.
+     * 
+     * @param repoType - Type of the repos to fetch (public, private, forks, or all)
+     * @returns a list of projects belonging to this organization.
+     */
+    getAllProjects(repoType?: RepoType): Promise<ProjectData[]> {
         return this.octokit.repos
             .listForOrg({
                 org: this.org,
-                type: this.type
+                type: repoType || "public"
             })
             .then((reposResponse) => {
                 const repos = reposResponse.data;
-                let projectList: ProjectData[] = [];
+                const projectList: ProjectData[] = [];
 
-                for (let repo of repos) {
-                    let project: ProjectData = {
+                for (const repo of repos) {
+                    const project: ProjectData = {
                         repoURL: repo.html_url,
                         name: repo.name,
                         description: repo.description
@@ -36,39 +44,66 @@ export default class GitHubControler {
 
                 return projectList;
             }).then(projectList => {
-                let apiCalls = [];
+                const apiCalls = [];
 
-                for (const i in projectList) {
+                for (let i = 0; i < projectList.length; ++i) {
                     // Get tools used for each repo
-                    apiCalls.push(this.octokit.repos.listTopics({
-                        owner: this.org,
-                        repo: projectList[i].name
-                    }).then((topicsResponse) => {
-                        const topics = topicsResponse.data;
-                        let tools: string[] = [];
-                        for(let topic of topics.names) {
-                            tools.push(topic);
-                        }
-                        projectList[i].tools = tools
+                    apiCalls.push(this.getProjectTopics(projectList[i].name).then(tools => {
+                        projectList[i].tools = tools;
                     }));
 
                     // Get contributors of each repo
-                    apiCalls.push(this.octokit.repos.listContributors({
-                        owner: this.org,
-                        repo: projectList[i].name
-                    }).then((contributorsResponse) => {
-                        let contributors = contributorsResponse.data;
-                        let members: ProjectMember[] = [];
-                        for(let contributor of contributors) {
-                            members.push({ 
-                                profileURL: contributor.html_url, 
-                                imageURL: contributor.avatar_url
-                            } as ProjectMember);
-                        }
-                        projectList[i].members = members
+                    apiCalls.push(this.getProjectContributors(projectList[i].name).then(members => {
+                        projectList[i].members = members;
                     }));
                 }
+
                 return Promise.all(apiCalls).then(_ => projectList);
             });
+    }
+
+
+    /**
+     * Returns a list of topics for the repository
+     * 
+     * @param projectName - Name of the repository (belonging to the org)
+     * @returns a list of topics
+     */
+    getProjectTopics(projectName: string): Promise<string[]> {
+        return this.octokit.repos.listTopics({
+            owner: this.org,
+            repo: projectName
+        }).then((topicsResponse) => {
+            const topics = topicsResponse.data;
+            const tools: string[] = [];
+            for(const topic of topics.names) {
+                tools.push(topic);
+            }
+            return tools;
+        })
+    }
+
+
+    /**
+     * Returns a list of project contributors for the repository
+     * 
+     * @param projectName - Name of the repository (belonging to the org)
+     * @returns a list of project contributors
+     */
+    getProjectContributors(projectName: string): Promise<ProjectMember[]> {
+        return this.octokit.repos.listContributors({
+            owner: this.org,
+            repo: projectName
+        }).then((contributorsResponse) => {
+            const contributors = contributorsResponse.data;
+            const members: ProjectMember[] = [];
+            for(const contributor of contributors) {
+                members.push({ 
+                    profileURL: contributor.html_url, 
+                    imageURL: contributor.avatar_url
+                } as ProjectMember);
+            }
+            return members;
+        })
     }
 }
