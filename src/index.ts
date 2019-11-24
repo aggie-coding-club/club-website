@@ -1,6 +1,14 @@
 import * as express from 'express';
 import * as path from 'path';
+import * as Octokit from '@octokit/rest';
+import { GitHubController } from './controllers/GitHubController';
 import { officers } from './data/officers.json';
+
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN
+});
+
+const gitHubController = new GitHubController(octokit);
 
 const app = express();
 const port = 3000;
@@ -30,8 +38,9 @@ app.get('/announcements', (req, res) => {
   });
 });
 
-app.get('/projects', (req, res) => {
-  res.render('projects');
+app.get('/projects', async (req, res) => {
+  const listOfProjects = await gitHubController.getAllProjects();
+  res.render('projects', {listOfProjects: listOfProjects});
 });
 
 app.listen(3000, () => {
