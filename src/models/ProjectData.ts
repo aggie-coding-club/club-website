@@ -3,7 +3,7 @@ export interface ProjectMember {
     imageURL: string
 }
 
-export default interface ProjectData {
+export interface ProjectData {
     repoURL: string,
     name: string,
     description?: string,
