@@ -1,6 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
-import {officers} from './data/officers.json';
+import { officers } from './data/officers.json';
 
 const app = express();
 const port = 3000;
@@ -11,33 +11,29 @@ app.set('view engine', 'html');
 app.use('/static', express.static(path.join(__dirname, '/static')));
 
 app.get('/', (req, res) => {
-    res.render('index');
+  res.render('index');
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', {officers: officers});
-})
+  res.render('about', { officers });
+});
 
 app.get('/announcements', (req, res) => {
-    let testCompetitions = [
-        { name: 'Discord Bot', info: 'beep boop' },
-        { name: 'Website', info: 'show them your power' },
-        { name: 'Chess', info: 'make big brain play' }
-    ] 
+  const testCompetitions = [
+    { name: 'Discord Bot', info: 'beep boop' },
+    { name: 'Website', info: 'show them your power' },
+    { name: 'Chess', info: 'make big brain play' },
+  ];
 
-    res.render('announcements', {
-        competitions: testCompetitions
-    });
+  res.render('announcements', {
+    competitions: testCompetitions,
+  });
 });
 
-app.get('/projects/learning', (req, res) => {
-    res.render('learning_oriented_projects.html');
-});
-
-app.get('/projects/progress', (req, res) => {
-    res.render('progress_oriented_projects.html');
+app.get('/projects', (req, res) => {
+  res.render('projects');
 });
 
 app.listen(3000, () => {
-    console.log(`Listening on port ${port}`);
+  console.log(`Listening on port ${port}`);
 });
