@@ -1,18 +1,21 @@
 {
-  "projects":[
+  "projects": [
     {
       "repoURL": "github.com",
       "name": "Project 1",
       "description": "The first project description",
-      "tools": ["Hammer","Screwdriver"],
+      "tools": [
+        "Hammer",
+        "Screwdriver"
+      ],
       "members": [
         {
           "profileURL": "www.MickeyMouseProfile.com",
-          "imageURL": "www.imageURL.com"
+          "imageURL": "https://www.imageURL.com"
         },
         {
-          "profileURL": "www.SpongeBobProfile.com",
-          "imageURL": "www.imageURL.com"
+          "profileURL": "https://www.SpongeBobProfile.com",
+          "imageURL": "https://www.imageURL.com"
         }
       ]
     },
@@ -20,15 +23,20 @@
       "repoURL": "github.com",
       "name": "Project 2",
       "description": "Second project description",
-      "tools": ["Hammer","Screwdriver","Nails","Chainsaw"],
+      "tools": [
+        "Hammer",
+        "Screwdriver",
+        "Nails",
+        "Chainsaw"
+      ],
       "members": [
         {
-          "profileURL": "www.CuriousGeorgeProfile.com",
-          "imageURL": "www.imageURL.com"
+          "profileURL": "https://www.CuriousGeorgeProfile.com",
+          "imageURL": "https://www.imageURL.com"
         },
         {
-          "profileURL": "www.ScoobyDooProfile.com",
-          "imageURL": "www.imageURL.com"
+          "profileURL": "https://www.ScoobyDooProfile.com",
+          "imageURL": "https://www.imageURL.com"
         }
       ]
     }
