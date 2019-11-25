@@ -1,6 +1,9 @@
 # Aggie Coding Club Website
 The website for [aggiecodingclub.com](https://aggiecodingclub.com)
 
+## Prerequisites
+- [TypeScript](https://www.typescriptlang.org/)
+
 ## How to Use
 
 1. `npm i`installs all the missing packages
