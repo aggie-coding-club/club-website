@@ -10,17 +10,7 @@
 
 
 <body>
-    <header>
-        <nav>
-            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/announcements">Announcements</a></li>
-          </ul>
-        </nav>
-    </header>
+    <% include partials/header %>
     <section class="projects">
         <div class="intro-left col-lg-7">
             <h1>Projects</h1>
@@ -38,10 +28,10 @@
 
     <section class="project-cat" id="learning">
         <h1>Learning Oriented Projects</h1>
-        <% for (const project of projects) { %>
+        <% for (const project of learningOriented) { %>
         <div class="col-md-6 col-12">
         <div class="project-card">
-            <h2><%=project.name%></h2>
+            <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
             <div class="project-tools">
                 <% for (const tool of project.tools) { %>
                 <span><%=tool%></span> <% } %>
@@ -76,15 +66,7 @@
         </div>
         <% } %>
     </section>
-
-    <footer>
-        <div class="links">
-            <p>Let's Socialize</p>
-            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img
-                    src="/static/images/slack.svg" /></a>
-            <a href="https://github.com/aggie-coding-club/club-website"><img src="/static/images/github.svg" /></a>
-        </div>
-    </footer>
+    <% include partials/footer %>
 </body>
 
 </html>
