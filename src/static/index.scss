@@ -4,6 +4,7 @@ $base-color: #0389CD;
 
 html {
     scroll-behavior: smooth;
+    min-height: 100%;
 }
 
 nav {
@@ -48,6 +49,7 @@ nav {
 }
 
 body {
+    min-height: 100%;
     p {
         font-size: 16px;
     }
@@ -74,6 +76,7 @@ section {
 
 .intro {
     padding: 5% 10%;
+    min-height: 100vh;
     .small-title {
         font-size: 4rem;
         margin-bottom: 0px;
@@ -247,7 +250,7 @@ section {
     .cat-button {
         margin: 40px 10px 0px 0px;
         border: 0px grey solid;
-        border-radius: 20px;
+        border-radius: 5px;
         padding: 15px 35px;
         font-size: 16px;
         color: white;
@@ -277,6 +280,15 @@ section {
     padding: 10px 30px 20px 30px;
     background-color: white;
     display: inline-block;
+
+    span {
+        border: 1px $base-color solid;
+        padding: 5px 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        color: $base-color;
+        border-radius: 3px;
+    }
 
     .project-lead {
         border-radius: 50px;
@@ -360,6 +372,7 @@ footer {
     color: white;
     padding: 0px 10%;
     #tim {
+        margin: 0px;
         color: $base-color;
         cursor: default;
     }
