@@ -4,27 +4,52 @@
         <meta charset="UTF-8">
         <title>Aggie Coding Club - Announcements</title>
         <meta name="description" content="Here you can find future events and announcements.">
+        <link rel="stylesheet" href="/static/bs.css">
+        <link rel="stylesheet" href="/static/index.css">
     </head>
 
     <body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/announcements">Events</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <section class="announcements">
         <h1>Announcements</h1>
         <% for(month of ["November", "December", "January"]) { %>
           <h2><%= month %></h2>
-          <ul role="navigation">
+          <div class="month-events" role="navigation">
               <% for(var x=0; x<4; x++) { %>
-              <li>
+              <div class="event-card">
                   <h3>Event Title</h3>
                   <h4>Date/Time: 9/25/2019 from 7:00pm to 9:00pm, <abbr title="Located at The Harvey Bright Building in Room 124">Location: HRBB 124</abbr></h4>
                   <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
-              </li>
+              </div>
               <% } %>
-          </ul>
+          </div>
         <% } %>
+    </section>
+    <section class="competitions">
         <h2>Competitions</h2>
-          <ul>
+          <div class="comps">
               <% competitions.forEach(function(competition) { %>
-                <li><%= competition.name %> - <%= competition.info %></li>
+                <div class="comp-card"><%= competition.name %> - <%= competition.info %></div>
               <% }); %>
-          </ul>
+          </div>
+    </section>
+    <footer>
+        <div class="links">
+            <p>Let's Socialize</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img
+                    src="/static/images/slack.svg" /></a>
+            <a href="https://github.com/aggie-coding-club/club-website"><img src="/static/images/github.svg" /></a>
+        </div>
+    </footer>
     </body>
 </html>
