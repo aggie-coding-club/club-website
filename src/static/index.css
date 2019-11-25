@@ -262,6 +262,10 @@ section {
 .project-cat h1 {
   text-align: center;
   margin-bottom: 60px; }
+.project-cat #tim {
+  margin: 0px;
+  color: #0389CD;
+  cursor: default; }
 
 #learning {
   color: white;
@@ -276,10 +280,6 @@ footer {
   overflow: hidden;
   color: white;
   padding: 0px 10%; }
-  footer #tim {
-    margin: 0px;
-    color: #0389CD;
-    cursor: default; }
   footer .links {
     padding: 20px 40px 40px 40px;
     min-width: 300px;

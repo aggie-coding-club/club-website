@@ -352,6 +352,11 @@ section {
         text-align: center;
         margin-bottom: 60px;
     }
+    #tim {
+        margin: 0px;
+        color: $base-color;
+        cursor: default;
+    }
 }
 
 #learning {
@@ -371,11 +376,6 @@ footer {
     overflow: hidden;
     color: white;
     padding: 0px 10%;
-    #tim {
-        margin: 0px;
-        color: $base-color;
-        cursor: default;
-    }
     .links {
         padding: 20px 40px 40px 40px;
         min-width: 300px;
