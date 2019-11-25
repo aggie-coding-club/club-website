@@ -5,11 +5,11 @@ import { GitHubController } from './controllers/GitHubController';
 import { officers } from './data/officers.json';
 import { projects } from './data/projects.json';
 
-// const octokit = new Octokit({
-//   auth: process.env.GITHUB_TOKEN
-// });
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN,
+});
 
-// const gitHubController = new GitHubController(octokit);
+const gitHubController = new GitHubController(octokit);
 
 const app = express();
 const port = 3000;
@@ -40,8 +40,16 @@ app.get('/announcements', (req, res) => {
 });
 
 app.get('/projects', async (req, res) => {
-  // const listOfProjects = await gitHubController.getAllProjects("public");
-  res.render('projects', { projects });
+  const projects = await gitHubController.getAllProjects('public');
+  const learningOriented = gitHubController.filterProjects(
+    'learning-oriented',
+    projects
+  );
+  const progressOriented = gitHubController.filterProjects(
+    'progress-oriented',
+    projects
+  );
+  res.render('projects', { learningOriented, progressOriented });
 });
 
 app.listen(3000, () => {
