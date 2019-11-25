@@ -17,8 +17,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/announcements">Events</a></li>
             </ul> 
         </nav>
     </header>
@@ -40,17 +39,19 @@
     <section class="project-cat" id="learning">
         <h1>Learning Oriented Projects</h1>
         <% for (const project of projects) { %>
-        <div>
+        <div class="col-md-6 col-12">
+        <div class="project-card">
             <h2><%=project.name%></h2>
-            <p><%=project.description%></p>
-            <div>
+            <div class="project-tools">
                 <% for (const tool of project.tools) { %>
                 <span><%=tool%>, </span> <% } %>
             </div>
+            <p><%=project.description%></p>
             <div>
                 <% for (const member of project.members) { %>
-                <a href="<%=member.profileURL%>"><img src="<%=member.imageURL%>"></a> <%} %>
+                <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
+        </div>
         </div>
         <% } %>
     </section>
@@ -58,16 +59,16 @@
     <section class="project-cat" id="progress">
         <h1>Projects Oriented Projects</h1>
         <% for (const project of projects) { %>
-        <div>
+        <div class="project-card col-md-6 col-12">
             <h2><%=project.name%></h2>
-            <p><%=project.description%></p>
-            <div>
+            <div class="project-tools">
                 <% for (const tool of project.tools) { %>
                 <span><%=tool%>, </span> <% } %>
             </div>
+            <p><%=project.description%></p>
             <div>
                 <% for (const member of project.members) { %>
-                <a href="<%=member.profileURL%>"><img src="<%=member.imageURL%>"></a> <%} %>
+                <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
         </div>
         <% } %>
@@ -78,7 +79,7 @@
             <p>Let's Socialize</p>
             <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img
                     src="/static/images/slack.svg" /></a>
-            <a href=""><img src="/static/images/github.svg" /></a>
+            <a href="https://github.com/aggie-coding-club/club-website"><img src="/static/images/github.svg" /></a>
         </div>
     </footer>
 </body>

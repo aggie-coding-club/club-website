@@ -126,9 +126,14 @@ section {
         font-size: 18px;
         font-weight: bold;
         background-color: white;
+        p {
+            width: 70%;
+            display: inline;
+        }
         
         img {
-            float: right;
+            width: 30%;
+            display: inline;
             max-height: 1.5em;
             padding: 0px 20px 5px 20px;
         }
@@ -145,7 +150,6 @@ section {
         background-color: rgb(218, 218, 218);
         
         img {
-            float: right;
             max-height: 1.5em;
             padding: 0px 20px 5px 20px;
         }
@@ -264,15 +268,89 @@ section {
     }
 }
 
+.project-card {
+    margin: 0px 10px 20px 10px;
+    border: 0px rgb(196, 196, 196) solid;
+    border-radius: 5px;
+    width: 100%;
+    color: black;
+    padding: 10px 30px 20px 30px;
+    background-color: white;
+    display: inline-block;
+
+    .project-lead {
+        border-radius: 50px;
+        max-width: 40px;
+
+    }
+}
+.project-card:hover {
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+    box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
+}
+
+.announcements {
+    h2 {
+        color: white;
+        background-color: $base-color;
+        padding: 10px 20px;
+        border-radius: 30px;
+        display: inline-block;
+    }
+    .month-events {
+        margin-bottom: 20px;
+    }
+    .event-card {
+        margin-bottom: 20px;
+        border: 1px rgb(196, 196, 196) solid;
+        border-radius: 5px;
+        padding: 10px 30px 20px 20px;
+        background-color: white;
+        display: inline-block;
+    }
+    .event-card:hover {
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+        -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+        box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
+    }
+}
+
+.competitions {
+    .comps {
+        margin-bottom: 20px;
+    }
+    .comp-card {
+        margin-bottom: 20px;
+        border: 1px rgb(196, 196, 196) solid;
+        border-radius: 5px;
+        padding: 10px 20px 10px 20px;
+        background-color: white;
+        display: inline-block;
+    }
+    .comp-card:hover {
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+        -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+        box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
+    }
+}
+
 .project-cat {
     h1 {
         text-align: center;
+        margin-bottom: 60px;
     }
 }
 
 #learning {
     color: white;
     background-color: $base-color;
+}
+
+#progress {
+    .project-card {
+        border: 1px rgb(196, 196, 196) solid;
+    }
 }
 
 footer {
@@ -300,3 +378,4 @@ footer {
 
     }
 }
+
