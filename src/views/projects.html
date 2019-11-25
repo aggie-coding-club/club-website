@@ -34,7 +34,7 @@
             <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
             <div class="project-tools">
                 <% for (const tool of project.tools) { %>
-                <span><%=tool%>, </span> <% } %>
+                <span><%=tool%></span> <% } %>
             </div>
             <p><%=project.description%></p>
             <div>
@@ -44,22 +44,25 @@
         </div>
         </div>
         <% } %>
+        <p id="tim">"Live a life you will remember" -◢◤</p>
     </section>
 
     <section class="project-cat" id="progress">
         <h1>Progress Oriented Projects</h1>
-        <% for (const project of progressOriented) { %>
-        <div class="project-card col-md-6 col-12">
-            <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
+        <% for (const project of projects) { %>
+        <div class=" col-md-6 col-12">
+        <div class="project-card">
+            <h2><%=project.name%></h2>
             <div class="project-tools">
                 <% for (const tool of project.tools) { %>
-                <span><%=tool%>, </span> <% } %>
+                <span><%=tool%></span> <% } %>
             </div>
             <p><%=project.description%></p>
             <div>
                 <% for (const member of project.members) { %>
                 <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
+        </div>
         </div>
         <% } %>
     </section>

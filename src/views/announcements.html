@@ -12,25 +12,25 @@
     <% include partials/header %>
     <section class="announcements">
         <h1>Announcements</h1>
-        <% for(month of ["November", "December", "January"]) { %>
-          <h2><%= month %></h2>
-          <div class="month-events" role="navigation">
-              <% for(var x=0; x<4; x++) { %>
-              <div class="event-card">
-                  <h3>Event Title</h3>
-                  <h4>Date/Time: 9/25/2019 from 7:00pm to 9:00pm, <abbr title="Located at The Harvey Bright Building in Room 124">Location: HRBB 124</abbr></h4>
-                  <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
-              </div>
-              <% } %>
-          </div>
-        <% } %>
+<!--        <% for(month of ["November", "December", "January"]) { %>-->
+<!--          <h2><%= month %></h2>-->
+<!--          <div class="month-events" role="navigation">-->
+<!--              <% for(var x=0; x<4; x++) { %>-->
+<!--              <div class="event-card">-->
+<!--                  <h3>Event Title</h3>-->
+<!--                  <h4>Date/Time: 9/25/2019 from 7:00pm to 9:00pm, <abbr title="Located at The Harvey Bright Building in Room 124">Location: HRBB 124</abbr></h4>-->
+<!--                  <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>-->
+<!--              </div>-->
+<!--              <% } %>-->
+<!--          </div>-->
+<!--        <% } %>-->
     </section>
     <section class="competitions">
         <h2>Competitions</h2>
           <div class="comps">
-              <% competitions.forEach(function(competition) { %>
-                <div class="comp-card"><%= competition.name %> - <%= competition.info %></div>
-              <% }); %>
+<!--              <% competitions.forEach(function(competition) { %>-->
+<!--                <div class="comp-card"><%= competition.name %> - <%= competition.info %></div>-->
+<!--              <% }); %>-->
           </div>
     </section>
     <% include partials/footer %>

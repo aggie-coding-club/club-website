@@ -1,6 +1,7 @@
 /* command: sass --watch src/static/index.scss:src/static/index.css */
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  min-height: 100%; }
 
 nav {
   padding: 0px 10%;
@@ -33,8 +34,10 @@ nav {
     color: #0389CD;
     text-decoration: none; }
 
-body p {
-  font-size: 16px; }
+body {
+  min-height: 100%; }
+  body p {
+    font-size: 16px; }
 
 section {
   padding: 5% 10% 2% 10%;
@@ -51,7 +54,8 @@ section {
     max-height: 100%; }
 
 .intro {
-  padding: 5% 10%; }
+  padding: 5% 10%;
+  min-height: 100vh; }
   .intro .small-title {
     font-size: 4rem;
     margin-bottom: 0px; }
@@ -181,7 +185,7 @@ section {
   .projects .cat-button {
     margin: 40px 10px 0px 0px;
     border: 0px grey solid;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 15px 35px;
     font-size: 16px;
     color: white;
@@ -205,6 +209,13 @@ section {
   padding: 10px 30px 20px 30px;
   background-color: white;
   display: inline-block; }
+  .project-card span {
+    border: 1px #0389CD solid;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: #0389CD;
+    border-radius: 3px; }
   .project-card .project-lead {
     border-radius: 50px;
     max-width: 40px; }
@@ -251,6 +262,10 @@ section {
 .project-cat h1 {
   text-align: center;
   margin-bottom: 60px; }
+.project-cat #tim {
+  margin: 0px;
+  color: #0389CD;
+  cursor: default; }
 
 #learning {
   color: white;
@@ -265,9 +280,6 @@ footer {
   overflow: hidden;
   color: white;
   padding: 0px 10%; }
-  footer #tim {
-    color: #0389CD;
-    cursor: default; }
   footer .links {
     padding: 20px 40px 40px 40px;
     min-width: 300px;
