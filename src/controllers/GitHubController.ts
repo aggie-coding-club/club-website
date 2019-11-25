@@ -45,14 +45,14 @@ export class GitHubController {
       // Get tools used for each repo
       apiCalls.push(
         this.getProjectTopics(projectList[i].name).then(tools => {
-          for (let i = 0; i < tools.length; i++) {
-            if (tools[i] === 'progress-oriented') {
+          for (let j = 0; j < tools.length; j++) {
+            if (tools[j] === 'progress-oriented') {
               projectList[i].type = 'progress-oriented';
-              tools.splice(i, 1);
+              tools.splice(j, 1);
               break;
-            } else if (tools[i] === 'learning-oriented') {
+            } else if (tools[j] === 'learning-oriented') {
               projectList[i].type = 'learning-oriented';
-              tools.splice(i, 1);
+              tools.splice(j, 1);
               break;
             }
           }
@@ -123,14 +123,8 @@ export class GitHubController {
    */
   filterProjects(
     type: 'progress-oriented' | 'learning-oriented',
-    list: ProjectData[]
+    projects: ProjectData[]
   ) {
-    const projectArr = [];
-    for (let i = 0; i < list.length; i++) {
-      if (list[i].type === type) {
-        projectArr.push(list[i]);
-      }
-    }
-    return projectArr;
+    return projects.filter(project => project.type === type);
   }
 }
