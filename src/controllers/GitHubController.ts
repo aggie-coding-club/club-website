@@ -45,14 +45,14 @@ export class GitHubController {
       // Get tools used for each repo
       apiCalls.push(
         this.getProjectTopics(projectList[i].name).then(tools => {
-          for(let i = 0; i < tools.length; i++){
-            if(tools[i] == ("progress-oriented")){
-              projectList[i].type = "progress-oriented";
-              tools.splice(i,1);  
+          for (let i = 0; i < tools.length; i++) {
+            if (tools[i] === 'progress-oriented') {
+              projectList[i].type = 'progress-oriented';
+              tools.splice(i, 1);
               break;
-            } else if (tools[i] == "learning-oriented") {
-              projectList[i].type = "learning-oriented";
-              tools.splice(i,1);  
+            } else if (tools[i] === 'learning-oriented') {
+              projectList[i].type = 'learning-oriented';
+              tools.splice(i, 1);
               break;
             }
           }
@@ -114,17 +114,20 @@ export class GitHubController {
     return members;
   }
 
-  /** 
-   * returns a list of projects with specified types to filter through 
-   * 
+  /**
+   * returns a list of projects with specified types to filter through
+   *
    * @param type - which type of project is it to filter
    * @param list - list of project data
    * @returns a list of projects with the specified types
    */
-  filterProjects(type:"progress-oriented" | "learning-oriented", list: ProjectData[]){
-    let projectArr = [];
-    for(let i = 0; i < list.length; i++){
-      if(list[i].type == type ){
+  filterProjects(
+    type: 'progress-oriented' | 'learning-oriented',
+    list: ProjectData[]
+  ) {
+    const projectArr = [];
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].type === type) {
         projectArr.push(list[i]);
       }
     }
