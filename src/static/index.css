@@ -94,8 +94,12 @@ section {
   font-size: 18px;
   font-weight: bold;
   background-color: white; }
+  .about #slack-button p {
+    width: 70%;
+    display: inline; }
   .about #slack-button img {
-    float: right;
+    width: 30%;
+    display: inline;
     max-height: 1.5em;
     padding: 0px 20px 5px 20px; }
 .about #slack-button:hover {
@@ -109,7 +113,6 @@ section {
   font-weight: bold;
   background-color: #dadada; }
   .about #slack-button:hover img {
-    float: right;
     max-height: 1.5em;
     padding: 0px 20px 5px 20px; }
 
@@ -193,12 +196,68 @@ section {
     background-color: #0389CD;
     text-decoration: none; }
 
+.project-card {
+  margin: 0px 10px 20px 10px;
+  border: 0px #c4c4c4 solid;
+  border-radius: 5px;
+  width: 100%;
+  color: black;
+  padding: 10px 30px 20px 30px;
+  background-color: white;
+  display: inline-block; }
+  .project-card .project-lead {
+    border-radius: 50px;
+    max-width: 40px; }
+
+.project-card:hover {
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+  -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+
+.announcements h2 {
+  color: white;
+  background-color: #0389CD;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block; }
+.announcements .month-events {
+  margin-bottom: 20px; }
+.announcements .event-card {
+  margin-bottom: 20px;
+  border: 1px #c4c4c4 solid;
+  border-radius: 5px;
+  padding: 10px 30px 20px 20px;
+  background-color: white;
+  display: inline-block; }
+.announcements .event-card:hover {
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+  -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+
+.competitions .comps {
+  margin-bottom: 20px; }
+.competitions .comp-card {
+  margin-bottom: 20px;
+  border: 1px #c4c4c4 solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  display: inline-block; }
+.competitions .comp-card:hover {
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+  -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+
 .project-cat h1 {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 60px; }
 
 #learning {
   color: white;
   background-color: #0389CD; }
+
+#progress .project-card {
+  border: 1px #c4c4c4 solid; }
 
 footer {
   background: #0389CD;
