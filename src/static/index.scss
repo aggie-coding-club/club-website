@@ -62,6 +62,7 @@ section {
     width: 100%;
     .intro-left {
         padding-top: 80px;
+        margin-bottom: 20px;
     }
     .intro-right {
         padding: 0px 50px;
@@ -73,6 +74,10 @@ section {
     }
 }
 
+.px-1 {
+    padding-bottom: 15px;
+    display: inline-block;
+}
 
 .intro {
     padding: 5% 10%;
@@ -272,7 +277,7 @@ section {
 }
 
 .project-card {
-    margin: 0px 10px 20px 10px;
+    margin: 0px;
     border: 0px rgb(196, 196, 196) solid;
     border-radius: 5px;
     width: 100%;
@@ -288,6 +293,7 @@ section {
         margin-bottom: 5px;
         color: $base-color;
         border-radius: 3px;
+        display: inline-block;
     }
 
     .project-lead {

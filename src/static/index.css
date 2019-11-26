@@ -45,13 +45,18 @@ section {
   margin: 0px;
   width: 100%; }
   section .intro-left {
-    padding-top: 80px; }
+    padding-top: 80px;
+    margin-bottom: 20px; }
   section .intro-right {
     padding: 0px 50px;
     overflow: hidden; }
   section img {
     max-width: 100%;
     max-height: 100%; }
+
+.px-1 {
+  padding-bottom: 15px;
+  display: inline-block; }
 
 .intro {
   padding: 5% 10%;
@@ -201,7 +206,7 @@ section {
     text-decoration: none; }
 
 .project-card {
-  margin: 0px 10px 20px 10px;
+  margin: 0px;
   border: 0px #c4c4c4 solid;
   border-radius: 5px;
   width: 100%;
@@ -215,7 +220,8 @@ section {
     margin-right: 5px;
     margin-bottom: 5px;
     color: #0389CD;
-    border-radius: 3px; }
+    border-radius: 3px;
+    display: inline-block; }
   .project-card .project-lead {
     border-radius: 50px;
     max-width: 40px; }
