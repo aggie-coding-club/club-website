@@ -313,6 +313,7 @@ section {
 }
 
 .announcements {
+    min-height: 100vh;
     h2 {
         color: white;
         background-color: $base-color;
@@ -404,10 +405,10 @@ footer {
 
 @media only screen and (max-width:992px) {
     .small-title {
-        font-size: 3rem;
+        font-size: 3rem!important;
     }
     .big-title {
-        font-size: 4rem;
+        font-size: 4rem!important;
     }
     header {
         overflow: hidden;

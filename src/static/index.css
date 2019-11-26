@@ -234,25 +234,27 @@ section {
   -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
   box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
 
-.announcements h2 {
-  color: white;
-  background-color: #0389CD;
-  padding: 10px 20px;
-  border-radius: 30px;
-  display: inline-block; }
-.announcements .month-events {
-  margin-bottom: 20px; }
-.announcements .event-card {
-  margin-bottom: 20px;
-  border: 1px #c4c4c4 solid;
-  border-radius: 5px;
-  padding: 10px 30px 20px 20px;
-  background-color: white;
-  display: inline-block; }
-.announcements .event-card:hover {
-  -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
-  -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+.announcements {
+  min-height: 100vh; }
+  .announcements h2 {
+    color: white;
+    background-color: #0389CD;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block; }
+  .announcements .month-events {
+    margin-bottom: 20px; }
+  .announcements .event-card {
+    margin-bottom: 20px;
+    border: 1px #c4c4c4 solid;
+    border-radius: 5px;
+    padding: 10px 30px 20px 20px;
+    background-color: white;
+    display: inline-block; }
+  .announcements .event-card:hover {
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+    box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
 
 .competitions .comps {
   margin-bottom: 20px; }
@@ -302,10 +304,10 @@ footer {
 
 @media only screen and (max-width: 992px) {
   .small-title {
-    font-size: 3rem; }
+    font-size: 3rem !important; }
 
   .big-title {
-    font-size: 4rem; }
+    font-size: 4rem !important; }
 
   header {
     overflow: hidden;
