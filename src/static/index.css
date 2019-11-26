@@ -1,7 +1,6 @@
 /* command: sass --watch src/static/index.scss:src/static/index.css */
 html {
-  scroll-behavior: smooth;
-  min-height: 100%; }
+  scroll-behavior: smooth; }
 
 nav {
   padding: 0px 10%;
