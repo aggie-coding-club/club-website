@@ -33,6 +33,8 @@ nav {
   nav li a:hover {
     color: #0389CD;
     text-decoration: none; }
+  nav .menu-icon {
+    display: none; }
 
 body {
   min-height: 100%; }
@@ -188,7 +190,7 @@ section {
   .projects img {
     padding: 40px 20px; }
   .projects .cat-button {
-    margin: 40px 10px 0px 0px;
+    margin: 30px 10px 0px 0px;
     border: 0px grey solid;
     border-radius: 5px;
     padding: 15px 35px;
@@ -213,7 +215,8 @@ section {
   color: black;
   padding: 10px 30px 20px 30px;
   background-color: white;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
   .project-card span {
     border: 1px #0389CD solid;
     padding: 5px 10px;
@@ -296,5 +299,39 @@ footer {
     max-width: 60px;
     filter: invert(1);
     padding: 0px 15px; }
+
+@media only screen and (max-width: 992px) {
+  .small-title {
+    font-size: 3rem; }
+
+  .big-title {
+    font-size: 4rem; }
+
+  header {
+    overflow: hidden;
+    margin-bottom: 90px; }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 5; }
+    nav .menu-icon {
+      padding: 30px 20px; }
+    nav ul.menu {
+      display: none; }
+    nav ul.small-drop {
+      width: 100%;
+      display: block; }
+      nav ul.small-drop li {
+        width: 100%;
+        float: none;
+        display: block; }
+        nav ul.small-drop li a {
+          text-align: left; }
+    nav .menu-icon {
+      float: right;
+      display: block; } }
 
 /*# sourceMappingURL=index.css.map */

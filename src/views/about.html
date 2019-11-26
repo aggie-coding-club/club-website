@@ -10,17 +10,7 @@
 
 
 <body>
-    <header>
-        <nav>
-            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/announcements">Announcements</a></li>
-            </ul>
-        </nav>
-    </header>
+    <% include partials/header %>
     <section class="about">
         <div class="intro-left col-lg-7">
             <h1>About Us</h1>
@@ -95,13 +85,7 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="links">
-            <p>Let's Socialize</p>
-            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img src="/static/images/slack.svg"/></a>
-            <a href="https://github.com/aggie-coding-club/club-website"><img src="/static/images/github.svg"/></a>
-        </div>
-    </footer>
+    <% include partials/footer %>
 </body>
 
 </html>
