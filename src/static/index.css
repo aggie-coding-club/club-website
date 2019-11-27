@@ -1,7 +1,6 @@
 /* command: sass --watch src/static/index.scss:src/static/index.css */
 html {
-  scroll-behavior: smooth;
-  min-height: 100%; }
+  scroll-behavior: smooth; }
 
 nav {
   padding: 0px 10%;
@@ -33,6 +32,8 @@ nav {
   nav li a:hover {
     color: #0389CD;
     text-decoration: none; }
+  nav .menu-icon {
+    display: none; }
 
 body {
   min-height: 100%; }
@@ -45,13 +46,18 @@ section {
   margin: 0px;
   width: 100%; }
   section .intro-left {
-    padding-top: 80px; }
+    padding-top: 80px;
+    margin-bottom: 20px; }
   section .intro-right {
     padding: 0px 50px;
     overflow: hidden; }
   section img {
     max-width: 100%;
     max-height: 100%; }
+
+.px-1 {
+  padding-bottom: 15px;
+  display: inline-block; }
 
 .intro {
   padding: 5% 10%;
@@ -183,7 +189,7 @@ section {
   .projects img {
     padding: 40px 20px; }
   .projects .cat-button {
-    margin: 40px 10px 0px 0px;
+    margin: 30px 10px 0px 0px;
     border: 0px grey solid;
     border-radius: 5px;
     padding: 15px 35px;
@@ -201,21 +207,23 @@ section {
     text-decoration: none; }
 
 .project-card {
-  margin: 0px 10px 20px 10px;
+  margin: 0px;
   border: 0px #c4c4c4 solid;
   border-radius: 5px;
   width: 100%;
   color: black;
   padding: 10px 30px 20px 30px;
   background-color: white;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
   .project-card span {
     border: 1px #0389CD solid;
     padding: 5px 10px;
     margin-right: 5px;
     margin-bottom: 5px;
     color: #0389CD;
-    border-radius: 3px; }
+    border-radius: 3px;
+    display: inline-block; }
   .project-card .project-lead {
     border-radius: 50px;
     max-width: 40px; }
@@ -225,25 +233,27 @@ section {
   -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
   box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
 
-.announcements h2 {
-  color: white;
-  background-color: #0389CD;
-  padding: 10px 20px;
-  border-radius: 30px;
-  display: inline-block; }
-.announcements .month-events {
-  margin-bottom: 20px; }
-.announcements .event-card {
-  margin-bottom: 20px;
-  border: 1px #c4c4c4 solid;
-  border-radius: 5px;
-  padding: 10px 30px 20px 20px;
-  background-color: white;
-  display: inline-block; }
-.announcements .event-card:hover {
-  -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
-  -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+.announcements {
+  min-height: 100vh; }
+  .announcements h2 {
+    color: white;
+    background-color: #0389CD;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block; }
+  .announcements .month-events {
+    margin-bottom: 20px; }
+  .announcements .event-card {
+    margin-bottom: 20px;
+    border: 1px #c4c4c4 solid;
+    border-radius: 5px;
+    padding: 10px 30px 20px 20px;
+    background-color: white;
+    display: inline-block; }
+  .announcements .event-card:hover {
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+    box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
 
 .competitions .comps {
   margin-bottom: 20px; }
@@ -290,5 +300,39 @@ footer {
     max-width: 60px;
     filter: invert(1);
     padding: 0px 15px; }
+
+@media only screen and (max-width: 992px) {
+  .small-title {
+    font-size: 3rem !important; }
+
+  .big-title {
+    font-size: 4rem !important; }
+
+  header {
+    overflow: hidden;
+    margin-bottom: 90px; }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 5; }
+    nav .menu-icon {
+      padding: 30px 20px; }
+    nav ul.menu {
+      display: none; }
+    nav ul.small-drop {
+      width: 100%;
+      display: block; }
+      nav ul.small-drop li {
+        width: 100%;
+        float: none;
+        display: block; }
+        nav ul.small-drop li a {
+          text-align: left; }
+    nav .menu-icon {
+      float: right;
+      display: block; } }
 
 /*# sourceMappingURL=index.css.map */

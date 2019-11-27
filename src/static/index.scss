@@ -4,7 +4,6 @@ $base-color: #0389CD;
 
 html {
     scroll-behavior: smooth;
-    min-height: 100%;
 }
 
 nav {
@@ -46,6 +45,9 @@ nav {
     color: $base-color;
     text-decoration: none;
     }
+    .menu-icon {
+        display: none;
+    }
 }
 
 body {
@@ -62,6 +64,7 @@ section {
     width: 100%;
     .intro-left {
         padding-top: 80px;
+        margin-bottom: 20px;
     }
     .intro-right {
         padding: 0px 50px;
@@ -73,6 +76,10 @@ section {
     }
 }
 
+.px-1 {
+    padding-bottom: 15px;
+    display: inline-block;
+}
 
 .intro {
     padding: 5% 10%;
@@ -248,7 +255,7 @@ section {
         padding: 40px 20px;
     }
     .cat-button {
-        margin: 40px 10px 0px 0px;
+        margin: 30px 10px 0px 0px;
         border: 0px grey solid;
         border-radius: 5px;
         padding: 15px 35px;
@@ -272,7 +279,7 @@ section {
 }
 
 .project-card {
-    margin: 0px 10px 20px 10px;
+    margin: 0px;
     border: 0px rgb(196, 196, 196) solid;
     border-radius: 5px;
     width: 100%;
@@ -280,6 +287,7 @@ section {
     padding: 10px 30px 20px 30px;
     background-color: white;
     display: inline-block;
+    vertical-align: top;
 
     span {
         border: 1px $base-color solid;
@@ -288,6 +296,7 @@ section {
         margin-bottom: 5px;
         color: $base-color;
         border-radius: 3px;
+        display: inline-block;
     }
 
     .project-lead {
@@ -303,6 +312,7 @@ section {
 }
 
 .announcements {
+    min-height: 100vh;
     h2 {
         color: white;
         background-color: $base-color;
@@ -389,6 +399,48 @@ footer {
         filter: invert(1);
         padding: 0px 15px;
 
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .small-title {
+        font-size: 3rem!important;
+    }
+    .big-title {
+        font-size: 4rem!important;
+    }
+    header {
+        overflow: hidden;
+        margin-bottom: 90px;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        z-index: 5;
+        .menu-icon {
+            padding: 30px 20px;
+        }
+        ul.menu {
+            display: none;
+        }
+        ul.small-drop {
+            width: 100%;
+            display: block;
+            li {
+                width:100%;
+                float: none;
+                display: block;
+                a {
+                    text-align: left;
+                }
+            }
+        }
+        .menu-icon {
+            float: right;
+            display: block;
+        }
     }
 }
 
