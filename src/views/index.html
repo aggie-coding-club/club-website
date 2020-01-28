@@ -9,18 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul> 
-        </nav>
-    </header>
+    <% include partials/header %>
     <section class="intro">
         <div class="intro-left col-lg-7">
             <h1 class="small-title">Welcome to the</h1>
@@ -37,18 +26,8 @@
             <img alt="main image" src="/static/images/img.jpg">
         </div>
     </section>
-<a target="_blank" rel="noopener noreferrer" href="https://groups.google.com/forum/#!forum/aggiecodingclub">Join Mailing List</a>
-<a href="/about">Learn more about ACC!</a>
-    <a href="/announcements">Announcements</a>
-    See our Learning and Progress Oriented projects <a href="/projects">here!</a>
-    <footer>
-        <div class="links">
-            <p>Let's Socialize</p>
-            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img src="/static/images/slack.svg"/></a>
-            <a href=""><img src="/static/images/github.svg"/></a>
-        </div>
-    </footer>
+    <% include partials/footer %>
 </body>
-    
+
 
 </html>

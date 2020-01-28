@@ -19,7 +19,9 @@
     "pretest": "npm run compile",
     "posttest": "npm run check",
     "start": "node build/src/index.js",
-    "copy-static-assets": "ts-node copyStaticAssets.ts"
+    "copy-static-assets": "ts-node copyStaticAssets.ts",
+    "gcp-build": "rm -rf build/ && npm i && npm run compile && npm run copy-static-assets",
+    "deploy": "gcloud app deploy"
   },
   "devDependencies": {
     "@types/chai": "^4.2.0",
@@ -33,6 +35,7 @@
     "typescript": "~3.5.0"
   },
   "dependencies": {
+    "@octokit/rest": "^16.35.0",
     "chai": "^4.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",

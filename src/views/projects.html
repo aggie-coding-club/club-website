@@ -10,18 +10,7 @@
 
 
 <body>
-    <header>
-        <nav>
-            <a class="navbar-brand" href="/"><img src="/static/images/acc.png" /></a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <% include partials/header %>
     <section class="projects">
         <div class="intro-left col-lg-7">
             <h1>Projects</h1>
@@ -39,48 +28,45 @@
 
     <section class="project-cat" id="learning">
         <h1>Learning Oriented Projects</h1>
-        <% for (const project of projects) { %>
-        <div>
-            <h2><%=project.name%></h2>
+        <% for (const project of learningOriented) { %>
+        <div class="col-lg-6 col-12 px-1">
+        <div class="project-card h-100">
+            <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
+            <div class="project-tools">
+                <% for (const tool of project.tools) { %>
+                <span><%=tool%></span> <% } %>
+            </div>
             <p><%=project.description%></p>
             <div>
-                <% for (const tool of project.tools) { %>
-                <span><%=tool%>, </span> <% } %>
-            </div>
-            <div>
                 <% for (const member of project.members) { %>
-                <a href="<%=member.profileURL%>"><img src="<%=member.imageURL%>"></a> <%} %>
+                <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
         </div>
+        </div>
         <% } %>
+        <p id="tim">"Live a life you will remember" -◢◤</p>
     </section>
 
     <section class="project-cat" id="progress">
-        <h1>Projects Oriented Projects</h1>
-        <% for (const project of projects) { %>
-        <div>
-            <h2><%=project.name%></h2>
+        <h1>Progress Oriented Projects</h1>
+        <% for (const project of progressOriented) { %>
+        <div class=" col-lg-6 col-12 px-1">
+        <div class="project-card h-100">
+            <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
+            <div class="project-tools">
+                <% for (const tool of project.tools) { %>
+                <span><%=tool%></span> <% } %>
+            </div>
             <p><%=project.description%></p>
             <div>
-                <% for (const tool of project.tools) { %>
-                <span><%=tool%>, </span> <% } %>
-            </div>
-            <div>
                 <% for (const member of project.members) { %>
-                <a href="<%=member.profileURL%>"><img src="<%=member.imageURL%>"></a> <%} %>
+                <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
+        </div>
         </div>
         <% } %>
     </section>
-
-    <footer>
-        <div class="links">
-            <p>Let's Socialize</p>
-            <a target="_blank" rel="noopener noreferrer" href="https://aggie-coding-club.slack.com"><img
-                    src="/static/images/slack.svg" /></a>
-            <a href=""><img src="/static/images/github.svg" /></a>
-        </div>
-    </footer>
+    <% include partials/footer %>
 </body>
 
 </html>

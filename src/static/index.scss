@@ -45,9 +45,13 @@ nav {
     color: $base-color;
     text-decoration: none;
     }
+    .menu-icon {
+        display: none;
+    }
 }
 
 body {
+    min-height: 100%;
     p {
         font-size: 16px;
     }
@@ -60,6 +64,7 @@ section {
     width: 100%;
     .intro-left {
         padding-top: 80px;
+        margin-bottom: 20px;
     }
     .intro-right {
         padding: 0px 50px;
@@ -71,9 +76,14 @@ section {
     }
 }
 
+.px-1 {
+    padding-bottom: 15px;
+    display: inline-block;
+}
 
 .intro {
     padding: 5% 10%;
+    min-height: 100vh;
     .small-title {
         font-size: 4rem;
         margin-bottom: 0px;
@@ -126,9 +136,14 @@ section {
         font-size: 18px;
         font-weight: bold;
         background-color: white;
+        p {
+            width: 70%;
+            display: inline;
+        }
         
         img {
-            float: right;
+            width: 30%;
+            display: inline;
             max-height: 1.5em;
             padding: 0px 20px 5px 20px;
         }
@@ -145,7 +160,6 @@ section {
         background-color: rgb(218, 218, 218);
         
         img {
-            float: right;
             max-height: 1.5em;
             padding: 0px 20px 5px 20px;
         }
@@ -241,9 +255,9 @@ section {
         padding: 40px 20px;
     }
     .cat-button {
-        margin: 40px 10px 0px 0px;
+        margin: 30px 10px 0px 0px;
         border: 0px grey solid;
-        border-radius: 20px;
+        border-radius: 5px;
         padding: 15px 35px;
         font-size: 16px;
         color: white;
@@ -264,9 +278,94 @@ section {
     }
 }
 
+.project-card {
+    margin: 0px;
+    border: 0px rgb(196, 196, 196) solid;
+    border-radius: 5px;
+    width: 100%;
+    color: black;
+    padding: 10px 30px 20px 30px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+
+    span {
+        border: 1px $base-color solid;
+        padding: 5px 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        color: $base-color;
+        border-radius: 3px;
+        display: inline-block;
+    }
+
+    .project-lead {
+        border-radius: 50px;
+        max-width: 40px;
+
+    }
+}
+.project-card:hover {
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+    box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
+}
+
+.announcements {
+    min-height: 100vh;
+    h2 {
+        color: white;
+        background-color: $base-color;
+        padding: 10px 20px;
+        border-radius: 30px;
+        display: inline-block;
+    }
+    .month-events {
+        margin-bottom: 20px;
+    }
+    .event-card {
+        margin-bottom: 20px;
+        border: 1px rgb(196, 196, 196) solid;
+        border-radius: 5px;
+        padding: 10px 30px 20px 20px;
+        background-color: white;
+        display: inline-block;
+    }
+    .event-card:hover {
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+        -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+        box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
+    }
+}
+
+.competitions {
+    .comps {
+        margin-bottom: 20px;
+    }
+    .comp-card {
+        margin-bottom: 20px;
+        border: 1px rgb(196, 196, 196) solid;
+        border-radius: 5px;
+        padding: 10px 20px 10px 20px;
+        background-color: white;
+        display: inline-block;
+    }
+    .comp-card:hover {
+        -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
+        -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
+        box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
+    }
+}
+
 .project-cat {
     h1 {
         text-align: center;
+        margin-bottom: 60px;
+    }
+    #tim {
+        margin: 0px;
+        color: $base-color;
+        cursor: default;
     }
 }
 
@@ -275,16 +374,18 @@ section {
     background-color: $base-color;
 }
 
+#progress {
+    .project-card {
+        border: 1px rgb(196, 196, 196) solid;
+    }
+}
+
 footer {
     background: $base-color;
     min-height: 100px;
     overflow: hidden;
     color: white;
     padding: 0px 10%;
-    #tim {
-        color: $base-color;
-        cursor: default;
-    }
     .links {
         padding: 20px 40px 40px 40px;
         min-width: 300px;
@@ -300,3 +401,46 @@ footer {
 
     }
 }
+
+@media only screen and (max-width:992px) {
+    .small-title {
+        font-size: 3rem!important;
+    }
+    .big-title {
+        font-size: 4rem!important;
+    }
+    header {
+        overflow: hidden;
+        margin-bottom: 90px;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        z-index: 5;
+        .menu-icon {
+            padding: 30px 20px;
+        }
+        ul.menu {
+            display: none;
+        }
+        ul.small-drop {
+            width: 100%;
+            display: block;
+            li {
+                width:100%;
+                float: none;
+                display: block;
+                a {
+                    text-align: left;
+                }
+            }
+        }
+        .menu-icon {
+            float: right;
+            display: block;
+        }
+    }
+}
+
