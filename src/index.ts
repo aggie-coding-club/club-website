@@ -40,7 +40,7 @@ app.get('/announcements', (req, res) => {
 });
 
 app.get('/projects', async (req, res) => {
-  const projects = await gitHubController.getAllProjects('public');
+  const projects = await gitHubController.getAllProjects('all');
   const learningOriented = gitHubController.filterProjects(
     'learning-oriented',
     projects
