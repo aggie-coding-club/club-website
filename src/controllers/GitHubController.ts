@@ -117,11 +117,9 @@ export class GitHubController {
 
     const contributors = contributorsResponse.data;
     const members: ProjectMember[] = [];
-    console.log(contributors);
-    if (contributors.length === 0) {
+    if (!contributors) {
       return [];
     }
-
     for (const contributor of contributors) {
       members.push({
         profileURL: contributor.html_url,
