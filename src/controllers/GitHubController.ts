@@ -36,7 +36,7 @@ export class GitHubController {
     const reposResponse = await this.octokit.repos.listForOrg({
       org: this.org,
       type: repoType || 'public',
-      per_page: 100
+      per_page: 100,
     });
 
     const repos = reposResponse.data;
