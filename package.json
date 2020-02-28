@@ -13,14 +13,14 @@
     "test": "npm run pretest && mocha build/src/**/*.test.js",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "tsc -p .",
+    "compile": "./node_modules/typescript/bin/tsc -p .",
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run check",
-    "start": "node build/src/index.js",
+    "start": "npm run gcp-build && node build/src/index.js",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
-    "gcp-build": "rm -rf build/ && npm i && npm run compile && npm run copy-static-assets",
+    "gcp-build": "npm i && npm run compile && npm run copy-static-assets",
     "deploy": "gcloud app deploy"
   },
   "devDependencies": {

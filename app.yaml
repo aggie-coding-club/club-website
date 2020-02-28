@@ -1,1 +1,13 @@
+# The only required line
 runtime: nodejs10
+
+# Force AppEngine to stay within the Google Free Tier
+instance_class: F1
+automatic_scaling:
+  max_instances: 1
+
+# Specify what routes should be dispatched to the Node application (all of them)
+handlers:
+- url: /.*
+  script: auto # Just runs `npm start`
+  secure: always # Redirect everybody to HTTPS
