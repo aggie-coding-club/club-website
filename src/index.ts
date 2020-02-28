@@ -27,20 +27,20 @@ app.get('/about', (req, res) => {
   res.render('about', { officers });
 });
 
-app.get('/announcements', (req, res) => {
-  const testCompetitions = [
-    { name: 'Discord Bot', info: 'beep boop' },
-    { name: 'Website', info: 'show them your power' },
-    { name: 'Chess', info: 'make big brain play' },
-  ];
+// app.get('/announcements', (req, res) => {
+//   const testCompetitions = [
+//     { name: 'Discord Bot', info: 'beep boop' },
+//     { name: 'Website', info: 'show them your power' },
+//     { name: 'Chess', info: 'make big brain play' },
+//   ];
 
-  res.render('announcements', {
-    competitions: testCompetitions,
-  });
-});
+//   res.render('announcements', {
+//     competitions: testCompetitions,
+//   });
+// });
 
 app.get('/projects', async (req, res) => {
-  const projects = await gitHubController.getAllProjects('public');
+  const projects = await gitHubController.getAllProjects('all');
   const learningOriented = gitHubController.filterProjects(
     'learning-oriented',
     projects
