@@ -3,16 +3,21 @@ import * as Octokit from '@octokit/rest';
 
 type RepoType = 'public' | 'private' | 'forks' | 'all';
 
+const DAY_IN_MILLIS = 24 * 60 * 60 * 1000;
+
 /**
  * Controller for all GitHub data
  */
 export class GitHubController {
   org: string;
   octokit: Octokit;
+  lastCalled: number | null;
+  cachedProjects?: ProjectData[];
 
   constructor(octokit: Octokit, org?: string) {
     this.org = org || 'aggie-coding-club';
     this.octokit = octokit;
+    this.lastCalled = null;
   }
 
   /**
@@ -22,9 +27,16 @@ export class GitHubController {
    * @returns a list of projects belonging to this organization.
    */
   async getAllProjects(repoType?: RepoType): Promise<ProjectData[]> {
+    if (this.lastCalled && Date.now() - this.lastCalled < DAY_IN_MILLIS) {
+      if (this.cachedProjects) {
+        console.log(`Using projects cached from ${this.lastCalled}`);
+        return this.cachedProjects;
+      }
+    }
     const reposResponse = await this.octokit.repos.listForOrg({
       org: this.org,
       type: repoType || 'public',
+      per_page: 100,
     });
 
     const repos = reposResponse.data;
@@ -69,6 +81,8 @@ export class GitHubController {
 
     // get all contributors and tools asynchronously
     await Promise.all(apiCalls);
+    this.cachedProjects = projectList;
+    this.lastCalled = Date.now();
 
     return projectList;
   }
@@ -103,7 +117,9 @@ export class GitHubController {
 
     const contributors = contributorsResponse.data;
     const members: ProjectMember[] = [];
-
+    if (!contributors) {
+      return [];
+    }
     for (const contributor of contributors) {
       members.push({
         profileURL: contributor.html_url,

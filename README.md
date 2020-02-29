@@ -7,8 +7,7 @@ The website for [aggiecodingclub.com](https://aggiecodingclub.com)
 ## How to Use
 
 1. `npm i`installs all the missing packages
-2. `npm run compile` transpiles the TypeScript to JavaScript
-3. `npm run copy-static-assets` copies the static files (like CSS and HTML files) to the compilation directory
+2. `npm run gcp-build` transpiles the TypeScript to JavaScript, and copies the static files (like CSS and HTML files) to the compilation directory.
 4. `npm start` starts the server
 
 
