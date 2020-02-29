@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Initialize Google Cloud SDK
+          uses: zxyle/publish-gae-action@master
+          with:
+                service_account_email: ${{ secrets.service_account_email }}
+                service_account_key: ${{ secrets.service_account_key }}
+                project_id: ${{ secrets.project_id }}
+                gae_variables: ${{ secrets.gae_variables }}
+
+        - name: Publish app to Google App Engine
+          run: |
+                # This client-secret.json is converted by GCP_SA_KEY.
+                gcloud auth activate-service-account ${{ secrets.service_account_email }} --key-file=client-secret.json
+                gcloud config set project ${{ secrets.project_id }}
+                gcloud -q app deploy app.yaml --promote
