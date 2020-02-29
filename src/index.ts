@@ -12,7 +12,7 @@ const octokit = new Octokit({
 const gitHubController = new GitHubController(octokit);
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
@@ -52,6 +52,6 @@ app.get('/projects', async (req, res) => {
   res.render('projects', { learningOriented, progressOriented });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
