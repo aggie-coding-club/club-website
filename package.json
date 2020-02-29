@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "club-website",
   "version": "0.0.0",
   "description": "",
   "main": "build/src/index.js",
@@ -13,12 +13,12 @@
     "test": "npm run pretest && mocha build/src/**/*.test.js",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "./node_modules/typescript/bin/tsc -p .",
+    "compile": "tsc -p .",
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run check",
-    "start": "npm run gcp-build && node build/src/index.js",
+    "start": "node build/src/index.js",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
     "gcp-build": "npm i && npm run compile && npm run copy-static-assets",
     "deploy": "gcloud app deploy"
