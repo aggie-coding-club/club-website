@@ -2,7 +2,7 @@ import * as express from 'express';
 import * as path from 'path';
 import * as Octokit from '@octokit/rest';
 import { GitHubController } from './controllers/GitHubController';
-import { officers } from './data/officers.json';
+import { officers, former } from './data/officers.json';
 import { projects } from './data/projects.json';
 
 const octokit = new Octokit({
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.render('about', { officers });
+  res.render('about', { officers, former });
 });
 
 // app.get('/announcements', (req, res) => {
