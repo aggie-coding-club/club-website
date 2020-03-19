@@ -76,7 +76,7 @@
             "name": "Alsten Okpisz",
             "image": "/static/images/alsten_okpisz.jpg",
             "major": "Computer Science",
-            "position": "Officer in Training",
+            "position": "Officer-in-Training",
             "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
         },
 
@@ -126,6 +126,15 @@
             "major": "General Engineering",
             "position": "Officer-in-Training",
             "description": "Dakshika is a freshman and will be majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing (https://handwrittenwriting.wordpress.com) and playing the keyboard."
+        }
+    ],
+
+    "former": [
+        {
+            "name": "Rohit Mucherla",
+            "image": "/static/images/rohit_mucherla.jpeg",
+            "major":"Computer Science",
+            "position": "President (2016 - 2018)"
         }
     ]
 }
