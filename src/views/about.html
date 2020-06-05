@@ -20,12 +20,13 @@
                 Aggie Coding Club provides the students of Texas A&M University that are interested in software development the opportunity to explore their careers and passions through projects, meetings, and workshops. The club also provides a community where members can benefit from valuable networking opportunities and learn from each other.
             </p>
             <P id="meeting"><b>Meeting Time:</b> <br/><time>Monday 7pm to 9pm</time></P>
-            <button onclick="window.location.href='https://aggie-coding-club.slack.com'" id="slack-button"><p>Join Our Slack</p> <img src="/static/images/slack-clr.svg" /></button>
+            <button onclick="window.location.href='https://aggie-coding-club.slack.com'" id="link-button"><p>Join Our Slack</p> <img src="/static/images/slack-clr.svg" /></button>
         </div>
         <div class="intro-right col-lg-5">
             <img alt="main image" src="/static/images/acc-website-graphics.png">
         </div>
     </section>
+
     <section>
         <h1>Officers</h1>
         <div class="row">
@@ -50,6 +51,32 @@
                 <% } %>
         </div></div>
     </section>
+
+    <section>
+        <h1>Former Officers</h1>
+        <div class="row">
+            <div class="row col-lg-6">
+                <% var i = 0 %>
+                <% for (const officer of former) { %>
+                    <div class="officer-card col-lg-6 col-md-6 col-sm-6">
+                        <div class="officer-img" style="background-image: url('<%=officer.image%>')"></div>
+                        <h3><%=officer.name%></h3>
+                        <h4><%=officer.major%></h4>
+                        <h4><%=officer.position%></h4>
+                    </div>
+                <% i++; %>
+                    <% if (i == 2) { %>
+                        </div><div class="row col-lg-6">
+                    <% } %>
+                    <% if (i == 4) { %>
+                        </div></div><div class="row"><div class="row col-lg-6">
+                        <% i = 0 %>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
     <section class="sponsored-by">
         <h1 class="mb-5">Sponsors</h1>
         <div class="sponsor-container">
