@@ -233,7 +233,7 @@ section {
   -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
   box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
 
-.announcements {
+/* .announcements {
   min-height: 100vh; }
   .announcements h2 {
     color: white;
@@ -267,7 +267,91 @@ section {
 .competitions .comp-card:hover {
   -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
   -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); } */
+
+
+/*ANNOUNCEMENTS*/
+.announcements{
+  text-align: center;
+  /* position: relative; */
+}
+
+.announcement {
+  /* margin: 5% 0; */
+  /* margin-right: 5%; */
+  width: 35%;
+  display: inline-block;
+  /* box-shadow: 1em 1em 1em 1.2em #0389CD; */
+}
+
+.announcement:hover {
+  /* box-shadow: 2px 2px 2px blue; */
+  /* box-shadow: 1em 1em 1em 1.2em #FEECE1; */
+} 
+
+/* .middle { */
+  /* transform: translate(-50%, -50%); */
+/* } */
+
+.card {
+  cursor: pointer;
+  /* position: absolute; */
+  /* width: 100%; */
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+/* .front, .back {
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 0.6s linear;
+  height: 100%;
+  width: 100%;
+} */
+
+.front {
+  /* transform: perspective(600px) rotateY(0deg); */
+  background: #E3F6FF;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: rgb(0, 170, 255);
+  backface-visibility: hidden;
+  /* width: 100%; */
+  height: 100%;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.back-content {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+}
+
+/* .card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+} */
+
+
+
+
+
+
+
+
+
+/*END OF ANNOUNCEMENTS*/
 
 .project-cat h1 {
   text-align: center;

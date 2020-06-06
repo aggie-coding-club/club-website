@@ -25,15 +25,29 @@
 <!--              <% } %>-->
 <!--          </div>-->
 <!--        <% } %>-->
+
+        <!-- <div class="row"> -->
+            <% for (const ann of announcements) { %>
+                <div class="announcement card">
+                    <div class="front">
+                        <h3><%=ann['title']%></h3>
+                        <h4><%=ann['date']%></h4>
+                    </div>
+                    <div class="back">
+                        <!-- <div class="back-content"> -->
+                            <h4>Workshop: <%=ann['workshop-title']%></h4>
+                            <h5>from <%=ann['workshop-time']%></h5>
+                            <h5>Description:<br><%=ann['workshop-description']%></h5>
+                            <h4>Company: <%=ann['company-name']%></h4>
+                            <h5>from: <%=ann['presentation-time']%></h5>
+                            <h5>Description:<br><%=ann['presentation-description']%></h5>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            <% } %>
+        <!-- </div> -->
     </section>
-    <section class="competitions">
-        <h2>Competitions</h2>
-          <div class="comps">
-<!--              <% competitions.forEach(function(competition) { %>-->
-<!--                <div class="comp-card"><%= competition.name %> - <%= competition.info %></div>-->
-<!--              <% }); %>-->
-          </div>
-    </section>
+    
     <% include partials/footer %>
     </body>
 </html>

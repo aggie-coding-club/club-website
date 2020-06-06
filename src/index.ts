@@ -4,6 +4,7 @@ import * as Octokit from '@octokit/rest';
 import { GitHubController } from './controllers/GitHubController';
 import { officers, former } from './data/officers.json';
 import { projects } from './data/projects.json';
+import {announcements} from './data/announcements.json';
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -27,17 +28,18 @@ app.get('/about', (req, res) => {
   res.render('about', { officers, former });
 });
 
-// app.get('/announcements', (req, res) => {
-//   const testCompetitions = [
-//     { name: 'Discord Bot', info: 'beep boop' },
-//     { name: 'Website', info: 'show them your power' },
-//     { name: 'Chess', info: 'make big brain play' },
-//   ];
+app.get('/announcements', (req, res) => {
+  const testCompetitions = [
+    { name: 'Discord Bot', info: 'beep boop' },
+    { name: 'Website', info: 'show them your power' },
+    { name: 'Chess', info: 'make big brain play' },
+  ];
 
-//   res.render('announcements', {
-//     competitions: testCompetitions,
-//   });
-// });
+  res.render('announcements', {
+    // competitions: testCompetitions,
+    announcements
+  });
+});
 
 app.get('/projects', async (req, res) => {
   const projects = await gitHubController.getAllProjects('all');
