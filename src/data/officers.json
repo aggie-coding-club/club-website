@@ -25,19 +25,19 @@
         },
 
         {
-            "name": "Tony Zhu",
-            "image": "/static/images/tony_zhu.jpg",
-            "major": "Electronic Systems Engineering Technology",
-            "position": "Officer-in-Training",
-            "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
-        },
-
-        {
             "name": "Gannon Prudhomme",
             "image": "/static/images/gannon_prudhomme.jpg",
             "major": "Computer Science",
-            "position": "Officer-in-Training",
+            "position": "Projects Officer",
             "description": "Gannon is a Junior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
+        },
+
+        {
+            "name": "Tony Zhu",
+            "image": "/static/images/tony_zhu.jpg",
+            "major": "Electronic Systems Engineering Technology",
+            "position": "Projects Officer",
+            "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
         },
 
         {
@@ -60,7 +60,7 @@
             "name": "Ryan Hall",
             "image": "/static/images/ryan_hall.jpg",
             "major": "Computer Science",
-            "position": "Officer-in-Training",
+            "position": "Workshops Officer",
             "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
         },
 
@@ -68,7 +68,7 @@
             "name": "Dakshika Srivastava",
             "image": "/static/images/dakshika_srivastava.jpg",
             "major": "General Engineering",
-            "position": "Officer-in-Training",
+            "position": "Webmaster",
             "description": "Dakshika is a freshman and will be majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing (https://handwrittenwriting.wordpress.com) and playing the keyboard."
         }
     ],
