@@ -1,6 +1,80 @@
 {
     "officers": [
         {
+            "name": "Alsten Okpisz",
+            "image": "/static/images/alsten_okpisz.jpg",
+            "major": "Computer Science",
+            "position": "President",
+            "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
+        },
+
+        {
+            "name": "Anikait Sharma",
+            "image": "/static/images/anikait_sharma.jpg",
+            "major": "Computer Science",
+            "position": "Vice President",
+            "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait is not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
+        },
+
+        {
+            "name": "Anthony Teo",
+            "image": "/static/images/anthony_teo.jpg",
+            "major": "Computer Science",
+            "position": "Events Officer",
+            "description": "Anthony is a sophomore Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
+        },
+
+        {
+            "name": "Tony Zhu",
+            "image": "/static/images/tony_zhu.jpg",
+            "major": "Electronic Systems Engineering Technology",
+            "position": "Officer-in-Training",
+            "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
+        },
+
+        {
+            "name": "Gannon Prudhomme",
+            "image": "/static/images/gannon_prudhomme.jpg",
+            "major": "Computer Science",
+            "position": "Officer-in-Training",
+            "description": "Gannon is a Junior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
+        },
+
+        {
+            "name": "Shrey Shah",
+            "image": "/static/images/shrey_shah.jpg",
+            "major": "Computer Engineering",
+            "position": "Workshops Officer",
+            "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
+        },
+
+        {
+            "name": "Yonathan Zetune",
+            "image": "/static/images/yonathan_zetune.jpg",
+            "major": "Mechanical Engineering",
+            "position": "Workshops Officer",
+            "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
+        }, 
+
+        {
+            "name": "Ryan Hall",
+            "image": "/static/images/ryan_hall.jpg",
+            "major": "Computer Science",
+            "position": "Officer-in-Training",
+            "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
+        },
+
+        {
+            "name": "Dakshika Srivastava",
+            "image": "/static/images/dakshika_srivastava.jpg",
+            "major": "General Engineering",
+            "position": "Officer-in-Training",
+            "description": "Dakshika is a freshman and will be majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing (https://handwrittenwriting.wordpress.com) and playing the keyboard."
+        }
+    ],
+
+    "former": [
+        {
             "name": "Hannah Gooden",
             "image": "/static/images/hannah_gooden.jpg",
             "major": "Computer Science",
@@ -56,80 +130,6 @@
             "description": "Edgar is a Computer Science major who enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club."
         },
 
-        {
-            "name": "Shrey Shah",
-            "image": "/static/images/shrey_shah.jpg",
-            "major": "Computer Engineering",
-            "position": "Workshops Officer",
-            "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
-        },
-
-        {
-            "name": "Yonathan Zetune",
-            "image": "/static/images/yonathan_zetune.jpg",
-            "major": "Mechanical Engineering",
-            "position": "Workshops Officer",
-            "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
-        }, 
-
-        {
-            "name": "Alsten Okpisz",
-            "image": "/static/images/alsten_okpisz.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
-        },
-
-        {
-            "name": "Anikait Sharma",
-            "image": "/static/images/anikait_sharma.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait is not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
-        },
-
-        {
-            "name": "Anthony Teo",
-            "image": "/static/images/anthony_teo.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Anthony is a sophomore Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
-        },
-
-        {
-            "name": "Tony Zhu",
-            "image": "/static/images/tony_zhu.jpg",
-            "major": "Electronic Systems Engineering Technology",
-            "position": "Officer-in-Training",
-            "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
-        },
-
-        {
-            "name": "Gannon Prudhomme",
-            "image": "/static/images/gannon_prudhomme.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Gannon is a Junior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
-        },
-
-        {
-            "name": "Ryan Hall",
-            "image": "/static/images/ryan_hall.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
-        },
-
-        {
-            "name": "Dakshika Srivastava",
-            "image": "/static/images/dakshika_srivastava.jpg",
-            "major": "General Engineering",
-            "position": "Officer-in-Training",
-            "description": "Dakshika is a freshman and will be majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing (https://handwrittenwriting.wordpress.com) and playing the keyboard."
-        }
-    ],
-
-    "former": [
         {
             "name": "Rohit Mucherla",
             "image": "/static/images/rohit_mucherla.jpeg",
