@@ -78,7 +78,8 @@
             "name": "Hannah Gooden",
             "image": "/static/images/hannah_gooden.jpg",
             "major": "Computer Science",
-            "position": "President (2018 - 2020)",
+            "position": "President",
+            "term": "2018 - 2020",
             "description": "Hannah has two minors in astrophysics and cybersecurity, and is very interested in the way scientists use computing to do research. She also loves traveling, and spent a whole summer in New Mexico, where she crewed for a hot air balloon team on her weekends."
         },
 
@@ -86,7 +87,8 @@
             "name": "Gabriel Britain",
             "image": "/static/images/gabriel_britain.jpg",
             "major": "Computer Science",
-            "position": "Vice President (2018 - 2020)",
+            "position": "Vice President",
+            "term": "2018 - 2020",
             "description": "When Gabriel isn't organizing hackathons or reading papers for his research, you can find him whipping something up in the kitchen, or 30 feet underwater scuba diving!"
         },
 
@@ -94,7 +96,8 @@
             "name": "Marissa Soria",
             "image": "/static/images/marissa_soria.jpg",
             "major": "Electronic Systems Engineering Technology",
-            "position": "Events Chair (2018 - 2020)",
+            "position": "Events Chair",
+            "term": "2018 - 2020",
             "description": "Marissa has a special interest in cyber security and hardware integration and in her free time enjoys baking and gardening."
         },
 
@@ -102,7 +105,8 @@
             "name": "Feras Khemakhem",
             "image": "/static/images/feras_khemakhem.jpg",
             "major": "Computer Science",
-            "position": "Project Management Chair (2017 - 2020)",
+            "position": "Project Management Chair",
+            "term": "2017 - 2020",
             "description": "Feras specializes in Computer Graphics and animation, and hopes to continue this work into the field. Personal hobbies include traveling to eat good food, and gaming."
         },
 
@@ -110,7 +114,8 @@
             "name": "Mitchell Eldridge",
             "image": "/static/images/mitchell_eldridge.jpg",
             "major": "Computer Science",
-            "position": "Project Management Chair (2019 - 2020)",
+            "position": "Project Management Chair",
+            "term": "2019 - 2020",
             "description": "Mitchell is interested in cyber security, machine learning, and teaching. With his free time, he enjoys rock climbing and hiking."
         },
 
@@ -118,7 +123,8 @@
             "name": "Thomas McDonald",
             "image": "/static/images/thomas_mcdonald.jpg",
             "major": "Computer Science",
-            "position": "Co-Workshops Chair (2018 - 2020)",
+            "position": "Co-Workshops Chair",
+            "term": "2018 - 2020",
             "description": "Thomas is a senior Computer Science student who has experience in several industries and loves to work with people to meet objectives. Outside of school and work, he enjoys rock climbing and spending time with family and friends."
         },
 
@@ -126,7 +132,8 @@
             "name": "Edgar Martinez",
             "image": "/static/images/edgar_martinez.jpg",
             "major": "Computer Science",
-            "position": "Co-Workshops Chair (2018 - 2020)",
+            "position": "Co-Workshops Chair",
+            "term": "2018 - 2020",
             "description": "Edgar is a Computer Science major who enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club."
         },
 
@@ -134,7 +141,8 @@
             "name": "Rohit Mucherla",
             "image": "/static/images/rohit_mucherla.jpeg",
             "major":"Computer Science",
-            "position": "President (2016 - 2018)"
+            "position": "President",
+            "term": "2016 - 2018"
         }
     ]
 }
