@@ -75,6 +75,14 @@
 
     "former": [
         {
+            "name": "Rohit Mucherla",
+            "image": "/static/images/rohit_mucherla.jpeg",
+            "major":"Computer Science",
+            "position": "President",
+            "term": "2016 - 2018"
+        },
+        
+        {
             "name": "Hannah Gooden",
             "image": "/static/images/hannah_gooden.jpg",
             "major": "Computer Science",
@@ -135,14 +143,6 @@
             "position": "Co-Workshops Chair",
             "term": "2018 - 2020",
             "description": "Edgar is a Computer Science major who enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club."
-        },
-
-        {
-            "name": "Rohit Mucherla",
-            "image": "/static/images/rohit_mucherla.jpeg",
-            "major":"Computer Science",
-            "position": "President",
-            "term": "2016 - 2018"
         }
     ]
 }
