@@ -1,59 +1,43 @@
 {
     "officers": [
         {
-            "name": "Hannah Gooden",
-            "image": "/static/images/hannah_gooden.jpg",
+            "name": "Alsten Okpisz",
+            "image": "/static/images/alsten_okpisz.jpg",
             "major": "Computer Science",
             "position": "President",
-            "description": "Hannah has two minors in astrophysics and cybersecurity, and is very interested in the way scientists use computing to do research. She also loves traveling, and spent a whole summer in New Mexico, where she crewed for a hot air balloon team on her weekends."
+            "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
         },
 
         {
-            "name": "Gabriel Britain",
-            "image": "/static/images/gabriel_britain.jpg",
+            "name": "Anikait Sharma",
+            "image": "/static/images/anikait_sharma.jpg",
             "major": "Computer Science",
             "position": "Vice President",
-            "description": "When Gabriel isn't organizing hackathons or reading papers for his research, you can find him whipping something up in the kitchen, or 30 feet underwater scuba diving!"
+            "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait is not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
         },
 
         {
-            "name": "Marissa Soria",
-            "image": "/static/images/marissa_soria.jpg",
+            "name": "Anthony Teo",
+            "image": "/static/images/anthony_teo.jpg",
+            "major": "Computer Science",
+            "position": "Events Officer",
+            "description": "Anthony is a junior Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
+        },
+
+        {
+            "name": "Gannon Prudhomme",
+            "image": "/static/images/gannon_prudhomme.jpg",
+            "major": "Computer Science",
+            "position": "Projects Officer",
+            "description": "Gannon is a Senior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
+        },
+
+        {
+            "name": "Tony Zhu",
+            "image": "/static/images/tony_zhu.jpg",
             "major": "Electronic Systems Engineering Technology",
-            "position": "Events Chair",
-            "description": "Marissa has a special interest in cyber security and hardware integration and in her free time enjoys baking and gardening."
-        },
-
-        {
-            "name": "Feras Khemakhem",
-            "image": "/static/images/feras_khemakhem.jpg",
-            "major": "Computer Science",
-            "position": "Project Management Chair",
-            "description": "Feras specializes in Computer Graphics and animation, and hopes to continue this work into the field. Personal hobbies include traveling to eat good food, and gaming."
-        },
-
-        {
-            "name": "Mitchell Eldridge",
-            "image": "/static/images/mitchell_eldridge.jpg",
-            "major": "Computer Science",
-            "position": "Project Management Chair",
-            "description": "Mitchell is interested in cyber security, machine learning, and teaching. With his free time, he enjoys rock climbing and hiking."
-        },
-
-        {
-            "name": "Thomas McDonald",
-            "image": "/static/images/thomas_mcdonald.jpg",
-            "major": "Computer Science",
-            "position": "Co-Workshops Chair",
-            "description": "Thomas is a senior Computer Science student who has experience in several industries and loves to work with people to meet objectives. Outside of school and work, he enjoys rock climbing and spending time with family and friends."
-        },
-
-        {
-            "name": "Edgar Martinez",
-            "image": "/static/images/edgar_martinez.jpg",
-            "major": "Computer Science",
-            "position": "Co-Workshops Chair",
-            "description": "Edgar is a Computer Science major who enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club."
+            "position": "Projects Officer",
+            "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
         },
 
         {
@@ -73,59 +57,19 @@
         }, 
 
         {
-            "name": "Alsten Okpisz",
-            "image": "/static/images/alsten_okpisz.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
-        },
-
-        {
-            "name": "Anikait Sharma",
-            "image": "/static/images/anikait_sharma.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait is not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
-        },
-
-        {
-            "name": "Anthony Teo",
-            "image": "/static/images/anthony_teo.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Anthony is a sophomore Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
-        },
-
-        {
-            "name": "Tony Zhu",
-            "image": "/static/images/tony_zhu.jpg",
-            "major": "Electronic Systems Engineering Technology",
-            "position": "Officer-in-Training",
-            "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
-        },
-
-        {
-            "name": "Gannon Prudhomme",
-            "image": "/static/images/gannon_prudhomme.jpg",
-            "major": "Computer Science",
-            "position": "Officer-in-Training",
-            "description": "Gannon is a Junior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
-        },
-
-        {
             "name": "Ryan Hall",
             "image": "/static/images/ryan_hall.jpg",
             "major": "Computer Science",
-            "position": "Officer-in-Training",
+            "position": "Workshops Officer",
             "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
         },
 
         {
             "name": "Dakshika Srivastava",
             "image": "/static/images/dakshika_srivastava.jpg",
-            "major": "General Engineering",
-            "position": "Officer-in-Training",
-            "description": "Dakshika is a freshman and will be majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing (https://handwrittenwriting.wordpress.com) and playing the keyboard."
+            "major": "Computer Science",
+            "position": "Webmaster",
+            "description": "Dakshika is a sophomore majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing and playing the keyboard."
         }
     ],
 
@@ -134,7 +78,71 @@
             "name": "Rohit Mucherla",
             "image": "/static/images/rohit_mucherla.jpeg",
             "major":"Computer Science",
-            "position": "President (2016 - 2018)"
+            "position": "President",
+            "term": "2016 - 2018"
+        },
+
+        {
+            "name": "Hannah Gooden",
+            "image": "/static/images/hannah_gooden.jpg",
+            "major": "Computer Science",
+            "position": "President",
+            "term": "2018 - 2020",
+            "description": "Hannah has two minors in astrophysics and cybersecurity, and is very interested in the way scientists use computing to do research. She also loves traveling, and spent a whole summer in New Mexico, where she crewed for a hot air balloon team on her weekends."
+        },
+
+        {
+            "name": "Gabriel Britain",
+            "image": "/static/images/gabriel_britain.jpg",
+            "major": "Computer Science",
+            "position": "Vice President",
+            "term": "2018 - 2020",
+            "description": "When Gabriel isn't organizing hackathons or reading papers for his research, you can find him whipping something up in the kitchen, or 30 feet underwater scuba diving!"
+        },
+
+        {
+            "name": "Marissa Soria",
+            "image": "/static/images/marissa_soria.jpg",
+            "major": "Electronic Systems Engineering Technology",
+            "position": "Events Chair",
+            "term": "2018 - 2020",
+            "description": "Marissa has a special interest in cyber security and hardware integration and in her free time enjoys baking and gardening."
+        },
+
+        {
+            "name": "Feras Khemakhem",
+            "image": "/static/images/feras_khemakhem.jpg",
+            "major": "Computer Science",
+            "position": "Project Management Chair",
+            "term": "2017 - 2020",
+            "description": "Feras specializes in Computer Graphics and animation, and hopes to continue this work into the field. Personal hobbies include traveling to eat good food, and gaming."
+        },
+
+        {
+            "name": "Mitchell Eldridge",
+            "image": "/static/images/mitchell_eldridge.jpg",
+            "major": "Computer Science",
+            "position": "Project Management Chair",
+            "term": "2019 - 2020",
+            "description": "Mitchell is interested in cyber security, machine learning, and teaching. With his free time, he enjoys rock climbing and hiking."
+        },
+
+        {
+            "name": "Thomas McDonald",
+            "image": "/static/images/thomas_mcdonald.jpg",
+            "major": "Computer Science",
+            "position": "Co-Workshops Chair",
+            "term": "2018 - 2020",
+            "description": "Thomas is a senior Computer Science student who has experience in several industries and loves to work with people to meet objectives. Outside of school and work, he enjoys rock climbing and spending time with family and friends."
+        },
+
+        {
+            "name": "Edgar Martinez",
+            "image": "/static/images/edgar_martinez.jpg",
+            "major": "Computer Science",
+            "position": "Co-Workshops Chair",
+            "term": "2018 - 2020",
+            "description": "Edgar is a Computer Science major who enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club."
         }
     ]
 }
