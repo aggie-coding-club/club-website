@@ -346,8 +346,18 @@ section {
   transform: perspective(600px) rotateY(0deg);
 } */
 
+.ann-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .ann {
-  margin: 5%;
+  /* display: table-cell; */
+  /* flex: 1; */
+  width: 40%;
+  margin: 4%;
+  min-height: 250px;
+  /* max-width: 30%; */
 }
 
 .ann-body {
@@ -362,7 +372,10 @@ section {
   margin-top: -50%;
 }
 
-
+.card-title h3 {
+  color: #0389CD;
+  /* text-shadow: 5px 0px 5px black; */
+}
 
 
 
