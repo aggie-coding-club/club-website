@@ -1,33 +1,33 @@
 {
  "announcements": [
   {
-   "title": "1234",
+   "title": "Git Essentials and JP Morgan",
    "image": "/static/",
-   "workshop-title": "Git",
-   "workshop-description": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-   "company-name": "abcd",
-   "presentation-description": "learn about abcd",
-   "date": "Jan 1, 2020",
+   "workshop-title": "Git Essentials",
+   "workshop-description": "Learn about Git and GitHub and how to make your life as a developer much easier.",
+   "company-name": "JP Moragn",
+   "presentation-description": "learn about JP Morgan internship opportunities",
+   "date": "Aug 20, 2020",
    "workshop-time": "7:00pm to 8:00pm",
    "presentation-time": "8:00pm to 9:00pm"
   },
   {
-   "title": "5678",
+   "title": "Web Dev Hero and Pariveda Solutions",
    "workshop-title": "Web Dev",
-   "workshop-description": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-   "company-name": "abcd",
-   "presentation-description": "learn about abcd",
-   "date": "Jan 2, 2020",
+   "workshop-description": "Learn how to make a basic website using HTML5 and CSS3.",
+   "company-name": "Pariveda Solutions",
+   "presentation-description": "learn about Pariveda Solutions and their Best Personal Website Competition",
+   "date": "Aug 27, 2020",
    "workshop-time": "7:00pm to 8:00pm",
    "presentation-time": "8:00pm to 9:00pm"
   },
   {
-   "title": "1589",
-   "workshop-title": "Flutter",
-   "workshop-description": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah",
-   "company-name": "abcd",
-   "presentation-description": "learn about abcd",
-   "date": "Jan 3, 2020",
+   "title": "Intro to Flutter and fireside chat with Dr. X",
+   "workshop-title": "Flutter & Dart",
+   "workshop-description": "Learn about flutter and dart and how to make your first platform independent website.",
+   "company-name": "TAMU CSCE",
+   "presentation-description": "learn about Dr. X's research",
+   "date": "Sep 2, 2020",
    "workshop-time": "7:00pm to 8:00pm",
    "presentation-time": "8:00pm to 9:00pm"
   }

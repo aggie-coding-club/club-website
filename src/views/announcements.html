@@ -7,45 +7,36 @@
         <link rel="stylesheet" href="/static/bs.css">
         <link rel="stylesheet" href="/static/index.css">
         <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
 
     <body>
     <% include partials/header %>
-    <section class="announcements">
+    <section class="container announcements">
         <h1>Announcements</h1>
-<!--        <% for(month of ["November", "December", "January"]) { %>-->
-<!--          <h2><%= month %></h2>-->
-<!--          <div class="month-events" role="navigation">-->
-<!--              <% for(var x=0; x<4; x++) { %>-->
-<!--              <div class="event-card">-->
-<!--                  <h3>Event Title</h3>-->
-<!--                  <h4>Date/Time: 9/25/2019 from 7:00pm to 9:00pm, <abbr title="Located at The Harvey Bright Building in Room 124">Location: HRBB 124</abbr></h4>-->
-<!--                  <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>-->
-<!--              </div>-->
-<!--              <% } %>-->
-<!--          </div>-->
-<!--        <% } %>-->
-
-        <!-- <div class="row"> -->
-            <% for (const ann of announcements) { %>
-                <div class="announcement">
-                    <div class="front">
-                        <h3><%=ann['title']%></h3>
-                        <h4><%=ann['date']%></h4>
+        <% for (const ann of announcements) { %>
+                <!-- <div class="row justify-content-center mb-5"> -->
+                    <div class="row col-md-6">
+                        
+                        <div class="card shadow ann">
+                            <!-- <img src="../static/images/acc.png" alt="" class="card-img-top"> -->
+                            <div class="card-body text-center ann-body">
+                                <!-- <img src="../static/images/acc.png" alt="" class="img-fluid rounded-circle w-50 mb-3"> -->
+                                <div class="card-title"><h3><%=ann['title']%></h3></div>
+                                <h4><%=ann['date']%></h4>
+                                <h4>Workshop: <%=ann['workshop-title']%></h4>
+                                <h5>from <%=ann['workshop-time']%></h5>
+                                <h5>Description:<br><%=ann['workshop-description']%></h5>
+                                <h4>Company: <%=ann['company-name']%></h4>
+                                <h5>from: <%=ann['presentation-time']%></h5>
+                                <h5>Description:<br><%=ann['presentation-description']%></h5>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="back">
-                        <!-- <div class="back-content"> -->
-                            <h4>Workshop: <%=ann['workshop-title']%></h4>
-                            <h5>from <%=ann['workshop-time']%></h5>
-                            <h5>Description:<br><%=ann['workshop-description']%></h5>
-                            <h4>Company: <%=ann['company-name']%></h4>
-                            <h5>from: <%=ann['presentation-time']%></h5>
-                            <h5>Description:<br><%=ann['presentation-description']%></h5>
-                        <!-- </div> -->
-                    </div>
-                </div>
-            <% } %>
-        <!-- </div> -->
+                <!-- </div> -->
+        <% } %>       
+            
     </section>
     
     <% include partials/footer %>
