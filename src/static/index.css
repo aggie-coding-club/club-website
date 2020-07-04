@@ -401,22 +401,40 @@ section {
 
 footer {
   background: #0389CD;
+  display: block;
   /* min-height: 100px; */
   overflow: hidden;
   color: white;
-  padding: 0px 5%; }
+  /* padding: 0px 5%;  */
+}
   footer .links {
     /* padding: 20px 40px 40px 40px; */
-    min-width: 300px;
-    float: right; }
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+    /* min-width: 300px; */
+    /* float: right;  */
+  }
     footer .links p {
-      padding: 0px 0px; }
+      padding: 1% 0; 
+    }
   footer a img {
     max-width: 60px;
     filter: invert(1);
     padding: 0px 15px; }
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) { */
+  @media (max-width: 768px) {
+  .ann-cards {
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .ann {
+    width: 100%;
+    margin: 4% 0;
+  }
+
   .small-title {
     font-size: 3rem !important; }
 
@@ -448,6 +466,11 @@ footer {
           text-align: left; }
     nav .menu-icon {
       float: right;
-      display: block; } }
+      display: block; } 
+  
+  footer .links {
+    padding: 2% 0;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
