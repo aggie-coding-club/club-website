@@ -14,39 +14,19 @@
     <% include partials/header %>
     <section class="container announcements">
         <h1>Announcements</h1>
-        
-                <!-- <div class="row justify-content-center mb-5"> -->
-                    <!-- <div class="row justify-content-center"> -->
-                        <!-- <div class="col-md-6"> -->
-                        <!-- <div class="card-deck"> -->
-                        <div class="ann-cards justify-content-center">
-                            <% for (const ann of announcements) { %>
-                            <div class="shadow ann">
-                                <div class="card-body text-center ann-body">
-                                    <div class="card-title"><h3><%=ann['title']%></h3></div>
-                                    <h4><%=ann['date']%></h4>
-                                    <h5><%=ann['time']%></h5>
-                                    <!-- <h4>Workshop: <%=ann['workshop-title']%></h4> -->
-                                    <!-- <h5>from <%=ann['workshop-time']%></h5> -->
-                                    <!-- <h5>Description:<br><%=ann['workshop-description']%></h5> -->
-                                    <!-- <h4>Company: <%=ann['company-name']%></h4> -->
-                                    <!-- <h5>from: <%=ann['presentation-time']%></h5> -->
-                                    <h5><%=ann['workshop-description']%></h5>
-                                </div>
-                            </div>
-                            <% } %> 
-                        </div>
-                            
-                        <!-- </div> -->
-                            
-                        <!-- </div> -->
-                        
-                        
-                        
-                    <!-- </div> -->
-                <!-- </div> -->
-              
-            
+            <div class="ann-cards justify-content-center">
+                <% for (const ann of announcements) { %>
+                <div class="shadow ann">
+                    <div class="card-body text-center ann-body">
+                        <img src=<%=ann['image']%> alt="" class="img-fluid rounded-circle">
+                        <div class="card-title"><h3><%=ann['title']%></h3></div>
+                        <h4><%=ann['date']%></h4>
+                        <h5><%=ann['time']%></h5>
+                        <h5><%=ann['description']%></h5>
+                    </div>
+                </div>
+                <% } %> 
+            </div>
     </section>
     
     <% include partials/footer %>

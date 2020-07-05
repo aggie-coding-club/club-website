@@ -1,72 +1,60 @@
 {
  "announcements": [
   {
-   "title": "Git Essentials and JP Morgan",
-   "image": "/static/",
-   "workshop-title": "Git Essentials",
-   "workshop-description": "Learn about Git and GitHub and how to make your life as a developer much easier.",
-   "company-name": "JP Moragn",
-   "presentation-description": "learn about JP Morgan internship opportunities",
-   "date": "Aug 20, 2020",
-   "time": "7 to 9pm",
-   "workshop-time": "7:00pm to 8:00pm",
-   "presentation-time": "8:00pm to 9:00pm"
+   "title": "APIs @ ACC + AWICS",
+   "date": "Mar 3, 2020",
+   "time": "7pm to 8pm", 
+   "description": "We also have a second event going on this week. Our workshops chairs are partnering with AWiCS to bring you a special workshop over APIs this Tuesday from 7pm to 8pm in HRBB 113. Food will be provided!",
+   "image": "../static/images/octocat.svg"
   },
   {
-   "title": "Web Dev Hero and Pariveda Solutions",
-   "workshop-title": "Web Dev",
-   "workshop-description": "Learn how to make a basic website using HTML5 and CSS3.",
-   "company-name": "Pariveda Solutions",
-   "presentation-description": "learn about Pariveda Solutions and their Best Personal Website Competition",
-   "date": "Aug 27, 2020",
-   "time": "7 to 9pm",
-   "workshop-time": "7:00pm to 8:00pm",
-   "presentation-time": "8:00pm to 9:00pm"
+   "title": "Board Game Night",
+   "date": "Mar 2, 2020",
+   "time": "7pm to 9pm", 
+   "description": "Bring your favorite game if you would like to share with others, but games and snacks will be provided too! ",
+   "image": "../static/images/developer.png"
   },
   {
-   "title": "Intro to Flutter and fireside chat with Dr. X",
-   "workshop-title": "Flutter & Dart",
-   "workshop-description": "Learn about flutter and dart and how to make your first platform independent website.",
-   "company-name": "TAMU CSCE",
-   "presentation-description": "learn about Dr. X's research",
-   "date": "Sep 2, 2020",
-   "time": "7 to 9pm",
-   "workshop-time": "7:00pm to 8:00pm",
-   "presentation-time": "8:00pm to 9:00pm"
+   "title": "Data Science & Free Food with General Motors",
+   "date": "Feb 24, 2020",
+   "time": "7pm to 9pm", 
+   "description": "One of our former presidents, Rohit Mucherla, will be visiting the club with his employer, General Motors. They have planned an interactive data science activity for you and will also be bringing dinner. We will also have a short workshop, starting at 8:30pm. Our workshops officers have prepared a hands-on API activity which will build off concepts we learned last week.",
+   "image": "../static/images/octocat.svg"
   },
   {
-   "title": "Git Essentials and JP Morgan",
-   "image": "/static/",
-   "workshop-title": "Git Essentials",
-   "workshop-description": "Learn about Git and GitHub and how to make your life as a developer much easier.",
-   "company-name": "JP Moragn",
-   "presentation-description": "learn about JP Morgan internship opportunities",
-   "date": "Aug 20, 2020",
-   "time": "7 to 9pm",
-   "workshop-time": "7:00pm to 8:00pm",
-   "presentation-time": "8:00pm to 9:00pm"
+   "title": "Internship Advice from Dr. Tyagi",
+   "date": "Feb 17, 2020",
+   "time": "7pm to 9pm", 
+   "description": "Dr. Aakash Tyagi will be giving a talk titled 'Internship...Ready...Get Set GO'. He has worked in industry for years before he entered academia, and is uniquely equipped to discuss his experiences working with students and to give advice on how to make the best of an internship. Later, our workshops chairs will be giving a workshop on Consuming and Understanding APIs. They also have a surprise reveal planned that you won't want to miss.",
+   "image": "../static/images/octocat.svg"
   },
   {
-   "title": "Web Dev Hero and Pariveda Solutions",
-   "workshop-title": "Web Dev",
-   "workshop-description": "Learn how to make a basic website using HTML5 and CSS3.",
-   "company-name": "Pariveda Solutions",
-   "presentation-description": "learn about Pariveda Solutions and their Best Personal Website Competition",
-   "date": "Aug 27, 2020",
-   "time": "7 to 9pm",
-   "workshop-time": "7:00pm to 8:00pm",
-   "presentation-time": "8:00pm to 9:00pm"
+   "title": "Accessibility in Coding",
+   "date": "Feb 10, 2020",
+   "time": "7pm to 9pm", 
+   "description": "Justin Romack, Assistive Technology Coordinator with Disability Resources here at Texas A&M, will share his perspective as a professional working in the accessible technologies field – and as a totally blind individual whose life has been transformed by accessibility. Later, we'll have a brief workshop on Developing an Accessible Website.",
+   "image": "../static/images/octocat.svg"
   },
   {
-   "title": "Intro to Flutter and fireside chat with Dr. X",
-   "workshop-title": "Flutter & Dart",
-   "workshop-description": "Learn about flutter and dart and how to make your first platform independent website.",
-   "company-name": "TAMU CSCE",
-   "presentation-description": "learn about Dr. X's research",
-   "date": "Sep 2, 2020",
-   "time": "7 to 9pm",
-   "workshop-time": "7:00pm to 8:00pm",
-   "presentation-time": "8:00pm to 9:00pm"
+   "title": "Project Presentations",
+   "date": "Feb 3, 2020",
+   "time": "7pm to 8pm", 
+   "description": "Hear from the project managers who will be hosting projects that you have the opportunity to join! You will get the chance to hear from each project manager, and then stay after and ask questions to get to know them. There will be NO workshop.",
+   "image": "../static/images/octocat.svg"
+  },
+  {
+   "title": "Informational Meeting",
+   "date": "Jan 27, 2020",
+   "time": "7pm to 9pm", 
+   "description": "Get to know about all the awesome things we will be doing this semester, including a Show and Tell with huge prizes, our second annual Smash competition, and much more! Later, learn from a workshop about project management.",
+   "image": "../static/images/octocat.svg"
+  },
+  {
+   "title": "Capital One Food and Fireside Chat",
+   "date": "Jan 1, 2020",
+   "time": "7pm to 8pm", 
+   "description": "Michael McKenna is our former President. Meeting is intended for you to get to know Michael, eat yummy food, and learn about Capital One.",
+   "image": "../static/images/octocat.svg"
   }
  ]
 }

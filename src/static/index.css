@@ -369,7 +369,8 @@ section {
 }
 
 .ann-body img {
-  margin-top: -50%;
+  margin-top: -40%;
+  margin-left: -110%;
 }
 
 .card-title h3 {
