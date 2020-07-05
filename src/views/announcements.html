@@ -7,33 +7,28 @@
         <link rel="stylesheet" href="/static/bs.css">
         <link rel="stylesheet" href="/static/index.css">
         <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
 
     <body>
     <% include partials/header %>
-    <section class="announcements">
+    <section class="container announcements">
         <h1>Announcements</h1>
-<!--        <% for(month of ["November", "December", "January"]) { %>-->
-<!--          <h2><%= month %></h2>-->
-<!--          <div class="month-events" role="navigation">-->
-<!--              <% for(var x=0; x<4; x++) { %>-->
-<!--              <div class="event-card">-->
-<!--                  <h3>Event Title</h3>-->
-<!--                  <h4>Date/Time: 9/25/2019 from 7:00pm to 9:00pm, <abbr title="Located at The Harvey Bright Building in Room 124">Location: HRBB 124</abbr></h4>-->
-<!--                  <p>Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>-->
-<!--              </div>-->
-<!--              <% } %>-->
-<!--          </div>-->
-<!--        <% } %>-->
+            <div class="ann-cards justify-content-center">
+                <% for (const ann of announcements) { %>
+                <div class="shadow ann">
+                    <div class="card-body text-center ann-body">
+                        <img src=<%=ann['image']%> alt="">
+                        <div class="card-title"><h3><%=ann['title']%></h3></div>
+                        <h4><%=ann['date']%></h4>
+                        <h5><%=ann['time']%></h5>
+                        <h5><%=ann['description']%></h5>
+                    </div>
+                </div>
+                <% } %> 
+            </div>
     </section>
-    <section class="competitions">
-        <h2>Competitions</h2>
-          <div class="comps">
-<!--              <% competitions.forEach(function(competition) { %>-->
-<!--                <div class="comp-card"><%= competition.name %> - <%= competition.info %></div>-->
-<!--              <% }); %>-->
-          </div>
-    </section>
+    
     <% include partials/footer %>
     </body>
 </html>

@@ -233,7 +233,7 @@ section {
   -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
   box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
 
-.announcements {
+/* .announcements {
   min-height: 100vh; }
   .announcements h2 {
     color: white;
@@ -267,7 +267,37 @@ section {
 .competitions .comp-card:hover {
   -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
   -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); }
+  box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4); } */
+
+.ann-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ann {
+  width: 40%;
+  margin: 4%;
+  min-height: 250px;
+}
+
+.ann-body {
+  margin: 8%;
+}
+
+.ann-body h3, h4, h5 {
+  padding: 2% 0;
+}
+
+/* .ann-body img {
+  margin-top: -40%;
+  margin-left: -110%;
+} */
+
+.card-title h3 {
+  color: #0389CD;
+}
+
+/*END OF ANNOUNCEMENTS*/
 
 .project-cat h1 {
   text-align: center;
@@ -286,22 +316,40 @@ section {
 
 footer {
   background: #0389CD;
-  min-height: 100px;
+  display: block;
+  /* min-height: 100px; */
   overflow: hidden;
   color: white;
-  padding: 0px 10%; }
+  /* padding: 0px 5%;  */
+}
   footer .links {
-    padding: 20px 40px 40px 40px;
-    min-width: 300px;
-    float: right; }
+    /* padding: 20px 40px 40px 40px; */
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+    /* min-width: 300px; */
+    /* float: right;  */
+  }
     footer .links p {
-      padding: 0px 10px; }
+      padding: 1% 0; 
+    }
   footer a img {
     max-width: 60px;
     filter: invert(1);
     padding: 0px 15px; }
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) { */
+  @media (max-width: 768px) {
+  .ann-cards {
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .ann {
+    width: 100%;
+    margin: 4% 0;
+  }
+
   .small-title {
     font-size: 3rem !important; }
 
@@ -333,6 +381,11 @@ footer {
           text-align: left; }
     nav .menu-icon {
       float: right;
-      display: block; } }
+      display: block; } 
+  
+  footer .links {
+    padding: 2% 0;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

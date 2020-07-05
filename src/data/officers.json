@@ -2,7 +2,7 @@
     "officers": [
         {
             "name": "Alsten Okpisz",
-            "image": "/static/images/alsten_okpisz.jpg",
+            "image": "/static/images/current-officers/alsten_okpisz.jpg",
             "major": "Computer Science' 21",
             "position": "President",
             "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
@@ -10,7 +10,7 @@
 
         {
             "name": "Anikait Sharma",
-            "image": "/static/images/anikait_sharma.jpg",
+            "image": "/static/images/current-officers/anikait_sharma.jpg",
             "major": "Computer Science' 22",
             "position": "Vice President",
             "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait is not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
@@ -18,7 +18,7 @@
 
         {
             "name": "Anthony Teo",
-            "image": "/static/images/anthony_teo.jpg",
+            "image": "/static/images/current-officers/anthony_teo.jpg",
             "major": "Computer Science' 22",
             "position": "Events Officer",
             "description": "Anthony is a junior Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
@@ -26,7 +26,7 @@
 
         {
             "name": "Gannon Prudhomme",
-            "image": "/static/images/gannon_prudhomme.jpg",
+            "image": "/static/images/current-officers/gannon_prudhomme.jpg",
             "major": "Computer Science' 21",
             "position": "Projects Officer",
             "description": "Gannon is a Senior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
@@ -34,7 +34,7 @@
 
         {
             "name": "Tony Zhu",
-            "image": "/static/images/tony_zhu.jpg",
+            "image": "/static/images/current-officers/tony_zhu.jpg",
             "major": "Electronic Systems Engineering Technology' 21",
             "position": "Projects Officer",
             "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
@@ -42,7 +42,7 @@
 
         {
             "name": "Shrey Shah",
-            "image": "/static/images/shrey_shah.jpg",
+            "image": "/static/images/current-officers/shrey_shah.jpg",
             "major": "Computer Engineering' 21",
             "position": "Workshops Officer",
             "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
@@ -50,7 +50,7 @@
 
         {
             "name": "Yonathan Zetune",
-            "image": "/static/images/yonathan_zetune.jpg",
+            "image": "/static/images/current-officers/yonathan_zetune.jpg",
             "major": "Mechanical Engineering' 22",
             "position": "Workshops Officer",
             "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
@@ -58,7 +58,7 @@
 
         {
             "name": "Ryan Hall",
-            "image": "/static/images/ryan_hall.jpg",
+            "image": "/static/images/current-officers/ryan_hall.jpg",
             "major": "Computer Science' 22",
             "position": "Workshops Officer",
             "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
@@ -66,7 +66,7 @@
 
         {
             "name": "Dakshika Srivastava",
-            "image": "/static/images/dakshika_srivastava.jpg",
+            "image": "/static/images/current-officers/dakshika_srivastava.jpg",
             "major": "Computer Science' 23",
             "position": "Webmaster",
             "description": "Dakshika is a sophomore majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing and playing the keyboard."
@@ -76,7 +76,7 @@
     "former": [
         {
             "name": "Rohit Mucherla",
-            "image": "/static/images/rohit_mucherla.jpeg",
+            "image": "/static/images/former-officers/rohit_mucherla.jpeg",
             "major":"Computer Science",
             "position": "President",
             "term": "2016 - 2018"
@@ -84,7 +84,7 @@
 
         {
             "name": "Hannah Gooden",
-            "image": "/static/images/hannah_gooden.jpg",
+            "image": "/static/images/former-officers/hannah_gooden.jpg",
             "major": "Computer Science",
             "position": "President",
             "term": "2018 - 2020",
@@ -93,7 +93,7 @@
 
         {
             "name": "Gabriel Britain",
-            "image": "/static/images/gabriel_britain.jpg",
+            "image": "/static/images/former-officers/gabriel_britain.jpg",
             "major": "Computer Science",
             "position": "Vice President",
             "term": "2018 - 2020",
@@ -102,7 +102,7 @@
 
         {
             "name": "Marissa Soria",
-            "image": "/static/images/marissa_soria.jpg",
+            "image": "/static/images/former-officers/marissa_soria.jpg",
             "major": "Electronic Systems Engineering Technology",
             "position": "Events Chair",
             "term": "2018 - 2020",
@@ -111,7 +111,7 @@
 
         {
             "name": "Feras Khemakhem",
-            "image": "/static/images/feras_khemakhem.jpg",
+            "image": "/static/images/former-officers/feras_khemakhem.jpg",
             "major": "Computer Science",
             "position": "Project Management Chair",
             "term": "2017 - 2020",
@@ -120,7 +120,7 @@
 
         {
             "name": "Mitchell Eldridge",
-            "image": "/static/images/mitchell_eldridge.jpg",
+            "image": "/static/images/former-officers/mitchell_eldridge.jpg",
             "major": "Computer Science",
             "position": "Project Management Chair",
             "term": "2019 - 2020",
@@ -129,7 +129,7 @@
 
         {
             "name": "Thomas McDonald",
-            "image": "/static/images/thomas_mcdonald.jpg",
+            "image": "/static/images/former-officers/thomas_mcdonald.jpg",
             "major": "Computer Science",
             "position": "Co-Workshops Chair",
             "term": "2018 - 2020",
@@ -138,7 +138,7 @@
 
         {
             "name": "Edgar Martinez",
-            "image": "/static/images/edgar_martinez.jpg",
+            "image": "/static/images/former-officers/edgar_martinez.jpg",
             "major": "Computer Science",
             "position": "Co-Workshops Chair",
             "term": "2018 - 2020",
