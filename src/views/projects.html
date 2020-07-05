@@ -32,7 +32,7 @@
         <% for (const project of learningOriented) { %>
         <div class="col-lg-6 col-12 px-1">
         <div class="project-card h-100">
-            <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
+            <h2><a target="_blank" href="<%=project.repoURL %>"><%=project.name%></a></h2>
             <div class="project-tools">
                 <% for (const tool of project.tools) { %>
                 <span><%=tool%></span> <% } %>
@@ -40,7 +40,7 @@
             <p><%=project.description%></p>
             <div>
                 <% for (const member of project.members) { %>
-                <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
+                <a target="_blank" href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
         </div>
         </div>
@@ -53,7 +53,7 @@
         <% for (const project of progressOriented) { %>
         <div class=" col-lg-6 col-12 px-1">
         <div class="project-card h-100">
-            <h2><a href="<%=project.repoURL %>"><%=project.name%></a></h2>
+            <h2><a target="_blank" href="<%=project.repoURL %>"><%=project.name%></a></h2>
             <div class="project-tools">
                 <% for (const tool of project.tools) { %>
                 <span><%=tool%></span> <% } %>
@@ -61,7 +61,7 @@
             <p><%=project.description%></p>
             <div>
                 <% for (const member of project.members) { %>
-                <a href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
+                <a target="_blank" href="<%=member.profileURL%>"><img class="project-lead" src="<%=member.imageURL%>"></a> <%} %>
             </div>
         </div>
         </div>
