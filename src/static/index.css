@@ -364,6 +364,10 @@ footer {
     max-width: 60px;
     filter: invert(1);
     padding: 0px 15px; }
+    footer a img:hover {
+      filter: invert(0);
+      transition: 500ms;
+    }
 
 /* @media only screen and (max-width: 992px) { */
   @media (max-width: 768px) {
