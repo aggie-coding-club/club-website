@@ -4,7 +4,7 @@ import * as Octokit from '@octokit/rest';
 import { GitHubController } from './controllers/GitHubController';
 import { officers, former } from './data/officers.json';
 import { projects } from './data/projects.json';
-import {announcements} from './data/announcements.json';
+import { announcements } from './data/announcements.json';
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
@@ -37,7 +37,7 @@ app.get('/announcements', (req, res) => {
 
   res.render('announcements', {
     // competitions: testCompetitions,
-    announcements
+    announcements,
   });
 });
 
