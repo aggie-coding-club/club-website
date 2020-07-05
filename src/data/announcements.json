@@ -18,21 +18,21 @@
    "title": "Data Science & Free Food with General Motors",
    "date": "Feb 24, 2020",
    "time": "7pm to 9pm", 
-   "description": "One of our former presidents, Rohit Mucherla, will be visiting the club with his employer, General Motors. They have planned an interactive data science activity for you and will also be bringing dinner. We will also have a short workshop, starting at 8:30pm. Our workshops officers have prepared a hands-on API activity which will build off concepts we learned last week.",
+   "description": "One of our former presidents, Rohit Mucherla, will be visiting the club with his employer, General Motors. They have planned an interactive data science activity for you and will also be bringing dinner. We will also have a short hands-on API activity at 8:30pm.",
    "image": "../static/images/octocat.svg"
   },
   {
    "title": "Internship Advice from Dr. Tyagi",
    "date": "Feb 17, 2020",
    "time": "7pm to 9pm", 
-   "description": "Dr. Aakash Tyagi will be giving a talk titled 'Internship...Ready...Get Set GO'. He has worked in industry for years before he entered academia, and is uniquely equipped to discuss his experiences working with students and to give advice on how to make the best of an internship. Later, our workshops chairs will be giving a workshop on Consuming and Understanding APIs. They also have a surprise reveal planned that you won't want to miss.",
+   "description": "Dr. Aakash Tyagi will be giving a talk titled 'Internship...Ready...Get Set GO'. He has worked in industry for years, and is uniquely equipped to discuss his experiences working with students. Later, our workshops chairs will be giving a workshop on Consuming and Understanding APIs.",
    "image": "../static/images/octocat.svg"
   },
   {
    "title": "Accessibility in Coding",
    "date": "Feb 10, 2020",
    "time": "7pm to 9pm", 
-   "description": "Justin Romack, Assistive Technology Coordinator with Disability Resources here at Texas A&M, will share his perspective as a professional working in the accessible technologies field – and as a totally blind individual whose life has been transformed by accessibility. Later, we'll have a brief workshop on Developing an Accessible Website.",
+   "description": "Justin Romack, Assistive Tech Coordinator with Disability Resources, will share his perspective as a totally blind professional working in the accessible technologies field. Later, we'll have a brief workshop on Developing an Accessible Website.",
    "image": "../static/images/octocat.svg"
   },
   {
