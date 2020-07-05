@@ -33,7 +33,7 @@ nav {
     color: #0389CD;
     transition: ease 500ms;
     text-decoration: none; 
-    box-shadow: inset -0.1em -0.1em 0.2em #B7E7FF
+    /* box-shadow: inset -0.1em -0.1em 0.2em #B7E7FF */
   }
   nav .menu-icon {
     display: none; }
