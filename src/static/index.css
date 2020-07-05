@@ -281,11 +281,42 @@ section {
 }
 
 .ann-body {
-  margin: 8%;
+  margin: 0 4%;
 }
 
-.ann-body h3, h4, h5 {
-  padding: 2% 0;
+.head {
+  background: #0389CD;
+  color: white;
+  padding: 5%;
+}
+
+.ann-body h3, h4, h5, h6 {
+  padding: 5% 0;
+}
+
+.ann-body p {
+  line-height: 20px;
+}
+
+.ann-body li {
+  list-style: none;
+}
+
+.ann-body h4 {
+  box-shadow: inset 0 -0.3em 0 #B7E7FF;
+  width: 70%;
+}
+
+.ann-body h5 {
+  line-height: 20px;
+}
+
+.ann-body span {
+  color: #0389CD;
+}
+
+.ann-body .info {
+  text-align: -webkit-center;
 }
 
 /* .ann-body img {
@@ -294,7 +325,7 @@ section {
 } */
 
 .card-title h3 {
-  color: #0389CD;
+  color: white;
 }
 
 /*END OF ANNOUNCEMENTS*/
