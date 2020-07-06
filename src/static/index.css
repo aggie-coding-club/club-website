@@ -321,7 +321,7 @@ section {
 }
 
 .card5 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5rem;
 }
 
@@ -429,7 +429,7 @@ footer {
     font-size: 4rem !important; }
 
   header {
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 90px;}
 
   nav {
