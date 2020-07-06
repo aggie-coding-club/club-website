@@ -341,6 +341,16 @@ section {
   text-align: -webkit-center;
 }
 
+.ann-link {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.ann-link:hover {
+  color: green;
+  text-decoration: none;
+}
+
 /* .ann-body img {
   margin-top: -40%;
   margin-left: -110%;
