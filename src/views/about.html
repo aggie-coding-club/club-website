@@ -3,6 +3,7 @@
 
 <head>
     <meta name="description" content="This is the about page for Aggie Coding Club.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Aggie Coding Club - About</title>
     <link rel="stylesheet" href="/static/bs.css">
@@ -27,76 +28,38 @@
         </div>
     </section>
 
-    <section>
-        <h1>Officers</h1>
-        <div class="row">
-            <div class="row col-lg-6">
-            <% var i = 0 %>
+    <section style="padding-top: 0;">
+        <h1 style="text-align: center;">Officers</h1>
+        <div class="officer-container">
             <% for (const officer of officers) { %>
-                <div class="officer-card col-lg-6 col-md-6 col-sm-6">
-                    <div class="officer-img" style="background-image: url('<%=officer.image%>')"></div>
+                <div class="officer-card">
+                    <img src= <%=officer.image%> alt="">
                     <h3><%=officer.name%></h3>
                     <h4><%=officer.position%></h4>
                     <h4><%=officer.major%></h4>
                     <p><%=officer.description%></p>
                 </div>
-                <% i++; %>
-                    <% if (i == 2) { %>
-                        </div><div class="row col-lg-6">
-                    <% } %>
-                    <% if (i == 4) { %>
-                        </div></div><div class="row"><div class="row col-lg-6">
-                        <% i = 0 %>
-                    <% } %>
-                <% } %>
-        </div></div>
+            <% } %>
+        </div>
     </section>
 
-    <section>
+    <section style="padding-top: 0;">
         <h1 style="text-align: center;">Former Officers</h1>
-        <!-- <div class="row"> -->
-            <!-- <div class="row col-lg-6"> -->
-                <!-- <% var i = 0 %> -->
-                <!-- <% for (const officer of former) { %> -->
-                    <!-- <div class="officer-card col-lg-6 col-md-6 col-sm-6"> -->
-                        <!-- <div class="officer-img" style="background-image: url('<%=officer.image%>')"></div> -->
-                        <!-- <h3><%=officer.name%></h3> -->
-                        <!-- <h4><%=officer.position%></h4> -->
-                        <!-- <h4>(<%=officer.term%>)</h4> -->
-                        <!-- <h4><%=officer.major%></h4> -->
-                        <!--  -->
-                    <!-- </div> -->
-                <!-- <% i++; %> -->
-                    <!-- <% if (i == 2) { %> -->
-                        <!-- </div><div class="row col-lg-6"> -->
-                    <!-- <% } %> -->
-                    <!-- <% if (i == 4) { %> -->
-                        <!-- </div></div><div class="row"><div class="row col-lg-6"> -->
-                        <!-- <% i = 0 %> -->
-                    <!-- <% } %> -->
-                <!-- <% } %> -->
-            <!-- </div> -->
-        <!-- </div> -->
-
-        <!-- <div class="row"> -->
-            <div class="officer-container">
-                <% for (const officer of former) { %>
-                    <div class="officer-card">
-                        <!-- <div class="officer-img"> -->
-                            <img src= <%=officer.image%> alt="">
-                        <!-- </div> -->
-                        <h3><%=officer.name%></h3>
-                        <h4><%=officer.position%></h4>
-                        <h4>(<%=officer.term%>)</h4>
-                        <h4><%=officer.major%></h4>
-                    </div>
-                <% } %>
-            </div>
-        <!-- </div> -->
+        <div class="officer-container">
+            <% for (const officer of former) { %>
+                <div class="officer-card">
+                    <img src= <%=officer.image%> alt="">
+                    <h3><%=officer.name%></h3>
+                    <h4><%=officer.position%></h4>
+                    <h4>(<%=officer.term%>)</h4>
+                    <h4><%=officer.major%></h4>
+                </div>
+            <% } %>
+        </div>
     </section>
 
-    <section class="sponsored-by">
-        <h1 class="mb-5">Sponsors</h1>
+    <section class="sponsored-by" style="padding-top: 0;">
+        <h1 style="text-align: center; padding-bottom: 5%;">Sponsors</h1>
         <div class="sponsor-container">
             <div class="row align-items-center">
                 <div class="col-md-4 col-6">
