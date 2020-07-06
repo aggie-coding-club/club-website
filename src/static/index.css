@@ -1,6 +1,17 @@
 /* command: sass --watch src/static/index.scss:src/static/index.css */
+
 html {
   scroll-behavior: smooth; }
+
+
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 5;
+    /* border-bottom: 1px solid #eee; */
+  }
 
 nav {
   padding: 0px 10%;
@@ -22,7 +33,7 @@ nav {
     overflow: hidden;
     float: right; }
   nav li {
-    float: left; }
+    float: left;}
   nav li a {
     display: block;
     color: black;
@@ -130,12 +141,12 @@ section {
     padding: 0px 20px 5px 20px; }
 
 .officer-card {
-  padding: 0px 30px;
-  margin-top: 40px;
-  /*min-width: 400px; */ }
+  padding: 2%;
+  margin-top: 3%;
+  width: 30%; }
   .officer-card .officer-img {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top; }
@@ -143,6 +154,13 @@ section {
     margin: 0px; }
   .officer-card p {
     font-size: 14px; }
+
+.officer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* text-align: center; */
+}
 
 .center {
   margin-left: auto !important;
@@ -302,6 +320,11 @@ section {
   width: 70%;
 }
 
+.card5 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
 .cardtitle3 {
   padding-top: 2%;
 }
@@ -361,7 +384,9 @@ footer {
     /* float: right;  */
   }
     footer .links p {
-      padding: 1% 0; 
+      /* padding: 1% 0;  */
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
   footer a img {
     max-width: 60px;
@@ -372,8 +397,10 @@ footer {
       transition: 500ms;
     }
 
-/* @media only screen and (max-width: 992px) { */
-  @media (max-width: 768px) {
+
+
+@media only screen and (max-width: 768px) {
+  /* @media (max-width: 768px) { */
   .ann-cards {
     display: inline-block;
     justify-content: center;
@@ -382,6 +409,17 @@ footer {
   .ann {
     width: 100%;
     margin: 4% 0;
+    margin-bottom: 8%;
+
+  }
+
+  /* .officer-container {
+    text-align: center;
+  } */
+
+  .officer-card {
+    width: 100%;
+    margin-top: 10%;
   }
 
   .small-title {
@@ -392,21 +430,24 @@ footer {
 
   header {
     overflow: hidden;
-    margin-bottom: 90px; }
+    margin-bottom: 90px;}
 
   nav {
     position: fixed;
     top: 0;
     width: 100%;
     background: white;
-    z-index: 5; }
+    z-index: 5; 
+    /* border-bottom: 1px solid #eee; */
+  }
     nav .menu-icon {
       padding: 30px 20px; }
     nav ul.menu {
       display: none; }
     nav ul.small-drop {
       width: 100%;
-      display: block; }
+      display: block; 
+      text-align: center;}
       nav ul.small-drop li {
         width: 100%;
         float: none;
@@ -419,6 +460,7 @@ footer {
   
   footer .links {
     padding: 2% 0;
+    padding-top: 4%;
   }
 }
 

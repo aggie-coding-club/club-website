@@ -58,7 +58,7 @@
 
         {
             "name": "Ryan Hall",
-            "image": "/static/images/current-officers/ryan_hall.jpg",
+            "image": "/static/images/current-officers/ryan_hall.png",
             "major": "Computer Science' 22",
             "position": "Workshops Officer",
             "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
@@ -120,7 +120,7 @@
 
         {
             "name": "Mitchell Eldridge",
-            "image": "/static/images/former-officers/mitchell_eldridge.jpg",
+            "image": "/static/images/former-officers/mitchell_eldridge.png",
             "major": "Computer Science",
             "position": "Project Management Chair",
             "term": "2019 - 2020",
