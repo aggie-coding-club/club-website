@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Aggie Coding Club - Announcements</title>
         <meta name="description" content="Here you can find future events and announcements.">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="/static/bs.css">
         <link rel="stylesheet" href="/static/index.css">
         <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
@@ -13,7 +14,7 @@
     <body>
     <% include partials/header %>
     <section class="container announcements">
-        <h1>Announcements</h1>
+        <h1 style="text-align: center;">Announcements</h1>
             <div class="ann-cards justify-content-center">
                 <% for (const ann of announcements) { %>
                 <div class="shadow ann">
