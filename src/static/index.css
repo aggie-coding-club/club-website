@@ -407,10 +407,10 @@ footer {
   }
 
   .ann {
-    width: 100%;
-    margin: 4% 0;
-    margin-bottom: 8%;
-
+    width: 90%;
+    /* margin: 4% 0; */
+    margin-bottom: 15%;
+    margin-top: 10%;
   }
 
   /* .officer-container {
