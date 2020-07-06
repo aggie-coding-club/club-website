@@ -24,9 +24,12 @@
                     </div>
                     <div class="card-body text-center ann-body">
                         <div class="info">
-                            <h4 class="card4"><span><%=ann['date']%></span> from <%=ann['time']%></h4>
+                            <h4 class="card4"><span><%=ann['date']%></span> <%=ann['time']%></h4>
                         </div>
                         <h5 class="card5"><%=ann['description']%></h5>
+                        <% if (ann['link'] != "null") { %>
+                            <a href= <%=ann['link']%> target="_blank" class="ann-link">Go to the link!</a>
+                        <% } %>
                     </div>
                 </div>
                 <% } %> 

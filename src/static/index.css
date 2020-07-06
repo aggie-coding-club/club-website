@@ -323,6 +323,7 @@ section {
 .card5 {
   font-weight: 400;
   font-size: 1.5rem;
+  padding-bottom: 1%;
 }
 
 .cardtitle3 {
@@ -339,6 +340,17 @@ section {
 
 .ann-body .info {
   text-align: -webkit-center;
+}
+
+.ann-link {
+  font-size: 1.5em;
+  text-decoration: none;
+  padding-bottom: 3%;
+}
+
+.ann-link:hover {
+  color: green;
+  text-decoration: none;
 }
 
 /* .ann-body img {
