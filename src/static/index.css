@@ -303,6 +303,7 @@ section {
 
 .ann-body {
   margin: 0 4%;
+  margin-bottom: 1%;
 }
 
 .head {
@@ -346,10 +347,14 @@ section {
   font-size: 1.5em;
   text-decoration: none;
   padding-bottom: 3%;
+  /* color: #B7E7FF; */
+  color: #71D0FF;
+  /* color: #0389CD; */
 }
 
 .ann-link:hover {
-  color: green;
+  /* color: green; */
+  color: #0389CD;
   text-decoration: none;
 }
 

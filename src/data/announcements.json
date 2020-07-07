@@ -6,6 +6,7 @@
    "time": "Fill out the survey",
    "description": "We'd love to hear some feedback centered on how projects went this past semester. You can access the survey through the link below. We want to assure you that no matter what A&M decides, we'll have ACC up and running again next semester.",
    "link": "https://urldefense.com/v3/__https://forms.gle/KD8PasTvBPdpASyK7__;!!KwNVnqRv!QUuviSp9kfgEltpb_j66rLTAUTDsmCJSDkoxy42-NABYWMHY11JJ66DKZzVdkbvFqWWu$",
+   "link-msg": "ACCESS THE SURVEY",
    "image": "../static/images/icons/developer.png"
   },
   {
@@ -14,6 +15,7 @@
    "time": "For Spring 2020",
    "description": "All Aggie Coding Club meetings are cancelled for the rest of this semester. We will miss seeing y'all on Monday nights! In addition, after discussing with Capsher, the CAPSHER Show and Tell competition has also been cancelled.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/binarycloud.png"
   },
   {
@@ -22,6 +24,7 @@
    "time": "from 7pm to 9pm",
    "description": "We have a second event going on this week. Our workshops chairs are partnering with AWiCS to bring you a special workshop over APIs this Tuesday from 7pm to 8pm in HRBB 113. Food will be provided!",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/api.png"
   },
   {
@@ -30,6 +33,7 @@
    "time": "is the deadline",
    "description": "We are looking for you to submit any side project you may have been working on in the past year for judging by industry experts from CAPSHER Technology. To enter the contest, drop your submission into the following shared drive!",
    "link": "https://drive.google.com/drive/folders/1NdajPVVT-DJE2QHTUnuAcIXgzcvlscp7?usp=sharing",
+   "link-msg": "ENTER THE CONTEST",
    "image": "../static/images/icons/sourcecode.png"
   },
   {
@@ -38,6 +42,7 @@
    "time": "from 7pm to 9pm", 
    "description": "Bring your favorite game if you would like to share with others, but games and snacks will be provided too! ",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/heatmap.png"
   },
   {
@@ -46,6 +51,7 @@
    "time": "from 7pm to 9pm",
    "description": "One of our former presidents, Rohit Mucherla, will be visiting the club with his employer, General Motors. They have planned an interactive data science activity for you and will also be bringing dinner. We will also have a short hands-on API activity at 8:30pm.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/octocat.svg"
   },
   {
@@ -54,6 +60,7 @@
    "time": "from 7pm to 9pm",
    "description": "Dr. Aakash Tyagi will be giving a talk titled 'Internship...Ready...Get Set GO'. He has worked in industry for years, and is uniquely equipped to discuss his experiences working with students. Later, our workshops chairs will be giving a workshop on Consuming and Understanding APIs.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/developer.png"
   },
   {
@@ -62,6 +69,7 @@
    "time": "from 7pm to 9pm", 
    "description": "Justin Romack, Assistive Tech Coordinator with Disability Resources, will share his perspective as a totally blind professional working in the accessible technologies field. Later, we'll have a brief workshop on Developing an Accessible Website.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/sourcecode.png"
   },
   {
@@ -70,6 +78,7 @@
    "time": "is the deadline",
    "description": "Project sign ups are out! Please provide your top 3 preferences in order of preference! Use the link below to sign up for your favourite project!",
    "link": "https://urldefense.proofpoint.com/v2/url?u=https-3A__forms.gle_AZhsDoeZacg5K4BZ6&d=DwMFaQ&c=u6LDEWzohnDQ01ySGnxMzg&r=U3YwG9omIrI_LSuhs04Cm6JzwUVBzhsb1W8LYfgFUyc&m=YqYMjACclrEhBfQGrc0D3ZPmQHvhz6Z2Fm1-iEPHdvk&s=dM71XHeliyFj3HInT2D4qvMF4ZU8v7ETGbORBR1hzwI&e=",
+   "link-msg": "SIGN UP FOR A PROJECT",
    "image": "../static/images/icons/heatmap.png"
   },
   {
@@ -78,6 +87,7 @@
    "time": "from 7pm to 8pm", 
    "description": "Hear from the project managers who will be hosting projects that you have the opportunity to join! You will get the chance to hear from each project manager, and then stay after and ask questions to get to know them. There will be NO workshop.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/table.png"
   },
   {
@@ -86,6 +96,7 @@
    "time": "is the deadline",
    "description": "Project manager applications are currently open. They will remain open until midnight tonight, so get those applications in!",
    "link": "https://forms.gle/8xwdZKKz4MFi72Bx5",
+   "link-msg": "APPLY TO BE A PM",
    "image": "../static/images/icons/api.png"
   },
   {
@@ -94,6 +105,7 @@
    "time": "from 7pm to 9pm", 
    "description": "Get to know about all the awesome things we will be doing this semester, including a Show and Tell with huge prizes, our second annual Smash competition, and much more! Later, learn from a workshop about project management.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/binarycloud.png"
   },
   {
@@ -102,6 +114,7 @@
    "time": "from 7pm to 8pm", 
    "description": "Michael McKenna is our former President. Meeting is intended for you to get to know Michael, eat yummy food, and learn about Capital One.",
    "link": "null",
+   "link-msg": "",
    "image": "../static/images/icons/octocat.svg"
   }
  ]

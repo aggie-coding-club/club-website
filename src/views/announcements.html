@@ -28,7 +28,7 @@
                         </div>
                         <h5 class="card5"><%=ann['description']%></h5>
                         <% if (ann['link'] != "null") { %>
-                            <a href= <%=ann['link']%> target="_blank" class="ann-link">Go to the link!</a>
+                            <a href= <%=ann['link']%> target="_blank" class="ann-link"><%=ann['link-msg']%></a>
                         <% } %>
                     </div>
                 </div>
