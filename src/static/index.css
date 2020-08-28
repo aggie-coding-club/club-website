@@ -69,17 +69,51 @@ section {
     max-width: 100%;
     max-height: 100%; }
 
+.maybe-intro {
+  display: flex;
+  /* align-items: center; */
+  align-items: end;
+  min-height: 100vh;
+  vertical-align: middle;
+  padding-right: 10%;
+  padding-bottom: 2%;
+  padding-left: 10%;
+  padding-top: 8%;
+}
+
+.maybe-head {
+  width: 50%;
+  /* display: flex; */
+  max-height: 200px;
+}
+
+.maybe-image {
+  width: 50%;
+  display: flex;
+}
+
 .px-1 {
   padding-bottom: 15px;
   display: inline-block; }
 
+.mailing-list {
+  width: 60%;
+  text-align: center;
+}
+
 .intro {
-  padding: 5% 10%;
-  min-height: 100vh; }
-  .intro .small-title {
+  /* padding: 5% 10%; */
+  /* min-height: 100vh;  */
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 0%;
+  text-align: center;
+}
+   .small-title {
     font-size: 4rem;
+    padding-top: 12%;
     margin-bottom: 0px; }
-  .intro .big-title {
+   .big-title {
     margin-top: 0px;
     font-size: 6rem; }
   .intro form {
@@ -103,7 +137,6 @@ section {
       border: none;
       color: white;
       border-radius: 80px; }
-
 .about img {
   padding: 40px 20px; }
 .about #meeting {
@@ -421,6 +454,31 @@ footer {
   .ann-cards {
     display: inline-block;
     justify-content: center;
+  }
+
+  .small-title {
+    text-align: center;
+  }
+
+  .big-title {
+    text-align: center;
+  }
+
+  .maybe-intro {
+    display: inline-block;
+  }
+
+  .maybe-head {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .maybe-image {
+    width: 100%;
+  }
+
+  .mailing-list {
+    width: 100%;
   }
 
   .ann {
