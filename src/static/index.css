@@ -69,17 +69,38 @@ section {
     max-width: 100%;
     max-height: 100%; }
 
+.maybe-intro {
+  display: flex;
+  align-items: center;
+}
+
+.maybe-head {
+  width: 50%;
+  /* display: flex; */
+  max-height: 200px;
+}
+
+.maybe-image {
+  width: 50%;
+  display: flex;
+}
+
 .px-1 {
   padding-bottom: 15px;
   display: inline-block; }
 
 .intro {
-  padding: 5% 10%;
-  min-height: 100vh; }
-  .intro .small-title {
+  /* padding: 5% 10%; */
+  /* min-height: 100vh;  */
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 0%;
+  text-align: center;
+}
+   .small-title {
     font-size: 4rem;
     margin-bottom: 0px; }
-  .intro .big-title {
+   .big-title {
     margin-top: 0px;
     font-size: 6rem; }
   .intro form {
@@ -103,7 +124,6 @@ section {
       border: none;
       color: white;
       border-radius: 80px; }
-
 .about img {
   padding: 40px 20px; }
 .about #meeting {

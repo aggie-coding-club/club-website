@@ -14,12 +14,13 @@
 
 <body>
     <% include partials/header %>
-    <section class="intro">
-        <div class="intro-left col-lg-7">
+    <!-- <section class="intro"> -->
+    <section class="maybe-intro">
+        <!-- <div class="intro-left col-lg-7">
             <h1 class="small-title">Welcome to the</h1>
-            <h1 class="big-title">Aggie Coding Club!</h1>
+            <h1 class="big-title">Aggie Coding Club!</h1> -->
 
-            <button onclick="window.location.href='https://groups.google.com/d/forum/aggiecodingclub'" id="link-button"><p>Join Our Mailing List</p><img src="/static/images/gmail.png" /> </button>
+            
 
             <!-- <form>
                 <div class="form-group">
@@ -29,11 +30,30 @@
                 <button type="submit" class="btn"><img alt="" src="/static/images/forward-arrow.svg"/></button>
             </form> -->
 
+        <!-- </div> -->
+        <!-- <div class="intro-right col-lg-5">
+            <img alt="main image" src="/static/images/acc-website-graphics.png"/>
+        </div> -->
+            
+        <div class="maybe-head">
+            <h1 class="small-title">Welcome to the</h1><br>
+            <h1 class="big-title">Aggie Coding Club!</h1>
         </div>
-        <div class="intro-right col-lg-5">
+
+        <div class="maybe-image">
             <img alt="main image" src="/static/images/acc-website-graphics.png"/>
         </div>
+
+        
     </section>
+    <section class="intro">
+        <div>
+            <h3>Aggie Coding Club empowers Texas A&M students to code. Explore other tabs to learn more about what we do and how you can get involved.</h3>
+            <h2>But before that, make sure that you join our mailing list, through the button below. And remember to use your TAMU email to sign up!</h2>
+            <button onclick="window.location.href='https://groups.google.com/d/forum/aggiecodingclub'" id="link-button"><p>Join Our Mailing List</p><img src="/static/images/gmail.png" /> </button>
+        </div>
+    </section>
+    
     <% include partials/footer %>
 </body>
 
