@@ -1,6 +1,24 @@
 {
  "announcements": [
   {
+    "title": "Project Management Interest Form",
+    "date": "Get those apps in",
+    "time": "ASAP",
+    "description": "ACC projects are teams lead by project managers to learn or create a product! Project managers are expected to write code, while also leading and teaching the team throughout the semester.",
+    "link": "https://forms.gle/Vq8uZGumfFYDS7po9",
+    "link-msg": "APPLY TO BE A PM",
+    "image": "../static/images/icons/api.png"
+  },
+  {
+    "title": "Fall Semester Kickoff",
+    "date": "Sep 1, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "Learn about all the awesome stuff we have planned this semester: multiple competitions, cool workshops, and maybe even some social events! Hear from Pariveda Solutions about a competition they will be sponsoring this semester, and to close off, get to interact with our Workshops team!",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/octocat.svg"
+  },
+  {
    "title": "ACC Recap",
    "date": "",
    "time": "Fill out the survey",
