@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "General Motors and Project Presentations",
+    "date": "Sep 14, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "Hear from one of our former presidents, Rohit Mucherla, who will be representing General Motors, presenting a competition and providing some info on a topic which will help you make an entry! Later, learn from the projects team about all the amazing projects we have lined up for this semester.",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/heatmap.png"
+  },
+  {
     "title": "Inernship Advice & Intro to Git",
     "date": "Sep 7, 2020",
     "time": "from 7pm to 9pm",
@@ -11,9 +20,9 @@
   },
   {
     "title": "Project Management Interest Form",
-    "date": "Get those apps in",
-    "time": "ASAP",
-    "description": "ACC projects are teams lead by project managers to learn or create a product! Project managers are expected to write code, while also leading and teaching the team throughout the semester.",
+    "date": "Sep 7, 2020",
+    "time": "is the deadline",
+    "description": "ACC projects are teams lead by project managers to learn or create a product! Project managers are expected to write code, while also leading and teaching the team throughout the semester. Get your app in before 11:59pm on the day of the deadline.",
     "link": "https://forms.gle/Vq8uZGumfFYDS7po9",
     "link-msg": "APPLY TO BE A PM",
     "image": "../static/images/icons/api.png"
