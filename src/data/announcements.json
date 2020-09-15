@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Project Member Sign-ups",
+    "date": "Sep 21, 2020",
+    "time": "is the deadline",
+    "description": "Liked a project you saw at our meeting on 09/14? Did you know that you can join and contribute to it? The sign-up link is below, apply right away! Make sure to open with your tamu email.",
+    "link": "https://forms.gle/DH1bH8VJb8uUV4iX9",
+    "link-msg": "SIGN UP FOR A PROJECT",
+    "image": "../static/images/icons/sourcecode.png"
+  },
+  {
     "title": "General Motors and Project Presentations",
     "date": "Sep 14, 2020",
     "time": "from 7pm to 9pm",
