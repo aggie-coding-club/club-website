@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Capsher Competition & CS Careers Officer Panel",
+    "date": "Sep 21, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "Capsher Technology, a local company, will be presenting our last semester long competition! Later our Workshops team will be presenting on CS Careers with an officer AMA panel. If you have any questions for our officers about their experience so far in industry, tonight's the night!",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/table.png"
+  },
+  {
     "title": "Project Member Sign-ups",
     "date": "Sep 21, 2020",
     "time": "is the deadline",
