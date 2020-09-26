@@ -237,6 +237,8 @@ section {
   max-width: 300px; }
 .sponsored-by #jpmc-logo {
   max-width: 350px; }
+.sponsored-by #gm-logo {
+  max-width: 125px; }
 
 .projects {
   overflow: hidden; }
