@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Checkmarx Competition & Intro to Web Dev",
+    "date": "Sep 28, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "Checkmarx, a software security company, will be introducing themselves, and also announcing a competition! Then, our Workshops team will be presenting an 'Intro to Web Development' presentation. Whether you've built tons of websites before or have never touched HTML in your life, this workshop probably has something for you.",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/binarycloud.png"
+  },
+  {
     "title": "Capsher Competition & CS Careers Officer Panel",
     "date": "Sep 21, 2020",
     "time": "from 7pm to 9pm",
