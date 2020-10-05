@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Credera & API Treasure Hunt with DSC",
+    "date": "Sep 28, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "First we will have a former officer, Thomas McDonald, give a presentation for Credera, a technology consulting company! Then, we will be hosting a joint workshop presentation with the Google Developer Student Club! The topic is 'Consuming API's', which will be followed up by a treasure hunt!",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/heatmap.png"
+  },
+  {
     "title": "Checkmarx Competition & Intro to Web Dev",
     "date": "Sep 28, 2020",
     "time": "from 7pm to 9pm",
