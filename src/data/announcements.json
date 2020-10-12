@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "HCSS & Intro to Mobile Dev",
+    "date": "Oct 12, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "First a construction software company called HCSS will be giving a presentation. Later, our workshops team will be presenting 'Intro to Mobile Dev' where we will build a simple, cross-platform app using Flutter.",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/octocat.svg"
+  },
+  {
     "title": "Credera & API Treasure Hunt with DSC",
     "date": "Oct 5, 2020",
     "time": "from 7pm to 9pm",
