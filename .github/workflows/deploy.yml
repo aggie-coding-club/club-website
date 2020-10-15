@@ -27,4 +27,5 @@ jobs:
                 # This client-secret.json is converted by GCP_SA_KEY.
                 gcloud auth activate-service-account ${{ secrets.service_account_email }} --key-file=client-secret.json
                 gcloud config set project ${{ secrets.project_id }}
+                gcloud iam service-accounts add-iam-policy-binding ${{ secrets.project_id }}@appspot.gserviceaccount.com --member=serviceAccount:${{ secrets.service_account_email }} --role=roles/iam.serviceAccountUser --project=${{ secrets.project_id }}
                 gcloud -q app deploy app.yaml --promote
