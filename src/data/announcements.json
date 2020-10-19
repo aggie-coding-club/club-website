@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "General Motors & Intro to Game Dev",
+    "date": "Oct 19, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "General Motors will be giving a careers presentation answering common student questions. Later, our workshops officers will be presenting an 'Intro to Game Dev' presentation and show you how to make a simple game of your own!",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/sourcecode.png"
+  },
+  {
     "title": "HCSS & Intro to Mobile Dev",
     "date": "Oct 12, 2020",
     "time": "from 7pm to 9pm",
