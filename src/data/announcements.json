@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Halloween with JP Morgan and Intro to Databases",
+    "date": "Oct 26, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "JP Morgan will kick off the session with a costume contest: the top 3 Halloween costumes will win DoorDash credits! They also have some fun interactive games planned, and will end the session with a Q&A about careers. At 8 PM our workshop officers will be presenting an Intro to Databases workshop! ",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/heatmap.png"
+  },
+  {
     "title": "General Motors & Intro to Game Dev",
     "date": "Oct 19, 2020",
     "time": "from 7pm to 9pm",
