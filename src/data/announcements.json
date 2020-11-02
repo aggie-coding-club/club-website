@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "ACC's first ever Minecraft Social",
+    "date": "Oct 30, 2020",
+    "time": "starting 6:30pm",
+    "description": "We will be hosting a multi-round Minecraft Hunger Games tournament and will be awarding Amazon gift cards for first, second, and third place. $30 for first place, $20 for second, and $10 for third. Don't miss out!",
+    "link": "https://urldefense.com/v3/__https:/discord.gg/q2gE5tJ__;!!KwNVnqRv!RnPTWl2aG0PaAaCMWsSWgS-ZfgS7gdUHiCwqJrQc_BRhAddZEcWeEAEmT1aXvH0b3g$",
+    "link-msg": "JOIN #hunger-games-social ON DISCORD",
+    "image": "../static/images/icons/octocat.svg"
+  },
+  {
     "title": "Halloween with JP Morgan and Intro to Databases",
     "date": "Oct 26, 2020",
     "time": "from 7pm to 9pm",
