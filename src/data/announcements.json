@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Fast Enterprises & Creating APIs with Flask",
+    "date": "Nov 9, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "Fast Enterprises will be presenting. They make software for state government agencies, which is a change of pace from our usual speakers. Later, our workshops team will be showing you how to create an API with Flask!",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/table.png"
+  },
+  {
     "title": "West Monroe Partners & Unit Testing",
     "date": "Nov 2, 2020",
     "time": "from 7pm to 9pm",
