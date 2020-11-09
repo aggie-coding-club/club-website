@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "West Monroe Partners & Unit Testing",
+    "date": "Nov 2, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "West Monroe Partners will be presenting on what technical consulting looks like at their company. Then, our workshops team will be talking about Unit Testing. This is an important part of industry jobs, and it's good to get an idea of how it works!",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/binarycloud.png"
+  },
+  {
     "title": "ACC's first ever Minecraft Social",
     "date": "Oct 30, 2020",
     "time": "starting 6:30pm",
