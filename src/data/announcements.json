@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Final Meeting & Social",
+    "date": "Nov 16, 2020",
+    "time": "from 7pm to 9pm",
+    "description": "Meeting this week will consist of a brief presentation by project managers, an announcement of the winners of this semester's contests, and capping off the semester with an ACC Holiday Pictionary game.",
+    "link": "https://tamu.zoom.us/j/99825885964",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/heatmap.png"
+  },
+  {
     "title": "Fast Enterprises & Creating APIs with Flask",
     "date": "Nov 9, 2020",
     "time": "from 7pm to 9pm",
