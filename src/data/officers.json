@@ -58,7 +58,7 @@
 
         {
             "name": "Ryan Hall",
-            "image": "/static/images/current-officers/ryan_hall.png",
+            "image": "/static/images/current-officers/ryan_hall.jpeg",
             "major": "Computer Science' 22",
             "position": "Workshops Officer",
             "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
@@ -70,6 +70,38 @@
             "major": "Computer Science' 23",
             "position": "Webmaster",
             "description": "Dakshika is a sophomore majoring in Computer Science. She first started coding in Java, and has been involved with web development. She loves writing and playing the keyboard."
+        },
+
+        {
+            "name": "Brady Langdale",
+            "image": "/static/images/current-officers/brady_langdale.jpg",
+            "major": "Industrial and System Engineering' 22",
+            "position": "Officer In Training",
+            "description": "During his free time, Brady enjoys doing game and app development. When he's not busy programming, he likes to play the guitar and watch Mr. Robot."
+        },
+
+        {
+            "name": "Andrew Fennell",
+            "image": "/static/images/current-officers/andrew_fennell.jpg",
+            "major": "Computer Engineering' 22",
+            "position": "Officer In Training",
+            "description": "Andrew is interested in software development. His other interests include coffee, photography, and chess."
+        },
+
+        {
+            "name": "Sofia Ortega",
+            "image": "/static/images/current-officers/sofia_ortega.jpg",
+            "major": "General Engineering' 24",
+            "position": "Officer In Training",
+            "description": "Sofia loves all things programming especially  servers. When she isn't working or programming, she is most likely playing Wizard101 or Spelunky."
+        },
+
+        {
+            "name": "Nathan Nguyen",
+            "image": "/static/images/current-officers/nathan_nguyen.jpg",
+            "major": "General Engineering' 24",
+            "position": "Officer In Training",
+            "description": "Nathan is a big fan of safe, robust systems software. He's typically experimenting with new baking recipes, reading a good book, or consuming an unholy amount of spicy ramen."
         }
     ],
 
