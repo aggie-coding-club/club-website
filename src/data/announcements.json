@@ -1,6 +1,24 @@
 {
  "announcements": [
   {
+    "title": "Career Fair Prep with Credera",
+    "date": "Jan 26, 2021",
+    "time": "from 7pm to 8pm",
+    "description": "Thomas McDonald, a former ACC officer, will be representing Credera and will give tips to succeed at the SEC Career Fair! ",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/developer.png"
+  },
+  {
+    "title": "Informational, Bell Flight, and Application Design",
+    "date": "Jan 25, 2021",
+    "time": "from 7pm to 9pm",
+    "description": "Meet ACC, hear from Bell Flight about their ridiculously cool aircraft which their engineers interact with, and join our Workshop officers in an Intro to the Application Design Series that we have lined up for this semester.",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/sourcecode.png"
+  },
+  {
     "title": "Final Meeting & Social",
     "date": "Nov 16, 2020",
     "time": "from 7pm to 9pm",
