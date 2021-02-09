@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Paycom and Project Presentations",
+    "date": "Feb 8, 2021",
+    "time": "from 7pm to 8pm",
+    "description": "Brittany Horn will be coming to present Paycom's job opportunities, some tips for internship/job searching, and the day-to-day life of a software developer at that company. Project Managers will then put on a showcase of the various project opportunities for the spring.",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/binarycloud.png"
+  },
+  {
     "title": "General Motors and MERN stack",
     "date": "Feb 1, 2021",
     "time": "from 7pm to 8pm",
