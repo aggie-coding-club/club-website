@@ -1,9 +1,54 @@
 {
  "announcements": [
   {
+    "title": "RedHat and setting up the MERN stack",
+    "date": "Mar 15, 2021",
+    "time": "from 7pm to 9pm",
+    "description": "RedHat will be giving an intro level presentation covering containers, Kubernetes, and OpenShift. Workshops will be presenting the next section of our STONKS app series: 'Introduction to React'",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/heatmap.png"
+  },
+  {
+    "title": "Building and using API's using Express.js",
+    "date": "Mar 8, 2021",
+    "time": "from 8pm to 9pm",
+    "description": "Due to scheduling mistakes, we will not be having our normal company meeting at 7, BUT... Our workshops will be taking place as planned. Join us for the next steps in our STONKS app series: 'Building and using API's using Express.js'",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/sourcecode.png"
+  },
+  {
+    "title": "HCSS and setting up the MERN stack",
+    "date": "Mar 1, 2021",
+    "time": "from 7pm to 9pm",
+    "description": "HCSS will be talking about company opportunities and HCSS as a whole. At 8PM, Workshops will be running the long awaited 'Setting up the MERN Stack' presentation. This will go into further detail about the way the STONKS app is structured. ",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/table.png"
+  },
+  {
+    "title": "Project Member Sign-ups",
+    "date": "Feb 24, 2021",
+    "time": "is the deadline",
+    "description": "Liked a project you saw at our meeting on 02/08? Did you know that you can join and contribute to it? The sign-up link is below, apply right away! Make sure to open with your tamu email.",
+    "link": "https://forms.gle/VaRgpq2EczmmF4x76",
+    "link-msg": "SIGN UP FOR A PROJECT",
+    "image": "../static/images/icons/octocat.svg"
+  },
+  {
+    "title": "[cancelled] Capsher and setting up the MERN stack",
+    "date": "Feb 15, 2021",
+    "time": "from 7pm to 9pm",
+    "description": "Capsher will be presenting from 7-8PM. At 8PM, Workshops will be running a presentation entitled: 'Setting up the MERN Stack'. This will go into further detail about the way the STONKS app is structured. ",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/api.png"
+  },
+  {
     "title": "Paycom and Project Presentations",
     "date": "Feb 8, 2021",
-    "time": "from 7pm to 8pm",
+    "time": "from 7pm to 9pm",
     "description": "Brittany Horn will be coming to present Paycom's job opportunities, some tips for internship/job searching, and the day-to-day life of a software developer at that company. Project Managers will then put on a showcase of the various project opportunities for the spring.",
     "link": "https://tamu.zoom.us/j/97087901205",
     "link-msg": "JOIN MEETING",
@@ -12,7 +57,7 @@
   {
     "title": "General Motors and MERN stack",
     "date": "Feb 1, 2021",
-    "time": "from 7pm to 8pm",
+    "time": "from 7pm to 9pm",
     "description": "Rohit Mucherla, a former ACC President, will be representing GM and will talk about their current projects! Later, our Workshops officers will give an intro to the MERN stack and how it applies to their stocks app. ",
     "link": "https://tamu.zoom.us/j/97087901205",
     "link-msg": "JOIN MEETING",
