@@ -1,7 +1,7 @@
 {
  "announcements": [
   {
-    "title": "RedHat and setting up the MERN stack",
+    "title": "RedHat and Intro to React",
     "date": "Mar 15, 2021",
     "time": "from 7pm to 9pm",
     "description": "RedHat will be giving an intro level presentation covering containers, Kubernetes, and OpenShift. Workshops will be presenting the next section of our STONKS app series: 'Introduction to React'",
