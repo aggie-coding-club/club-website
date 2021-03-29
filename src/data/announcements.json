@@ -1,6 +1,24 @@
 {
  "announcements": [
   {
+    "title": "Capsher and Intro to MongoDB",
+    "date": "Mar 29, 2021",
+    "time": "from 7pm to 9pm",
+    "description": "Hear from Capsher, a consultant company based locally here out of College Station! Later, workshops will be presenting the next section of the comprehensive STONKS app tutorial series.",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/octocat.svg"
+  },
+  {
+    "title": "Charles Schwab and React States and Nivo",
+    "date": "Mar 22, 2021",
+    "time": "from 7pm to 9pm",
+    "description": "Charles Schwab will be giving an overview of their company and will do a Q/A panel with engineers from their technology teams. Workshops will be presenting the follow-up to last week's STONKS app presentation. ",
+    "link": "https://tamu.zoom.us/j/97087901205",
+    "link-msg": "JOIN MEETING",
+    "image": "../static/images/icons/binarycloud.png"
+  },
+  {
     "title": "RedHat and Intro to React",
     "date": "Mar 15, 2021",
     "time": "from 7pm to 9pm",
