@@ -1,6 +1,15 @@
 {
  "announcements": [
   {
+    "title": "Fall 2021 KickOff & Career Fair 101",
+    "date": "Sep 6, 2021",
+    "time": "from 7pm to 9pm", 
+    "description": "Get a quick rundown of who we are, what we do, and what our plans are for this semester! Later, get some Career Fair prep tips and a chance to get your resume reviewed from our Workshops officers!",
+    "link": "null",
+    "link-msg": "",
+    "image": "../static/images/icons/api.png"
+   },
+  {
     "title": "Capsher and Intro to MongoDB",
     "date": "Mar 29, 2021",
     "time": "from 7pm to 9pm",
