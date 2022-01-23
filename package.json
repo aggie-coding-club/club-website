@@ -21,6 +21,7 @@
     "start": "node build/src/index.js",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
     "gcp-build": "rm -rf build/ && npm i && npm run compile && npm run copy-static-assets",
+    "gcp-build-win": "rmdir /s build && npm run compile && npm run copy-static-assets && npm run start",
     "deploy": "gcloud app deploy"
   },
   "devDependencies": {

@@ -80,7 +80,7 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# react / gatsby 
+# react / gatsby
 public/
 
 # vuepress build output
@@ -107,6 +107,7 @@ public/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.idea
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
