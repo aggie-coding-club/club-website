@@ -7,17 +7,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-<!--  <link rel="stylesheet" href="/static/bs.css">-->
-  <link rel="stylesheet" href="/static/_config.css">
-  <link rel="stylesheet" href="/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="/static/test.css">
+  <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
 </head>
 <body>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">ACC</a>
+      <a class="navbar-brand" href="#">
+        <img src="/static/images/acc-logo.png" style="width: 50%" />
+      </a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#">Home</a></li>
@@ -27,6 +27,8 @@
     </ul>
   </div>
 </nav>
+
+<img href="/static/images/acc.png" />
 
 <div class="welcome container-md" id="#">
   <div class="welcome-content container-md">
@@ -227,159 +229,64 @@
 <div class="officer-team">
   <h1>OFFICER TEAM</h1>
   <div class="container-md d-flex flex-wrap justify-content-center">
+    <% for (const officer of officers) { %>
     <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
+      <img src=<%=officer.image%> alt=<%=officer.name%> class="img-img" />
       <div class="img-description">
         <div class="center-margin-y">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
+          <div><strong><%=officer.position%></strong></div>
+          <div><strong><%=officer.major%></strong></div>
+          <div><%=officer.description%></div>
           </div>
         </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
+        <div class="name"><%=officer.name%></div>
     </div>
-
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
-
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
-    <div class="img-wrap m-4">
-      <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-      <div class="img-description">
-        <div class="my-1">
-          <div><strong>President</strong></div>
-          <div><strong>Computer Science '23</strong></div>
-          <div>
-            Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free
-            time, you can find her cooking or watching Netflix!
-          </div>
-        </div>
-      </div>
-      <div class="name ">Brady Langdale</div>
-    </div>
+    <% } %>
   </div>
-  <div class="d-flex justify-content-center my-2">
-    <button class="btn btn-primary" id="former-officers-btn">Former Officer</button>
-  </div>
-  <div id="former-officers">
 
-    <div class="container-md d-flex flex-wrap justify-content-center">
-      <div class="container-md d-flex flex-wrap justify-content-center">
-        <div class="img-wrap m-4">
-          <img src="static/brady.png" alt="brady langdale" class="img-img"/>
-          <div class="img-description">
-            <div class="my-1">
-              <div><strong>President</strong></div>
-              <div><strong>Computer Science '21</strong></div>
-              <div>
-                This is a former officer.
-              </div>
-            </div>
-          </div>
-          <div class="name">Alsten</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div id="sponsors">
-  <h1>OUR SPONSORS</h1>
-</div>
+      <!--  ------------------------------FORMER OFFICERS--------------------------------------- -->
+      <!--  <div class="d-flex justify-content-center my-2">-->
+      <!--    <button class="btn btn-primary" id="former-officers-btn">Former Officer</button>-->
+      <!--  </div>-->
+      <!--  <div id="former-officers">-->
 
-<div id="gallery">
-  <h1>GALLERY</h1>
-</div>
+      <!--    <div class="container-md d-flex flex-wrap justify-content-center">-->
+      <!--      <div class="container-md d-flex flex-wrap justify-content-center">-->
+      <!--        <div class="img-wrap m-4">-->
+      <!--          <img src="static/brady.png" alt="brady langdale" class="img-img"/>-->
+      <!--          <div class="img-description">-->
+      <!--            <div class="my-1">-->
+      <!--              <div><strong>President</strong></div>-->
+      <!--              <div><strong>Computer Science '21</strong></div>-->
+      <!--              <div>-->
+      <!--                This is a former officer.-->
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--          <div class="name">Alsten</div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</div>-->
 
-<footer>
+      <!--  ------------------------------ SPONSERS -------------------------------------- -->
+      <!--<div id="sponsors">-->
+      <!--  <h1>OUR SPONSORS</h1>-->
+      <!--</div>-->
 
-</footer>
 
-<script src="acc.js"></script>
+      <!--  ------------------------------ GALLERY -------------------------------------- -->
+      <!--<div id="gallery">-->
+      <!--  <h1>GALLERY</h1>-->
+      <!--</div>-->
+
+      <!--<footer>-->
+
+      <!--</footer>-->
+
+      <!--<script src="acc.js"></script>-->
 
 </body>
 </html>

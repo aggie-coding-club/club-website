@@ -19,44 +19,43 @@ app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.use('/static', express.static(path.join(__dirname, '/static')));
-app.use('/css', express.static(__dirname + '../node_modules/bootstrap/dist/css'))
+
+// app.get('/', (req, res) => {
+//   res.render('index');
+// });
+//
+// app.get('/about', (req, res) => {
+//   res.render('about', { officers, former });
+// });
+//
+// app.get('/announcements', (req, res) => {
+//   const testCompetitions = [
+//     { name: 'Discord Bot', info: 'beep boop' },
+//     { name: 'Website', info: 'show them your power' },
+//     { name: 'Chess', info: 'make big brain play' },
+//   ];
+//
+//   res.render('announcements', {
+//     // competitions: testCompetitions,
+//     announcements,
+//   });
+// });
+//
+// app.get('/projects', async (req, res) => {
+//   const projects = await gitHubController.getAllProjects('all');
+//   const learningOriented = gitHubController.filterProjects(
+//     'learning-oriented',
+//     projects
+//   );
+//   const progressOriented = gitHubController.filterProjects(
+//     'progress-oriented',
+//     projects
+//   );
+//   res.render('projects', { learningOriented, progressOriented });
+// });
 
 app.get('/', (req, res) => {
-  res.render('index');
-});
-
-app.get('/about', (req, res) => {
-  res.render('about', { officers, former });
-});
-
-app.get('/announcements', (req, res) => {
-  const testCompetitions = [
-    { name: 'Discord Bot', info: 'beep boop' },
-    { name: 'Website', info: 'show them your power' },
-    { name: 'Chess', info: 'make big brain play' },
-  ];
-
-  res.render('announcements', {
-    // competitions: testCompetitions,
-    announcements,
-  });
-});
-
-app.get('/projects', async (req, res) => {
-  const projects = await gitHubController.getAllProjects('all');
-  const learningOriented = gitHubController.filterProjects(
-    'learning-oriented',
-    projects
-  );
-  const progressOriented = gitHubController.filterProjects(
-    'progress-oriented',
-    projects
-  );
-  res.render('projects', { learningOriented, progressOriented });
-});
-
-app.get('/test', (req, res) => {
-  res.render('test')
+  res.render('test', {officers})
 })
 
 app.listen(port, () => {
