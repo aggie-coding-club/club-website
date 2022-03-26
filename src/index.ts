@@ -55,8 +55,8 @@ app.use('/static', express.static(path.join(__dirname, '/static')));
 // });
 
 app.get('/', (req, res) => {
-  res.render('test', {officers})
-})
+  res.render('test', { officers });
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
