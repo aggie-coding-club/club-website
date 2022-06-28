@@ -1,68 +1,292 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-    <meta name="description" content="The Aggie Coding Club empowers Texas A&M students to code!">
-    <title>Aggie Coding Club</title>
-    <meta name="keywords" content="aggie coding club, texas a&m computer science">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/_config.css">
-    <link rel="stylesheet" href="/static/bs.css">
-    <link rel="stylesheet" href="/static/index.css">
-    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
+  <meta charset="UTF-8">
+  <title>ACC Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/static/test.css">
+  <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png">
 </head>
-
 <body>
-    <% include partials/header %>
-    <!-- <section class="intro"> -->
-    <section class="maybe-intro">
-        <!-- <div class="intro-left col-lg-7">
-            <h1 class="small-title">Welcome to the</h1>
-            <h1 class="big-title">Aggie Coding Club!</h1> -->
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="/static/images/acc-logo.png" style="width: 50%" />
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Home</a></li>
+      <li><a href="#how-to-join">Join</a></li>
+      <li><a href="#projects">Projects</a></li>
 
+    </ul>
+  </div>
+</nav>
 
-            <!-- <form>
-                <div class="form-group">
-                    <label for="email-input" class="sr-only">Email</label>
-                    <input type="email" class="form-control" id="email-input" placeholder="Enter your email...">
-                </div>
-                <button type="submit" class="btn"><img alt="" src="/static/images/forward-arrow.svg"/></button>
-            </form> -->
+<img href="/static/images/acc.png" />
 
-        <!-- </div> -->
-        <!-- <div class="intro-right col-lg-5">
-            <img alt="main image" src="/static/images/acc-website-graphics.png"/>
-        </div> -->
+<div class="welcome container-md" id="#">
+  <div class="welcome-content container-md">
+    <div class="row">
+      <div class="col">
+        <h2 class="welcome-heading">Welcome to the
+          <span class="heading-emphasis">Aggie Coding Club!</span></h2>
+        <p class="center-text-small">
+          Aggie Coding Club provides the students of Texas A&M University that are interested in software development
+          the
+          opportunity to explore their careers and passions through projects, meetings, and workshops. The club also
+          provides a community where members can benefit from valuable networking opportunities and learn from each
+          other.
+        </p>
+        <div class="center-small">
+          <button class="btn btn-primary">Join Discord</button>
+        </div>
+      </div>
+      <div class="col border no-small-display">
+        Image
+      </div>
+    </div>
+  </div>
+</div>
 
-        <div class="maybe-head">
-            <div class="testing-scss">This is a div</div>
-            <h1 class="small-title">Welcome to the</h1><br>
-            <h1 class="big-title">Aggie Coding Club!</h1>
-            <div class="mailing-list">
-                <button onclick="window.location.href='https://groups.google.com/d/forum/aggiecodingclub'" id="link-button"><p>Join Our Mailing List</p><img src="/static/images/gmail.png" /> </button>
-                <p class="instruction">Use your TAMU email!</p>
+<div id="what-we-do">
+  <h1>WHAT WE DO</h1>
+  <div class="container-md">
+    <div class="row">
+      <div class="col fake-pic no-small-display">Hey</div>
+      <div class="col">
+        <div class="container-xl">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div class="circle">
+                <div class="circle-txt">01</div>
+              </div>
             </div>
-
+            <div class="col">
+              <h5>Workshops</h5>
+              <p>a small and unobtrusive description</p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div class="circle">
+                <div class="circle-txt">02</div>
+              </div>
+            </div>
+            <div class="col">
+              <h5>Company Talks</h5>
+              <p>a small and unobtrusive description</p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div class="circle">
+                <div class="circle-txt">03</div>
+              </div>
+            </div>
+            <div class="col">
+              <h5>Company Talks</h5>
+              <p>a small and unobtrusive description</p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-3">
+              <div class="circle">
+                <div class="circle-txt">04</div>
+              </div>
+            </div>
+            <div class="col">
+              <h5>Company Talks</h5>
+              <p>a small and unobtrusive description</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="maybe-image">
-            <img alt="main image" src="/static/images/acc-website-graphics.png" style="max-height: 400px;"/>
+</div>
+
+
+<div id="how-to-join">
+  <h1>HOW TO JOIN</h1>
+  <div class="container-md">
+    <div class="row">
+      <div class="col center-margin-y">
+        <p>
+          Aggie Coding Club is open to all Texas A&M students regardless of coding experience or major at any point
+          during the semester. There is <strong>no dues</strong> and <strong>no application forms.</strong> Simply start
+          attending our weekly meetings!
+        </p>
+        <p>
+          Follow the link below to join our Discord to connect and be informed of our meeting times.
+        </p>
+        <div class="center-small">
+          <button class="btn btn-primary">Join Discord</button>
         </div>
+      </div>
+      <div class="col border fake-pic no-small-display">
+        img
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="schedule">
+  <h1>SCHEDULE</h1>
+  <h6><strong>Mondays from 7:00pm to 9:00 pm in room 118 in the Peterson Building</strong></h6>
+</div>
+
+<div class="projects" id="projects">
+  <h1>PROJECTS</h1>
+  <div class="container-md">
+    <div class="row">
+      <div class="col center-margin-y">
+        <h2>Build something cool together</h2>
+        <p>
+          Aggie Coding Club offers learning and progress oriented projects to students to work on in teams throughout
+          the semester. Students are able to apply skills they have learned in the classroom and gain new skills while
+          developing new technologies. ACC project’s welcomes all level of experience to join.
+        </p>
+        <p>
+          Applications to join a project open at the start of each semester.
+        </p>
+      </div>
+      <div class="col border fake-pic no-small-display">
+        img
+      </div>
+    </div>
+  </div>
+  <div class="container-md">
+    <div class="row my-4">
+      <div class="col border fake-pic no-small-display">
+        img
+      </div>
+      <div class="col center-margin-y">
+        <h2>Or start something awesome</h2>
+        <p>
+          Do you have a great project idea ? Are you interested in learning more about project management? You might
+          want to consider becoming a project manager.
+        </p>
+        <p>
+          Project manager applications open at the start of each semester. Contact project officers for any questions
+          regarding projects.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="past-projects">
+  <h1>PAST PROJECTS</h1>
+  <!--  CAN USE LOOP !-->
+  <div class="container mt-5 mb-3">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="https://www.google.com">
+          <div class="card p-3 mb-2">
+            <h3 class="heading">Past Projects</h3>
+            <p class="card-text">
+              Lorem ipsum dolor sin amet. A cool description for what this project was. Likely scraped
+              from Github along with the collaborators
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.google.com">
+          <div class="card p-3 mb-2">
+            <h3 class="heading">Past Projects</h3>
+            <p class="card-text">
+              Lorem ipsum dolor sin amet. A cool description for what this project was. Likely scraped
+              from Github along with the collaborators
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.google.com">
+          <div class="card p-3 mb-2">
+            <h3 class="heading">Past Projects</h3>
+            <p class="card-text">
+              Lorem ipsum dolor sin amet. A cool description for what this project was. Likely scraped
+              from Github along with the collaborators
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-    </section>
-    <!-- <section class="intro">
-        <div>
-            <h3>Aggie Coding Club empowers Texas A&M students to code. Explore other tabs to learn more about what we do and how you can get involved.</h3>
-            <h2>But before that, make sure that you join our mailing list, through the button below. And remember to use your TAMU email to sign up!</h2>
-            <button onclick="window.location.href='https://groups.google.com/d/forum/aggiecodingclub'" id="link-button"><p>Join Our Mailing List</p><img src="/static/images/gmail.png" /> </button>
+<div class="officer-team">
+  <h1>OFFICER TEAM</h1>
+  <div class="container-md d-flex flex-wrap justify-content-center">
+    <% for (const officer of officers) { %>
+    <div class="img-wrap m-4">
+      <img src=<%=officer.image%> alt=<%=officer.name%> class="img-img" />
+      <div class="img-description">
+        <div class="center-margin-y">
+          <div><strong><%=officer.position%></strong></div>
+          <div><strong><%=officer.major%></strong></div>
+          <div><%=officer.description%></div>
+          </div>
         </div>
-    </section> -->
+        <div class="name"><%=officer.name%></div>
+    </div>
+    <% } %>
+  </div>
 
-    <% include partials/footer %>
+
+      <!--  ------------------------------FORMER OFFICERS--------------------------------------- -->
+      <!--  <div class="d-flex justify-content-center my-2">-->
+      <!--    <button class="btn btn-primary" id="former-officers-btn">Former Officer</button>-->
+      <!--  </div>-->
+      <!--  <div id="former-officers">-->
+
+      <!--    <div class="container-md d-flex flex-wrap justify-content-center">-->
+      <!--      <div class="container-md d-flex flex-wrap justify-content-center">-->
+      <!--        <div class="img-wrap m-4">-->
+      <!--          <img src="static/brady.png" alt="brady langdale" class="img-img"/>-->
+      <!--          <div class="img-description">-->
+      <!--            <div class="my-1">-->
+      <!--              <div><strong>President</strong></div>-->
+      <!--              <div><strong>Computer Science '21</strong></div>-->
+      <!--              <div>-->
+      <!--                This is a former officer.-->
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--          <div class="name">Alsten</div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--    </div>-->
+      <!--  </div>-->
+      <!--</div>-->
+
+      <!--  ------------------------------ SPONSERS -------------------------------------- -->
+      <!--<div id="sponsors">-->
+      <!--  <h1>OUR SPONSORS</h1>-->
+      <!--</div>-->
+
+
+      <!--  ------------------------------ GALLERY -------------------------------------- -->
+      <!--<div id="gallery">-->
+      <!--  <h1>GALLERY</h1>-->
+      <!--</div>-->
+
+      <!--<footer>-->
+
+      <!--</footer>-->
+
+      <!--<script src="acc.js"></script>-->
+
 </body>
-
-
 </html>

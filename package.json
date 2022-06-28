@@ -25,22 +25,22 @@
     "deploy": "gcloud app deploy"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.0",
-    "@types/ejs": "^2.6.3",
-    "@types/express": "^4.17.1",
+    "@types/chai": "^4.3.1",
+    "@types/ejs": "^2.7.0",
+    "@types/express": "^4.17.13",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^10.0.3",
-    "@types/shelljs": "^0.8.5",
-    "gts": "^1.1.0",
-    "ts-node": "^8.4.1",
-    "typescript": "~3.5.0"
+    "@types/node": "^10.17.60",
+    "@types/shelljs": "^0.8.11",
+    "gts": "^1.1.2",
+    "ts-node": "^8.10.2"
   },
   "dependencies": {
-    "@octokit/rest": "^16.35.0",
-    "chai": "^4.2.0",
-    "ejs": "^2.7.1",
-    "express": "^4.17.1",
-    "mocha": "^6.2.0",
-    "shelljs": "^0.8.3"
+    "@octokit/rest": "^16.43.2",
+    "chai": "^4.3.6",
+    "ejs": "^2.7.4",
+    "express": "^4.18.1",
+    "mocha": "^6.2.3",
+    "shelljs": "^0.8.5",
+    "typescript": "^4.7.4"
   }
 }
