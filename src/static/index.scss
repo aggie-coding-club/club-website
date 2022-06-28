@@ -9,7 +9,7 @@ $badge-size: 75px;
 $officer-img-width: 250px;
 $officer-img-height: 250px;
 
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 .welcome {
   background-color: $secondary;

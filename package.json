@@ -10,6 +10,7 @@
   "license": "GPL-3.0",
   "keywords": [],
   "scripts": {
+    "dev": "concurrently \"nodemon -e ts,html,css src/index.ts\"  \"sass --watch src/static/index.scss src/static/index.css\"",
     "test": "npm run pretest && mocha build/src/**/*.test.js",
     "check": "gts check",
     "clean": "gts clean",
@@ -31,7 +32,10 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^10.17.60",
     "@types/shelljs": "^0.8.11",
+    "concurrently": "^7.2.2",
     "gts": "^1.1.2",
+    "nodemon": "^2.0.18",
+    "sass": "^1.53.0",
     "ts-node": "^8.10.2"
   },
   "dependencies": {
