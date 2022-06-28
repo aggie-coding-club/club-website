@@ -1,8 +1,0 @@
-<section class="competitions">
-        <h2>Competitions</h2>
-          <div class="comps">
-<!--              <% competitions.forEach(function(competition) { %>-->
-<!--                <div class="comp-card"><%= competition.name %> - <%= competition.info %></div>-->
-<!--              <% }); %>-->
-          </div>
-    </section>
