@@ -1,446 +1,217 @@
-/* command: sass --watch src/static/index.scss:src/static/index.css */
+////declare your variables BEFORE importing bootstrap
+$dark: #02233a;
+$primary: #3766b4;
+$secondary: #eef6ff;
+$custom-color: #0f5f35;
+$nav-link-color: #969696;
 
-$base-color: #0389CD;
+$badge-size: 75px;
+$officer-img-width: 250px;
+$officer-img-height: 250px;
 
-html {
-    scroll-behavior: smooth;
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.welcome {
+  background-color: $secondary;
+  @media (min-width: 768px) {
+    border-radius: 25px;
+  }
+
+  .welcome-content {
+    padding: 60px 40px;
+  }
+
+  .welcome-heading {
+    text-align: left;
+    font-weight: 600;
+    font-size: 55px;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+
+    .heading-emphasis {
+      color: $primary;
+
+      //display: inline-block;
+      //@media(max-width: 768px) {
+      display: block;
+      //}
+    }
+  }
+}
+
+.fake-pic {
+  background-color: $secondary;
+  border: 1px solid $primary;
+  height: 400px;
+}
+
+#what-we-do {
+  .fake-pic {
+    background-color: $secondary;
+    border: 1px solid $primary;
+    height: 300px;
+  }
+
+  .circle {
+    background-color: $secondary;
+    height: $badge-size;
+    width: $badge-size;
+    vertical-align: middle;
+    border-radius: 50%;
+  }
+
+  .circle-txt {
+    text-align: center;
+    color: $primary;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: $badge-size;
+  }
+}
+
+.past-projects {
+  .heading {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .card {
+    background-color: $secondary;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      max-width: 18rem;
+    }
+  }
+}
+
+.officer-team {
+  .name {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .img-img {
+    width: $officer-img-width;
+    height: $officer-img-height;
+  }
+
+  /* Parent Container */
+  .img-wrap {
+    position: relative;
+  }
+
+  /* Child Text Container */
+  .img-description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    height: $officer-img-height;
+    width: $officer-img-width;
+    color: black;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    text-align: center;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+
+  /* Hover on Parent Container */
+  .img-wrap:hover {
+    cursor: pointer;
+  }
+
+  .img-wrap:hover .img-description {
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.8;
+  }
+}
+
+#former-officers {
+  display: none;
+}
+
+// config
+* {
+  color: $dark;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  border-radius: 0;
+  padding: 10px 50px;
+}
+
+// navbar
+.navbar-nav {
+  flex-direction: row;
 }
 
 nav {
-    padding: 0px 10%;
-    overflow: hidden;
-    .navbar-brand {
-        overflow: hidden;
-        img {
-            padding: 15px;
-            height: 100%;
-            max-height: 90px;
-            width: auto;
-            display: inline-block;
-        }
-    }
-    ul {
-    list-style-type: none;
-    font-size: 16px;
-    margin: 0;
-    padding: 20px 0px;
-    overflow: hidden;
-    float: right;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    li {
-    float: left;
-    }
+  li {
+    padding: 15px;
+  }
 
-    li a {
-    display: block;
-    color: grey;
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    text-decoration-thickness: 3px;
+    color: $dark;
+  }
+}
+
+a {
+  color: $nav-link-color;
+  text-decoration: none;
+  transition: all 1s ease-out;
+}
+
+h1 {
+  font-weight: 600;
+  color: $dark;
+  font-size: 55px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+h6 {
+  text-align: center;
+}
+
+.no-small-display {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.center-small {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.center-text-small {
+  text-align: left;
+  @media (max-width: 768px) {
     text-align: center;
-    padding: 14px 30px;
-    text-decoration: none;
-    }
-
-    /* Change the link color to #111 (black) on hover */
-    li a:hover {
-    color: $base-color;
-    text-decoration: none;
-    }
-    .menu-icon {
-        display: none;
-    }
+  }
 }
 
-body {
-    min-height: 100%;
-    p {
-        font-size: 16px;
-    }
+.center-margin-y {
+  margin: auto 0;
 }
-
-section {
-    padding: 5% 10% 2% 10%;
-    overflow: hidden;
-    margin: 0px;
-    width: 100%;
-    .intro-left {
-        padding-top: 80px;
-        margin-bottom: 20px;
-    }
-    .intro-right {
-        padding: 0px 50px;
-        overflow: hidden;
-    }
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.px-1 {
-    padding-bottom: 15px;
-    display: inline-block;
-}
-
-.intro {
-    padding: 5% 10%;
-    min-height: 100vh;
-    .small-title {
-        font-size: 4rem;
-        margin-bottom: 0px;
-    }
-    .big-title {
-        margin-top: 0px;
-        font-size: 6rem;
-    }
-    form {
-        border: 1px solid grey;
-        border-radius: 20px;
-        max-width: 400px;
-        .form-group {
-            padding: 10px 20px;
-            width: calc(100% - 70px);
-            display: inline-block;
-        }
-        input {
-            height: 30px;
-            border: none;
-            background: none;
-        }
-        button {
-            margin-left: 20px;
-            width: 35px;
-            height: 35px;
-            display: inline-block;
-            background: $base-color;
-            border: none;
-            color: white;
-            border-radius: 80px;
-        }
-    }
-}
-
-.about {
-    img {
-        padding: 40px 20px;
-    }
-    #meeting {
-        margin-top: 30px;
-    }
-    #slack-button {
-        margin-top: 20px;
-        border: 1px grey solid;
-        border-radius: 20px;
-        width: 100%;
-        max-width: 250px;
-        padding: 15px 10px;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: white;
-        p {
-            width: 70%;
-            display: inline;
-        }
-        
-        img {
-            width: 30%;
-            display: inline;
-            max-height: 1.5em;
-            padding: 0px 20px 5px 20px;
-        }
-    }
-    #slack-button:hover {
-        margin-top: 20px;
-        border: 1px grey solid;
-        border-radius: 20px;
-        width: 100%;
-        max-width: 250px;
-        padding: 15px 10px;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: rgb(218, 218, 218);
-        
-        img {
-            max-height: 1.5em;
-            padding: 0px 20px 5px 20px;
-        }
-    }
-}
-
-.officer-card {
-    padding: 0px 30px;
-    margin-top: 40px;
-    /*min-width: 400px; */
-    .officer-img {
-        width: 100%;
-        height: 300px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-    }
-    h4 {
-        margin: 0px;
-    }
-    p {
-        font-size: 14px;
-    }
-
-}
-
-
-.center {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block;
-}
-
-.left {
-    margin-right: auto !important;
-    display: block;
-}
-
-.right {
-    margin-left: auto !important;
-    display: block;
-}
-.sponsored-by {
-    .sponsor-logo-lg,
-    .sponsor-logo-md,
-    .sponsor-logo-sm {
-        transition: 0.5s;
-        margin: 30px 0;
-        -webkit-filter: grayscale(100%);
-        /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .sponsor-logo-lg:hover,
-    .sponsor-logo-md:hover,
-    .sponsor-logo-sm:hover {
-        transform: scale(1.05);
-        -webkit-filter: grayscale(0%);
-        /* Safari 6.0 - 9.0 */
-        filter: grayscale(0%);
-    }
-
-    #capsher-logo {
-        max-width: 150px;
-    }
-
-    #schwab-logo {
-        max-width: 125px;
-    }
-
-    #hcss-logo {
-        max-width: 150px;
-    }
-
-    #bell-logo {
-        max-width: 100px;
-    }
-
-    #westmonroe-logo {
-        max-width: 300px;
-    }
-
-    #jpmc-logo {
-        max-width: 350px;
-    }
-}
-
-.projects {
-    overflow: hidden;
-    img {
-        padding: 40px 20px;
-    }
-    .cat-button {
-        margin: 30px 10px 0px 0px;
-        border: 0px grey solid;
-        border-radius: 5px;
-        padding: 15px 35px;
-        font-size: 16px;
-        color: white;
-        background-color: grey;
-        display: inline-block;
-        
-        img {
-            float: right;
-            max-height: 1.5em;
-            padding: 0px 20px 5px 20px;
-        }
-    }
-    .cat-button:hover {
-        cursor: pointer;
-        background-color: $base-color;
-        text-decoration: none;
-
-    }
-}
-
-.project-card {
-    margin: 0px;
-    border: 0px rgb(196, 196, 196) solid;
-    border-radius: 5px;
-    width: 100%;
-    color: black;
-    padding: 10px 30px 20px 30px;
-    background-color: white;
-    display: inline-block;
-    vertical-align: top;
-
-    span {
-        border: 1px $base-color solid;
-        padding: 5px 10px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        color: $base-color;
-        border-radius: 3px;
-        display: inline-block;
-    }
-
-    .project-lead {
-        border-radius: 50px;
-        max-width: 40px;
-
-    }
-}
-.project-card:hover {
-    -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
-    -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-    box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
-}
-
-.announcements {
-    min-height: 100vh;
-    h2 {
-        color: white;
-        background-color: $base-color;
-        padding: 10px 20px;
-        border-radius: 30px;
-        display: inline-block;
-    }
-    .month-events {
-        margin-bottom: 20px;
-    }
-    .event-card {
-        margin-bottom: 20px;
-        border: 1px rgb(196, 196, 196) solid;
-        border-radius: 5px;
-        padding: 10px 30px 20px 20px;
-        background-color: white;
-        display: inline-block;
-    }
-    .event-card:hover {
-        -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
-        -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-        box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
-    }
-}
-
-.competitions {
-    .comps {
-        margin-bottom: 20px;
-    }
-    .comp-card {
-        margin-bottom: 20px;
-        border: 1px rgb(196, 196, 196) solid;
-        border-radius: 5px;
-        padding: 10px 20px 10px 20px;
-        background-color: white;
-        display: inline-block;
-    }
-    .comp-card:hover {
-        -webkit-box-shadow: 1px 1px 10px 0px rgba(158, 158, 158, 0.4);
-        -moz-box-shadow: 1px 1px 10px 0px rgba(156, 156, 156, 0.4);
-        box-shadow: 1px 1px 10px 0px rgba(160, 160, 160, 0.4);
-    }
-}
-
-.project-cat {
-    h1 {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-    #tim {
-        margin: 0px;
-        color: $base-color;
-        cursor: default;
-    }
-}
-
-#learning {
-    color: white;
-    background-color: $base-color;
-}
-
-#progress {
-    .project-card {
-        border: 1px rgb(196, 196, 196) solid;
-    }
-}
-
-footer {
-    background: $base-color;
-    min-height: 100px;
-    overflow: hidden;
-    color: white;
-    padding: 0px 10%;
-    .links {
-        padding: 20px 40px 40px 40px;
-        min-width: 300px;
-        float: right;
-        p {
-            padding: 0px 10px;
-        }
-    }
-    a img {
-        max-width: 60px;
-        filter: invert(1);
-        padding: 0px 15px;
-
-    }
-}
-
-@media only screen and (max-width:992px) {
-    .small-title {
-        font-size: 3rem!important;
-    }
-    .big-title {
-        font-size: 4rem!important;
-    }
-    header {
-        overflow: hidden;
-        margin-bottom: 90px;
-    }
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: white;
-        z-index: 5;
-        .menu-icon {
-            padding: 30px 20px;
-        }
-        ul.menu {
-            display: none;
-        }
-        ul.small-drop {
-            width: 100%;
-            display: block;
-            li {
-                width:100%;
-                float: none;
-                display: block;
-                a {
-                    text-align: left;
-                }
-            }
-        }
-        .menu-icon {
-            float: right;
-            display: block;
-        }
-    }
-}
-
