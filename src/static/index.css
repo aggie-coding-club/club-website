@@ -10145,6 +10145,9 @@ textarea.form-control-lg {
   border: 1px solid #3766b4;
   height: 300px;
 }
+#what-we-do .list-item {
+  margin: 5px 0;
+}
 #what-we-do .circle {
   background-color: #eef6ff;
   height: 75px;
