@@ -10109,10 +10109,15 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .welcome {
     border-radius: 25px;
+    margin: 0 30px;
   }
 }
 .welcome .welcome-content {
   padding: 60px 40px;
+}
+.welcome .welcome-content .welcome-words {
+  margin-right: 40px;
+  max-width: 565px;
 }
 .welcome .welcome-heading {
   text-align: left;
@@ -10272,6 +10277,11 @@ h6, .h6 {
   .no-small-display {
     display: none;
   }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {

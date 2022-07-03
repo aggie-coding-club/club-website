@@ -5,6 +5,8 @@ $secondary: #eef6ff;
 $custom-color: #0f5f35;
 $nav-link-color: #969696;
 
+$small-screen: 768px;
+
 $badge-size: 75px;
 $officer-img-width: 250px;
 $officer-img-height: 250px;
@@ -13,29 +15,30 @@ $officer-img-height: 250px;
 
 .welcome {
   background-color: $secondary;
-  @media (min-width: 768px) {
+  @media (min-width: $small-screen) {
     border-radius: 25px;
+    margin: 0 30px;
   }
-
   .welcome-content {
     padding: 60px 40px;
+
+    .welcome-words {
+      margin-right: 40px;
+      max-width: 565px;
+    }
   }
 
   .welcome-heading {
     text-align: left;
     font-weight: 600;
     font-size: 55px;
-    @media (max-width: 768px) {
+    @media (max-width: $small-screen) {
       text-align: center;
     }
 
     .heading-emphasis {
       color: $primary;
-
-      //display: inline-block;
-      //@media(max-width: 768px) {
       display: block;
-      //}
     }
   }
 }
@@ -78,7 +81,7 @@ $officer-img-height: 250px;
   .card {
     background-color: $secondary;
     cursor: pointer;
-    @media (min-width: 768px) {
+    @media (min-width: $small-screen) {
       max-width: 18rem;
     }
   }
@@ -193,13 +196,18 @@ h6 {
 }
 
 .no-small-display {
-  @media (max-width: 768px) {
+  @media (max-width: $small-screen) {
     display: none;
   }
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .center-small {
-  @media (max-width: 768px) {
+  @media (max-width: $small-screen) {
     display: flex;
     justify-content: center;
   }
@@ -207,7 +215,7 @@ h6 {
 
 .center-text-small {
   text-align: left;
-  @media (max-width: 768px) {
+  @media (max-width: $small-screen) {
     text-align: center;
   }
 }
