@@ -10140,10 +10140,23 @@ textarea.form-control-lg {
   height: 400px;
 }
 
-#what-we-do .fake-pic {
+#what-we-do .image-container {
+  float: right;
+  margin-right: 30px;
+  position: relative;
+}
+#what-we-do .image-container .blue-box {
+  width: 300px;
+  height: 400px;
+  position: absolute;
   background-color: #eef6ff;
-  border: 1px solid #3766b4;
-  height: 300px;
+  top: 30px;
+  left: 30px;
+  z-index: -1;
+}
+#what-we-do .image-container .image {
+  width: 300px;
+  height: 400px;
 }
 #what-we-do .list-item {
   margin: 5px 0;
