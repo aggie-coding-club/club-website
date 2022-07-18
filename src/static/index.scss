@@ -50,25 +50,14 @@ $officer-img-height: 250px;
 }
 
 #what-we-do {
-  .image-container {
-    float: right;
-    margin-right: 30px;
-    position: relative;
+  .image {
+    width: 300px;
+    height: 400px;
+  }
 
-    .blue-box {
-      width: 300px;
-      height: 400px;
-      position: absolute;
-      background-color: $secondary;
-      top: 30px;
-      left: 30px;
-      z-index: -1;
-    }
-
-    .image {
-      width: 300px;
-      height: 400px;
-    }
+  .blue-box {
+    top: 30px;
+    left: 30px;
   }
 
   .list-item {
@@ -88,6 +77,20 @@ $officer-img-height: 250px;
     font-weight: bold;
     font-size: 30px;
     line-height: $badge-size;
+  }
+}
+
+#how-to-join {
+  .blue-box {
+    top: 30px;
+    left: 40px;
+  }
+}
+
+#projects {
+  .blue-box {
+    top: 10px;
+    left: 20px;
   }
 }
 
@@ -240,4 +243,15 @@ h6 {
 
 .center-margin-y {
   margin: auto 0;
+}
+
+.image-container {
+  position: relative;
+  .blue-box {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    background-color: $secondary;
+    z-index: -1;
+  }
 }
