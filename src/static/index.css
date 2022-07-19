@@ -10176,18 +10176,42 @@ textarea.form-control-lg {
   left: 20px;
 }
 
+.past-projects {
+  align-items: stretch;
+}
 .past-projects .heading {
   font-weight: 600;
   font-size: 25px;
 }
 .past-projects .card {
   background-color: #eef6ff;
+  height: 100%;
   cursor: pointer;
 }
 @media (min-width: 768px) {
   .past-projects .card {
     max-width: 18rem;
   }
+}
+.past-projects .card-text {
+  margin-bottom: 30px;
+}
+.past-projects .learn-more-container {
+  position: absolute;
+  bottom: 15px;
+}
+.past-projects .learn-more {
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  color: #3766b4;
+  text-decoration: none;
+  transition: all 0.25s ease-out;
+}
+.past-projects .learn-more:hover {
+  cursor: pointer;
+  background-color: rgba(209, 205, 205, 0.2901960784);
 }
 
 .officer-team {
@@ -10258,18 +10282,17 @@ nav {
 nav li {
   padding: 15px;
 }
+nav a {
+  color: #969696;
+  text-decoration: none;
+  transition: all 1s ease-out;
+}
 nav a:hover,
 nav a:focus {
   text-decoration: underline;
   text-decoration-color: #3766b4;
   text-decoration-thickness: 3px;
   color: #02233a;
-}
-
-a {
-  color: #969696;
-  text-decoration: none;
-  transition: all 1s ease-out;
 }
 
 h1, .h1 {

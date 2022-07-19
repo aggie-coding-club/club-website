@@ -95,16 +95,41 @@ $officer-img-height: 250px;
 }
 
 .past-projects {
+  align-items: stretch;
   .heading {
     font-weight: 600;
     font-size: 25px;
   }
   .card {
     background-color: $secondary;
+    height: 100%;
     cursor: pointer;
     @media (min-width: $small-screen) {
       max-width: 18rem;
     }
+  }
+
+  .card-text {
+    margin-bottom: 30px;
+  }
+  .learn-more-container {
+    position: absolute;
+    bottom: 15px;
+  }
+
+  .learn-more {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: $primary;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+  }
+
+  .learn-more:hover {
+    cursor: pointer;
+    background-color: #d1cdcd4a;
   }
 }
 
@@ -184,6 +209,12 @@ nav {
     padding: 15px;
   }
 
+  a {
+    color: $nav-link-color;
+    text-decoration: none;
+    transition: all 1s ease-out;
+  }
+
   a:hover,
   a:focus {
     text-decoration: underline;
@@ -191,12 +222,6 @@ nav {
     text-decoration-thickness: 3px;
     color: $dark;
   }
-}
-
-a {
-  color: $nav-link-color;
-  text-decoration: none;
-  transition: all 1s ease-out;
 }
 
 h1 {
