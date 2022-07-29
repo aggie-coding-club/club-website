@@ -10103,6 +10103,30 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav li {
+  padding: 15px;
+}
+nav a {
+  color: #969696;
+  text-decoration: none;
+  transition: all 1s ease-out;
+}
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+  text-decoration-color: #3766b4;
+  text-decoration-thickness: 3px;
+  color: #02233a;
+}
+nav .navbar-nav {
+  flex-direction: row;
+}
+
 .welcome {
   background-color: #eef6ff;
 }
@@ -10132,12 +10156,6 @@ textarea.form-control-lg {
 .welcome .welcome-heading .heading-emphasis {
   color: #3766b4;
   display: block;
-}
-
-.fake-pic {
-  background-color: #eef6ff;
-  border: 1px solid #3766b4;
-  height: 400px;
 }
 
 #what-we-do .image {
@@ -10273,6 +10291,27 @@ textarea.form-control-lg {
   display: none;
 }
 
+footer {
+  border-top: 2px solid #e7e7e7;
+  margin-top: 100px;
+  height: 100px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+  width: 100vw;
+}
+footer .container .acc-logo {
+  width: 107px;
+  height: 33px;
+}
+footer .container .links img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 * {
   color: #02233a;
   font-family: Poppins, sans-serif;
@@ -10282,31 +10321,6 @@ textarea.form-control-lg {
 .btn-primary {
   border-radius: 0;
   padding: 10px 50px;
-}
-
-.navbar-nav {
-  flex-direction: row;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-nav li {
-  padding: 15px;
-}
-nav a {
-  color: #969696;
-  text-decoration: none;
-  transition: all 1s ease-out;
-}
-nav a:hover,
-nav a:focus {
-  text-decoration: underline;
-  text-decoration-color: #3766b4;
-  text-decoration-thickness: 3px;
-  color: #02233a;
 }
 
 h1, .h1 {

@@ -13,6 +13,35 @@ $officer-img-height: 250px;
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    padding: 15px;
+  }
+
+  a {
+    color: $nav-link-color;
+    text-decoration: none;
+    transition: all 1s ease-out;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    text-decoration-color: $primary;
+    text-decoration-thickness: 3px;
+    color: $dark;
+  }
+
+  // navbar
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
 .welcome {
   background-color: $secondary;
   @media (min-width: $small-screen) {
@@ -41,12 +70,6 @@ $officer-img-height: 250px;
       display: block;
     }
   }
-}
-
-.fake-pic {
-  background-color: $secondary;
-  border: 1px solid $primary;
-  height: 400px;
 }
 
 #what-we-do {
@@ -169,7 +192,7 @@ $officer-img-height: 250px;
     transition: visibility 0s, opacity 0.5s linear;
 
     .description-header {
-      margin-bottom: 10px
+      margin-bottom: 10px;
     }
   }
 
@@ -190,10 +213,9 @@ $officer-img-height: 250px;
 
     .github-icon {
       width: 18px;
-      height: 18px; 
+      height: 18px;
       margin: 2px 0 0 10px;
     }
-
   }
 }
 
@@ -201,7 +223,32 @@ $officer-img-height: 250px;
   display: none;
 }
 
-// config
+footer {
+  border-top: 2px solid #e7e7e7;
+  margin-top: 100px;
+  height: 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    width: 100vw;
+    .acc-logo {
+      width: 107px;
+      height: 33px;
+    }
+
+    .links {
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// ---------------------- GLOBAL ----------------
 * {
   color: $dark;
   font-family: Poppins, sans-serif;
@@ -211,35 +258,6 @@ $officer-img-height: 250px;
 .btn-primary {
   border-radius: 0;
   padding: 10px 50px;
-}
-
-// navbar
-.navbar-nav {
-  flex-direction: row;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  li {
-    padding: 15px;
-  }
-
-  a {
-    color: $nav-link-color;
-    text-decoration: none;
-    transition: all 1s ease-out;
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-    text-decoration-color: $primary;
-    text-decoration-thickness: 3px;
-    color: $dark;
-  }
 }
 
 h1 {

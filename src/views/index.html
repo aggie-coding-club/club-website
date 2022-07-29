@@ -34,7 +34,7 @@
     </nav>
 
     <div class="welcome" id="#">
-      <div class="welcome-content container-md">
+      <div class="welcome-content">
         <div class="d-flex justify-content-center">
           <div class="welcome-words flex-fill">
             <h2 class="welcome-heading">
@@ -326,26 +326,27 @@
       </div>
       <div id="former-officers">
         <h1>FORMER OFFICERS</h1>
-      <div class="container-md d-flex flex-wrap justify-content-center">
-        <% for (const officer of former) { %>
-        <div class="img-wrap m-4">
-          <img src=<%=officer.image%> alt=<%=officer.name%> class="img-img" />
-          <div class="img-description">
-            <div class="center-margin-y">
-              <div class="description-header">
+        <div class="container-md d-flex flex-wrap justify-content-center">
+          <% for (const officer of former) { %>
+          <div class="img-wrap m-4">
+            <img src=<%=officer.image%> alt=<%=officer.name%> class="img-img" />
+            <div class="img-description">
+              <div class="center-margin-y">
+                <div class="description-header">
 
-              <div><strong><%=officer.position%></strong></div>
-              <div><strong><%=officer.major%></strong></div>
-              <div><strong>(<%=officer.term%>)</strong></div>
+                <div><strong><%=officer.position%></strong></div>
+                <div><strong><%=officer.major%></strong></div>
+                <div><strong>(<%=officer.term%>)</strong></div>
+                </div>
+                <div><%=officer.description%></div>
               </div>
-              <div><%=officer.description%></div>
+            </div>
+            <div class="caption">
+              <div class="name"><%=officer.name%></div>
             </div>
           </div>
-          <div class="caption">
-            <div class="name"><%=officer.name%></div>
-          </div>
+          <% } %>
         </div>
-        <% } %>
       </div>
     </div>
 
@@ -360,7 +361,17 @@
     </div> -->
 
     <footer>
-      <h3>Ah, yes, the footer</h3>
+      <div class="container">
+        <img class="acc-logo" src="/static/images/acc-logo.png" />
+        <div class="links">
+          <a href="https://github.com/aggie-coding-club">
+            <img src="../static/images/github.svg" href="https://github.com/aggie-coding-club" />
+          </a>
+
+
+        </div>
+        
+      </div>
     </footer>
 
     <script src="/static/acc.js"></script>
