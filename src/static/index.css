@@ -10214,23 +10214,24 @@ textarea.form-control-lg {
   background-color: rgba(209, 205, 205, 0.2901960784);
 }
 
-.officer-team {
+#officer-team {
   /* Parent Container */
   /* Child Text Container */
   /* Hover on Parent Container */
 }
-.officer-team .name {
+#officer-team .name {
   text-align: center;
   font-weight: 600;
 }
-.officer-team .img-img {
+#officer-team .img-img {
   width: 250px;
   height: 250px;
 }
-.officer-team .img-wrap {
+#officer-team .img-wrap {
   position: relative;
 }
-.officer-team .img-description {
+#officer-team .img-description {
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
@@ -10246,13 +10247,25 @@ textarea.form-control-lg {
   -webkit-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
 }
-.officer-team .img-wrap:hover {
+#officer-team .img-description .description-header {
+  margin-bottom: 10px;
+}
+#officer-team .img-wrap:hover {
   cursor: pointer;
 }
-.officer-team .img-wrap:hover .img-description {
+#officer-team .img-wrap:hover .img-description {
   padding: 8px 15px;
   visibility: visible;
   opacity: 0.8;
+}
+#officer-team .caption {
+  display: flex;
+  justify-content: center;
+}
+#officer-team .caption .github-icon {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0 10px;
 }
 
 #former-officers {

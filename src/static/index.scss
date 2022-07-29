@@ -133,7 +133,7 @@ $officer-img-height: 250px;
   }
 }
 
-.officer-team {
+#officer-team {
   .name {
     text-align: center;
     font-weight: 600;
@@ -151,6 +151,7 @@ $officer-img-height: 250px;
 
   /* Child Text Container */
   .img-description {
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
@@ -165,6 +166,10 @@ $officer-img-height: 250px;
     text-align: center;
     -webkit-transition: visibility 0s, opacity 0.5s linear;
     transition: visibility 0s, opacity 0.5s linear;
+
+    .description-header {
+      margin-bottom: 10px
+    }
   }
 
   /* Hover on Parent Container */
@@ -176,6 +181,18 @@ $officer-img-height: 250px;
     padding: 8px 15px;
     visibility: visible;
     opacity: 0.8;
+  }
+
+  .caption {
+    display: flex;
+    justify-content: center;
+
+    .github-icon {
+      width: 18px;
+      height: 18px; 
+      margin: 2px 0 0 10px;
+    }
+
   }
 }
 
