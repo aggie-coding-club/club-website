@@ -10128,16 +10128,20 @@ nav .navbar-nav {
 }
 
 .welcome {
-  background-color: #eef6ff;
-}
-@media (min-width: 768px) {
-  .welcome {
-    border-radius: 25px;
-    margin: 0 30px;
-  }
+  display: flex;
+  justify-content: center;
 }
 .welcome .welcome-content {
-  padding: 60px 40px;
+  background-color: #eef6ff;
+  padding: 60px 0;
+  width: 100vw;
+}
+@media (min-width: 768px) {
+  .welcome .welcome-content {
+    border-radius: 25px;
+    width: 80vw;
+    max-width: 1320px;
+  }
 }
 .welcome .welcome-content .welcome-words {
   margin-right: 40px;
@@ -10287,19 +10291,15 @@ nav .navbar-nav {
   margin: 2px 0 0 10px;
 }
 
-#former-officers {
-  display: none;
-}
-
 footer {
   border-top: 2px solid #e7e7e7;
   margin-top: 100px;
-  height: 100px;
+  height: 60px;
 }
 footer .container {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 30px 0;
   width: 100vw;
 }
 footer .container .acc-logo {
@@ -10328,7 +10328,7 @@ h1, .h1 {
   color: #02233a;
   font-size: 55px;
   text-align: center;
-  margin-top: 50px;
+  margin: 70px 0 25px 0;
 }
 
 h2, .h2 {

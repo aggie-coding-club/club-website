@@ -43,14 +43,19 @@ nav {
 }
 
 .welcome {
-  background-color: $secondary;
-  @media (min-width: $small-screen) {
-    border-radius: 25px;
-    margin: 0 30px;
-  }
+  display: flex;
+  justify-content: center;
   .welcome-content {
-    padding: 60px 40px;
+    background-color: $secondary;
+    padding: 60px 0;
+    width: 100vw;
 
+    @media (min-width: $small-screen) {
+      border-radius: 25px;
+      width: 80vw;
+      max-width: 1320px;
+      // margin: 0 30px;
+    }
     .welcome-words {
       margin-right: 40px;
       max-width: 565px;
@@ -219,19 +224,15 @@ nav {
   }
 }
 
-#former-officers {
-  display: none;
-}
-
 footer {
   border-top: 2px solid #e7e7e7;
   margin-top: 100px;
-  height: 100px;
+  height: 60px;
 
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 60px 0;
+    padding: 30px 0;
     width: 100vw;
     .acc-logo {
       width: 107px;
@@ -265,7 +266,7 @@ h1 {
   color: $dark;
   font-size: 55px;
   text-align: center;
-  margin-top: 50px;
+  margin: 70px 0 25px 0;
 }
 
 h2 {
