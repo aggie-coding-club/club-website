@@ -24,29 +24,9 @@
             "description": "Andrew is interested in software development. His other interests include coffee, photography, and chess."
         },
 
-        {
-            "name": "Anthony Teo",
-            "image": "/static/images/current-officers/anthony_teo.jpg",
-            "major": "Computer Science' 22",
-            "position": "Events Officer",
-            "description": "Anthony is a senior Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
-        },
+       
 
-        {
-            "name": "Yonathan Zetune",
-            "image": "/static/images/current-officers/yonathan_zetune.jpg",
-            "major": "Mechanical Engineering' 22",
-            "position": "Workshops Chair",
-            "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
-        }, 
-
-        {
-            "name": "Ryan Hall",
-            "image": "/static/images/current-officers/ryan_hall.jpeg",
-            "major": "Computer Science' 22",
-            "position": "Workshops Chair",
-            "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
-        },
+       
 
         {
             "name": "Sofia Ortega",
@@ -56,12 +36,14 @@
             "description": "Sofia loves all things programming especially  servers. When she isn't working or programming, she is most likely playing Wizard101 or Spelunky."
         },
 
+       
+
         {
-            "name": "Nathan Nguyen",
-            "image": "/static/images/current-officers/nathan_nguyen.jpg",
-            "major": "General Engineering' 24",
-            "position": "Workshops Officer",
-            "description": "Nathan is a big fan of safe, robust systems software. He's typically experimenting with new baking recipes, reading a good book, or consuming an unholy amount of spicy ramen."
+            "name": "Rebekah Garcia",
+            "image": "/static/images/current-officers/rebekah_garcia.jpg",
+            "major": "Finance",
+            "position": "Events and Marketing Officer",
+            "description": "Rebekah is a senior Finance major. In her free time she enjoys road trips, watching movies, and reading."
         }
     ],
 
@@ -180,6 +162,44 @@
             "position": "Workshops Chair",
             "term": "2019 - 2021",
             "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
+        },
+
+         {
+            "name": "Anthony Teo",
+            "image": "/static/images/former-officers/anthony_teo.jpg",
+            "major": "Computer Science' 22",
+            "position": "Events Officer",
+            "term": "2019-2022",
+            "description": "Anthony is a senior Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
+        },
+
+        {
+            "name": "Yonathan Zetune",
+            "image": "/static/images/former-officers/yonathan_zetune.jpg",
+            "major": "Mechanical Engineering' 22",
+            "position": "Workshops Chair",
+            "term": "2019-2022",
+            "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
+        }, 
+
+        {
+            "name": "Ryan Hall",
+            "image": "/static/images/former-officers/ryan_hall.jpeg",
+            "major": "Computer Science' 22",
+            "position": "Workshops Chair",
+            "term": "2019-2022",
+            "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
+        },
+
+         {
+            "name": "Nathan Nguyen",
+            "image": "/static/images/former-officers/nathan_nguyen.jpg",
+            "major": "General Engineering' 24",
+            "position": "Workshops Officer",
+            "term": "2021-2022",
+            "description": "Nathan is a big fan of safe, robust systems software. He's typically experimenting with new baking recipes, reading a good book, or consuming an unholy amount of spicy ramen."
         }
+
+
     ]
 }

@@ -10232,6 +10232,7 @@ textarea.form-control-lg {
 }
 #officer-team .img-description {
   display: flex;
+  justify-content: center;
   position: absolute;
   top: 0;
   right: 0;
