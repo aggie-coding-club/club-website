@@ -50,7 +50,7 @@ nav {
     padding: 60px 0;
     width: 100vw;
 
-    @media (min-width: $small-screen) {
+    @media (min-width: 1100px) {
       border-radius: 25px;
       width: 80vw;
       max-width: 1320px;
