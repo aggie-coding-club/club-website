@@ -280,8 +280,9 @@ h6 {
 
 .no-small-display {
   @media (max-width: $small-screen) {
-    display: none;
+    display: none !important;
   }
+  // display: none !important;
 }
 
 .center {
