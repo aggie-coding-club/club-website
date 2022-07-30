@@ -25,6 +25,15 @@
     },
 
     {
+      "name": "Casey Pei",
+      "image": "/static/images/current-officers/casey_pei.jpg",
+      "major": "Computer Science' 25",
+      "position": "Projects Officer",
+      "description": "Casey is a sophomore Computer Science major who only occasionally refers to herself in the third person. She enjoys drawing, cooking, and scrolling endlessly on twitter."
+    },
+
+
+    {
       "name": "Sofia Ortega",
       "image": "/static/images/current-officers/sofia_ortega.jpg",
       "major": "General Engineering' 24",
