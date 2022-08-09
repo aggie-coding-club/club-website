@@ -68,15 +68,13 @@
       <h1>WHAT WE DO</h1>
       <div class="container-md">
         <div class="row">
-          <div class="no-small-display">
-            <div class="col no-small-display center">
-              <div class="image-container">
-                <img
-                  src="../static/images/thePeople/officers-natural-habitat.jpg"
-                  class="center-margin-y image"
-                />
-                <div class="blue-box"></div>
-              </div>
+          <div class="col no-small-display center">
+            <div class="image-container">
+              <img
+                src="../static/images/thePeople/officers-natural-habitat.jpg"
+                class="center-margin-y image"
+              />
+              <div class="blue-box"></div>
             </div>
           </div>
           <div class="col">
@@ -149,16 +147,14 @@
               <button class="btn btn-primary">Join Discord</button>
             </div>
           </div>
-          <div class="no-small-display">
-            <div class="col center">
-              <div class="image-container">
-                <div>
-                  <img
-                    src="../static/images/thePeople/people1.png"
-                    class="center-margin-y image"
-                  />
-                  <div class="blue-box"></div>
-                </div>
+          <div class="no-small-display col center">
+            <div class="image-container">
+              <div>
+                <img
+                  src="../static/images/thePeople/people1.png"
+                  class="center-margin-y image"
+                />
+                <div class="blue-box"></div>
               </div>
             </div>
           </div>
@@ -193,16 +189,14 @@
               Applications to join a project open at the start of each semester.
             </p>
           </div>
-          <div class="no-small-display">
-            <div class="col center">
-              <div class="image-container">
-                <div>
-                  <img
-                    src="../static/images/thePeople/people2.jpg"
-                    class="center-margin-y image"
-                  />
-                  <div class="blue-box"></div>
-                </div>
+          <div class="no-small-display col center">
+            <div class="image-container">
+              <div>
+                <img
+                  src="../static/images/thePeople/people2.jpg"
+                  class="center-margin-y image"
+                />
+                <div class="blue-box"></div>
               </div>
             </div>
           </div>
@@ -210,16 +204,14 @@
       </div>
       <div class="container-md">
         <div class="row my-4">
-          <div class="no-small-display">
-            <div class="col center">
-              <div class="image-container">
-                <div>
-                  <img
-                    src="../static/images/thePeople/people3.png"
-                    class="center-margin-y image"
-                  />
-                  <div class="blue-box"></div>
-                </div>
+          <div class="col center no-small-display">
+            <div class="image-container">
+              <div>
+                <img
+                  src="../static/images/thePeople/people3.png"
+                  class="center-margin-y image"
+                />
+                <div class="blue-box"></div>
               </div>
             </div>
           </div>
@@ -311,9 +303,8 @@
           <div class="img-description">
             <div class="center-margin-y">
               <div class="description-header">
-
-              <div><strong><%=officer.position%></strong></div>
-              <div><strong><%=officer.major%></strong></div>
+                <div><strong><%=officer.position%></strong></div>
+                <div><strong><%=officer.major%></strong></div>
               </div>
               <div><%=officer.description%></div>
             </div>
@@ -328,7 +319,11 @@
 
       <!--  ------------------------------FORMER OFFICERS--------------------------------------- -->
       <div class="d-flex justify-content-center my-2">
-        <button class="btn btn-primary" id="former-officers-btn" onclick="handleFormerOfficers()">
+        <button
+          class="btn btn-primary"
+          id="former-officers-btn"
+          onclick="handleFormerOfficers()"
+        >
           Former Officers
         </button>
       </div>
@@ -341,9 +336,9 @@
             <div class="img-description">
               <div class="center-margin-y">
                 <div class="description-header">
-                <div><strong><%=officer.position%></strong></div>
-                <div><strong><%=officer.major%></strong></div>
-                <div><strong>(<%=officer.term%>)</strong></div>
+                  <div><strong><%=officer.position%></strong></div>
+                  <div><strong><%=officer.major%></strong></div>
+                  <div><strong>(<%=officer.term%>)</strong></div>
                 </div>
                 <div><%=officer.description%></div>
               </div>
@@ -369,15 +364,12 @@
 
     <footer>
       <div class="container">
-        <img class="acc-logo" src="/static/images/acc-logo.png"/>
+        <img class="acc-logo" src="/static/images/acc-logo.png" />
         <div class="links">
           <a href="https://github.com/aggie-coding-club">
             <img src="../static/images/github.svg" />
           </a>
-
-
         </div>
-        
       </div>
     </footer>
 

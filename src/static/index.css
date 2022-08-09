@@ -10342,7 +10342,7 @@ h6, .h6 {
 
 @media (max-width: 768px) {
   .no-small-display {
-    display: none;
+    display: none !important;
   }
 }
 
