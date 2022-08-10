@@ -14,28 +14,29 @@
     "test": "npm run pretest && mocha build/src/**/*.test.js",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "tsc -p .",
+    "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run check",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint",
     "start": "node build/src/index.js",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
     "gcp-build": "rm -rf build/ && npm i && npm run compile && npm run copy-static-assets",
     "gcp-build-win": "rmdir /s build && npm run compile && npm run copy-static-assets && npm run start",
-    "deploy": "gcloud app deploy"
+    "deploy": "gcloud app deploy",
+    "lint": "gts lint"
   },
   "devDependencies": {
     "@types/ejs": "^2.7.0",
     "@types/express": "^4.17.13",
-    "@types/node": "^10.17.60",
+    "@types/node": "^14.11.2",
     "@types/shelljs": "^0.8.11",
     "concurrently": "^7.2.2",
     "gts": "^3.1.0",
     "nodemon": "^2.0.18",
     "sass": "^1.53.0",
     "ts-node": "^8.10.2",
-    "typescript": "^4.7.4"
+    "typescript": "^4.0.3"
   },
   "dependencies": {
     "@octokit/rest": "^16.43.2",

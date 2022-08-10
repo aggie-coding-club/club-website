@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 function handleFormerOfficers() {
-    var formerOfficers = document.getElementById("former-officers");
+  const formerOfficers = document.getElementById('former-officers');
 
-    if(formerOfficers.style.display === "none") {
-        formerOfficers.style.display = "inline";
-    } else {
-        formerOfficers.style.display = "none";
-    }
+  if (formerOfficers.style.display === 'none') {
+    formerOfficers.style.display = 'inline';
+  } else {
+    formerOfficers.style.display = 'none';
+  }
 }
+/* eslint-enable no-unused-vars */
