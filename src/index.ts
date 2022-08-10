@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as path from 'path';
-import { officers } from './data/officers.json';
-import { former } from './data/officers.json';
+import {officers} from './data/officers.json';
+import {former} from './data/officers.json';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -12,7 +12,7 @@ app.set('view engine', 'html');
 app.use('/static', express.static(path.join(__dirname, '/static')));
 
 app.get('/', (req, res) => {
-  res.render('index', { officers, former });
+  res.render('index', {officers, former});
 });
 
 app.listen(port, () => {
