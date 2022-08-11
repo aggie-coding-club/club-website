@@ -44,9 +44,17 @@
     {
       "name": "Rebekah Garcia",
       "image": "/static/images/current-officers/rebekah_garcia.jpg",
-      "major": "Finance",
+      "major": "Finance '23",
       "position": "Events and Marketing Officer",
       "description": "Rebekah is a senior Finance major. In her free time she enjoys road trips, watching movies, and reading."
+    },
+
+    {
+      "name": "Jay De Vera",
+      "image": "/static/images/current-officers/jay_de_vera.jpg",
+      "major": "Psychology and Computer Science '24",
+      "position": "Events and Marketing Officer",
+      "description": "Jay is a Psychology Computer Science double major. In her free time she trains service dogs and rock climbs!"
     }
   ],
 
@@ -183,7 +191,7 @@
         "position": "Workshops Chair",
         "term": "2019-2022",
         "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
-    }, 
+    },
 
     {
         "name": "Ryan Hall",
