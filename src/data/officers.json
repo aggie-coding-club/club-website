@@ -11,54 +11,86 @@
     {
       "name": "Brady Langdale",
       "image": "/static/images/current-officers/brady_langdale.jpg",
-      "major": "Industrial and System Engineering' 22",
-      "position": "Projects Officer",
+      "major": "Electronic Systems Engineering Technology '23",
+      "position": "Vice President",
       "description": "During his free time, Brady enjoys doing game and app development. When he's not busy programming, he likes to play the guitar and watch Mr. Robot."
-    },
-
-    {
-      "name": "Andrew Fennell",
-      "image": "/static/images/current-officers/andrew_fennell.jpg",
-      "major": "Computer Engineering' 22",
-      "position": "Projects Officer",
-      "description": "Andrew is interested in software development. His other interests include coffee, photography, and chess."
     },
 
     {
       "name": "Casey Pei",
       "image": "/static/images/current-officers/casey_pei.jpg",
-      "major": "Computer Science' 25",
-      "position": "Projects Officer",
+      "major": "Computer Science '25",
+      "position": "Projects Chair",
       "description": "Casey is a sophomore Computer Science major who only occasionally refers to herself in the third person. She enjoys drawing, cooking, and scrolling endlessly on twitter."
-    },
-
-
-    {
-      "name": "Sofia Ortega",
-      "image": "/static/images/current-officers/sofia_ortega.jpg",
-      "major": "General Engineering' 24",
-      "position": "Workshops Officer",
-      "description": "Sofia loves all things programming especially  servers. When she isn't working or programming, she is most likely playing Wizard101 or Spelunky."
     },
 
     {
       "name": "Rebekah Garcia",
       "image": "/static/images/current-officers/rebekah_garcia.jpg",
       "major": "Finance '23",
-      "position": "Events and Marketing Officer",
+      "position": "Events and Marketing Chair",
       "description": "Rebekah is a senior Finance major. In her free time she enjoys road trips, watching movies, and reading."
     },
 
     {
-      "name": "Jay De Vera",
-      "image": "/static/images/current-officers/jay_de_vera.jpg",
-      "major": "Psychology and Computer Science '24",
+      "name": "Jad Khalili",
+      "image": "/static/images/current-officers/jad_khalili.jpg",
+      "major": "Computer Science '25",
+      "position": "Workshops Chair",
+      "description": "Hi, I'm Jad! I joined ACC in Fall 2021 as a freshman, later becoming a workshops officer during my sophomore year. Outside of school and ACC, I love to play basketball, soccer, and scuba dive. I can't wait to help share the world of coding with y'all!"
+    },
+
+    {
+      "name": "Sofia Ortega",
+      "image": "/static/images/current-officers/sofia_ortega.jpg",
+      "major": "Computer Engineering '24",
+      "position": "Workshops Officer",
+      "description": "Sofia loves all things programming especially  servers. When she isn't working or programming, she is most likely playing Wizard101 or Spelunky."
+    },
+
+    {
+      "name": "Harsh Gangaramani",
+      "image": "/static/images/current-officers/harsh_gangaramani.jpg",
+      "major": "Computer Science '25",
+      "position": "Projects Officer",
+      "description": "Harsh is a driven, persistent, and efficient second year student pursuing a B.S. in Computer Science. His objective it to be apart of a Summer 2023 Internship where he can push his limits to pcik up new skills while learning about the company culture."
+    },
+
+    {
+      "name": "Pranav Jain",
+      "image": "/static/images/current-officers/pranav_jain.jpg",
+      "major": "Computer Science '23",
+      "position": "Workshops Officer",
+      "description": "Pranav is a Senior Computer Science Major at Texas A&M. One of his dreams was to be a software engineer at Disney."
+    },
+
+    {
+      "name": "Ezra Jeter",
+      "image": "/static/images/current-officers/ezra_jeter.jpg",
+      "major": "Computer Engineering '25",
       "position": "Events and Marketing Officer",
-      "description": "Jay is a Psychology Computer Science double major. In her free time she trains service dogs and rock climbs!"
+      "description": "big coding guy. black honey tea with tapioca enthusiast. 6ft tall"
     }
+
   ],
 
   "former": [
+    {
+      "name": "Andrew Fennell",
+      "image": "/static/images/current-officers/andrew_fennell.jpg",
+      "major": "Computer Engineering' 22",
+      "position": "Projects Chair",
+      "description": "Andrew is interested in software development. His other interests include coffee, photography, and chess. He is now currently a Performance Engineer at arm."
+    },
+
+    {
+      "name": "Jay De Vera",
+      "image": "/static/images/former-officers/jay_de_vera.jpg",
+      "major": "Psychology and Computer Science '24",
+      "position": "Events and Marketing Officer",
+      "description": "Jay is a Psychology Computer Science double major. In her free time she trains service dogs and rock climbs!"
+    },
+
     {
       "name": "Rohit Mucherla",
       "image": "/static/images/former-officers/rohit_mucherla.jpeg",
@@ -166,16 +198,16 @@
       "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
     },
 
-      {
-          "name": "Shrey Shah",
-          "image": "/static/images/former-officers/shrey_shah.jpg",
-          "major": "Computer Engineering' 21",
-          "position": "Workshops Chair",
-          "term": "2019 - 2021",
-          "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
-      },
+    {
+        "name": "Shrey Shah",
+        "image": "/static/images/former-officers/shrey_shah.jpg",
+        "major": "Computer Engineering' 21",
+        "position": "Workshops Chair",
+        "term": "2019 - 2021",
+        "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
+    },
 
-      {
+    {
         "name": "Anthony Teo",
         "image": "/static/images/former-officers/anthony_teo.jpg",
         "major": "Computer Science' 22",
@@ -210,7 +242,6 @@
         "term": "2021-2022",
         "description": "Nathan is a big fan of safe, robust systems software. He's typically experimenting with new baking recipes, reading a good book, or consuming an unholy amount of spicy ramen."
     }
-
 
     ]
 }
