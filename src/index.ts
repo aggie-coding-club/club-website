@@ -18,3 +18,11 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+function activateDarkMode() {
+  // set style to dark
+}
+
+declare global {
+  interface Window { MyNamespace: any; }
+}

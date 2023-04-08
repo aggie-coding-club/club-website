@@ -1,9 +1,35 @@
 ////declare your variables BEFORE importing bootstrap
-$dark: #02233a;
-$primary: #3766b4;
-$secondary: #eef6ff;
+$dark-theme: "dark-theme";
+$light-theme: "light-theme";
+$computer-img: "computer-img";
+
+$dark: #001030;
+$primary: #0047ba;
+$secondary: #bddbfb;
 $custom-color: #0f5f35;
 $nav-link-color: #969696;
+$general-background: #FAFAFA;
+
+$themes: (
+        $light-theme: (
+          $general-background: #FAFAFA,
+          $dark: #03202c,
+          $primary: #0047ba,
+          $secondary: #b2ceec,
+          $custom-color: #0f5f35,
+          $nav-link-color: #969696,
+          $computer-img: "images/computer.png",
+        ),
+        $dark-theme: (
+          $general-background: #040916,
+          $dark: #ffffff,
+          $primary: #0141cd,
+          $secondary: #1d1e34,
+          $custom-color: #0f5f35,
+          $nav-link-color: #969696,
+          $computer-img: "images/computer_darkmode.png",
+        )
+);
 
 $small-screen: 768px;
 
@@ -12,6 +38,27 @@ $officer-img-width: 250px;
 $officer-img-height: 250px;
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color));
+  } @else {
+    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties);
+  }
+}
+
+@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+
+  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  }
+}
+
 
 nav {
   display: flex;
@@ -23,17 +70,17 @@ nav {
   }
 
   a {
-    color: $nav-link-color;
+    @include theme('color', $nav-link-color);
     text-decoration: none;
     transition: all 1s ease-out;
   }
 
   a:hover,
   a:focus {
+    @include theme('color', $dark);
+    @include theme('text-decoration-color', $primary);
     text-decoration: underline;
-    text-decoration-color: $primary;
     text-decoration-thickness: 3px;
-    color: $dark;
   }
 
   // navbar
@@ -43,26 +90,31 @@ nav {
 }
 
 .welcome {
+  @include theme('color', $dark);
   display: flex;
   justify-content: center;
+
   .welcome-content {
-    background-color: $secondary;
+    @include theme('background-color', $secondary);
     padding: 60px 0;
     width: 100vw;
 
     @media (min-width: 1100px) {
+      @include theme('background-color', $secondary);
       border-radius: 25px;
       width: 80vw;
       max-width: 1320px;
       // margin: 0 30px;
     }
     .welcome-words {
+      @include theme('background-color', $secondary);
       margin-right: 40px;
       max-width: 565px;
     }
   }
 
   .welcome-heading {
+    @include theme('background-color', $secondary);
     text-align: left;
     font-weight: 600;
     font-size: 55px;
@@ -71,19 +123,24 @@ nav {
     }
 
     .heading-emphasis {
-      color: $primary;
+      @include theme('background-color', $secondary);
+      @include theme('color', $primary);
       display: block;
     }
   }
 }
 
 #what-we-do {
+  z-index: 1;
+  position: relative;
+
   .image {
     width: 300px;
     height: 400px;
   }
 
   .blue-box {
+    @include theme('background-color', $secondary);
     top: 30px;
     left: 30px;
   }
@@ -92,7 +149,7 @@ nav {
     margin: 5px 0;
   }
   .circle {
-    background-color: $secondary;
+    @include theme('background-color', $secondary);
     height: $badge-size;
     width: $badge-size;
     vertical-align: middle;
@@ -100,8 +157,8 @@ nav {
   }
 
   .circle-txt {
+    @include theme('color', $primary);    
     text-align: center;
-    color: $primary;
     font-weight: bold;
     font-size: 30px;
     line-height: $badge-size;
@@ -110,6 +167,7 @@ nav {
 
 #how-to-join {
   .blue-box {
+    @include theme('background-color', $secondary);
     top: 30px;
     left: 40px;
   }
@@ -117,6 +175,7 @@ nav {
 
 #projects {
   .blue-box {
+    @include theme('background-color', $secondary);
     top: 10px;
     left: 20px;
   }
@@ -129,7 +188,7 @@ nav {
     font-size: 25px;
   }
   .card {
-    background-color: $secondary;
+    @include theme('background-color', $secondary);
     height: 100%;
     cursor: pointer;
     @media (min-width: $small-screen) {
@@ -146,11 +205,11 @@ nav {
   }
 
   .learn-more {
+    @include theme('color', $primary);
     margin-top: 15px;
     font-weight: bold;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
-    color: $primary;
     text-decoration: none;
     transition: all 0.25s ease-out;
   }
@@ -179,15 +238,15 @@ nav {
 
   /* Child Text Container */
   .img-description {
+    @include theme('background-color', $general-background);
+    @include theme('color', $dark);
     display: flex;
     justify-content: center;
     position: absolute;
     top: 0;
     right: 0;
-    background: white;
     height: $officer-img-height;
     width: $officer-img-width;
-    color: black;
     font-family: sans-serif;
     opacity: 0;
     visibility: hidden;
@@ -225,7 +284,9 @@ nav {
 }
 
 footer {
-  border-top: 2px solid #e7e7e7;
+  @include theme('border-top', $secondary);
+
+  border-top: 2px solid $secondary;
   margin-top: 100px;
   height: 60px;
 
@@ -250,8 +311,17 @@ footer {
 }
 
 // ---------------------- GLOBAL ----------------
+
 * {
-  color: $dark;
+  @include theme('color', $dark);
+  @include theme('background-color', $general-background);
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  @include theme('color', $dark);
+  background-color: transparent;
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
 }
@@ -262,8 +332,8 @@ footer {
 }
 
 h1 {
+  @include theme('color', $dark);
   font-weight: 600;
-  color: $dark;
   font-size: 55px;
   text-align: center;
   margin: 70px 0 25px 0;
@@ -309,11 +379,15 @@ h6 {
 
 .image-container {
   position: relative;
+  z-index: 2;
+  @include theme('background-color', $secondary);
+
   .blue-box {
+    @include theme('background-color', $secondary);
     width: 300px;
     height: 400px;
     position: absolute;
-    background-color: $secondary;
     z-index: -1;
   }
 }
+
