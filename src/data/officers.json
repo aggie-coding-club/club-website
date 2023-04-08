@@ -5,7 +5,7 @@
       "image": "/static/images/current-officers/dakshika_srivastava.jpg",
       "major": "Computer Science' 23",
       "position": "President",
-      "description": "Dakshika is a junior majoring in Computer Science, who loves writing and playing the keyboard. In her free time, you can find her cooking or watching Netflix!"
+      "description": "Dakshika is a senior majoring in Computer Science, who loves writing and playing the keyboard. In her free time, you can find her cooking or watching Netflix!"
     },
 
     {
@@ -78,10 +78,10 @@
     {
       "name": "Andrew Fennell",
       "image": "/static/images/former-officers/andrew_fennell.jpg",
-      "major": "Computer Engineering' 22",
+      "major": "Computer Engineering '22",
       "position": "Projects Chair",
       "term": "2020 - 2022",
-      "description": "Andrew is interested in software development. His other interests include coffee, photography, and chess. He is now currently a Performance Engineer at arm."
+      "description": "Andrew is interested in software development. His other interests include coffee, photography, and chess. He is now currently a Performance Engineer at arm!"
     },
 
     {
@@ -90,159 +90,160 @@
       "major": "Psychology and Computer Science '24",
       "position": "Events and Marketing Officer",
       "term": "2022",
-      "description": "Jay is a Psychology Computer Science double major. In her free time she trains service dogs and rock climbs!"
+      "description": "Jay is a Psychology / Computer Science double major. In her free time she trains service dogs and rock climbs! She is now a Campus Ambassador for Bartleby!"
     },
     
     {
-        "name": "Nathan Nguyen",
-        "image": "/static/images/former-officers/nathan_nguyen.jpg",
-        "major": "General Engineering' 24",
-        "position": "Workshops Officer",
-        "term": "2021-2022",
-        "description": "Nathan is a big fan of safe, robust systems software. He's typically experimenting with new baking recipes, reading a good book, or consuming an unholy amount of spicy ramen."
+      "name": "Nathan Nguyen",
+      "image": "/static/images/former-officers/nathan_nguyen.jpg",
+      "major": "Computer Science '24",
+      "position": "Workshops Officer",
+      "term": "2021-2022",
+      "description": "Nathan is a big fan of safe, robust systems software. He's typically experimenting with new baking recipes, reading a good book, or consuming an unholy amount of spicy ramen."
     },
 
     {
-        "name": "Anthony Teo",
-        "image": "/static/images/former-officers/anthony_teo.jpg",
-        "major": "Computer Science' 22",
-        "position": "Events Officer",
-        "term": "2019-2022",
-        "description": "Anthony is a senior Computer Science major who loves producing and playing music. When he’s not coding, he enjoys hiking, playing soccer, and watching Formula 1."
+      "name": "Anthony Teo",
+      "image": "/static/images/former-officers/anthony_teo.jpg",
+      "major": "Computer Science '22",
+      "position": "Events Officer",
+      "term": "2019-2022",
+      "description": "When Anthony is not coding, he enjoys hiking, playing soccer, and watching Formula 1. He is now pursuing a Masters in HCI at Carnegie Mellon University and interning at Palantir!"
     },
 
     {
-        "name": "Yonathan Zetune",
-        "image": "/static/images/former-officers/yonathan_zetune.jpg",
-        "major": "Mechanical Engineering' 22",
-        "position": "Workshops Chair",
-        "term": "2019-2022",
-        "description": "Yonathan is a mobile development aficionado and is trying to transfer into CS. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can."
+      "name": "Yonathan Zetune",
+      "image": "/static/images/former-officers/yonathan_zetune.jpg",
+      "major": "Interdisciplinary Engineering '22",
+      "position": "Workshops Chair",
+      "term": "2019-2022",
+      "description": "Yonathan is a mobile development aficionado. In his free time he enjoys watching the TechLead or The Good Place and listens to jazz, otherwise known as elevator music, when he can. He is now a Software Engineer at Google!"
     },
 
     {
-        "name": "Ryan Hall",
-        "image": "/static/images/former-officers/ryan_hall.jpeg",
-        "major": "Computer Science' 22",
-        "position": "Workshops Chair",
-        "term": "2019-2022",
-        "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal."
+      "name": "Ryan Hall",
+      "image": "/static/images/former-officers/ryan_hall.jpeg",
+      "major": "Computer Science '22",
+      "position": "Workshops Chair",
+      "term": "2019-2022",
+      "description": "Ryan enjoys cybersecurity, working with APIs, and teaching others new things. He is a certified caffeine addict, enjoys playing tabletop board games,  and always pours his milk before his cereal. He is now a Security Engineer at Google!"
     },
 
     {
       "name": "Alsten Okpisz",
       "image": "/static/images/former-officers/alsten_okpisz.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '21",
       "position": "President",
       "term": "2020 - 2021",
-      "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends."
+      "description": "Alsten enjoys front-end web development and running Dungeons and Dragons games for friends. He is now a Software Developer at Paycom!"
     },
 
     {
       "name": "Gannon Prudhomme",
       "image": "/static/images/former-officers/gannon_prudhomme.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '21",
       "position": "Projects Chair",
       "term": "2020 - 2021",
-      "description": "Gannon is a Senior Computer Science student, whose interests include creating useful products and project management as a whole! When he’s not programming, he likes to play video games, play basketball, and watch film!"
+      "description": "When Gannon is not programming, he likes to play video games, play basketball, and watch film! He is now a Software Engineer II at Amazon working on iOS development for eero!"
     },
 
     {
       "name": "Tony Zhu",
       "image": "/static/images/former-officers/tony_zhu.jpg",
-      "major": "Electronic Systems Engineering Technology' 21",
+      "major": "Electronic Systems Engineering Technology '21",
       "position": "Projects Chair",
       "term": "2020 - 2021",
-      "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii."
+      "description": "Lover of ultimate frisbee. movies and sleeping. Fun fact: traveled over 33,000 miles last summer. Not so fun fact: threw up while skydiving in Hawaii. He is now a Software Engineer at Amazon!"
     },
 
     {
-        "name": "Shrey Shah",
-        "image": "/static/images/former-officers/shrey_shah.jpg",
-        "major": "Computer Engineering' 21",
-        "position": "Workshops Chair",
-        "term": "2019 - 2021",
-        "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic."
+      "name": "Shrey Shah",
+      "image": "/static/images/former-officers/shrey_shah.jpg",
+      "major": "Computer Engineering '21",
+      "position": "Workshops Chair",
+      "term": "2019 - 2021",
+      "description": "Shrey loves to code in Python and is extremely interested in Machine Learning and Cloud Computing. He is also a magician and has performed in stage shows and street magic. He is now a Software Engineer at Software.com!"
     },
 
     {
       "name": "Anikait Sharma",
       "image": "/static/images/former-officers/anikait_sharma.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '21",
       "position": "Vice President",
       "term": "2020 - 2021",
-      "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait is not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
+      "description": "Anikait has a keen interest in HCI on how we can use technology to increase accessibility for all users. If Anikait was not at Zach procrastinating on his code - he’s probably climbing some rocks, cooking some grub, or concert hopping with his homies!"
     },
 
     {
       "name": "Hannah Gooden",
       "image": "/static/images/former-officers/hannah_gooden.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '20",
       "position": "President",
       "term": "2018 - 2020",
-      "description": "Hannah has two minors in astrophysics and cybersecurity, and is very interested in the way scientists use computing to do research. She also loves traveling, and spent a whole summer in New Mexico, where she crewed for a hot air balloon team on her weekends."
+      "description": "Hannah earned two minors in astrophysics and cybersecurity. She loves traveling, and spent a whole summer in New Mexico, where she crewed for a hot air balloon team on her weekends. She is now at the Johns Hopkins University APL!"
     },
 
     {
       "name": "Marissa Soria",
       "image": "/static/images/former-officers/marissa_soria.jpg",
-      "major": "Electronic Systems Engineering Technology",
+      "major": "Electronic Systems Engineering Technology '21",
       "position": "Events Chair",
       "term": "2018 - 2020",
-      "description": "Marissa has a special interest in cyber security and hardware integration and in her free time enjoys baking and gardening."
+      "description": "Marissa has a special interest in cyber security and hardware integration and in her free time enjoys baking and gardening. She is now a Senior Consultant at Booz Allen Hamilton!"
     },
 
     {
       "name": "Feras Khemakhem",
       "image": "/static/images/former-officers/feras_khemakhem.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '20",
       "position": "Project Management Chair",
       "term": "2017 - 2020",
-      "description": "Feras specializes in Computer Graphics and animation, and hopes to continue this work into the field. Personal hobbies include traveling to eat good food, and gaming."
+      "description": "Feras completed his Masters in Computer Science in 2022 at A&M working on Computer Graphics and Animation the field. Personal hobbies include traveling to eat good food, and gaming. He is now a Software Engineer at Microsoft!"
     },
 
     {
       "name": "Mitchell Eldridge",
       "image": "/static/images/former-officers/mitchell_eldridge.png",
-      "major": "Computer Science",
+      "major": "Computer Science '20",
       "position": "Project Management Chair",
       "term": "2019 - 2020",
-      "description": "Mitchell is interested in cyber security, machine learning, and teaching. With his free time, he enjoys rock climbing and hiking."
+      "description": "Mitchell is interested in cyber security, machine learning, and teaching. With his free time, he enjoys rock climbing and hiking. He is now a Consultant at Pariveda Solutions!"
     },
 
     {
       "name": "Thomas McDonald",
       "image": "/static/images/former-officers/thomas_mcdonald.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '20",
       "position": "Co-Workshops Chair",
       "term": "2018 - 2020",
-      "description": "Thomas is a senior Computer Science student who has experience in several industries and loves to work with people to meet objectives. Outside of school and work, he enjoys rock climbing and spending time with family and friends."
+      "description": "Thomas has experience in several industries and loves to work with people to meet objectives. Outside of school and work, he enjoys rock climbing and spending time with family and friends. He is now a Full-Stack Software Engineer at Stride!"
     },
 
     {
       "name": "Edgar Martinez",
       "image": "/static/images/former-officers/edgar_martinez.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '20",
       "position": "Co-Workshops Chair",
       "term": "2018 - 2020",
-      "description": "Edgar is a Computer Science major who enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club."
+      "description": "Edgar enjoys learning from others and helping others learn. It is likely that he has had more tacos than any other member in the Aggie Coding Club. Edgar is now at the Johns Hopkins University Applied Physics Laboratory!"
     },
 
     {
       "name": "Gabriel Britain",
       "image": "/static/images/former-officers/gabriel_britain.jpg",
-      "major": "Computer Science",
+      "major": "Computer Science '20",
       "position": "Vice President",
       "term": "2018 - 2020",
-      "description": "When Gabriel isn't organizing hackathons or reading papers for his research, you can find him whipping something up in the kitchen, or 30 feet underwater scuba diving!"
+      "description": "When Gabriel isn't organizing hackathons or reading papers for his research, you can find him whipping something up in the kitchen, or 30 feet underwater scuba diving! Gabriel is now a Software Engineer at Microsoft!"
     },
     
     {
       "name": "Rohit Mucherla",
       "image": "/static/images/former-officers/rohit_mucherla.jpeg",
-      "major": "Computer Science",
+      "major": "Computer Science '18",
       "position": "President",
-      "term": "2016 - 2018"
+      "term": "2016 - 2018",
+      "description": "Rohit is the former president of Aggie Coding Club! He is now a Software Developer at General Motors!"
     }
 
     ]
