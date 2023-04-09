@@ -1,11 +1,10 @@
 ////declare your variables BEFORE importing bootstrap
 $dark-theme: "dark-theme";
 $light-theme: "light-theme";
-$computer-img: "computer-img";
 
 $dark: #001030;
-$primary: #0047ba;
-$secondary: #bddbfb;
+$primary: #3766b4;
+$secondary: #eef6ff;
 $secondary-hovered: #b2ceec;
 $custom-color: #0f5f35;
 $nav-link-color: #969696;
@@ -13,24 +12,22 @@ $general-background: #FAFAFA;
 
 $themes: (
         $light-theme: (
-          $general-background: #FAFAFA,
-          $dark: #03202c,
-          $primary: #0047ba,
-          $secondary: #b2ceec,
-          $secondary-hovered: #99b1cb,
+          $dark: #001030,
+          $primary: #3766b4,
+          $secondary: #eef6ff,
+          $secondary-hovered: #b2ceec,
           $custom-color: #0f5f35,
           $nav-link-color: #969696,
-          $computer-img: "images/computer.png",
+          $general-background: #FAFAFA,
         ),
         $dark-theme: (
           $general-background: #040916,
           $dark: #ffffff,
-          $primary: #0141cd,
+          $primary: #3766b4,
           $secondary: #1d1e34,
           $secondary-hovered: #2b2d4d,
           $custom-color: #0f5f35,
           $nav-link-color: #969696,
-          $computer-img: "images/computer_darkmode.png",
         )
 );
 
