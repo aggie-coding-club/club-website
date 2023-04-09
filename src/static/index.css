@@ -10318,6 +10318,7 @@ nav .navbar-nav {
 }
 .past-projects .learn-more {
   color: #0047ba ;
+  background-color: #b2ceec ;
   margin-top: 15px;
   font-weight: bold;
   padding: 5px 10px 5px 10px;
@@ -10330,9 +10331,19 @@ nav .navbar-nav {
     color: #0141cd ;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .past-projects .learn-more {
+    background-color: #1d1e34 ;
+  }
+}
 .past-projects .learn-more:hover {
   cursor: pointer;
-  background-color: rgba(209, 205, 205, 0.2901960784);
+  background-color: #99b1cb ;
+}
+@media (prefers-color-scheme: dark) {
+  .past-projects .learn-more:hover {
+    background-color: #2b2d4d ;
+  }
 }
 
 #officer-team {

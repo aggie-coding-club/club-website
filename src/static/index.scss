@@ -6,6 +6,7 @@ $computer-img: "computer-img";
 $dark: #001030;
 $primary: #0047ba;
 $secondary: #bddbfb;
+$secondary-hovered: #b2ceec;
 $custom-color: #0f5f35;
 $nav-link-color: #969696;
 $general-background: #FAFAFA;
@@ -16,6 +17,7 @@ $themes: (
           $dark: #03202c,
           $primary: #0047ba,
           $secondary: #b2ceec,
+          $secondary-hovered: #99b1cb,
           $custom-color: #0f5f35,
           $nav-link-color: #969696,
           $computer-img: "images/computer.png",
@@ -25,6 +27,7 @@ $themes: (
           $dark: #ffffff,
           $primary: #0141cd,
           $secondary: #1d1e34,
+          $secondary-hovered: #2b2d4d,
           $custom-color: #0f5f35,
           $nav-link-color: #969696,
           $computer-img: "images/computer_darkmode.png",
@@ -206,6 +209,7 @@ nav {
 
   .learn-more {
     @include theme('color', $primary);
+    @include theme('background-color', $secondary);
     margin-top: 15px;
     font-weight: bold;
     padding: 5px 10px 5px 10px;
@@ -216,7 +220,7 @@ nav {
 
   .learn-more:hover {
     cursor: pointer;
-    background-color: #d1cdcd4a;
+    @include theme('background-color', $secondary-hovered);
   }
 }
 
