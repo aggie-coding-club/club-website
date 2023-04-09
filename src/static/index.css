@@ -10440,7 +10440,6 @@ footer .container .links img {
 
 * {
   color: #03202c ;
-  background-color: #FAFAFA ;
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
 }
@@ -10449,21 +10448,21 @@ footer .container .links img {
     color: #ffffff ;
   }
 }
-@media (prefers-color-scheme: dark) {
-  * {
-    background-color: #040916 ;
-  }
-}
 
 body {
   color: #03202c ;
-  background-color: transparent;
+  background-color: #FAFAFA ;
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
 }
 @media (prefers-color-scheme: dark) {
   body {
     color: #ffffff ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #040916 ;
   }
 }
 
