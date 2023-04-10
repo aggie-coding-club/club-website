@@ -10131,7 +10131,7 @@ nav a:focus {
 @media (prefers-color-scheme: dark) {
   nav a:hover,
 nav a:focus {
-    color: #ffffff ;
+    color: #FAF9F6 ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -10151,7 +10151,7 @@ nav .navbar-nav {
 }
 @media (prefers-color-scheme: dark) {
   .welcome {
-    color: #ffffff ;
+    color: #FAF9F6 ;
   }
 }
 .welcome .welcome-content {
@@ -10363,7 +10363,7 @@ nav .navbar-nav {
   position: relative;
 }
 #officer-team .img-description {
-  background-color: #FAFAFA ;
+  background-color: #FAF9F6 ;
   color: #001030 ;
   display: flex;
   justify-content: center;
@@ -10387,7 +10387,7 @@ nav .navbar-nav {
 }
 @media (prefers-color-scheme: dark) {
   #officer-team .img-description {
-    color: #ffffff ;
+    color: #FAF9F6 ;
   }
 }
 #officer-team .img-description .description-header {
@@ -10445,19 +10445,19 @@ footer .container .links img {
 }
 @media (prefers-color-scheme: dark) {
   * {
-    color: #ffffff ;
+    color: #FAF9F6 ;
   }
 }
 
 body {
   color: #001030 ;
-  background-color: #FAFAFA ;
+  background-color: #FAF9F6 ;
   font-family: Poppins, sans-serif;
   box-sizing: border-box;
 }
 @media (prefers-color-scheme: dark) {
   body {
-    color: #ffffff ;
+    color: #FAF9F6 ;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -10480,7 +10480,7 @@ h1, .h1 {
 }
 @media (prefers-color-scheme: dark) {
   h1, .h1 {
-    color: #ffffff ;
+    color: #FAF9F6 ;
   }
 }
 
