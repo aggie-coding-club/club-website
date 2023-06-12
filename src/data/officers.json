@@ -1,35 +1,43 @@
 {
   "officers": [
     {
-      "name": "Dakshika Srivastava",
-      "image": "/static/images/current-officers/dakshika_srivastava.jpg",
-      "major": "Computer Science' 23",
-      "position": "President",
-      "description": "Dakshika is a senior majoring in Computer Science, who loves writing and playing the keyboard. In her free time, you can find her cooking or watching Netflix!"
-    },
-
-    {
       "name": "Brady Langdale",
       "image": "/static/images/current-officers/brady_langdale.jpg",
       "major": "Electronic Systems Engineering Technology '23",
-      "position": "Vice President",
+      "position": "President",
       "description": "Brady is a former Projects Officer. During his free time, Brady enjoys doing game and app development. When he's not busy programming, he likes to play the guitar and watch Mr. Robot."
+    },
+
+    {
+      "name": "Sofia Ortega",
+      "image": "/static/images/current-officers/sofia_ortega.jpg",
+      "major": "Computer Engineering '24",
+      "position": "President",
+      "description": "Sofia is a former Workshops Chair and loves all things programming, especially servers. When she isn't working or programming, she is most likely playing Wizard101, Overwatch, or Spelunky."
     },
 
     {
       "name": "Casey Pei",
       "image": "/static/images/current-officers/casey_pei.jpg",
       "major": "Computer Science '25",
-      "position": "Projects Chair",
+      "position": "Vice President",
       "description": "Casey is a sophomore Computer Science major with a Stats minor who only occasionally refers to herself in the third person. She enjoys digital drawing, typing tests, and scrolling endlessly on twitter."
     },
 
     {
-      "name": "Rebekah Garcia",
-      "image": "/static/images/current-officers/rebekah_garcia.jpg",
-      "major": "Finance '23",
+      "name": "Ezra Jeter",
+      "image": "/static/images/current-officers/ezra_jeter.jpg",
+      "major": "Computer Engineering '25",
       "position": "Events and Marketing Chair",
-      "description": "Rebekah is a senior Finance major. In her free time she enjoys road trips, watching movies, and reading."
+      "description": "big coding guy. black honey tea with tapioca enthusiast. 6ft tall"
+    },
+
+    {
+      "name": "Christion Bradley",
+      "image": "/static/images/current-officers/christion_bradley.jpg",
+      "major": "Computer Science '25",
+      "position": "Projects Chair",
+      "description": "Christion is one of our wonderful projects officers and a summer graphics software engineering intern with Intel!"
     },
 
     {
@@ -41,19 +49,19 @@
     },
 
     {
-      "name": "Sofia Ortega",
-      "image": "/static/images/current-officers/sofia_ortega.jpg",
-      "major": "Computer Engineering '24",
-      "position": "Workshops Officer",
-      "description": "Sofia is a former Workshops Chair and loves all things programming, especially servers. When she isn't working or programming, she is most likely playing Wizard101, Overwatch, or Spelunky."
+      "name": "Ryan Kabir",
+      "image": "/static/images/current-officers/ryan_kabir.jpg",
+      "major": "Computer Engineering '25",
+      "position": "Events and Marketing Officer",
+      "description": "Ryan is one of our wonderful events and marketing officers and has a triple internship this summer with JHUAPL, Frogslayer, and Paycom!"
     },
 
     {
-      "name": "Pranav Jain",
-      "image": "/static/images/current-officers/pranav_jain.jpg",
-      "major": "Computer Science '23",
-      "position": "Workshops Officer",
-      "description": "Pranav is a Senior Computer Science Major at Texas A&M. One of his dreams was to be a software engineer at Disney."
+      "name": "Yuqian Cao",
+      "image": "/static/images/current-officers/yuqian_cao.jpg",
+      "major": "Computer Science '25",
+      "position": "Projects Officer",
+      "description": "Yuqian is one of our wonderful projects officers and a VR Research Assistant Intern at the Software Interaction Lab at Texas A&M!"
     },
     
     {
@@ -61,20 +69,79 @@
       "image": "/static/images/current-officers/harsh_gangaramani.jpg",
       "major": "Computer Science '25",
       "position": "Projects Officer",
-      "description": "Harsh is a driven, persistent, and efficient second year student pursuing a B.S. in Computer Science. His objective it to be apart of a Summer 2023 Internship where he can push his limits to pick up new skills while learning about the company culture."
+      "description": "Harsh  is one of our wonderful projects officers and a summer software engineering intern with American Airlines!"
     },
 
     {
-      "name": "Ezra Jeter",
-      "image": "/static/images/current-officers/ezra_jeter.jpg",
-      "major": "Computer Engineering '25",
+      "name": "Carlos Acosta",
+      "image": "/static/images/current-officers/carlos_acosta.jpg",
+      "major": "Computer Science '25",
       "position": "Events and Marketing Officer",
-      "description": "big coding guy. black honey tea with tapioca enthusiast. 6ft tall"
+      "description": "Carlos is one of our wonderful events and marketing officers officers!"
+    },
+
+    {
+      "name": "Warren Wu",
+      "image": "/static/images/current-officers/warren_wu.jpg",
+      "major": "Computer Science '26",
+      "position": "Workshops Officer",
+      "description": "Warren is one of our wonderful workshops officers!"
+    },
+
+    {
+      "name": "Andrew Mao",
+      "image": "/static/images/current-officers/andrew_mao.jpg",
+      "major": "Computer Science '25",
+      "position": "Workshops Officer",
+      "description": "Andrew is one of our wonderful workshops officers and a summer software engineering intern with Publicis Sapient this summer in New York City!"
+    },
+
+    {
+      "name": "A.J. Bamgbelu",
+      "image": "/static/images/current-officers/aj_bamgbelu.jpg",
+      "major": "Computer Science '26",
+      "position": "Projects Officer",
+      "description": "A.J. is one of our wonderful projects officers and a summer software engineering intern with Amazon this summer!"
+    },
+
+    {
+      "name": "Carol Geng",
+      "image": "/static/images/current-officers/carol_geng.jpg",
+      "major": "Computer Science '25",
+      "position": "Events and Marketing Officer",
+      "description": "Carol is one of our wonderful events and marketing officers and a Software Engineering Intern with J.P. Morgan Chase this summer!"
     }
 
   ],
 
   "former": [
+    {
+      "name": "Dakshika Srivastava",
+      "image": "/static/images/former-officers/dakshika_srivastava.jpg",
+      "major": "Computer Science' 23",
+      "position": "President",
+      "term": "2019 - 2023",
+      "description": "Dakshika is our beloved former president, who loves writing and playing the keyboard. In her free time, you can find her cooking or watching Netflix!"
+    },
+
+    {
+      "name": "Rebekah Garcia",
+      "image": "/static/images/former-officers/rebekah_garcia.jpg",
+      "major": "Finance '23",
+      "position": "Events and Marketing Chair",
+      "term": "2020 - 2023",
+      "description": "Rebekah is our beloved former events chair. In her free time she enjoys road trips, watching movies, and reading. She will be a Financial Analyst at CBRE after graduation!"
+    },
+
+    {
+      "name": "Pranav Jain",
+      "image": "/static/images/former-officers/pranav_jain.jpg",
+      "major": "Computer Science '23",
+      "position": "Workshops Officer",
+      "term": "2021 - 2023",
+      "description": "Pranav is one of our beloved former workshops officers. He will be attending Columbia as a Masters student after graduation!"
+    },
+
     {
       "name": "Andrew Fennell",
       "image": "/static/images/former-officers/andrew_fennell.jpg",
