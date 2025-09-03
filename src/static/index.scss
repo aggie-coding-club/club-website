@@ -315,14 +315,14 @@ footer {
 
 * {
   @include theme('color', $dark);
-  font-family: Poppins, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   box-sizing: border-box;
 }
 
 body {
   @include theme('color', $dark);
   @include theme('background-color', $general-background);
-  font-family: Poppins, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   box-sizing: border-box;
 }
 

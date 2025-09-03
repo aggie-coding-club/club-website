@@ -10440,7 +10440,7 @@ footer .container .links img {
 
 * {
   color: #001030 ;
-  font-family: Poppins, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   box-sizing: border-box;
 }
 @media (prefers-color-scheme: dark) {
@@ -10452,7 +10452,7 @@ footer .container .links img {
 body {
   color: #001030 ;
   background-color: #FAFAFA ;
-  font-family: Poppins, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   box-sizing: border-box;
 }
 @media (prefers-color-scheme: dark) {
